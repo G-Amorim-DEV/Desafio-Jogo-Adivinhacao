@@ -1,0 +1,34 @@
+[
+  {
+    "texto": "Python foi criado em 1991.",
+    "resposta": "verdadeiro"
+  },
+  {
+    "texto": "O Sol gira em torno da Terra.",
+    "resposta": "falso"
+  },
+  {
+    "texto": "A água ferve a 100°C ao nível do mar.",
+    "resposta": "verdadeiro"
+  },
+  {
+    "texto": "O Brasil fica na Europa.",
+    "resposta": "falso"
+  },
+  {
+    "texto": "A luz viaja mais rápido que o som.",
+    "resposta": "verdadeiro"
+  },
+  {
+    "texto": "HTML é uma linguagem de programação.",
+    "resposta": "falso"
+  },
+  {
+    "texto": "Um byte possui 8 bits.",
+    "resposta": "verdadeiro"
+  },
+  {
+    "texto": "A Terra tem duas luas.",
+    "resposta": "falso"
+  }
+]

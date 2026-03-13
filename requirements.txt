@@ -1,0 +1,11 @@
+streamlit
+watchdog
+pydantic
+python-dotenv
+requests
+python-dateutil
+typing_extensions
+numpy
+pandas
+faker
+streamlit-extras

@@ -1,0 +1,82 @@
+[
+  {
+    "palavra": "python",
+    "categoria": "programacao",
+    "dificuldade": "facil",
+    "dica": "linguagem popular",
+    "tentativas": 6,
+    "pontos": 10
+  },
+  {
+    "palavra": "internet",
+    "categoria": "tecnologia",
+    "dificuldade": "facil",
+    "dica": "rede mundial",
+    "tentativas": 6,
+    "pontos": 10
+  },
+  {
+    "palavra": "dados",
+    "categoria": "computacao",
+    "dificuldade": "facil",
+    "dica": "informação",
+    "tentativas": 6,
+    "pontos": 10
+  },
+  {
+    "palavra": "algoritmo",
+    "categoria": "computacao",
+    "dificuldade": "medio",
+    "dica": "passos lógicos",
+    "tentativas": 5,
+    "pontos": 12
+  },
+  {
+    "palavra": "servidor",
+    "categoria": "rede",
+    "dificuldade": "medio",
+    "dica": "fornece serviços",
+    "tentativas": 5,
+    "pontos": 12
+  },
+  {
+    "palavra": "criptografia",
+    "categoria": "seguranca",
+    "dificuldade": "dificil",
+    "dica": "protege dados",
+    "tentativas": 4,
+    "pontos": 18
+  },
+  {
+    "palavra": "neuronio",
+    "categoria": "biologia",
+    "dificuldade": "medio",
+    "dica": "cérebro",
+    "tentativas": 5,
+    "pontos": 12
+  },
+  {
+    "palavra": "framework",
+    "categoria": "tecnologia",
+    "dificuldade": "medio",
+    "dica": "estrutura pronta",
+    "tentativas": 5,
+    "pontos": 12
+  },
+  {
+    "palavra": "processador",
+    "categoria": "hardware",
+    "dificuldade": "medio",
+    "dica": "cérebro do pc",
+    "tentativas": 5,
+    "pontos": 12
+  },
+  {
+    "palavra": "inteligencia",
+    "categoria": "ciencia",
+    "dificuldade": "dificil",
+    "dica": "capacidade cognitiva",
+    "tentativas": 4,
+    "pontos": 18
+  }
+]

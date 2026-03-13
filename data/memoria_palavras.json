@@ -1,0 +1,80 @@
+{
+    "facil": {
+        "animais": [
+            "gato",
+            "cachorro",
+            "leao",
+            "tigre",
+            "urso",
+            "vaca",
+            "cavalo",
+            "ovelha",
+            "pato",
+            "coelho"
+        ],
+        "objetos": [
+            "mesa",
+            "cadeira",
+            "porta",
+            "janela",
+            "livro",
+            "caneta",
+            "copo",
+            "bola",
+            "relogio",
+            "telefone"
+        ]
+    },
+    "medio": {
+        "natureza": [
+            "montanha",
+            "oceano",
+            "floresta",
+            "tempestade",
+            "deserto",
+            "planicie",
+            "vulcao",
+            "ilha",
+            "cachoeira",
+            "neblina"
+        ],
+        "ciencia": [
+            "energia",
+            "gravidade",
+            "planeta",
+            "galaxia",
+            "atomos",
+            "orbita",
+            "massa",
+            "forca",
+            "luz",
+            "tempo"
+        ]
+    },
+    "dificil": {
+        "tecnologia": [
+            "programacao",
+            "algoritmo",
+            "computacao",
+            "inteligencia",
+            "neural",
+            "machine",
+            "database",
+            "criptografia",
+            "backend",
+            "frontend"
+        ],
+        "cerebro": [
+            "memoria",
+            "cognicao",
+            "sinapse",
+            "neuronio",
+            "percepcao",
+            "aprendizado",
+            "atencao",
+            "emocao",
+            "logica",
+            "raciocinio"
+        ]
+    }
+}

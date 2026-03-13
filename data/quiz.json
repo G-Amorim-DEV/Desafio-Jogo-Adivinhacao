@@ -1,0 +1,242 @@
+[
+    {
+        "id": 1,
+        "categoria": "geografia",
+        "dificuldade": "facil",
+        "pergunta": "Capital do Canadá?",
+        "opcoes": [
+            "Toronto",
+            "Ottawa",
+            "Vancouver",
+            "Montreal"
+        ],
+        "resposta": "Ottawa",
+        "dica": "Não é Toronto",
+        "tempo": 15,
+        "pontos": 5
+    },
+    {
+        "id": 2,
+        "categoria": "matematica",
+        "dificuldade": "facil",
+        "pergunta": "5+6=?",
+        "opcoes": [
+            "10",
+            "11",
+            "12",
+            "13"
+        ],
+        "resposta": "11",
+        "dica": "Maior que 10",
+        "tempo": 10,
+        "pontos": 5
+    },
+    {
+        "id": 3,
+        "categoria": "ciencia",
+        "dificuldade": "facil",
+        "pergunta": "Água é formada por?",
+        "opcoes": [
+            "CO2",
+            "H2O",
+            "O2",
+            "NaCl"
+        ],
+        "resposta": "H2O",
+        "dica": "Dois hidrogênios",
+        "tempo": 12,
+        "pontos": 5
+    },
+    {
+        "id": 4,
+        "categoria": "historia",
+        "dificuldade": "facil",
+        "pergunta": "Descobrimento do Brasil ocorreu em?",
+        "opcoes": [
+            "1492",
+            "1500",
+            "1600",
+            "1700"
+        ],
+        "resposta": "1500",
+        "dica": "Século XVI",
+        "tempo": 15,
+        "pontos": 5
+    },
+    {
+        "id": 5,
+        "categoria": "tecnologia",
+        "dificuldade": "facil",
+        "pergunta": "Python é?",
+        "opcoes": [
+            "Sistema",
+            "Linguagem",
+            "Hardware",
+            "Banco"
+        ],
+        "resposta": "Linguagem",
+        "dica": "Usada em IA",
+        "tempo": 10,
+        "pontos": 5
+    },
+    {
+        "id": 6,
+        "categoria": "matematica",
+        "dificuldade": "medio",
+        "pergunta": "12×4=?",
+        "opcoes": [
+            "36",
+            "40",
+            "48",
+            "52"
+        ],
+        "resposta": "48",
+        "dica": "12 dobrado duas vezes",
+        "tempo": 10,
+        "pontos": 8
+    },
+    {
+        "id": 7,
+        "categoria": "ciencia",
+        "dificuldade": "medio",
+        "pergunta": "Planeta vermelho?",
+        "opcoes": [
+            "Terra",
+            "Marte",
+            "Saturno",
+            "Vênus"
+        ],
+        "resposta": "Marte",
+        "dica": "Deus da guerra",
+        "tempo": 12,
+        "pontos": 8
+    },
+    {
+        "id": 8,
+        "categoria": "geografia",
+        "dificuldade": "medio",
+        "pergunta": "Maior oceano?",
+        "opcoes": [
+            "Atlântico",
+            "Índico",
+            "Pacífico",
+            "Ártico"
+        ],
+        "resposta": "Pacífico",
+        "dica": "Nome sugere calma",
+        "tempo": 15,
+        "pontos": 8
+    },
+    {
+        "id": 9,
+        "categoria": "tecnologia",
+        "dificuldade": "medio",
+        "pergunta": "HTML serve para?",
+        "opcoes": [
+            "Banco",
+            "Estrutura web",
+            "IA",
+            "Rede"
+        ],
+        "resposta": "Estrutura web",
+        "dica": "Base dos sites",
+        "tempo": 12,
+        "pontos": 8
+    },
+    {
+        "id": 10,
+        "categoria": "historia",
+        "dificuldade": "medio",
+        "pergunta": "Primeira Guerra começou em?",
+        "opcoes": [
+            "1914",
+            "1920",
+            "1939",
+            "1900"
+        ],
+        "resposta": "1914",
+        "dica": "Antes da segunda",
+        "tempo": 15,
+        "pontos": 8
+    },
+    {
+        "id": 11,
+        "categoria": "ciencia",
+        "dificuldade": "dificil",
+        "pergunta": "Velocidade da luz aproximada?",
+        "opcoes": [
+            "300 mil km/s",
+            "150 mil",
+            "1 milhão",
+            "30 mil"
+        ],
+        "resposta": "300 mil km/s",
+        "dica": "Constante física",
+        "tempo": 10,
+        "pontos": 15
+    },
+    {
+        "id": 12,
+        "categoria": "matematica",
+        "dificuldade": "dificil",
+        "pergunta": "√144=?",
+        "opcoes": [
+            "10",
+            "11",
+            "12",
+            "14"
+        ],
+        "resposta": "12",
+        "dica": "12×12",
+        "tempo": 10,
+        "pontos": 15
+    },
+    {
+        "id": 13,
+        "categoria": "tecnologia",
+        "dificuldade": "dificil",
+        "pergunta": "Criador do Linux?",
+        "opcoes": [
+            "Bill Gates",
+            "Torvalds",
+            "Jobs",
+            "Musk"
+        ],
+        "resposta": "Torvalds",
+        "dica": "Linus",
+        "tempo": 12,
+        "pontos": 15
+    },
+    {
+        "id": 14,
+        "categoria": "historia",
+        "dificuldade": "dificil",
+        "pergunta": "Queda de Constantinopla?",
+        "opcoes": [
+            "1453",
+            "1500",
+            "1601",
+            "1702"
+        ],
+        "resposta": "1453",
+        "dica": "Fim da idade média",
+        "tempo": 15,
+        "pontos": 15
+    },
+    {
+        "id": 15,
+        "categoria": "geografia",
+        "dificuldade": "dificil",
+        "pergunta": "Maior deserto quente?",
+        "opcoes": [
+            "Saara",
+            "Gobi",
+            "Kalahari",
+            "Atacama"
+        ],
+        "resposta": "Saara",
+        "dica": "África",
+        "tempo": 12,
+        "pontos": 15
+    }
+]

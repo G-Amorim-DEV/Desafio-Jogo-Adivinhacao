@@ -1,0 +1,72 @@
+[
+    {
+        "tipo": "aritmetica",
+        "dificuldade": "facil",
+        "sequencia": [
+            2,
+            4,
+            6,
+            8
+        ],
+        "resposta": 10,
+        "dica": "+2",
+        "explicacao": "soma constante",
+        "pontos": 5
+    },
+    {
+        "tipo": "aritmetica",
+        "dificuldade": "facil",
+        "sequencia": [
+            5,
+            10,
+            15,
+            20
+        ],
+        "resposta": 25,
+        "dica": "+5",
+        "explicacao": "progressão aritmética",
+        "pontos": 5
+    },
+    {
+        "tipo": "geometrica",
+        "dificuldade": "medio",
+        "sequencia": [
+            3,
+            6,
+            12,
+            24
+        ],
+        "resposta": 48,
+        "dica": "×2",
+        "explicacao": "multiplicação constante",
+        "pontos": 8
+    },
+    {
+        "tipo": "triangular",
+        "dificuldade": "medio",
+        "sequencia": [
+            1,
+            3,
+            6,
+            10
+        ],
+        "resposta": 15,
+        "dica": "soma crescente",
+        "explicacao": "números triangulares",
+        "pontos": 10
+    },
+    {
+        "tipo": "potencia",
+        "dificuldade": "dificil",
+        "sequencia": [
+            2,
+            4,
+            16,
+            256
+        ],
+        "resposta": 65536,
+        "dica": "quadrado",
+        "explicacao": "potências sucessivas",
+        "pontos": 15
+    }
+]
