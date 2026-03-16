@@ -24,6 +24,62 @@
     "pontos": 10
   },
   {
+    "palavra": "gato",
+    "categoria": "animais",
+    "dificuldade": "facil",
+    "dica": "animal doméstico que mia",
+    "tentativas": 6,
+    "pontos": 10
+  },
+  {
+    "palavra": "cachorro",
+    "categoria": "animais",
+    "dificuldade": "facil",
+    "dica": "animal doméstico que late",
+    "tentativas": 6,
+    "pontos": 10
+  },
+  {
+    "palavra": "leao",
+    "categoria": "animais",
+    "dificuldade": "facil",
+    "dica": "rei da selva",
+    "tentativas": 6,
+    "pontos": 10
+  },
+  {
+    "palavra": "mesa",
+    "categoria": "objetos",
+    "dificuldade": "facil",
+    "dica": "móvel para apoiar objetos",
+    "tentativas": 6,
+    "pontos": 10
+  },
+  {
+    "palavra": "cadeira",
+    "categoria": "objetos",
+    "dificuldade": "facil",
+    "dica": "móvel para sentar",
+    "tentativas": 6,
+    "pontos": 10
+  },
+  {
+    "palavra": "porta",
+    "categoria": "objetos",
+    "dificuldade": "facil",
+    "dica": "permite entrar ou sair de um ambiente",
+    "tentativas": 6,
+    "pontos": 10
+  },
+  {
+    "palavra": "janela",
+    "categoria": "objetos",
+    "dificuldade": "facil",
+    "dica": "permite ver o exterior",
+    "tentativas": 6,
+    "pontos": 10
+  },
+  {
     "palavra": "algoritmo",
     "categoria": "computacao",
     "dificuldade": "medio",
@@ -40,18 +96,10 @@
     "pontos": 12
   },
   {
-    "palavra": "criptografia",
-    "categoria": "seguranca",
-    "dificuldade": "dificil",
-    "dica": "protege dados",
-    "tentativas": 4,
-    "pontos": 18
-  },
-  {
     "palavra": "neuronio",
     "categoria": "biologia",
     "dificuldade": "medio",
-    "dica": "cérebro",
+    "dica": "célula do cérebro",
     "tentativas": 5,
     "pontos": 12
   },
@@ -67,9 +115,57 @@
     "palavra": "processador",
     "categoria": "hardware",
     "dificuldade": "medio",
-    "dica": "cérebro do pc",
+    "dica": "cérebro do computador",
     "tentativas": 5,
     "pontos": 12
+  },
+  {
+    "palavra": "montanha",
+    "categoria": "natureza",
+    "dificuldade": "medio",
+    "dica": "elevação natural do terreno",
+    "tentativas": 5,
+    "pontos": 12
+  },
+  {
+    "palavra": "oceano",
+    "categoria": "natureza",
+    "dificuldade": "medio",
+    "dica": "grande massa de água salgada",
+    "tentativas": 5,
+    "pontos": 12
+  },
+  {
+    "palavra": "floresta",
+    "categoria": "natureza",
+    "dificuldade": "medio",
+    "dica": "área com muitas árvores",
+    "tentativas": 5,
+    "pontos": 12
+  },
+  {
+    "palavra": "deserto",
+    "categoria": "natureza",
+    "dificuldade": "medio",
+    "dica": "região com pouca água",
+    "tentativas": 5,
+    "pontos": 12
+  },
+  {
+    "palavra": "planicie",
+    "categoria": "natureza",
+    "dificuldade": "medio",
+    "dica": "terreno plano e extenso",
+    "tentativas": 5,
+    "pontos": 12
+  },
+  {
+    "palavra": "criptografia",
+    "categoria": "seguranca",
+    "dificuldade": "dificil",
+    "dica": "protege dados",
+    "tentativas": 4,
+    "pontos": 18
   },
   {
     "palavra": "inteligencia",
@@ -78,5 +174,229 @@
     "dica": "capacidade cognitiva",
     "tentativas": 4,
     "pontos": 18
+  },
+  {
+    "palavra": "programacao",
+    "categoria": "tecnologia",
+    "dificuldade": "dificil",
+    "dica": "escrever códigos",
+    "tentativas": 4,
+    "pontos": 18
+  },
+  {
+    "palavra": "neural",
+    "categoria": "tecnologia",
+    "dificuldade": "dificil",
+    "dica": "relacionado a redes de neurônios artificiais",
+    "tentativas": 4,
+    "pontos": 18
+  },
+  {
+    "palavra": "machine",
+    "categoria": "tecnologia",
+    "dificuldade": "dificil",
+    "dica": "parte de machine learning",
+    "tentativas": 4,
+    "pontos": 18
+  },
+  {
+    "palavra": "database",
+    "categoria": "tecnologia",
+    "dificuldade": "dificil",
+    "dica": "local para armazenar dados",
+    "tentativas": 4,
+    "pontos": 18
+  },
+  {
+    "palavra": "backend",
+    "categoria": "tecnologia",
+    "dificuldade": "dificil",
+    "dica": "parte do sistema que roda no servidor",
+    "tentativas": 4,
+    "pontos": 18
+  },
+  {
+    "palavra": "frontend",
+    "categoria": "tecnologia",
+    "dificuldade": "dificil",
+    "dica": "parte do sistema que interage com o usuário",
+    "tentativas": 4,
+    "pontos": 18
+  },
+  {
+    "palavra": "memoria",
+    "categoria": "cerebro",
+    "dificuldade": "dificil",
+    "dica": "capacidade de armazenar informações",
+    "tentativas": 4,
+    "pontos": 18
+  },
+  {
+    "palavra": "cognicao",
+    "categoria": "cerebro",
+    "dificuldade": "dificil",
+    "dica": "processos mentais de adquirir conhecimento",
+    "tentativas": 4,
+    "pontos": 18
+  },
+  {
+    "palavra": "tigre",
+    "categoria": "animais",
+    "dificuldade": "facil",
+    "dica": "felino listrado e selvagem",
+    "tentativas": 6,
+    "pontos": 10
+  },
+  {
+    "palavra": "urso",
+    "categoria": "animais",
+    "dificuldade": "facil",
+    "dica": "grande mamífero que hiberna",
+    "tentativas": 6,
+    "pontos": 10
+  },
+  {
+    "palavra": "vaca",
+    "categoria": "animais",
+    "dificuldade": "facil",
+    "dica": "animal que produz leite",
+    "tentativas": 6,
+    "pontos": 10
+  },
+  {
+    "palavra": "cavalo",
+    "categoria": "animais",
+    "dificuldade": "facil",
+    "dica": "animal usado para montar",
+    "tentativas": 6,
+    "pontos": 10
+  },
+  {
+    "palavra": "ovelha",
+    "categoria": "animais",
+    "dificuldade": "facil",
+    "dica": "animal que produz lã",
+    "tentativas": 6,
+    "pontos": 10
+  },
+  {
+    "palavra": "pato",
+    "categoria": "animais",
+    "dificuldade": "facil",
+    "dica": "animal que grasna e nada",
+    "tentativas": 6,
+    "pontos": 10
+  },
+  {
+    "palavra": "coelho",
+    "categoria": "animais",
+    "dificuldade": "facil",
+    "dica": "animal que pula e tem orelhas longas",
+    "tentativas": 6,
+    "pontos": 10
+  },
+  {
+    "palavra": "livro",
+    "categoria": "objetos",
+    "dificuldade": "facil",
+    "dica": "reúne páginas com histórias ou informações",
+    "tentativas": 6,
+    "pontos": 10
+  },
+  {
+    "palavra": "caneta",
+    "categoria": "objetos",
+    "dificuldade": "facil",
+    "dica": "usada para escrever",
+    "tentativas": 6,
+    "pontos": 10
+  },
+  {
+    "palavra": "copo",
+    "categoria": "objetos",
+    "dificuldade": "facil",
+    "dica": "usado para beber líquidos",
+    "tentativas": 6,
+    "pontos": 10
+  },
+  {
+    "palavra": "vulcao",
+    "categoria": "natureza",
+    "dificuldade": "medio",
+    "dica": "montanha que expele lava",
+    "tentativas": 5,
+    "pontos": 12
+  },
+  {
+    "palavra": "ilha",
+    "categoria": "natureza",
+    "dificuldade": "medio",
+    "dica": "porção de terra cercada de água",
+    "tentativas": 5,
+    "pontos": 12
+  },
+  {
+    "palavra": "cachoeira",
+    "categoria": "natureza",
+    "dificuldade": "medio",
+    "dica": "água que cai de altura",
+    "tentativas": 5,
+    "pontos": 12
+  },
+  {
+    "palavra": "neblina",
+    "categoria": "natureza",
+    "dificuldade": "medio",
+    "dica": "névoa fina que dificulta a visão",
+    "tentativas": 5,
+    "pontos": 12
+  },
+  {
+    "palavra": "planeta",
+    "categoria": "ciencia",
+    "dificuldade": "medio",
+    "dica": "corpo celeste que orbita uma estrela",
+    "tentativas": 5,
+    "pontos": 12
+  },
+  {
+    "palavra": "galaxia",
+    "categoria": "ciencia",
+    "dificuldade": "medio",
+    "dica": "grande conjunto de estrelas",
+    "tentativas": 5,
+    "pontos": 12
+  },
+  {
+    "palavra": "atomo",
+    "categoria": "ciencia",
+    "dificuldade": "medio",
+    "dica": "menor unidade de matéria",
+    "tentativas": 5,
+    "pontos": 12
+  },
+  {
+    "palavra": "orbita",
+    "categoria": "ciencia",
+    "dificuldade": "medio",
+    "dica": "caminho de um corpo ao redor de outro",
+    "tentativas": 5,
+    "pontos": 12
+  },
+  {
+    "palavra": "massa",
+    "categoria": "ciencia",
+    "dificuldade": "medio",
+    "dica": "quantidade de matéria em um corpo",
+    "tentativas": 5,
+    "pontos": 12
+  },
+  {
+    "palavra": "luz",
+    "categoria": "ciencia",
+    "dificuldade": "medio",
+    "dica": "radiação visível pelos olhos",
+    "tentativas": 5,
+    "pontos": 12
   }
 ]

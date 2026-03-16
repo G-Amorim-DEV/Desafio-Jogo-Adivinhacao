@@ -1,80 +1,345 @@
 {
-    "facil": {
-        "animais": [
+    "facil": [
+        [
             "gato",
-            "cachorro",
+            "mesa",
+            "cachorro"
+        ],
+        [
             "leao",
-            "tigre",
-            "urso",
+            "bola",
+            "coelho",
+            "janela"
+        ],
+        [
             "vaca",
+            "copo",
+            "pato"
+        ],
+        [
+            "urso",
+            "livro",
+            "cadeira",
             "cavalo",
-            "ovelha",
-            "pato",
             "coelho"
         ],
-        "objetos": [
-            "mesa",
-            "cadeira",
-            "porta",
-            "janela",
-            "livro",
-            "caneta",
-            "copo",
-            "bola",
-            "relogio",
-            "telefone"
-        ]
-    },
-    "medio": {
-        "natureza": [
-            "montanha",
-            "oceano",
-            "floresta",
-            "tempestade",
-            "deserto",
-            "planicie",
-            "vulcao",
-            "ilha",
-            "cachoeira",
-            "neblina"
+        [
+            "tigre",
+            "telefone",
+            "ovelha"
         ],
-        "ciencia": [
+        [
+            "mesa",
+            "gato",
+            "bola",
+            "pato"
+        ],
+        [
+            "cadeira",
+            "leao",
+            "coelho"
+        ],
+        [
+            "porta",
+            "urso",
+            "cavalo",
+            "livro"
+        ],
+        [
+            "janela",
+            "vaca",
+            "gato",
+            "telefone"
+        ],
+        [
+            "relogio",
+            "cachorro",
+            "bola"
+        ],
+        [
+            "pato",
+            "cadeira",
+            "ovelha",
+            "coelho"
+        ],
+        [
+            "livro",
+            "tigre",
+            "mesa"
+        ],
+        [
+            "copo",
+            "gato",
+            "cavalo",
+            "telefone"
+        ],
+        [
+            "bola",
+            "urso",
+            "janela"
+        ],
+        [
+            "coelho",
+            "leao",
+            "pato",
+            "cadeira"
+        ],
+        [
+            "mesa",
+            "vaca",
+            "telefone",
+            "bola"
+        ],
+        [
+            "gato",
+            "porta",
+            "coelho",
+            "livro"
+        ],
+        [
+            "relogio",
+            "cachorro",
+            "cavalo"
+        ],
+        [
+            "janela",
+            "tigre",
+            "pato",
+            "urso"
+        ],
+        [
+            "cadeira",
+            "gato",
+            "coelho",
+            "bola"
+        ]
+    ],
+    "medio": [
+        [
+            "montanha",
             "energia",
+            "oceano"
+        ],
+        [
+            "floresta",
             "gravidade",
             "planeta",
-            "galaxia",
-            "atomos",
-            "orbita",
-            "massa",
-            "forca",
+            "deserto"
+        ],
+        [
+            "vulcao",
             "luz",
-            "tempo"
+            "ilha",
+            "tempestade"
+        ],
+        [
+            "planicie",
+            "massa",
+            "cachoeira"
+        ],
+        [
+            "neblina",
+            "orbita",
+            "galaxia",
+            "energia"
+        ],
+        [
+            "oceano",
+            "deserto",
+            "luz"
+        ],
+        [
+            "planeta",
+            "floresta",
+            "tempestade",
+            "atomo",
+            "vulcao"
+        ],
+        [
+            "energia",
+            "neblina",
+            "cachoeira"
+        ],
+        [
+            "montanha",
+            "planicie",
+            "massa"
+        ],
+        [
+            "vulcao",
+            "orbita",
+            "oceano",
+            "gravidade"
+        ],
+        [
+            "ilha",
+            "planeta",
+            "deserto"
+        ],
+        [
+            "cachoeira",
+            "atomo",
+            "luz",
+            "tempestade"
+        ],
+        [
+            "neblina",
+            "planicie",
+            "energia"
+        ],
+        [
+            "gravidade",
+            "oceano",
+            "floresta",
+            "vulcao"
+        ],
+        [
+            "planeta",
+            "montanha",
+            "deserto",
+            "orbita"
+        ],
+        [
+            "tempestade",
+            "massa",
+            "luz"
+        ],
+        [
+            "cachoeira",
+            "energia",
+            "vulcao",
+            "neblina"
+        ],
+        [
+            "oceano",
+            "planicie",
+            "planeta"
+        ],
+        [
+            "gravidade",
+            "floresta",
+            "atomo",
+            "ilha"
+        ],
+        [
+            "montanha",
+            "neblina",
+            "massa",
+            "energia"
         ]
-    },
-    "dificil": {
-        "tecnologia": [
+    ],
+    "dificil": [
+        [
             "programacao",
-            "algoritmo",
+            "memoria",
+            "algoritmo"
+        ],
+        [
             "computacao",
+            "cognicao",
             "inteligencia",
-            "neural",
+            "neural"
+        ],
+        [
             "machine",
+            "sinapse",
             "database",
+            "aprendizado"
+        ],
+        [
             "criptografia",
+            "atencao",
+            "frontend",
+            "raciocinio"
+        ],
+        [
             "backend",
+            "emocao",
+            "neuronio"
+        ],
+        [
+            "logica",
+            "programacao",
+            "inteligencia",
+            "machine"
+        ],
+        [
+            "memoria",
+            "database",
             "frontend"
         ],
-        "cerebro": [
-            "memoria",
+        [
+            "algoritmo",
             "cognicao",
-            "sinapse",
+            "criptografia",
+            "neural"
+        ],
+        [
+            "aprendizado",
+            "backend",
+            "emocao",
+            "logica"
+        ],
+        [
             "neuronio",
-            "percepcao",
+            "programacao",
+            "raciocinio"
+        ],
+        [
+            "inteligencia",
+            "memoria",
+            "machine",
+            "frontend"
+        ],
+        [
+            "cognicao",
+            "algoritmo",
+            "criptografia"
+        ],
+        [
+            "sinapse",
             "aprendizado",
             "atencao",
-            "emocao",
+            "backend"
+        ],
+        [
+            "emocoa",
+            "neuronio",
+            "logica"
+        ],
+        [
+            "raciocinio",
+            "programacao",
+            "database",
+            "inteligencia"
+        ],
+        [
+            "frontend",
+            "machine",
+            "cognicao",
+            "sinapse"
+        ],
+        [
+            "backend",
+            "aprendizado",
+            "memoria"
+        ],
+        [
             "logica",
-            "raciocinio"
+            "algoritmo",
+            "neural",
+            "emocao"
+        ],
+        [
+            "raciocinio",
+            "criptografia",
+            "programacao"
+        ],
+        [
+            "database",
+            "neuronio",
+            "machine",
+            "aprendizado"
         ]
-    }
+    ]
 }

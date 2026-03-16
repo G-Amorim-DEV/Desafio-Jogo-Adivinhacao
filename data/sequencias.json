@@ -28,6 +28,118 @@
         "pontos": 5
     },
     {
+        "tipo": "aritmetica",
+        "dificuldade": "facil",
+        "sequencia": [
+            1,
+            3,
+            5,
+            7
+        ],
+        "resposta": 9,
+        "dica": "+2",
+        "explicacao": "soma constante",
+        "pontos": 5
+    },
+    {
+        "tipo": "aritmetica",
+        "dificuldade": "facil",
+        "sequencia": [
+            10,
+            20,
+            30,
+            40
+        ],
+        "resposta": 50,
+        "dica": "+10",
+        "explicacao": "progressão aritmética",
+        "pontos": 5
+    },
+    {
+        "tipo": "aritmetica",
+        "dificuldade": "facil",
+        "sequencia": [
+            0,
+            2,
+            4,
+            6
+        ],
+        "resposta": 8,
+        "dica": "+2",
+        "explicacao": "soma constante",
+        "pontos": 5
+    },
+    {
+        "tipo": "aritmetica",
+        "dificuldade": "facil",
+        "sequencia": [
+            3,
+            6,
+            9,
+            12
+        ],
+        "resposta": 15,
+        "dica": "+3",
+        "explicacao": "progressão aritmética",
+        "pontos": 5
+    },
+    {
+        "tipo": "aritmetica",
+        "dificuldade": "facil",
+        "sequencia": [
+            7,
+            14,
+            21,
+            28
+        ],
+        "resposta": 35,
+        "dica": "+7",
+        "explicacao": "progressão aritmética",
+        "pontos": 5
+    },
+    {
+        "tipo": "aritmetica",
+        "dificuldade": "facil",
+        "sequencia": [
+            1,
+            2,
+            3,
+            4
+        ],
+        "resposta": 5,
+        "dica": "+1",
+        "explicacao": "soma constante",
+        "pontos": 5
+    },
+    {
+        "tipo": "aritmetica",
+        "dificuldade": "facil",
+        "sequencia": [
+            6,
+            12,
+            18,
+            24
+        ],
+        "resposta": 30,
+        "dica": "+6",
+        "explicacao": "progressão aritmética",
+        "pontos": 5
+    },
+    {
+        "tipo": "aritmetica",
+        "dificuldade": "facil",
+        "sequencia": [
+            8,
+            16,
+            24,
+            32
+        ],
+        "resposta": 40,
+        "dica": "+8",
+        "explicacao": "progressão aritmética",
+        "pontos": 5
+    },
+    {
         "tipo": "geometrica",
         "dificuldade": "medio",
         "sequencia": [
@@ -37,6 +149,62 @@
             24
         ],
         "resposta": 48,
+        "dica": "×2",
+        "explicacao": "multiplicação constante",
+        "pontos": 8
+    },
+    {
+        "tipo": "geometrica",
+        "dificuldade": "medio",
+        "sequencia": [
+            2,
+            4,
+            8,
+            16
+        ],
+        "resposta": 32,
+        "dica": "×2",
+        "explicacao": "potência de 2",
+        "pontos": 8
+    },
+    {
+        "tipo": "geometrica",
+        "dificuldade": "medio",
+        "sequencia": [
+            1,
+            3,
+            9,
+            27
+        ],
+        "resposta": 81,
+        "dica": "×3",
+        "explicacao": "potências de 3",
+        "pontos": 8
+    },
+    {
+        "tipo": "geometrica",
+        "dificuldade": "medio",
+        "sequencia": [
+            5,
+            10,
+            20,
+            40
+        ],
+        "resposta": 80,
+        "dica": "×2",
+        "explicacao": "multiplicação constante",
+        "pontos": 8
+    },
+    {
+        "tipo": "geometrica",
+        "dificuldade": "medio",
+        "sequencia": [
+            4,
+            8,
+            16,
+            32
+        ],
+        "resposta": 64,
         "dica": "×2",
         "explicacao": "multiplicação constante",
         "pontos": 8
@@ -56,6 +224,62 @@
         "pontos": 10
     },
     {
+        "tipo": "triangular",
+        "dificuldade": "medio",
+        "sequencia": [
+            3,
+            6,
+            10,
+            15
+        ],
+        "resposta": 21,
+        "dica": "soma crescente",
+        "explicacao": "números triangulares",
+        "pontos": 10
+    },
+    {
+        "tipo": "triangular",
+        "dificuldade": "medio",
+        "sequencia": [
+            6,
+            10,
+            15,
+            21
+        ],
+        "resposta": 28,
+        "dica": "soma crescente",
+        "explicacao": "números triangulares",
+        "pontos": 10
+    },
+    {
+        "tipo": "triangular",
+        "dificuldade": "medio",
+        "sequencia": [
+            10,
+            15,
+            21,
+            28
+        ],
+        "resposta": 36,
+        "dica": "soma crescente",
+        "explicacao": "números triangulares",
+        "pontos": 10
+    },
+    {
+        "tipo": "triangular",
+        "dificuldade": "medio",
+        "sequencia": [
+            15,
+            21,
+            28,
+            36
+        ],
+        "resposta": 45,
+        "dica": "soma crescente",
+        "explicacao": "números triangulares",
+        "pontos": 10
+    },
+    {
         "tipo": "potencia",
         "dificuldade": "dificil",
         "sequencia": [
@@ -65,6 +289,356 @@
             256
         ],
         "resposta": 65536,
+        "dica": "quadrado",
+        "explicacao": "potências sucessivas",
+        "pontos": 15
+    },
+    {
+        "tipo": "potencia",
+        "dificuldade": "dificil",
+        "sequencia": [
+            3,
+            9,
+            81,
+            6561
+        ],
+        "resposta": 43046721,
+        "dica": "quadrado",
+        "explicacao": "potências sucessivas",
+        "pontos": 15
+    },
+    {
+        "tipo": "potencia",
+        "dificuldade": "dificil",
+        "sequencia": [
+            2,
+            8,
+            64,
+            512
+        ],
+        "resposta": 4096,
+        "dica": "potência de 2",
+        "explicacao": "exponenciais",
+        "pontos": 15
+    },
+    {
+        "tipo": "potencia",
+        "dificuldade": "dificil",
+        "sequencia": [
+            5,
+            25,
+            625,
+            390625
+        ],
+        "resposta": 152587890625,
+        "dica": "potência de 5",
+        "explicacao": "exponenciais",
+        "pontos": 15
+    },
+    {
+        "tipo": "potencia",
+        "dificuldade": "dificil",
+        "sequencia": [
+            10,
+            100,
+            10000,
+            1000000
+        ],
+        "resposta": 100000000,
+        "dica": "potência de 10",
+        "explicacao": "exponenciais",
+        "pontos": 15
+    },
+    {
+        "tipo": "aritmetica",
+        "dificuldade": "medio",
+        "sequencia": [
+            2,
+            5,
+            8,
+            11
+        ],
+        "resposta": 14,
+        "dica": "+3",
+        "explicacao": "progressão aritmética",
+        "pontos": 8
+    },
+    {
+        "tipo": "aritmetica",
+        "dificuldade": "medio",
+        "sequencia": [
+            7,
+            14,
+            21,
+            28
+        ],
+        "resposta": 35,
+        "dica": "+7",
+        "explicacao": "progressão aritmética",
+        "pontos": 8
+    },
+    {
+        "tipo": "aritmetica",
+        "dificuldade": "medio",
+        "sequencia": [
+            1,
+            4,
+            7,
+            10
+        ],
+        "resposta": 13,
+        "dica": "+3",
+        "explicacao": "progressão aritmética",
+        "pontos": 8
+    },
+    {
+        "tipo": "aritmetica",
+        "dificuldade": "medio",
+        "sequencia": [
+            6,
+            12,
+            18,
+            24
+        ],
+        "resposta": 30,
+        "dica": "+6",
+        "explicacao": "progressão aritmética",
+        "pontos": 8
+    },
+    {
+        "tipo": "aritmetica",
+        "dificuldade": "medio",
+        "sequencia": [
+            3,
+            9,
+            15,
+            21
+        ],
+        "resposta": 27,
+        "dica": "+6",
+        "explicacao": "progressão aritmética",
+        "pontos": 8
+    },
+    {
+        "tipo": "geometrica",
+        "dificuldade": "dificil",
+        "sequencia": [
+            2,
+            6,
+            18,
+            54
+        ],
+        "resposta": 162,
+        "dica": "×3",
+        "explicacao": "multiplicação constante",
+        "pontos": 12
+    },
+    {
+        "tipo": "geometrica",
+        "dificuldade": "dificil",
+        "sequencia": [
+            1,
+            2,
+            6,
+            24
+        ],
+        "resposta": 120,
+        "dica": "× crescente",
+        "explicacao": "fatorial",
+        "pontos": 12
+    },
+    {
+        "tipo": "geometrica",
+        "dificuldade": "dificil",
+        "sequencia": [
+            5,
+            25,
+            125,
+            625
+        ],
+        "resposta": 3125,
+        "dica": "×5",
+        "explicacao": "multiplicação constante",
+        "pontos": 12
+    },
+    {
+        "tipo": "geometrica",
+        "dificuldade": "dificil",
+        "sequencia": [
+            4,
+            16,
+            64,
+            256
+        ],
+        "resposta": 1024,
+        "dica": "×4",
+        "explicacao": "multiplicação constante",
+        "pontos": 12
+    },
+    {
+        "tipo": "geometrica",
+        "dificuldade": "dificil",
+        "sequencia": [
+            3,
+            12,
+            48,
+            192
+        ],
+        "resposta": 768,
+        "dica": "×4",
+        "explicacao": "multiplicação constante",
+        "pontos": 12
+    },
+    {
+        "tipo": "triangular",
+        "dificuldade": "dificil",
+        "sequencia": [
+            21,
+            28,
+            36,
+            45
+        ],
+        "resposta": 55,
+        "dica": "soma crescente",
+        "explicacao": "números triangulares",
+        "pontos": 15
+    },
+    {
+        "tipo": "triangular",
+        "dificuldade": "dificil",
+        "sequencia": [
+            28,
+            36,
+            45,
+            55
+        ],
+        "resposta": 66,
+        "dica": "soma crescente",
+        "explicacao": "números triangulares",
+        "pontos": 15
+    },
+    {
+        "tipo": "triangular",
+        "dificuldade": "dificil",
+        "sequencia": [
+            36,
+            45,
+            55,
+            66
+        ],
+        "resposta": 78,
+        "dica": "soma crescente",
+        "explicacao": "números triangulares",
+        "pontos": 15
+    },
+    {
+        "tipo": "triangular",
+        "dificuldade": "dificil",
+        "sequencia": [
+            45,
+            55,
+            66,
+            78
+        ],
+        "resposta": 91,
+        "dica": "soma crescente",
+        "explicacao": "números triangulares",
+        "pontos": 15
+    },
+    {
+        "tipo": "triangular",
+        "dificuldade": "dificil",
+        "sequencia": [
+            55,
+            66,
+            78,
+            91
+        ],
+        "resposta": 105,
+        "dica": "soma crescente",
+        "explicacao": "números triangulares",
+        "pontos": 15
+    },
+    {
+        "tipo": "aritmetica",
+        "dificuldade": "facil",
+        "sequencia": [
+            1,
+            2,
+            3,
+            4
+        ],
+        "resposta": 5,
+        "dica": "+1",
+        "explicacao": "soma constante",
+        "pontos": 5
+    },
+    {
+        "tipo": "aritmetica",
+        "dificuldade": "facil",
+        "sequencia": [
+            10,
+            15,
+            20,
+            25
+        ],
+        "resposta": 30,
+        "dica": "+5",
+        "explicacao": "progressão aritmética",
+        "pontos": 5
+    },
+    {
+        "tipo": "aritmetica",
+        "dificuldade": "medio",
+        "sequencia": [
+            2,
+            4,
+            8,
+            16
+        ],
+        "resposta": 32,
+        "dica": "×2",
+        "explicacao": "multiplicação constante",
+        "pontos": 8
+    },
+    {
+        "tipo": "aritmetica",
+        "dificuldade": "medio",
+        "sequencia": [
+            3,
+            6,
+            12,
+            24
+        ],
+        "resposta": 48,
+        "dica": "×2",
+        "explicacao": "multiplicação constante",
+        "pontos": 8
+    },
+    {
+        "tipo": "aritmetica",
+        "dificuldade": "dificil",
+        "sequencia": [
+            2,
+            4,
+            16,
+            256
+        ],
+        "resposta": 65536,
+        "dica": "quadrado",
+        "explicacao": "potências sucessivas",
+        "pontos": 15
+    },
+    {
+        "tipo": "aritmetica",
+        "dificuldade": "dificil",
+        "sequencia": [
+            3,
+            9,
+            81,
+            6561
+        ],
+        "resposta": 43046721,
         "dica": "quadrado",
         "explicacao": "potências sucessivas",
         "pontos": 15

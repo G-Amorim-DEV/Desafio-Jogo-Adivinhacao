@@ -1,17 +1,21 @@
 from abc import ABC, abstractmethod
+from typing import Any
 
 
-class Jogo(ABC):
-
-    nome = "Base"
-
-    def __init__(self, jogador):
-        self.jogador = jogador
+class JogoBase(ABC):
 
     @abstractmethod
-    def gerar_desafio(self):
+    def gerar_desafio(self) -> Any:
         pass
 
     @abstractmethod
-    def verificar_resposta(self, resposta):
+    def verificar_resposta(self, resposta: Any):
+        pass
+
+    @abstractmethod
+    def renderizar(self, desafio: Any):
+        pass
+
+    @abstractmethod
+    def obter_dica(self) -> str:
         pass

@@ -1,3 +1,6 @@
+from datetime import datetime
+
+
 class Jogador:
 
     def __init__(self, nome):
@@ -27,10 +30,29 @@ class Jogador:
             self.nivel = 3
         elif self.pontos >= 10:
             self.nivel = 2
+        else:
+            self.nivel = 1
 
     def registrar(self, jogo, resultado):
 
         self.historico.append({
             "jogo": jogo,
-            "resultado": resultado
+            "resultado": resultado,
+            "pontos": self.pontos,
+            "data": datetime.now()
         })
+
+    def estatisticas(self):
+
+        total = self.acertos + self.erros
+
+        taxa = (self.acertos / total) * 100 if total > 0 else 0
+
+        return {
+            "nome": self.nome,
+            "pontos": self.pontos,
+            "nivel": self.nivel,
+            "acertos": self.acertos,
+            "erros": self.erros,
+            "taxa_acerto": taxa
+        }

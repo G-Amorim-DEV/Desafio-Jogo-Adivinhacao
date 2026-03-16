@@ -1,11 +1,19 @@
-streamlit
-watchdog
-pydantic
-python-dotenv
-requests
-python-dateutil
-typing_extensions
-numpy
-pandas
-faker
-streamlit-extras
+# Streamlit e extras
+streamlit>=1.25
+streamlit-extras>=0.1.0
+watchdog>=3.0
+
+# Utilitários e configuração
+pydantic>=2.1
+python-dotenv>=1.0
+requests>=2.31
+python-dateutil>=2.9
+typing_extensions>=4.7
+
+# Ciência de dados e manipulação
+numpy>=1.26
+pandas>=2.1
+matplotlib>=3.8
+
+# Testes e dados falsos
+faker>=23.3

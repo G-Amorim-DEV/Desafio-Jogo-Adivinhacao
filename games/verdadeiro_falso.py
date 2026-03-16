@@ -2,6 +2,7 @@ import random
 from core.jogo_base import Jogo
 from services.data_loader import carregar_json
 
+GAME_NAME = "Verdadeiro ou Falso"
 
 class JogoVF(Jogo):
 
@@ -22,3 +23,5 @@ class JogoVF(Jogo):
             return "Certo!"
 
         return "Errado!"
+    
+Game = JogoVF

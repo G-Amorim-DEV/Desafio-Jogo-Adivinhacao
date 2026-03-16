@@ -238,5 +238,725 @@
         "dica": "África",
         "tempo": 12,
         "pontos": 15
+    },
+    {
+        "id": 16,
+        "categoria": "matematica",
+        "dificuldade": "facil",
+        "pergunta": "7+3=?",
+        "opcoes": [
+            "9",
+            "10",
+            "11",
+            "12"
+        ],
+        "resposta": "10",
+        "dica": "Número redondo",
+        "tempo": 10,
+        "pontos": 5
+    },
+    {
+        "id": 17,
+        "categoria": "ciencia",
+        "dificuldade": "facil",
+        "pergunta": "Qual planeta é conhecido como azul?",
+        "opcoes": [
+            "Terra",
+            "Marte",
+            "Júpiter",
+            "Vênus"
+        ],
+        "resposta": "Terra",
+        "dica": "Nosso planeta",
+        "tempo": 12,
+        "pontos": 5
+    },
+    {
+        "id": 18,
+        "categoria": "geografia",
+        "dificuldade": "facil",
+        "pergunta": "Rio mais longo do mundo?",
+        "opcoes": [
+            "Nilo",
+            "Amazonas",
+            "Yangtzé",
+            "Mississippi"
+        ],
+        "resposta": "Nilo",
+        "dica": "África",
+        "tempo": 15,
+        "pontos": 5
+    },
+    {
+        "id": 19,
+        "categoria": "historia",
+        "dificuldade": "medio",
+        "pergunta": "Ano da independência dos EUA?",
+        "opcoes": [
+            "1776",
+            "1789",
+            "1800",
+            "1812"
+        ],
+        "resposta": "1776",
+        "dica": "Século XVIII",
+        "tempo": 15,
+        "pontos": 8
+    },
+    {
+        "id": 20,
+        "categoria": "tecnologia",
+        "dificuldade": "medio",
+        "pergunta": "O que é Java?",
+        "opcoes": [
+            "Linguagem",
+            "Café",
+            "Plataforma",
+            "Banco"
+        ],
+        "resposta": "Linguagem",
+        "dica": "Usada para backend",
+        "tempo": 12,
+        "pontos": 8
+    },
+    {
+        "id": 21,
+        "categoria": "matematica",
+        "dificuldade": "medio",
+        "pergunta": "15×3=?",
+        "opcoes": [
+            "45",
+            "35",
+            "40",
+            "50"
+        ],
+        "resposta": "45",
+        "dica": "15 dobrado 3 vezes",
+        "tempo": 10,
+        "pontos": 8
+    },
+    {
+        "id": 22,
+        "categoria": "ciencia",
+        "dificuldade": "medio",
+        "pergunta": "Maior planeta do sistema solar?",
+        "opcoes": [
+            "Terra",
+            "Marte",
+            "Júpiter",
+            "Saturno"
+        ],
+        "resposta": "Júpiter",
+        "dica": "Gigante gasoso",
+        "tempo": 12,
+        "pontos": 8
+    },
+    {
+        "id": 23,
+        "categoria": "historia",
+        "dificuldade": "medio",
+        "pergunta": "Independência do Brasil?",
+        "opcoes": [
+            "1822",
+            "1808",
+            "1889",
+            "1810"
+        ],
+        "resposta": "1822",
+        "dica": "Dia 7 de setembro",
+        "tempo": 15,
+        "pontos": 8
+    },
+    {
+        "id": 24,
+        "categoria": "geografia",
+        "dificuldade": "medio",
+        "pergunta": "País com mais ilhas?",
+        "opcoes": [
+            "Noruega",
+            "Filipinas",
+            "Indonésia",
+            "Japão"
+        ],
+        "resposta": "Suécia",
+        "dica": "País europeu",
+        "tempo": 15,
+        "pontos": 8
+    },
+    {
+        "id": 25,
+        "categoria": "tecnologia",
+        "dificuldade": "medio",
+        "pergunta": "CSS é usado para?",
+        "opcoes": [
+            "Backend",
+            "Estilizar sites",
+            "Banco",
+            "IA"
+        ],
+        "resposta": "Estilizar sites",
+        "dica": "Front-end",
+        "tempo": 12,
+        "pontos": 8
+    },
+    {
+        "id": 26,
+        "categoria": "ciencia",
+        "dificuldade": "dificil",
+        "pergunta": "Número de planetas no sistema solar?",
+        "opcoes": [
+            "7",
+            "8",
+            "9",
+            "10"
+        ],
+        "resposta": "8",
+        "dica": "Depois de Plutão",
+        "tempo": 10,
+        "pontos": 15
+    },
+    {
+        "id": 27,
+        "categoria": "matematica",
+        "dificuldade": "dificil",
+        "pergunta": "Integral de x dx?",
+        "opcoes": [
+            "x²/2",
+            "x³/3",
+            "2x",
+            "1/x"
+        ],
+        "resposta": "x²/2",
+        "dica": "Função básica",
+        "tempo": 10,
+        "pontos": 15
+    },
+    {
+        "id": 28,
+        "categoria": "tecnologia",
+        "dificuldade": "dificil",
+        "pergunta": "O que é Git?",
+        "opcoes": [
+            "Banco",
+            "Controle de versão",
+            "Linguagem",
+            "Framework"
+        ],
+        "resposta": "Controle de versão",
+        "dica": "Ferramenta essencial para dev",
+        "tempo": 12,
+        "pontos": 15
+    },
+    {
+        "id": 29,
+        "categoria": "historia",
+        "dificuldade": "dificil",
+        "pergunta": "Fim da Segunda Guerra?",
+        "opcoes": [
+            "1945",
+            "1939",
+            "1950",
+            "1940"
+        ],
+        "resposta": "1945",
+        "dica": "Europa em ruínas",
+        "tempo": 15,
+        "pontos": 15
+    },
+    {
+        "id": 30,
+        "categoria": "geografia",
+        "dificuldade": "dificil",
+        "pergunta": "Maior ilha do mundo?",
+        "opcoes": [
+            "Groenlândia",
+            "Madagáscar",
+            "Sumatra",
+            "Borneo"
+        ],
+        "resposta": "Groenlândia",
+        "dica": "Entre Canadá e Atlântico",
+        "tempo": 12,
+        "pontos": 15
+    },
+    {
+        "id": 31,
+        "categoria": "matematica",
+        "dificuldade": "facil",
+        "pergunta": "10-4=?",
+        "opcoes": [
+            "4",
+            "5",
+            "6",
+            "7"
+        ],
+        "resposta": "6",
+        "dica": "Menos que 7",
+        "tempo": 10,
+        "pontos": 5
+    },
+    {
+        "id": 32,
+        "categoria": "ciencia",
+        "dificuldade": "facil",
+        "pergunta": "Gas essencial para respiração?",
+        "opcoes": [
+            "O2",
+            "CO2",
+            "H2O",
+            "N2"
+        ],
+        "resposta": "O2",
+        "dica": "Oxigênio",
+        "tempo": 12,
+        "pontos": 5
+    },
+    {
+        "id": 33,
+        "categoria": "geografia",
+        "dificuldade": "facil",
+        "pergunta": "Capital da França?",
+        "opcoes": [
+            "Paris",
+            "Londres",
+            "Berlim",
+            "Madri"
+        ],
+        "resposta": "Paris",
+        "dica": "Cidade luz",
+        "tempo": 15,
+        "pontos": 5
+    },
+    {
+        "id": 34,
+        "categoria": "historia",
+        "dificuldade": "facil",
+        "pergunta": "Ano da Revolução Francesa?",
+        "opcoes": [
+            "1789",
+            "1776",
+            "1800",
+            "1799"
+        ],
+        "resposta": "1789",
+        "dica": "Fim do Antigo Regime",
+        "tempo": 15,
+        "pontos": 5
+    },
+    {
+        "id": 35,
+        "categoria": "tecnologia",
+        "dificuldade": "facil",
+        "pergunta": "HTML é?",
+        "opcoes": [
+            "Linguagem",
+            "Banco",
+            "Sistema",
+            "Rede"
+        ],
+        "resposta": "Linguagem",
+        "dica": "Sites web",
+        "tempo": 10,
+        "pontos": 5
+    },
+    {
+        "id": 36,
+        "categoria": "matematica",
+        "dificuldade": "medio",
+        "pergunta": "√81=?",
+        "opcoes": [
+            "7",
+            "8",
+            "9",
+            "10"
+        ],
+        "resposta": "9",
+        "dica": "Quadrado perfeito",
+        "tempo": 10,
+        "pontos": 8
+    },
+    {
+        "id": 37,
+        "categoria": "ciencia",
+        "dificuldade": "medio",
+        "pergunta": "Gas nobre mais leve?",
+        "opcoes": [
+            "Hélio",
+            "Neon",
+            "Argônio",
+            "Xenônio"
+        ],
+        "resposta": "Hélio",
+        "dica": "Balões",
+        "tempo": 12,
+        "pontos": 8
+    },
+    {
+        "id": 38,
+        "categoria": "historia",
+        "dificuldade": "medio",
+        "pergunta": "Fim da Guerra Fria?",
+        "opcoes": [
+            "1989",
+            "1991",
+            "1995",
+            "1985"
+        ],
+        "resposta": "1991",
+        "dica": "Queda do muro de Berlim",
+        "tempo": 15,
+        "pontos": 8
+    },
+    {
+        "id": 39,
+        "categoria": "geografia",
+        "dificuldade": "medio",
+        "pergunta": "Montanha mais alta?",
+        "opcoes": [
+            "Everest",
+            "K2",
+            "Kangchenjunga",
+            "Lhotse"
+        ],
+        "resposta": "Everest",
+        "dica": "Himalaia",
+        "tempo": 15,
+        "pontos": 8
+    },
+    {
+        "id": 40,
+        "categoria": "tecnologia",
+        "dificuldade": "medio",
+        "pergunta": "JS é usado para?",
+        "opcoes": [
+            "Backend",
+            "Estilizar",
+            "Programar",
+            "IA"
+        ],
+        "resposta": "Programar",
+        "dica": "Front-end",
+        "tempo": 12,
+        "pontos": 8
+    },
+    {
+        "id": 41,
+        "categoria": "ciencia",
+        "dificuldade": "dificil",
+        "pergunta": "Elemento químico ouro?",
+        "opcoes": [
+            "Au",
+            "Ag",
+            "Fe",
+            "O"
+        ],
+        "resposta": "Au",
+        "dica": "Símbolo químico",
+        "tempo": 10,
+        "pontos": 15
+    },
+    {
+        "id": 42,
+        "categoria": "matematica",
+        "dificuldade": "dificil",
+        "pergunta": "2³=?",
+        "opcoes": [
+            "6",
+            "7",
+            "8",
+            "9"
+        ],
+        "resposta": "8",
+        "dica": "Potência",
+        "tempo": 10,
+        "pontos": 15
+    },
+    {
+        "id": 43,
+        "categoria": "tecnologia",
+        "dificuldade": "dificil",
+        "pergunta": "Criador do Python?",
+        "opcoes": [
+            "Guido",
+            "Linus",
+            "Jobs",
+            "Torvalds"
+        ],
+        "resposta": "Guido",
+        "dica": "Van Rossum",
+        "tempo": 12,
+        "pontos": 15
+    },
+    {
+        "id": 44,
+        "categoria": "historia",
+        "dificuldade": "dificil",
+        "pergunta": "Queda do muro de Berlim?",
+        "opcoes": [
+            "1989",
+            "1990",
+            "1991",
+            "1988"
+        ],
+        "resposta": "1989",
+        "dica": "Fim da divisão",
+        "tempo": 15,
+        "pontos": 15
+    },
+    {
+        "id": 45,
+        "categoria": "geografia",
+        "dificuldade": "dificil",
+        "pergunta": "País maior em extensão?",
+        "opcoes": [
+            "China",
+            "Rússia",
+            "Canadá",
+            "EUA"
+        ],
+        "resposta": "Rússia",
+        "dica": "Maior do mundo",
+        "tempo": 12,
+        "pontos": 15
+    },
+    {
+        "id": 46,
+        "categoria": "matematica",
+        "dificuldade": "facil",
+        "pergunta": "3+4=?",
+        "opcoes": [
+            "6",
+            "7",
+            "8",
+            "9"
+        ],
+        "resposta": "7",
+        "dica": "Menor que 8",
+        "tempo": 10,
+        "pontos": 5
+    },
+    {
+        "id": 47,
+        "categoria": "ciencia",
+        "dificuldade": "facil",
+        "pergunta": "Sol é um?",
+        "opcoes": [
+            "Planeta",
+            "Estrela",
+            "Cometa",
+            "Lua"
+        ],
+        "resposta": "Estrela",
+        "dica": "Brilha no céu",
+        "tempo": 12,
+        "pontos": 5
+    },
+    {
+        "id": 48,
+        "categoria": "geografia",
+        "dificuldade": "facil",
+        "pergunta": "Capital da Itália?",
+        "opcoes": [
+            "Roma",
+            "Paris",
+            "Londres",
+            "Berlim"
+        ],
+        "resposta": "Roma",
+        "dica": "Cidade eterna",
+        "tempo": 15,
+        "pontos": 5
+    },
+    {
+        "id": 49,
+        "categoria": "historia",
+        "dificuldade": "medio",
+        "pergunta": "Ano da Revolução Industrial?",
+        "opcoes": [
+            "1750",
+            "1800",
+            "1700",
+            "1850"
+        ],
+        "resposta": "1750",
+        "dica": "Início do século XVIII",
+        "tempo": 15,
+        "pontos": 8
+    },
+    {
+        "id": 50,
+        "categoria": "tecnologia",
+        "dificuldade": "medio",
+        "pergunta": "SQL serve para?",
+        "opcoes": [
+            "Programar",
+            "Gerenciar banco de dados",
+            "Frontend",
+            "IA"
+        ],
+        "resposta": "Gerenciar banco de dados",
+        "dica": "Base de dados",
+        "tempo": 12,
+        "pontos": 8
+    },
+    {
+        "id": 51,
+        "categoria": "matematica",
+        "dificuldade": "medio",
+        "pergunta": "15-7=?",
+        "opcoes": [
+            "7",
+            "8",
+            "9",
+            "10"
+        ],
+        "resposta": "8",
+        "dica": "Menos que 9",
+        "tempo": 10,
+        "pontos": 8
+    },
+    {
+        "id": 52,
+        "categoria": "ciencia",
+        "dificuldade": "medio",
+        "pergunta": "Maior satélite da Terra?",
+        "opcoes": [
+            "Lua",
+            "Io",
+            "Europa",
+            "Ganimedes"
+        ],
+        "resposta": "Lua",
+        "dica": "Visível à noite",
+        "tempo": 12,
+        "pontos": 8
+    },
+    {
+        "id": 53,
+        "categoria": "historia",
+        "dificuldade": "medio",
+        "pergunta": "Primeiro presidente dos EUA?",
+        "opcoes": [
+            "Lincoln",
+            "Washington",
+            "Jefferson",
+            "Adams"
+        ],
+        "resposta": "Washington",
+        "dica": "Pai da pátria",
+        "tempo": 15,
+        "pontos": 8
+    },
+    {
+        "id": 54,
+        "categoria": "geografia",
+        "dificuldade": "medio",
+        "pergunta": "Rio Amazonas está em qual continente?",
+        "opcoes": [
+            "África",
+            "América do Sul",
+            "Ásia",
+            "Europa"
+        ],
+        "resposta": "América do Sul",
+        "dica": "Maior rio",
+        "tempo": 15,
+        "pontos": 8
+    },
+    {
+        "id": 55,
+        "categoria": "tecnologia",
+        "dificuldade": "medio",
+        "pergunta": "API significa?",
+        "opcoes": [
+            "Interface de Programação",
+            "Banco",
+            "Hardware",
+            "Rede"
+        ],
+        "resposta": "Interface de Programação",
+        "dica": "Comunicação entre softwares",
+        "tempo": 12,
+        "pontos": 8
+    },
+    {
+        "id": 56,
+        "categoria": "ciencia",
+        "dificuldade": "dificil",
+        "pergunta": "Força da gravidade na Terra?",
+        "opcoes": [
+            "9,8 m/s²",
+            "10 m/s²",
+            "8 m/s²",
+            "12 m/s²"
+        ],
+        "resposta": "9,8 m/s²",
+        "dica": "Aceleração padrão",
+        "tempo": 10,
+        "pontos": 15
+    },
+    {
+        "id": 57,
+        "categoria": "matematica",
+        "dificuldade": "dificil",
+        "pergunta": "log10 1000=?",
+        "opcoes": [
+            "2",
+            "3",
+            "10",
+            "100"
+        ],
+        "resposta": "3",
+        "dica": "Potência de 10",
+        "tempo": 10,
+        "pontos": 15
+    },
+    {
+        "id": 58,
+        "categoria": "tecnologia",
+        "dificuldade": "dificil",
+        "pergunta": "Criador do C?",
+        "opcoes": [
+            "Dennis Ritchie",
+            "Bjarne Stroustrup",
+            "Linus",
+            "Jobs"
+        ],
+        "resposta": "Dennis Ritchie",
+        "dica": "Unix",
+        "tempo": 12,
+        "pontos": 15
+    },
+    {
+        "id": 59,
+        "categoria": "historia",
+        "dificuldade": "dificil",
+        "pergunta": "Independência da Índia?",
+        "opcoes": [
+            "1947",
+            "1945",
+            "1950",
+            "1939"
+        ],
+        "resposta": "1947",
+        "dica": "Gandhi",
+        "tempo": 15,
+        "pontos": 15
+    },
+    {
+        "id": 60,
+        "categoria": "geografia",
+        "dificuldade": "dificil",
+        "pergunta": "Monte Everest fica em qual país?",
+        "opcoes": [
+            "Nepal",
+            "China",
+            "Índia",
+            "Tibete"
+        ],
+        "resposta": "Nepal",
+        "dica": "Himalaia",
+        "tempo": 12,
+        "pontos": 15
     }
 ]

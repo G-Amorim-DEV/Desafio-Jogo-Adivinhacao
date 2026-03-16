@@ -1,24 +1,15 @@
-from games.quiz import JogoQuiz
-from games.forca import JogoForca
-from games.memoria import JogoMemoria
-from games.sequencia import JogoSequencia
-from games.matematica import JogoMatematica
-
+from core.game_loader import GameLoader
 
 class GameManager:
+    """Gerencia criação e listagem de jogos"""
 
     def __init__(self):
+        self.loader = GameLoader()
 
-        self.jogos = {
-            "Quiz": JogoQuiz,
-            "Forca": JogoForca,
-            "Memória": JogoMemoria,
-            "Sequência": JogoSequencia,
-            "Matemática": JogoMatematica
-        }
+    def listar_jogos(self):
+        """Retorna os nomes dos jogos disponíveis"""
+        return list(self.loader.jogos.keys())
 
-    def listar(self):
-        return list(self.jogos.keys())
-
-    def criar(self, nome, jogador):
-        return self.jogos[nome](jogador)
+    def criar_jogo(self, nome, jogador):
+        """Cria uma instância do jogo com o jogador"""
+        return self.loader.criar(nome, jogador)

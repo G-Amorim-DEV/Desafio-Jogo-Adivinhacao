@@ -30,5 +30,237 @@
   {
     "texto": "A Terra tem duas luas.",
     "resposta": "falso"
+  },
+  {
+    "texto": "O oxigênio é essencial para a respiração humana.",
+    "resposta": "verdadeiro"
+  },
+  {
+    "texto": "O Monte Everest está na África.",
+    "resposta": "falso"
+  },
+  {
+    "texto": "A Lua é um satélite natural da Terra.",
+    "resposta": "verdadeiro"
+  },
+  {
+    "texto": "O Brasil é o maior país do mundo.",
+    "resposta": "falso"
+  },
+  {
+    "texto": "A gravidade mantém a Terra em órbita ao redor do Sol.",
+    "resposta": "verdadeiro"
+  },
+  {
+    "texto": "Saturno é o planeta mais próximo do Sol.",
+    "resposta": "falso"
+  },
+  {
+    "texto": "Água é composta por hidrogênio e oxigênio.",
+    "resposta": "verdadeiro"
+  },
+  {
+    "texto": "A eletricidade não pode ser convertida em luz.",
+    "resposta": "falso"
+  },
+  {
+    "texto": "O cérebro humano é responsável pelo pensamento e memória.",
+    "resposta": "verdadeiro"
+  },
+  {
+    "texto": "O DNA é encontrado apenas em plantas.",
+    "resposta": "falso"
+  },
+  {
+    "texto": "A velocidade da luz é maior que a do som.",
+    "resposta": "verdadeiro"
+  },
+  {
+    "texto": "O fogo é frio.",
+    "resposta": "falso"
+  },
+  {
+    "texto": "Marte é conhecido como planeta vermelho.",
+    "resposta": "verdadeiro"
+  },
+  {
+    "texto": "O ouro é mais leve que a água.",
+    "resposta": "falso"
+  },
+  {
+    "texto": "A Amazonia é a maior floresta tropical do mundo.",
+    "resposta": "verdadeiro"
+  },
+  {
+    "texto": "O gelo é mais quente que a água.",
+    "resposta": "falso"
+  },
+  {
+    "texto": "A Terra gira em torno do Sol.",
+    "resposta": "verdadeiro"
+  },
+  {
+    "texto": "Plutão é atualmente considerado um planeta principal.",
+    "resposta": "falso"
+  },
+  {
+    "texto": "O ferro é um metal.",
+    "resposta": "verdadeiro"
+  },
+  {
+    "texto": "O som se propaga mais rápido que a luz.",
+    "resposta": "falso"
+  },
+  {
+    "texto": "O café vem da planta Coffea.",
+    "resposta": "verdadeiro"
+  },
+  {
+    "texto": "O Japão está na América do Sul.",
+    "resposta": "falso"
+  },
+  {
+    "texto": "A Lua influencia as marés da Terra.",
+    "resposta": "verdadeiro"
+  },
+  {
+    "texto": "O sol nasce no oeste.",
+    "resposta": "falso"
+  },
+  {
+    "texto": "O corpo humano possui 206 ossos.",
+    "resposta": "verdadeiro"
+  },
+  {
+    "texto": "A gravidade só existe na Terra.",
+    "resposta": "falso"
+  },
+  {
+    "texto": "A velocidade média de um carro depende do tempo e distância.",
+    "resposta": "verdadeiro"
+  },
+  {
+    "texto": "O sangue humano é azul.",
+    "resposta": "falso"
+  },
+  {
+    "texto": "A água cobre mais de 70% da superfície da Terra.",
+    "resposta": "verdadeiro"
+  },
+  {
+    "texto": "O Brasil tem 52 estados.",
+    "resposta": "falso"
+  },
+  {
+    "texto": "A eletricidade é um fluxo de elétrons.",
+    "resposta": "verdadeiro"
+  },
+  {
+    "texto": "A Lua é feita de queijo.",
+    "resposta": "falso"
+  },
+  {
+    "texto": "A fotossíntese ocorre nas plantas.",
+    "resposta": "verdadeiro"
+  },
+  {
+    "texto": "O número zero é negativo.",
+    "resposta": "falso"
+  },
+  {
+    "texto": "O universo está em constante expansão.",
+    "resposta": "verdadeiro"
+  },
+  {
+    "texto": "O sol é menor que a Terra.",
+    "resposta": "falso"
+  },
+  {
+    "texto": "Os seres humanos possuem cinco sentidos principais.",
+    "resposta": "verdadeiro"
+  },
+  {
+    "texto": "O vento é feito de água.",
+    "resposta": "falso"
+  },
+  {
+    "texto": "O coração bombeia sangue por todo o corpo.",
+    "resposta": "verdadeiro"
+  },
+  {
+    "texto": "O carvão é um líquido.",
+    "resposta": "falso"
+  },
+  {
+    "texto": "O diamante é uma forma cristalina de carbono.",
+    "resposta": "verdadeiro"
+  },
+  {
+    "texto": "Os peixes respiram ar como os humanos.",
+    "resposta": "falso"
+  },
+  {
+    "texto": "A luz solar é essencial para a vida na Terra.",
+    "resposta": "verdadeiro"
+  },
+  {
+    "texto": "O leite vem das árvores.",
+    "resposta": "falso"
+  },
+  {
+    "texto": "O planeta Terra tem formato aproximadamente esférico.",
+    "resposta": "verdadeiro"
+  },
+  {
+    "texto": "O tempo passa mais rápido à noite.",
+    "resposta": "falso"
+  },
+  {
+    "texto": "O cobre é um bom condutor de eletricidade.",
+    "resposta": "verdadeiro"
+  },
+  {
+    "texto": "A gravidade pode ser desligada.",
+    "resposta": "falso"
+  },
+  {
+    "texto": "O cérebro humano contém bilhões de neurônios.",
+    "resposta": "verdadeiro"
+  },
+  {
+    "texto": "A água salgada é doce.",
+    "resposta": "falso"
+  },
+  {
+    "texto": "O petróleo é um recurso natural não renovável.",
+    "resposta": "verdadeiro"
+  },
+  {
+    "texto": "A Terra é plana.",
+    "resposta": "falso"
+  },
+  {
+    "texto": "Os gatos são mamíferos.",
+    "resposta": "verdadeiro"
+  },
+  {
+    "texto": "O fogo é um sólido.",
+    "resposta": "falso"
+  },
+  {
+    "texto": "O vento pode ser medido com anemômetro.",
+    "resposta": "verdadeiro"
+  },
+  {
+    "texto": "O açúcar é salgado.",
+    "resposta": "falso"
+  },
+  {
+    "texto": "As plantas produzem oxigênio através da fotossíntese.",
+    "resposta": "verdadeiro"
+  },
+  {
+    "texto": "A Lua reflete a luz do Sol.",
+    "resposta": "verdadeiro"
   }
 ]
