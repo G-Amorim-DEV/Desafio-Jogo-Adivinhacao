@@ -7,7 +7,7 @@ from games.verdadeiro_falso import Game as JogoVF
 from games.scramble import Game as JogoScramble
 from games.sequencia import Game as JogoSequencia
 
-class GameLoader:
+class GameAdapter:
     """Carrega e instancia jogos"""
 
     def __init__(self):

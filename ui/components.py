@@ -9,9 +9,9 @@ def game_card(
     padding: str = "20px",
     borda: str = "15px",
     margin: str = "10px"
-) -> None:
+) -> bool:
     """
-    Renderiza um card estilizado para um jogo.
+    Renderiza um card estilizado para um jogo como um botão clicável.
 
     Args:
         nome (str): Nome do jogo a exibir.
@@ -22,17 +22,17 @@ def game_card(
         padding (str, optional): Espaçamento interno. Defaults to "20px".
         borda (str, optional): Raio da borda. Defaults to "15px".
         margin (str, optional): Espaçamento externo. Defaults to "10px".
+
+    Returns:
+        bool: True se o botão foi clicado, False caso contrário.
     """
-    st.markdown(f"""
-        <div style="
-            padding:{padding};
-            border-radius:{borda};
-            background:{cor_fundo};
-            margin-bottom:{margin};
-            text-align:center;
-            font-size:{font_size};
-            color:{cor_texto};
-        ">
-            {emoji} {nome}
-        </div>
-    """, unsafe_allow_html=True)
+    # Usar st.button com label estilizado
+    button_label = f"{emoji} {nome}"
+    
+    # Criar um botão que retorna se foi clicado
+    return st.button(
+        button_label,
+        key=f"btn_{nome}",
+        help=f"Jogar {nome}",
+        use_container_width=True
+    )

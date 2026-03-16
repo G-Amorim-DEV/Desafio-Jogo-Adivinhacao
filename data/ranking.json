@@ -1,0 +1,10 @@
+{
+  "global": {
+    "Guilherme": 10
+  },
+  "jogos": {
+    "Adivinhação": {
+      "Guilherme": 10
+    }
+  }
+}

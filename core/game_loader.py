@@ -29,17 +29,25 @@ class GameLoader:
             except Exception as e:
                 logging.warning(f"Erro carregando {mod.name}: {e}")
 
+        # Adicionar jogos em subpastas que podem não ser encontrados
+        try:
+            import games.forca.jogo_forca as forca_mod
+            if hasattr(forca_mod, "GAME_NAME") and hasattr(forca_mod, "Game"):
+                jogos[forca_mod.GAME_NAME] = forca_mod.Game
+        except Exception as e:
+            logging.warning(f"Erro carregando forca: {e}")
+
         return jogos
 
     def listar(self):
         return list(self.jogos.keys())
 
-    def criar(self, nome):
+    def criar(self, nome, jogador):
 
         if nome not in self.jogos:
             raise ValueError(f"Jogo '{nome}' não encontrado")
 
-        jogo = self.jogos[nome]()
+        jogo = self.jogos[nome](jogador)
 
         if isinstance(jogo, JogoBase):
             return jogo
