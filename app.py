@@ -68,6 +68,27 @@ def multiplayer_ativo(player_manager: PlayerManager) -> bool:
     return st.session_state.get("multiplayer_game_mode", True) and len(get_session_player_ids(player_manager)) > 1
 
 
+def get_multiplayer_turn_mode() -> str:
+    return st.session_state.get("multiplayer_turn_mode", "round")
+
+
+def multiplayer_turn_mode_label() -> str:
+    return {
+        "round": "Um desafio por jogador",
+        "lose": "Troca apenas quando perder",
+    }.get(get_multiplayer_turn_mode(), "Um desafio por jogador")
+
+
+def deve_avancar_turno_apos_resultado(player_manager: PlayerManager, resultado) -> bool:
+    if not multiplayer_ativo(player_manager) or not resultado or not resultado.finalizado:
+        return False
+
+    if get_multiplayer_turn_mode() == "round":
+        return True
+
+    return not resultado.correto
+
+
 def get_game_turn_state(pagina: str, player_manager: PlayerManager):
     chave = f"turnos_{pagina}"
     player_ids = get_session_player_ids(player_manager)
@@ -482,7 +503,22 @@ def render_menu_page(jogos: list[str], player_manager: PlayerManager):
                 value=st.session_state.get("multiplayer_game_mode", True),
                 key="multiplayer_game_mode",
             )
-            st.caption("Quando ativo, os jogos individuais alternam entre os participantes da sessao a cada rodada concluida.")
+            if st.session_state.get("multiplayer_game_mode", True):
+                st.radio(
+                    "Regra de troca de jogador",
+                    options=["round", "lose"],
+                    index=0 if get_multiplayer_turn_mode() == "round" else 1,
+                    format_func=lambda valor: {
+                        "round": "Cada jogador responde um desafio",
+                        "lose": "O jogador continua ate perder",
+                    }[valor],
+                    key="multiplayer_turn_mode",
+                )
+                st.caption(
+                    "No primeiro modo, a vez troca ao final de cada desafio. No segundo, o jogador atual continua jogando ate perder a rodada."
+                )
+            else:
+                st.caption("Ative o multiplayer para alternar jogadores nos desafios individuais.")
 
         with st.container(border=True):
             st.subheader("Acessibilidade")
@@ -510,6 +546,7 @@ def render_menu_page(jogos: list[str], player_manager: PlayerManager):
                 ("Vidas", f"{player_manager.vidas()} / 5"),
                 ("Participantes", str(len(get_session_players(player_manager)))),
                 ("Modo multi", "Ligado" if multiplayer_ativo(player_manager) else "Desligado"),
+                ("Troca de vez", multiplayer_turn_mode_label() if multiplayer_ativo(player_manager) else "Nao se aplica"),
             ],
             "Use este menu para ajustar a sessao e depois volte para Home ou abra qualquer jogo diretamente.",
         )
@@ -925,6 +962,7 @@ else:
                 ("Nivel", str(player.nivel())),
                 ("Vidas", f"{player.vidas()} / 5"),
                 ("Modo", "Multiplayer local" if multiplayer_ativo(player) else "Solo"),
+                ("Troca", multiplayer_turn_mode_label() if multiplayer_ativo(player) else "Nao se aplica"),
                 ("Rodada", str(turno["round"]) if turno else "1"),
                 ("Dicas restantes", str(max(0, controle_partida["max_dicas"] - controle_partida["dicas_usadas"]))),
                 ("Custo da dica", f"-{controle_partida['custo_dica_xp']} XP"),
@@ -998,31 +1036,41 @@ else:
 
         if jogo_perdido:
             st.warning("Suas vidas acabaram nesta rodada.")
-            colunas = st.columns(3 if multiplayer_ativo(player) else 2)
-            col1, col2 = colunas[0], colunas[1]
-            with col1:
-                if st.button("Jogar novamente", use_container_width=True):
-                    player.resetar_vidas()
-                    encerrar_jogo(jogo)
-                    st.session_state.pagina = pagina
-                    st.rerun()
-            with col2:
-                if st.button("Voltar para home", use_container_width=True):
-                    player.resetar_vidas()
-                    encerrar_jogo(jogo)
-                    st.session_state.pagina = "🏠 Home"
-                    st.rerun()
             if multiplayer_ativo(player):
-                with colunas[2]:
-                    if st.button("Passar vez", key=f"passar_vez_{pagina}", use_container_width=True):
+                col1, col2 = st.columns(2)
+                with col1:
+                    if st.button("Voltar para home", use_container_width=True):
+                        player.resetar_vidas()
+                        encerrar_jogo(jogo)
+                        st.session_state.pagina = "🏠 Home"
+                        st.rerun()
+                with col2:
+                    if st.button("Proximo jogador", key=f"passar_vez_{pagina}", use_container_width=True):
                         player.resetar_vidas()
                         encerrar_jogo(jogo)
                         avancar_turno_jogo(pagina, player)
                         st.rerun()
+            else:
+                col1, col2 = st.columns(2)
+                with col1:
+                    if st.button("Jogar novamente", use_container_width=True):
+                        player.resetar_vidas()
+                        encerrar_jogo(jogo)
+                        st.session_state.pagina = pagina
+                        st.rerun()
+                with col2:
+                    if st.button("Voltar para home", use_container_width=True):
+                        player.resetar_vidas()
+                        encerrar_jogo(jogo)
+                        st.session_state.pagina = "🏠 Home"
+                        st.rerun()
 
         resultado_atual = st.session_state.get("ultimo_resultado")
-        if multiplayer_ativo(player) and resultado_atual and resultado_atual.finalizado and resultado_atual.correto:
-            if st.button("Proximo jogador", key=f"proximo_jogador_{pagina}", use_container_width=True):
+        if not jogo_perdido and deve_avancar_turno_apos_resultado(player, resultado_atual):
+            acao_label = "Proximo jogador" if resultado_atual.correto else "Passar a vez"
+            if st.button(acao_label, key=f"proximo_jogador_{pagina}", use_container_width=True):
+                if not resultado_atual.correto:
+                    player.resetar_vidas()
                 encerrar_jogo(jogo)
                 avancar_turno_jogo(pagina, player)
                 st.rerun()
