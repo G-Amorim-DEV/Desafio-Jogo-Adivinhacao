@@ -164,6 +164,10 @@ def sidebar(jogos: List[str], dados: dict, player_manager) -> None:
         st.session_state.pagina = "🎲 Circuito Aleatorio"
         st.rerun()
 
+    if st.sidebar.button("Como usar", use_container_width=True):
+        st.session_state.pagina = "📘 Como Usar"
+        st.rerun()
+
     if st.sidebar.button("Mudar nome", use_container_width=True):
         st.session_state.mudar_nome = True
         st.rerun()

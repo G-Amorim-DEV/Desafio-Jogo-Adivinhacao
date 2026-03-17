@@ -44,7 +44,6 @@ def game_card(info: GameInfo, button_key: str) -> bool:
         return st.button(
             "Abrir desafio",
             key=button_key,
-            help=info.descricao,
             use_container_width=True,
         )
 
@@ -127,6 +126,33 @@ def render_championship_row(posicao: int, nome: str, score: int, jogo: str = "")
             </div>
             <div class="championship-score">{score} pts</div>
         </div>
+        """,
+        unsafe_allow_html=True,
+    )
+
+
+def render_step_guide(titulo: str, passos: list[tuple[str, str]]) -> None:
+    itens = "".join(
+        f"""
+        <div class="guide-step">
+            <div class="guide-step-index">{indice}</div>
+            <div class="guide-step-copy">
+                <strong>{titulo_passo}</strong>
+                <p>{descricao}</p>
+            </div>
+        </div>
+        """
+        for indice, (titulo_passo, descricao) in enumerate(passos, start=1)
+    )
+    st.markdown(
+        f"""
+        <section class="guide-shell">
+            <div class="guide-kicker">Manual rapido</div>
+            <h3>{titulo}</h3>
+            <div class="guide-list">
+                {itens}
+            </div>
+        </section>
         """,
         unsafe_allow_html=True,
     )

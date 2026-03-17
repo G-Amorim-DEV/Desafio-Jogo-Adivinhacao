@@ -13,11 +13,13 @@ from ui.components import (
     render_page_hero,
     render_side_panel,
     render_spotlight_panel,
+    render_step_guide,
 )
 from ui.layout import sidebar
 from ui.theme import aplicar_tema
 
 CIRCUIT_PAGE = "🎲 Circuito Aleatorio"
+GUIDE_PAGE = "📘 Como Usar"
 
 
 def carregar_infos_jogos(manager: GameManager, player: PlayerManager) -> dict:
@@ -171,6 +173,8 @@ def montar_resumo_acessivel(pagina: str, player: PlayerManager, jogos: list[str]
         return base + "Tela de ranking com classificacao de jogadores por jogo ou no placar global."
     if pagina == CIRCUIT_PAGE:
         return base + "Tela de circuito aleatorio com rotacao entre os participantes da sessao."
+    if pagina == GUIDE_PAGE:
+        return base + "Tela de ajuda com manual passo a passo, orientacoes de acessibilidade e fluxo recomendado para usar o arcade."
     return base + f"Voce esta dentro do jogo {pagina}. Use o painel lateral para consultar vidas, dicas e progresso."
 
 
@@ -487,6 +491,29 @@ if pagina == "🏠 Home":
             "Use o circuito aleatorio para transformar todo o catalogo em uma partida unica com rotacao entre perfis.",
         )
 
+    guia_home, acoes_rapidas = st.columns([1.35, 1])
+    with guia_home:
+        render_step_guide(
+            "Comece em menos de 2 minutos",
+            [
+                ("Crie ou selecione um perfil", "Use a sidebar para definir o jogador ativo, configurar dificuldade e montar a sessao multiplayer."),
+                ("Escolha um modo de jogo", "Abra um desafio individual, experimente o Code Lab ou rode o Circuito Aleatorio com todos os jogos."),
+                ("Use vidas, dicas e feedback", "Cada rodada mostra progresso, dicas restantes e mensagens de acerto ou erro para orientar a partida."),
+                ("Acompanhe o ranking", "Compare pontuacoes no ranking global ou por jogo para medir evolucao individual e entre amigos."),
+            ],
+        )
+    with acoes_rapidas:
+        render_side_panel(
+            "Fluxo Recomendado",
+            [
+                ("1", "Criar perfil"),
+                ("2", "Escolher dificuldade"),
+                ("3", "Montar sessao"),
+                ("4", "Abrir jogo"),
+            ],
+            "Se quiser um tour completo, abra a pagina Como Usar no menu lateral.",
+        )
+
     st.markdown("<div class='home-grid-note'>Modos disponiveis no arcade</div>", unsafe_allow_html=True)
     colunas = st.columns(3)
 
@@ -551,6 +578,59 @@ elif pagina == "🏆 Ranking":
                 ("Melhor marca", melhor_score),
             ],
             "O ranking guarda a melhor pontuacao registrada por jogador em cada jogo e soma isso no quadro global.",
+        )
+
+elif pagina == GUIDE_PAGE:
+    render_page_hero(
+        "Como Usar o Arcade Cognitivo",
+        "Um manual rapido para aprender o fluxo do app, entender os modos disponiveis e aproveitar melhor os recursos de acessibilidade.",
+        "Onboarding",
+    )
+
+    guia_principal, guia_lateral = st.columns([1.45, 1])
+    with guia_principal:
+        render_step_guide(
+            "Passo a passo do app",
+            [
+                ("Crie seu perfil local", "Ao abrir o app pela primeira vez, informe um nome para criar o perfil principal e liberar o catalogo."),
+                ("Ajuste a dificuldade", "Na sidebar, escolha entre modo automatico ou manual para controlar o nivel dos desafios."),
+                ("Monte a sessao multiplayer", "Defina quantos jogadores participam e selecione os perfis que entram na rodada local."),
+                ("Escolha uma experiencia", "Na Home, abra um jogo especifico, va para o ranking ou inicie o Circuito Aleatorio."),
+                ("Responda e acompanhe o feedback", "Cada jogo informa regras, mostra dicas disponiveis e permite tentar novamente quando o erro nao encerra a rodada."),
+                ("Use os recursos de acessibilidade", "Ative alto contraste, fonte ampliada, reducao de efeitos e leitura automatica quando necessario."),
+            ],
+        )
+
+        render_step_guide(
+            "Como funciona cada area",
+            [
+                ("Home", "Hub principal com cards dos jogos, resumo da sessao e atalhos para ranking e circuito."),
+                ("Jogos individuais", "Tela com introducao, input apropriado para cada desafio, dicas, vidas e feedback da rodada."),
+                ("Circuito Aleatorio", "Modo maratona que alterna jogadores e sorteia jogos do catalogo em sequencia."),
+                ("Ranking", "Painel de campeonato com classificacao global e filtros por jogo."),
+                ("Code Lab", "Trilha para iniciantes em programacao com desafios por linguagem, conceito e dificuldade."),
+            ],
+        )
+    with guia_lateral:
+        render_side_panel(
+            "Checklist de Inicio",
+            [
+                ("Perfil ativo", player.dados()["nome"]),
+                ("Jogadores na sessao", str(len(get_session_players(player)))),
+                ("Dificuldade", resumo_dificuldade(player)),
+                ("Pagina atual", "Manual do usuario"),
+            ],
+            "Se o objetivo for aprender jogando, comece pelo Code Lab e depois avance para o Circuito Aleatorio.",
+        )
+
+        render_step_guide(
+            "Boas praticas de uso",
+            [
+                ("Jogue em blocos curtos", "Os desafios foram pensados para sessoes rapidas e repetiveis."),
+                ("Use dica com estrategia", "Dicas ajudam a progredir, mas consomem uma pequena quantidade de XP."),
+                ("Reveja o ranking", "Acompanhar pontuacao ajuda a medir evolucao e criar metas simples."),
+                ("Ative a leitura de tela", "Para usuarios com baixa visao, a leitura automatica ajuda a navegar pelo conteudo atual."),
+            ],
         )
 
 elif pagina == CIRCUIT_PAGE:

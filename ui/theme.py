@@ -10,8 +10,9 @@ def aplicar_tema() -> None:
     heading_size = "3rem" if large_text else "2.6rem"
     subheading_size = "2rem" if large_text else "1.8rem"
     button_text = "#f8fafc"
-    button_bg = "linear-gradient(135deg, #1d4ed8 0%, #0f766e 100%)" if not high_contrast else "linear-gradient(135deg, #0b0f14 0%, #0b0f14 100%)"
-    button_border = "#60a5fa" if not high_contrast else "#ffffff"
+    button_bg = "#162235" if not high_contrast else "#0b0f14"
+    button_hover_bg = "#1b2a40" if not high_contrast else "#111827"
+    button_border = "#334155" if not high_contrast else "#ffffff"
     page_bg = "linear-gradient(180deg, #06080d 0%, #0b1220 100%)" if high_contrast else "linear-gradient(180deg, #0b1220 0%, #111827 100%)"
     sidebar_bg = "linear-gradient(180deg, #08101c 0%, #0f172a 100%)"
     focus_color = "#ffffff" if high_contrast else "#7dd3fc"
@@ -109,34 +110,87 @@ def aplicar_tema() -> None:
         }}
 
         .stButton > button {{
+            appearance: none;
+            -webkit-appearance: none;
+            width: 100%;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
             min-height: 2.9rem;
             border-radius: 16px;
             border: 1px solid {button_border};
             background: {button_bg};
+            background-color: {button_bg};
             color: {button_text};
             font-weight: 700;
             font-size: 1rem;
             letter-spacing: 0.02em;
-            transition: box-shadow 140ms ease, filter 140ms ease, border-color 140ms ease;
+            box-shadow: none;
+            outline: none !important;
+            text-align: center;
+            transition: background-color 140ms ease, border-color 140ms ease, color 140ms ease;
         }}
 
         .stButton > button p,
         .stButton > button span,
         .stButton > button div {{
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
             color: {button_text} !important;
+            background: transparent !important;
+            background-color: transparent !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            line-height: 1.2 !important;
+        }}
+
+        .stButton > button *,
+        .stButton > button [data-testid="stMarkdownContainer"],
+        .stButton > button [data-testid="stMarkdownContainer"] p,
+        .stButton > button .st-emotion-cache-1lads1q,
+        .stButton > button .st-emotion-cache-1kl7f1u,
+        .stButton > button .st-emotion-cache-1xkyjt8 {{
+            color: {button_text} !important;
+            background: transparent !important;
+            background-color: transparent !important;
+            box-shadow: none !important;
+            text-shadow: none !important;
+            border: 0 !important;
+            opacity: 1 !important;
         }}
 
         .stButton > button:hover {{
             border-color: var(--focus);
-            filter: brightness(1.02);
+            filter: none;
             transform: none;
-            box-shadow: 0 8px 20px rgba(15, 23, 42, 0.22);
+            background: {button_hover_bg};
+            background-color: {button_hover_bg};
+            box-shadow: none !important;
+        }}
+
+        .stButton > button:hover *,
+        .stButton > button:hover [data-testid="stMarkdownContainer"],
+        .stButton > button:hover [data-testid="stMarkdownContainer"] p {{
+            color: {button_text} !important;
+            background: transparent !important;
+            background-color: transparent !important;
+            box-shadow: none !important;
         }}
 
         .stButton > button:active {{
             transform: none;
-            filter: brightness(0.99);
-            box-shadow: 0 4px 12px rgba(15, 23, 42, 0.18);
+            filter: none;
+            background: {button_hover_bg};
+            background-color: {button_hover_bg};
+            box-shadow: none !important;
+        }}
+
+        .stButton > button::before,
+        .stButton > button::after {{
+            display: none !important;
+            box-shadow: none !important;
+            background: transparent !important;
         }}
 
         .stButton > button:disabled {{
@@ -347,7 +401,8 @@ def aplicar_tema() -> None:
 
         .spotlight-panel,
         .side-panel-shell,
-        .championship-row {{
+        .championship-row,
+        .guide-shell {{
             border: 1px solid var(--border);
             background: linear-gradient(180deg, rgba(15, 23, 42, 0.98) 0%, rgba(15, 23, 42, 0.92) 100%);
             box-shadow: var(--shadow);
@@ -370,6 +425,14 @@ def aplicar_tema() -> None:
 
         .spotlight-kicker {{
             color: #e2e8f0;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            font-size: 0.78rem;
+            font-weight: 700;
+        }}
+
+        .guide-kicker {{
+            color: #c7d2fe;
             text-transform: uppercase;
             letter-spacing: 0.08em;
             font-size: 0.78rem;
@@ -431,6 +494,57 @@ def aplicar_tema() -> None:
             background: rgba(51, 65, 85, 0.52);
             color: #e2e8f0;
             font-size: 0.92rem;
+        }}
+
+        .guide-shell {{
+            padding: 1.1rem 1.15rem;
+            border-radius: 24px;
+            margin-bottom: 1rem;
+        }}
+
+        .guide-shell h3 {{
+            margin: 0.7rem 0 1rem;
+            color: var(--ink);
+            font-size: 1.2rem;
+        }}
+
+        .guide-list {{
+            display: grid;
+            gap: 0.85rem;
+        }}
+
+        .guide-step {{
+            display: grid;
+            grid-template-columns: 2.4rem 1fr;
+            gap: 0.8rem;
+            align-items: start;
+            padding: 0.9rem 0.95rem;
+            border-radius: 18px;
+            border: 1px solid rgba(148, 163, 184, 0.14);
+            background: rgba(30, 41, 59, 0.42);
+        }}
+
+        .guide-step-index {{
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 2.4rem;
+            height: 2.4rem;
+            border-radius: 999px;
+            background: linear-gradient(135deg, #2563eb 0%, #0f766e 100%);
+            color: #f8fafc;
+            font-weight: 800;
+        }}
+
+        .guide-step-copy strong {{
+            display: block;
+            color: var(--ink);
+            margin-bottom: 0.2rem;
+        }}
+
+        .guide-step-copy p {{
+            margin: 0;
+            color: var(--muted);
         }}
 
         .championship-row {{
