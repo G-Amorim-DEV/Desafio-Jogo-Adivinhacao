@@ -27,7 +27,20 @@ class JogoForca(JogoBase):
         dificuldade = self.jogador.dificuldade()
         candidatos = [item for item in palavras if item.get("dificuldade") == dificuldade]
         palavra = random.choice(candidatos or palavras)["palavra"].upper()
-        st.session_state.forca = {"palavra": palavra, "letras": [], "tentativas": 6}
+        configuracao = {
+            "facil": {"tentativas": 8, "reveladas": 1},
+            "medio": {"tentativas": 6, "reveladas": 0},
+            "dificil": {"tentativas": 5, "reveladas": 0},
+        }[dificuldade]
+        letras_iniciais = []
+        if configuracao["reveladas"] > 0:
+            letras_iniciais = [palavra[0]]
+        st.session_state.forca = {
+            "palavra": palavra,
+            "letras": letras_iniciais,
+            "tentativas": configuracao["tentativas"],
+            "dificuldade": dificuldade,
+        }
 
     def obter_info(self) -> GameInfo:
         return GameInfo(
@@ -36,9 +49,9 @@ class JogoForca(JogoBase):
             emoji="🪢",
             descricao="Descubra a palavra secreta antes que as tentativas acabem.",
             instrucoes=[
-                "Use o teclado virtual ou digite uma letra.",
-                "Cada erro reduz uma tentativa.",
-                "Vogais costumam ajudar no inicio.",
+                "No facil voce comeca com mais tentativas e uma letra revelada.",
+                "No medio a partida segue o ritmo padrao da forca.",
+                "No dificil voce tem menos tentativas e precisa errar menos.",
             ],
             max_dicas=3,
             custo_dica_xp=1,
@@ -65,6 +78,7 @@ class JogoForca(JogoBase):
             erros = 6 - estado["tentativas"]
             desenhar_forca(erros)
             st.write(f"**Tentativas restantes:** {estado['tentativas']}")
+            st.write(f"**Modo:** {estado.get('dificuldade', 'medio').title()}")
             if estado["letras"]:
                 st.write(f"**Letras usadas:** {' '.join(sorted(estado['letras']))}")
 
@@ -135,6 +149,8 @@ class JogoForca(JogoBase):
 
     def obter_dica(self):
         estado = st.session_state.forca
+        if estado.get("dificuldade") == "facil":
+            return f"A palavra tem {len(estado['palavra'])} letras e comeca com {estado['palavra'][0]}."
         return f"A palavra tem {len(estado['palavra'])} letras. Tente vogais primeiro."
 
 

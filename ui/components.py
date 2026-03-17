@@ -158,6 +158,21 @@ def render_step_guide(titulo: str, passos: list[tuple[str, str]]) -> None:
     )
 
 
+def render_answer_panel(titulo: str, descricao: str, destaque: str = "") -> None:
+    destaque_html = f"<div class='answer-zone-chip'>{destaque}</div>" if destaque else ""
+    st.markdown(
+        f"""
+        <section class="answer-zone-shell">
+            <div class="answer-zone-kicker">Area de resposta</div>
+            <h3>{titulo}</h3>
+            <p>{descricao}</p>
+            {destaque_html}
+        </section>
+        """,
+        unsafe_allow_html=True,
+    )
+
+
 def render_accessibility_reader(texto: str, forcar_leitura: bool = False, auto: bool = False, velocidade: float = 1.0) -> None:
     payload = json.dumps(texto)
     should_speak = "true" if (forcar_leitura or auto) else "false"

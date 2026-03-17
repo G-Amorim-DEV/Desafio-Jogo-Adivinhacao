@@ -68,8 +68,8 @@ class JogoMemoria(JogoBase):
 
         dificuldade = self.escolher_dificuldade()
         palavras = random.choice(self.data[dificuldade])
-        quantidade_base = {"facil": 3, "medio": 4, "dificil": 5}[dificuldade]
-        quantidade = min(len(palavras), quantidade_base + min(2, self.jogador.nivel() // 2))
+        quantidade_base = {"facil": 3, "medio": 5, "dificil": 7}[dificuldade]
+        quantidade = min(len(palavras), quantidade_base)
         ordem = random.sample(palavras, quantidade)
 
         st.session_state.memoria.update(
@@ -96,9 +96,9 @@ class JogoMemoria(JogoBase):
             with col1:
                 st.markdown("🧠 **Memoria:** Foque nas palavras.")
             with col2:
-                st.markdown("⏱️ **Ritmo:** Memorize antes de responder.")
+                st.markdown(f"⏱️ **Ritmo:** Modo {estado.get('dificuldade', 'medio').title()}.")
             with col3:
-                st.markdown("📝 **Ordem:** A sequencia importa.")
+                st.markdown(f"📝 **Volume:** {len(desafio['palavras'])} palavras.")
 
             if st.button("Memorizei!", key="memorizei"):
                 estado["fase"] = "esconder"
@@ -160,6 +160,8 @@ class JogoMemoria(JogoBase):
     def obter_dica(self) -> str:
         estado = st.session_state.memoria
         if estado["categoria"]:
+            if estado.get("dificuldade") == "dificil":
+                return f"A sequencia tem {len(estado['ordem'])} palavras."
             return f"As palavras sao da categoria: {estado['categoria']}."
         return "Tente se lembrar da ordem exata das palavras apresentadas."
 

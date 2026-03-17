@@ -44,24 +44,31 @@ class JogoMatematica(JogoBase):
 
     def gerar_desafio(self):
         dificuldade = self.jogador.dificuldade()
-        limites = {"facil": 20, "medio": 50, "dificil": 100}
+        limites = {"facil": 20, "medio": 50, "dificil": 120}
         operacoes = {
             "facil": ["+", "-"],
             "medio": ["+", "-", "*"],
-            "dificil": ["+", "-", "*"],
+            "dificil": ["+", "-", "*", "/"],
         }
         limite = limites[dificuldade]
         a = random.randint(1, limite)
         b = random.randint(1, limite)
         op = random.choice(operacoes[dificuldade])
+        pontos = {"facil": 5, "medio": 8, "dificil": 12}[dificuldade]
 
-        if op == "+":
+        if op == "/":
+            b = random.randint(2, 12)
+            self.resposta = random.randint(2, 12)
+            a = b * self.resposta
+        elif op == "+":
             self.resposta = a + b
         elif op == "-":
             self.resposta = a - b
         else:
             self.resposta = a * b
 
+        st.session_state.matematica["pontos"] = pontos
+        st.session_state.matematica["dificuldade"] = dificuldade
         self.desafio_texto = f"{a} {op} {b}"
         return self.desafio_texto
 
@@ -74,14 +81,15 @@ class JogoMatematica(JogoBase):
         estado = st.session_state.matematica
 
         if resposta == self.resposta:
-            self.jogador.adicionar_xp(5)
+            pontos = st.session_state.matematica.get("pontos", 5)
+            self.jogador.adicionar_xp(pontos)
             estado["acertos_seguidos"] += 1
             if estado["acertos_seguidos"] % 5 == 0:
                 self.jogador.ganhar_vida()
             return ResultadoJogo(
                 True,
                 f"Correto. {self.desafio_texto} = {self.resposta}",
-                5,
+                pontos,
                 False,
             )
 
@@ -117,7 +125,8 @@ class JogoMatematica(JogoBase):
         with col1:
             st.markdown("🧮 **Calculo mental:** Resolva a operacao.")
         with col2:
-            st.markdown("🔢 **Operacoes:** +, -, ×")
+            modo = st.session_state.matematica.get("dificuldade", "medio").title()
+            st.markdown(f"🔢 **Modo:** {modo}")
         with col3:
             st.markdown("🎯 **Precisao:** Digite apenas o resultado.")
 

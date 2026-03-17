@@ -82,6 +82,11 @@ def aplicar_tema() -> None:
             border-right: 1px solid var(--border);
         }}
 
+        [data-testid="stSidebar"] .block-container {{
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }}
+
         [data-testid="stSidebar"] * {{
             color: var(--ink);
         }}
@@ -402,7 +407,8 @@ def aplicar_tema() -> None:
         .spotlight-panel,
         .side-panel-shell,
         .championship-row,
-        .guide-shell {{
+        .guide-shell,
+        .answer-zone-shell {{
             border: 1px solid var(--border);
             background: linear-gradient(180deg, rgba(15, 23, 42, 0.98) 0%, rgba(15, 23, 42, 0.92) 100%);
             box-shadow: var(--shadow);
@@ -545,6 +551,59 @@ def aplicar_tema() -> None:
         .guide-step-copy p {{
             margin: 0;
             color: var(--muted);
+        }}
+
+        .answer-zone-shell {{
+            padding: 1rem 1.1rem;
+            border-radius: 22px;
+            margin: 1rem 0 0.85rem;
+            position: relative;
+            overflow: hidden;
+        }}
+
+        .answer-zone-shell::before {{
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(120deg, rgba(37, 99, 235, 0.12) 0%, transparent 50%, rgba(16, 185, 129, 0.10) 100%);
+            pointer-events: none;
+        }}
+
+        .answer-zone-kicker {{
+            display: inline-flex;
+            align-items: center;
+            padding: 0.28rem 0.65rem;
+            border-radius: 999px;
+            background: rgba(37, 99, 235, 0.14);
+            border: 1px solid rgba(96, 165, 250, 0.28);
+            color: #dbeafe;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            font-size: 0.76rem;
+            font-weight: 700;
+        }}
+
+        .answer-zone-shell h3 {{
+            margin: 0.7rem 0 0.3rem;
+            color: var(--ink);
+            font-size: 1.15rem;
+        }}
+
+        .answer-zone-shell p {{
+            margin: 0;
+            color: var(--muted);
+        }}
+
+        .answer-zone-chip {{
+            display: inline-flex;
+            margin-top: 0.8rem;
+            padding: 0.35rem 0.78rem;
+            border-radius: 999px;
+            background: rgba(51, 65, 85, 0.52);
+            border: 1px solid var(--border);
+            color: #e2e8f0;
+            font-size: 0.86rem;
+            font-weight: 600;
         }}
 
         .championship-row {{
