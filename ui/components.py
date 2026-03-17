@@ -138,25 +138,23 @@ def render_step_guide(titulo: str, passos: list[tuple[str, str]], kicker: str = 
         <div class="guide-step">
             <div class="guide-step-index">{indice}</div>
             <div class="guide-step-copy">
-                <strong>{titulo_passo}</strong>
-                <p>{descricao}</p>
+                <strong>{html.escape(titulo_passo)}</strong>
+                <p>{html.escape(descricao)}</p>
             </div>
         </div>
         """
         for indice, (titulo_passo, descricao) in enumerate(passos, start=1)
     )
-    kicker_html = f"<div class='guide-kicker'>{kicker}</div>" if kicker else ""
+    kicker_html = f"<div class='guide-kicker'>{html.escape(kicker)}</div>" if kicker else ""
     shell_class = "guide-shell" if kicker else "guide-shell guide-shell-no-kicker"
     st.markdown(
-        f"""
-        <section class="{shell_class}">
-            {kicker_html}
-            <h3>{titulo}</h3>
-            <div class="guide-list">
-                {itens}
-            </div>
-        </section>
-        """,
+        (
+            f'<section class="{shell_class}">'
+            f"{kicker_html}"
+            f"<h3>{html.escape(titulo)}</h3>"
+            f'<div class="guide-list">{itens}</div>'
+            f"</section>"
+        ),
         unsafe_allow_html=True,
     )
 
