@@ -1,6 +1,7 @@
 import random
 import streamlit as st
 from core.jogo_base import JogoBase
+from core.resultado import ResultadoJogo
 from services.data_loader import carregar_json
 
 GAME_NAME = "Verdadeiro ou Falso"
@@ -11,6 +12,13 @@ class JogoVF(JogoBase):
 
     def __init__(self, jogador):
         self.jogador = jogador
+        if "verdadeiro_falso" not in st.session_state:
+            self.resetar_jogo()
+
+    def resetar_jogo(self):
+        st.session_state.verdadeiro_falso = {
+            "acertos_seguidos": 0
+        }
 
     def gerar_desafio(self):
 
@@ -57,6 +65,7 @@ class JogoVF(JogoBase):
             <h2 class="vf-title"><span class="check-emoji">✅</span>❌<span class="x-emoji">❌</span> Verdadeiro ou Falso</h2>
         </div>
         """, unsafe_allow_html=True)
+        st.write(f"**Vidas restantes:** {self.jogador.vidas()} ❤️")
         st.write(desafio)
         st.write("Verdadeiro ou Falso?")
         
@@ -70,12 +79,23 @@ class JogoVF(JogoBase):
             st.markdown("🧠 **Julgamento:** Use seu conhecimento!")
 
     def verificar_resposta(self, resposta):
+        estado = st.session_state.verdadeiro_falso
 
         if resposta.lower() == self.afirmacao["resposta"]:
             self.jogador.adicionar_xp(5)
-            return "Certo!"
+            estado["acertos_seguidos"] += 1
+            # Ganhar vida a cada 5 acertos seguidos
+            if estado["acertos_seguidos"] % 5 == 0:
+                self.jogador.ganhar_vida()
+            return ResultadoJogo(True, "Certo!", 5, False)
 
-        return "Errado!"
+        # Erro: perder vida
+        vidas_restantes = self.jogador.perder_vida()
+        estado["acertos_seguidos"] = 0
+        if vidas_restantes <= 0:
+            return ResultadoJogo(False, f"Errado! Você perdeu todas as vidas!", 0, True)
+
+        return ResultadoJogo(False, f"Errado! Vidas restantes: {vidas_restantes}", 0, False)
 
     def obter_dica(self) -> str:
         return "Pense se a afirmação é verdadeira ou falsa baseada em conhecimento geral."

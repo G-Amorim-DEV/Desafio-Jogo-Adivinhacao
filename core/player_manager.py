@@ -51,6 +51,13 @@ class PlayerManager:
             self.salvar()
         return self.player["vidas"]
 
+    def ganhar_vida(self):
+        """Adiciona uma vida ao jogador, máximo 5"""
+        if self.player["vidas"] < 5:
+            self.player["vidas"] += 1
+            self.salvar()
+        return self.player["vidas"]
+
     def resetar_vidas(self):
         """Restaura as vidas para 5"""
         self.player["vidas"] = 5

@@ -23,7 +23,8 @@ class JogoQuiz(JogoBase):
     def resetar_jogo(self):
         """Reinicia o estado do jogo."""
         st.session_state.quiz = {
-            "pergunta_atual": None
+            "pergunta_atual": None,
+            "acertos_seguidos": 0
         }
 
     def escolher_dificuldade(self):
@@ -36,6 +37,9 @@ class JogoQuiz(JogoBase):
 
     def gerar_desafio(self):
         """Escolhe uma pergunta aleatória da dificuldade correspondente."""
+        if st.session_state.quiz.get("pergunta_atual") is not None:
+            return st.session_state.quiz["pergunta_atual"]
+        
         dificuldade = self.escolher_dificuldade()
         filtradas = [p for p in self.perguntas if p["dificuldade"] == dificuldade]
 
@@ -82,6 +86,7 @@ class JogoQuiz(JogoBase):
             <h2 class="quiz-title">❓ <span class="question-emoji">🧠</span> Quiz</h2>
         </div>
         """, unsafe_allow_html=True)
+        st.write(f"**Vidas restantes:** {self.jogador.vidas()} ❤️")
         st.write(desafio["pergunta"])
         
         # Elementos visuais temáticos
@@ -99,16 +104,29 @@ class JogoQuiz(JogoBase):
         if not pergunta:
             return ResultadoJogo(False, "Nenhuma pergunta selecionada!", 0, False)
 
+        estado = st.session_state.quiz
         resposta_limpa = resposta.strip().lower()
         correta = pergunta["resposta"].strip().lower()
 
         if resposta_limpa == correta:
             pontos = pergunta["pontos"]
             self.jogador.ganhar_pontos(pontos)
-            return ResultadoJogo(True, f"Correto! +{pontos} pontos", pontos, True)
+            estado["acertos_seguidos"] += 1
+            # Ganhar vida a cada 5 acertos seguidos
+            if estado["acertos_seguidos"] % 5 == 0:
+                self.jogador.ganhar_vida()
+            st.session_state.quiz["pergunta_atual"] = None  # Preparar para nova pergunta
+            return ResultadoJogo(True, f"Correto! +{pontos} pontos", pontos, False)
+
+        # Erro: perder vida
+        vidas_restantes = self.jogador.perder_vida()
+        estado["acertos_seguidos"] = 0
+        if vidas_restantes <= 0:
+            return ResultadoJogo(False, f"Errado! Resposta correta: {pergunta['resposta']}. Você perdeu todas as vidas!", 0, True)
 
         self.jogador.perder_pontos(2)
-        return ResultadoJogo(False, f"Errado! Resposta correta: {pergunta['resposta']}", 0, True)
+        st.session_state.quiz["pergunta_atual"] = None  # Preparar para nova pergunta
+        return ResultadoJogo(False, f"Errado! Resposta correta: {pergunta['resposta']}. Vidas restantes: {vidas_restantes}", 0, False)
 
     def obter_dica(self) -> str:
         pergunta = st.session_state.quiz.get("pergunta_atual")

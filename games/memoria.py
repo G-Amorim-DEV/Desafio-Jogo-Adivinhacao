@@ -26,7 +26,8 @@ class JogoMemoria(JogoBase):
             "ordem": [],
             "categoria": "",
             "dificuldade": "",
-            "fase": "mostrar"
+            "fase": "mostrar",
+            "acertos_seguidos": 0
         }
 
     def escolher_dificuldade(self):
@@ -39,6 +40,12 @@ class JogoMemoria(JogoBase):
 
     def gerar_desafio(self):
         """Gera um conjunto de palavras aleatórias para o desafio."""
+        if st.session_state.memoria.get("ordem"):
+            return {
+                "categoria": st.session_state.memoria["categoria"],
+                "palavras": st.session_state.memoria["ordem"]
+            }
+        
         dificuldade = self.escolher_dificuldade()
         palavras = random.choice(self.data[dificuldade])  # Escolhe uma lista de palavras
 
@@ -93,6 +100,7 @@ class JogoMemoria(JogoBase):
             <h2 class="memory-title">🧠 <span class="brain-emoji">💭</span> Memória</h2>
         </div>
         """, unsafe_allow_html=True)
+        st.write(f"**Vidas restantes:** {self.jogador.vidas()} ❤️")
         estado = st.session_state.memoria
         
         if estado["fase"] == "mostrar":
@@ -134,16 +142,28 @@ class JogoMemoria(JogoBase):
 
         if resposta_lista == ordem_correta:
             self.jogador.adicionar_xp(10)
+            estado["acertos_seguidos"] += 1
+            # Ganhar vida a cada 5 acertos seguidos
+            if estado["acertos_seguidos"] % 5 == 0:
+                self.jogador.ganhar_vida()
             return ResultadoJogo(True, "Memória perfeita!", 10, True)
+
+        # Erro: perder vida
+        vidas_restantes = self.jogador.perder_vida()
+        estado["acertos_seguidos"] = 0
+        if vidas_restantes <= 0:
+            return ResultadoJogo(False, f"Memória falhou! Ordem correta: {' '.join(estado['ordem'])}. Você perdeu todas as vidas!", 0, True)
 
         # Feedback detalhado: contar palavras corretas na posição certa
         corretas_posicao = sum(1 for i, palavra in enumerate(resposta_lista) if i < len(ordem_correta) and palavra == ordem_correta[i])
         palavras_corretas = sum(1 for palavra in resposta_lista if palavra in ordem_correta)
         
         if len(resposta_lista) != len(ordem_correta):
-            return ResultadoJogo(False, f"Quantidade errada de palavras. São {len(ordem_correta)} palavras.", 0, False)
+            st.session_state.memoria["ordem"] = []  # Preparar para nova ordem
+            return ResultadoJogo(False, f"Quantidade errada de palavras. São {len(ordem_correta)} palavras. Vidas restantes: {vidas_restantes}", 0, False)
         else:
-            return ResultadoJogo(False, f"{corretas_posicao} palavras na posição certa, {palavras_corretas} palavras corretas no total. Ordem correta: {' '.join(estado['ordem'])}", 0, False)
+            st.session_state.memoria["ordem"] = []  # Preparar para nova ordem
+            return ResultadoJogo(False, f"{corretas_posicao} palavras na posição certa, {palavras_corretas} palavras corretas no total. Ordem correta: {' '.join(estado['ordem'])}. Vidas restantes: {vidas_restantes}", 0, False)
 
     def obter_dica(self) -> str:
         estado = st.session_state.memoria

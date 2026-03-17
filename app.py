@@ -2,6 +2,7 @@ import streamlit as st
 
 from core.game_manager import GameManager
 from core.player_manager import PlayerManager
+from core.jogador import Jogador
 from core.ranking_manager import RankingManager
 from ui.layout import sidebar
 from ui.theme import aplicar_tema
@@ -15,6 +16,7 @@ aplicar_tema()
 # Inicializa gerenciadores
 manager = GameManager()
 player = PlayerManager()
+jogador = Jogador(player.dados()["nome"])
 ranking = RankingManager()
 jogos = manager.listar_jogos()
 
@@ -117,7 +119,7 @@ else:
     # Inicializa jogo ativo se não existir
     if "jogo_ativo" not in st.session_state:
         # ✅ PASSA O JOGADOR na criação do jogo
-        st.session_state.jogo_ativo = manager.criar_jogo(pagina, player)
+        st.session_state.jogo_ativo = manager.criar_jogo(pagina, jogador)
         # Limpar resultado anterior quando novo jogo começa
         if "ultimo_resultado" in st.session_state:
             del st.session_state.ultimo_resultado

@@ -22,11 +22,15 @@ class JogoSequencia(JogoBase):
     def resetar_jogo(self):
         """Reinicia o estado do jogo."""
         st.session_state.sequencia = {
-            "item_atual": None
+            "item_atual": None,
+            "acertos_seguidos": 0
         }
 
     def gerar_desafio(self):
         """Escolhe um item aleatório da lista de sequências."""
+        if st.session_state.sequencia.get("item_atual") is not None:
+            return st.session_state.sequencia["item_atual"]
+        
         item = random.choice(self.lista)
         st.session_state.sequencia["item_atual"] = item
         return item
@@ -70,6 +74,7 @@ class JogoSequencia(JogoBase):
             <h2 class="sequence-title">🔢 <span class="number-emoji">📊</span> Sequência</h2>
         </div>
         """, unsafe_allow_html=True)
+        st.write(f"**Vidas restantes:** {self.jogador.vidas()} ❤️")
         st.write(desafio["sequencia"])
         st.write("Qual é o próximo número?")
         
@@ -88,6 +93,8 @@ class JogoSequencia(JogoBase):
         if not item:
             return ResultadoJogo(False, "Nenhuma sequência selecionada!", 0, False)
 
+        estado = st.session_state.sequencia
+
         try:
             resposta_num = int(resposta)
         except ValueError:
@@ -96,7 +103,18 @@ class JogoSequencia(JogoBase):
         if resposta_num == item["resposta"]:
             pontos = item["pontos"]
             self.jogador.adicionar_xp(pontos)
-            return ResultadoJogo(True, f"Correto! {item['explicacao']}", pontos, True)
+            estado["acertos_seguidos"] += 1
+            # Ganhar vida a cada 5 acertos seguidos
+            if estado["acertos_seguidos"] % 5 == 0:
+                self.jogador.ganhar_vida()
+            st.session_state.sequencia["item_atual"] = None  # Preparar para nova sequência
+            return ResultadoJogo(True, f"Correto! {item['explicacao']}", pontos, False)
+
+        # Erro: perder vida
+        vidas_restantes = self.jogador.perder_vida()
+        estado["acertos_seguidos"] = 0
+        if vidas_restantes <= 0:
+            return ResultadoJogo(False, f"Errado! {item['explicacao']}. Você perdeu todas as vidas!", 0, True)
 
         # Feedback detalhado baseado na diferença
         diferenca = abs(resposta_num - item["resposta"])
@@ -109,7 +127,8 @@ class JogoSequencia(JogoBase):
         else:
             dica = "Muito diferente. Observe melhor o padrão."
 
-        return ResultadoJogo(False, f"Errado! {dica} ({item['explicacao']})", 0, False)
+        st.session_state.sequencia["item_atual"] = None  # Preparar para nova sequência
+        return ResultadoJogo(False, f"Errado! {dica} ({item['explicacao']}). Vidas restantes: {vidas_restantes}", 0, False)
 
     def obter_dica(self) -> str:
         item = st.session_state.sequencia.get("item_atual")

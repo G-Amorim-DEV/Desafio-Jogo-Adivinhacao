@@ -13,6 +13,13 @@ class JogoMatematica(JogoBase):
         self.jogador = jogador
         self.resposta = None
         self.desafio_texto = None
+        if "matematica" not in st.session_state:
+            self.resetar_jogo()
+
+    def resetar_jogo(self):
+        st.session_state.matematica = {
+            "acertos_seguidos": 0
+        }
 
     # -------------------------
     # GERAR DESAFIO
@@ -46,9 +53,21 @@ class JogoMatematica(JogoBase):
         except ValueError:
             return ResultadoJogo(False, "Digite um número válido!", 0, False)
 
+        estado = st.session_state.matematica
+
         if resposta == self.resposta:
             self.jogador.adicionar_xp(5)
+            estado["acertos_seguidos"] += 1
+            # Ganhar vida a cada 5 acertos seguidos
+            if estado["acertos_seguidos"] % 5 == 0:
+                self.jogador.ganhar_vida()
             return ResultadoJogo(True, f"Correto! {self.desafio_texto} = {self.resposta}", 5, False)
+
+        # Erro: perder vida
+        vidas_restantes = self.jogador.perder_vida()
+        estado["acertos_seguidos"] = 0
+        if vidas_restantes <= 0:
+            return ResultadoJogo(False, f"Errado! {self.desafio_texto} = {self.resposta}. Você perdeu todas as vidas!", 0, True)
 
         # Feedback detalhado baseado na diferença
         diferenca = abs(resposta - self.resposta)
@@ -59,7 +78,7 @@ class JogoMatematica(JogoBase):
         else:
             dica = "Um pouco longe. Reveja a operação."
 
-        return ResultadoJogo(False, f"Errado! {dica} ({self.desafio_texto} = {self.resposta})", 0, False)
+        return ResultadoJogo(False, f"Errado! {dica} ({self.desafio_texto} = {self.resposta}). Vidas restantes: {vidas_restantes}", 0, False)
 
     # -------------------------
     # RENDERIZAR (obrigatório)
@@ -106,6 +125,7 @@ class JogoMatematica(JogoBase):
             <h2 class="math-title">➗ <span class="calc-emoji">🧮</span> Matemática</h2>
         </div>
         """, unsafe_allow_html=True)
+        st.write(f"**Vidas restantes:** {self.jogador.vidas()} ❤️")
         st.write(desafio)
         
         # Elementos visuais temáticos
