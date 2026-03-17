@@ -134,15 +134,15 @@ def render_championship_row(posicao: int, nome: str, score: int, jogo: str = "")
 
 def render_step_guide(titulo: str, passos: list[tuple[str, str]], kicker: str = "") -> None:
     itens = "".join(
-        f"""
-        <div class="guide-step">
-            <div class="guide-step-index">{indice}</div>
-            <div class="guide-step-copy">
-                <strong>{html.escape(titulo_passo)}</strong>
-                <p>{html.escape(descricao)}</p>
-            </div>
-        </div>
-        """
+        (
+            f'<div class="guide-step">'
+            f'<div class="guide-step-index">{indice}</div>'
+            f'<div class="guide-step-copy">'
+            f"<strong>{html.escape(titulo_passo)}</strong>"
+            f"<p>{html.escape(descricao)}</p>"
+            f"</div>"
+            f"</div>"
+        )
         for indice, (titulo_passo, descricao) in enumerate(passos, start=1)
     )
     kicker_html = f"<div class='guide-kicker'>{html.escape(kicker)}</div>" if kicker else ""
