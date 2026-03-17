@@ -950,7 +950,7 @@ else:
             metric_card("Turno atual", player.dados()["nome"] if multiplayer_ativo(player) else f"Nivel {player.nivel()}")
 
         jogo.renderizar(desafio)
-        jogo_perdido = exibir_feedback(jogo)
+        jogo_perdido = False
 
         if not jogo_perdido:
             if "temp_letra" in st.session_state:
@@ -986,6 +986,8 @@ else:
                         st.rerun()
             else:
                 st.info("Conclua a etapa atual do jogo para habilitar a resposta.")
+
+        jogo_perdido = exibir_feedback(jogo)
 
         if jogo_perdido:
             st.warning("Suas vidas acabaram nesta rodada.")

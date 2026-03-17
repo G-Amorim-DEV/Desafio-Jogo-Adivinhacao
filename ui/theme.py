@@ -114,7 +114,8 @@ def aplicar_tema() -> None:
             border-radius: 20px;
         }}
 
-        .stButton > button {{
+        .stButton > button,
+        .stFormSubmitButton > button {{
             appearance: none;
             -webkit-appearance: none;
             width: 100%;
@@ -138,7 +139,10 @@ def aplicar_tema() -> None:
 
         .stButton > button p,
         .stButton > button span,
-        .stButton > button div {{
+        .stButton > button div,
+        .stFormSubmitButton > button p,
+        .stFormSubmitButton > button span,
+        .stFormSubmitButton > button div {{
             display: flex !important;
             align-items: center !important;
             justify-content: center !important;
@@ -155,7 +159,13 @@ def aplicar_tema() -> None:
         .stButton > button [data-testid="stMarkdownContainer"] p,
         .stButton > button .st-emotion-cache-1lads1q,
         .stButton > button .st-emotion-cache-1kl7f1u,
-        .stButton > button .st-emotion-cache-1xkyjt8 {{
+        .stButton > button .st-emotion-cache-1xkyjt8,
+        .stFormSubmitButton > button *,
+        .stFormSubmitButton > button [data-testid="stMarkdownContainer"],
+        .stFormSubmitButton > button [data-testid="stMarkdownContainer"] p,
+        .stFormSubmitButton > button .st-emotion-cache-1lads1q,
+        .stFormSubmitButton > button .st-emotion-cache-1kl7f1u,
+        .stFormSubmitButton > button .st-emotion-cache-1xkyjt8 {{
             color: {button_text} !important;
             background: transparent !important;
             background-color: transparent !important;
@@ -165,7 +175,8 @@ def aplicar_tema() -> None:
             opacity: 1 !important;
         }}
 
-        .stButton > button:hover {{
+        .stButton > button:hover,
+        .stFormSubmitButton > button:hover {{
             border-color: var(--focus);
             filter: none;
             transform: none;
@@ -176,14 +187,18 @@ def aplicar_tema() -> None:
 
         .stButton > button:hover *,
         .stButton > button:hover [data-testid="stMarkdownContainer"],
-        .stButton > button:hover [data-testid="stMarkdownContainer"] p {{
+        .stButton > button:hover [data-testid="stMarkdownContainer"] p,
+        .stFormSubmitButton > button:hover *,
+        .stFormSubmitButton > button:hover [data-testid="stMarkdownContainer"],
+        .stFormSubmitButton > button:hover [data-testid="stMarkdownContainer"] p {{
             color: {button_text} !important;
             background: transparent !important;
             background-color: transparent !important;
             box-shadow: none !important;
         }}
 
-        .stButton > button:active {{
+        .stButton > button:active,
+        .stFormSubmitButton > button:active {{
             transform: none;
             filter: none;
             background: {button_hover_bg};
@@ -192,13 +207,16 @@ def aplicar_tema() -> None:
         }}
 
         .stButton > button::before,
-        .stButton > button::after {{
+        .stButton > button::after,
+        .stFormSubmitButton > button::before,
+        .stFormSubmitButton > button::after {{
             display: none !important;
             box-shadow: none !important;
             background: transparent !important;
         }}
 
-        .stButton > button:disabled {{
+        .stButton > button:disabled,
+        .stFormSubmitButton > button:disabled {{
             opacity: 0.62;
             color: {button_text} !important;
             background: linear-gradient(135deg, rgba(100, 116, 139, 0.95) 0%, rgba(71, 85, 105, 0.95) 100%);

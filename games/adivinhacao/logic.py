@@ -20,7 +20,7 @@ class JogoAdivinhacao(JogoBase):
     def resetar_jogo(self):
         dificuldade = self.jogador.dificuldade() if self.jogador else "medio"
         configuracao = {
-            "facil": {"intervalo": (1, 30), "tentativas": 10, "pontos": 8},
+            "facil": {"intervalo": (1, 30), "tentativas": 10, "pontos": 10},
             "medio": {"intervalo": (1, 100), "tentativas": 7, "pontos": 12},
             "dificil": {"intervalo": (1, 300), "tentativas": 6, "pontos": 18},
         }[dificuldade]
