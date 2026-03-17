@@ -616,6 +616,14 @@ def aplicar_tema() -> None:
             border-color: var(--focus);
         }}
 
+        .stFileUploader section[data-testid="stFileUploaderDropzone"] small,
+        .stFileUploader section[data-testid="stFileUploaderDropzone"] span,
+        .stFileUploader section[data-testid="stFileUploaderDropzone"] p,
+        .stFileUploader section[data-testid="stFileUploaderDropzone"] label,
+        .stFileUploader [data-testid="stFileUploaderDropzoneInstructions"] {{
+            color: #f8fafc !important;
+        }}
+
         .stFileUploader section[data-testid="stFileUploaderDropzone"] button p {{
             visibility: hidden;
         }}
