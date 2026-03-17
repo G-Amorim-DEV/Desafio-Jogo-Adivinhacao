@@ -109,7 +109,7 @@ O app agora possui uma area de progresso no `Menu da Sessao`.
 
 #### Exportar progresso
 
-Use o botao `Baixar progresso atual` para gerar um arquivo `.json` com:
+Use o botao `Baixar progresso` para gerar um arquivo `.json` com:
 
 - perfis locais;
 - ranking;
@@ -126,6 +126,13 @@ Use o botao `Baixar progresso atual` para gerar um arquivo `.json` com:
 3. Clique em `Restaurar progresso`.
 
 Isso permite continuar a experiencia em outro momento ou em outro ambiente com o mesmo progresso salvo.
+
+### Recomendacao de uso do save
+
+- exporte o progresso ao terminar uma sessao importante;
+- mantenha mais de um arquivo se quiser pontos de restauracao diferentes;
+- importe apenas arquivos gerados pelo proprio app;
+- se estiver alternando de maquina ou navegador, importe o save antes de continuar jogando.
 
 ## Acessibilidade
 
@@ -245,6 +252,36 @@ Durante a varredura de QA, o projeto foi ajustado em varios pontos importantes:
 - persistencia mais consistente do estado de alguns jogos para retomada;
 - normalizacao mais segura dos perfis locais;
 - testes de regressao ampliados.
+
+## Solucao de Problemas
+
+### O app nao inicia
+
+Verifique se as dependencias do `requirements.txt` foram instaladas e rode novamente:
+
+```bash
+streamlit run app.py
+```
+
+### Os testes nao rodam
+
+Os testes dependem de `streamlit`. Instale as dependencias antes de executar:
+
+```bash
+pip install -r requirements.txt
+```
+
+### Quero retomar meu progresso
+
+Abra o `Menu da Sessao`, selecione um arquivo `.json` exportado anteriormente e clique em `Restaurar progresso`.
+
+### O multiplayer parece incorreto
+
+Confira no `Menu da Sessao`:
+
+- quais perfis estao ativos;
+- quantos jogadores participam da sessao;
+- qual regra de troca esta selecionada.
 
 ## Testes
 

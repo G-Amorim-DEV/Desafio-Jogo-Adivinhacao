@@ -623,23 +623,34 @@ def render_menu_page(jogos: list[str], player_manager: PlayerManager, ranking: R
         with st.container(border=True):
             st.subheader("Salvar e retomar progresso")
             snapshot = build_progress_snapshot(player_manager, ranking)
-            st.download_button(
-                "Baixar progresso atual",
-                data=json.dumps(snapshot, ensure_ascii=False, indent=2),
-                file_name="arcade-cognitivo-save.json",
-                mime="application/json",
-                use_container_width=True,
-            )
-            arquivo_importado = st.file_uploader(
-                "Importar arquivo de progresso",
-                type=["json"],
-                key="progress_import_file",
-                help="Use um arquivo exportado pelo proprio app para continuar de onde parou.",
-            )
-            if st.button("Restaurar progresso", key="restaurar_progresso_menu", use_container_width=True):
-                if not arquivo_importado:
-                    st.session_state.progress_error = "Selecione um arquivo de progresso antes de restaurar."
+            st.caption("Exporte um arquivo para continuar depois ou importe um progresso salvo anteriormente.")
+            col_download, col_upload = st.columns(2)
+            with col_download:
+                st.download_button(
+                    "Baixar progresso",
+                    data=json.dumps(snapshot, ensure_ascii=False, indent=2),
+                    file_name="arcade-cognitivo-save.json",
+                    mime="application/json",
+                    use_container_width=True,
+                )
+                st.caption("Inclui perfis, ranking, sessao ativa, configuracoes e parte do estado dos jogos.")
+            with col_upload:
+                arquivo_importado = st.file_uploader(
+                    "Selecionar arquivo de progresso",
+                    type=["json"],
+                    key="progress_import_file",
+                    help="Use um arquivo exportado pelo proprio app para continuar de onde parou.",
+                )
+                if arquivo_importado:
+                    st.caption(f"Arquivo selecionado: {arquivo_importado.name}")
                 else:
+                    st.caption("Nenhum arquivo selecionado.")
+                if st.button(
+                    "Restaurar progresso",
+                    key="restaurar_progresso_menu",
+                    use_container_width=True,
+                    disabled=arquivo_importado is None,
+                ):
                     try:
                         snapshot_importado = json.loads(arquivo_importado.getvalue().decode("utf-8"))
                         restore_progress_snapshot(snapshot_importado, player_manager, ranking)
@@ -669,6 +680,7 @@ def render_menu_page(jogos: list[str], player_manager: PlayerManager, ranking: R
                 ("Ajuste a dificuldade", "Deixe automatico para progressao ou use o manual para controlar o nivel."),
                 ("Abra um jogo", "Volte para a Home ou entre direto em um desafio pela lista abaixo."),
             ],
+            kicker="Sessao",
         )
         st.markdown("### Atalhos rapidos")
         if st.button("Ir para Home", key="atalho_home_menu", use_container_width=True):
@@ -897,6 +909,7 @@ if pagina == "🏠 Home":
                 ("Use vidas, dicas e feedback", "Cada rodada mostra progresso, dicas restantes e mensagens de acerto ou erro para orientar a partida."),
                 ("Acompanhe o ranking", "Compare pontuacoes no ranking global ou por jogo para medir evolucao individual e entre amigos."),
             ],
+            kicker="Inicio rapido",
         )
     with acoes_rapidas:
         render_side_panel(
@@ -982,8 +995,8 @@ elif pagina == MENU_PAGE:
 elif pagina == GUIDE_PAGE:
     render_page_hero(
         "Como Usar o Arcade Cognitivo",
-        "Guia completo da plataforma: perfis, multiplayer, circuito, acessibilidade, ranking e boas praticas para cada rodada.",
-        "Manual da Plataforma",
+        "Guia completo da plataforma com onboarding, regras de multiplayer, salvamento de progresso, acessibilidade e suporte para cada etapa da sessao.",
+        "Manual Completo",
     )
 
     guia_principal, guia_lateral = st.columns([1.45, 1])
@@ -999,6 +1012,7 @@ elif pagina == GUIDE_PAGE:
                 ("Abra um jogo ou circuito", "Na Home, entre em um desafio individual, no Code Lab ou no Circuito Aleatorio."),
                 ("Leia o feedback da rodada", "A interface mostra vidas, dicas, custo de ajuda, mensagens de acerto ou erro e a proxima acao recomendada."),
             ],
+            kicker="Onboarding",
         )
 
         render_step_guide(
@@ -1011,6 +1025,7 @@ elif pagina == GUIDE_PAGE:
                 ("Ranking", "Quadro global e por jogo, sempre considerando a melhor pontuacao de cada perfil."),
                 ("Code Lab", "Modo de aprendizado com filtros por linguagem e conceito para treinar leitura de codigo."),
             ],
+            kicker="Navegacao",
         )
 
         render_step_guide(
@@ -1021,6 +1036,7 @@ elif pagina == GUIDE_PAGE:
                 ("Jogador ativo", "O nome exibido no topo e no placar lateral sempre indica quem esta com a vez naquele momento."),
                 ("Quando alguem perde todas as vidas", "No multiplayer, a tela oferece avancar para o proximo jogador sem reiniciar a sessao inteira."),
             ],
+            kicker="Multiplayer",
         )
 
         render_step_guide(
@@ -1031,6 +1047,29 @@ elif pagina == GUIDE_PAGE:
                 ("O que volta junto", "Perfis, ranking, jogadores da sessao, configuracoes de acessibilidade, multiplayer, circuito e varios estados dos jogos."),
                 ("Boa pratica", "Sempre exporte novamente depois de uma sequencia importante de partidas para manter o backup atualizado."),
             ],
+            kicker="Progresso",
+        )
+
+        render_step_guide(
+            "Regras importantes da rodada",
+            [
+                ("Dicas custam XP", "Cada jogo informa quantas dicas ainda restam e quanto custa usar uma ajuda."),
+                ("Nem todo erro encerra a rodada", "Em varios jogos voce pode tentar novamente, ajustando a resposta com base no feedback recebido."),
+                ("Acertos podem manter o fluxo", "Alguns jogos geram novo desafio logo depois do acerto, enquanto outros concluem a etapa atual."),
+                ("As vidas sao o limite da tentativa", "Quando acabam, a tela oferece o fluxo adequado para solo ou multiplayer."),
+            ],
+            kicker="Rodadas",
+        )
+
+        render_step_guide(
+            "Se algo parecer errado",
+            [
+                ("Confira o jogador ativo", "No multiplayer, sempre veja o nome no topo e no placar lateral antes de responder."),
+                ("Revise o modo da sessao", "Confirme se a regra de troca esta em 'Cada jogador responde um desafio' ou 'Errou, passou a vez'."),
+                ("Use o arquivo de progresso", "Se estiver alternando de ambiente, importe o save mais recente antes de continuar."),
+                ("Volte ao menu da sessao", "Quase toda configuracao principal pode ser ajustada sem perder o restante da sessao."),
+            ],
+            kicker="Suporte",
         )
     with guia_lateral:
         render_side_panel(
@@ -1054,6 +1093,7 @@ elif pagina == GUIDE_PAGE:
                 ("Use dicas com estrategia", "As dicas ajudam a manter o fluxo da rodada, mas consomem XP."),
                 ("Revise o ranking com frequencia", "Ele ajuda a acompanhar evolucao individual e desempenho por jogo."),
             ],
+            kicker="Boas praticas",
         )
 
 elif pagina == CIRCUIT_PAGE:

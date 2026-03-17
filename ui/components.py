@@ -132,7 +132,7 @@ def render_championship_row(posicao: int, nome: str, score: int, jogo: str = "")
     )
 
 
-def render_step_guide(titulo: str, passos: list[tuple[str, str]]) -> None:
+def render_step_guide(titulo: str, passos: list[tuple[str, str]], kicker: str = "") -> None:
     itens = "".join(
         f"""
         <div class="guide-step">
@@ -145,10 +145,12 @@ def render_step_guide(titulo: str, passos: list[tuple[str, str]]) -> None:
         """
         for indice, (titulo_passo, descricao) in enumerate(passos, start=1)
     )
+    kicker_html = f"<div class='guide-kicker'>{kicker}</div>" if kicker else ""
+    shell_class = "guide-shell" if kicker else "guide-shell guide-shell-no-kicker"
     st.markdown(
         f"""
-        <section class="guide-shell">
-            <div class="guide-kicker">Manual rapido</div>
+        <section class="{shell_class}">
+            {kicker_html}
             <h3>{titulo}</h3>
             <div class="guide-list">
                 {itens}

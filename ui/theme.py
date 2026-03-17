@@ -115,7 +115,9 @@ def aplicar_tema() -> None:
         }}
 
         .stButton > button,
-        .stFormSubmitButton > button {{
+        .stFormSubmitButton > button,
+        .stDownloadButton > button,
+        .stFileUploader section[data-testid="stFileUploaderDropzone"] button {{
             appearance: none;
             -webkit-appearance: none;
             width: 100%;
@@ -142,7 +144,13 @@ def aplicar_tema() -> None:
         .stButton > button div,
         .stFormSubmitButton > button p,
         .stFormSubmitButton > button span,
-        .stFormSubmitButton > button div {{
+        .stFormSubmitButton > button div,
+        .stDownloadButton > button p,
+        .stDownloadButton > button span,
+        .stDownloadButton > button div,
+        .stFileUploader section[data-testid="stFileUploaderDropzone"] button p,
+        .stFileUploader section[data-testid="stFileUploaderDropzone"] button span,
+        .stFileUploader section[data-testid="stFileUploaderDropzone"] button div {{
             display: flex !important;
             align-items: center !important;
             justify-content: center !important;
@@ -165,7 +173,13 @@ def aplicar_tema() -> None:
         .stFormSubmitButton > button [data-testid="stMarkdownContainer"] p,
         .stFormSubmitButton > button .st-emotion-cache-1lads1q,
         .stFormSubmitButton > button .st-emotion-cache-1kl7f1u,
-        .stFormSubmitButton > button .st-emotion-cache-1xkyjt8 {{
+        .stFormSubmitButton > button .st-emotion-cache-1xkyjt8,
+        .stDownloadButton > button *,
+        .stDownloadButton > button [data-testid="stMarkdownContainer"],
+        .stDownloadButton > button [data-testid="stMarkdownContainer"] p,
+        .stFileUploader section[data-testid="stFileUploaderDropzone"] button *,
+        .stFileUploader section[data-testid="stFileUploaderDropzone"] button [data-testid="stMarkdownContainer"],
+        .stFileUploader section[data-testid="stFileUploaderDropzone"] button [data-testid="stMarkdownContainer"] p {{
             color: {button_text} !important;
             background: transparent !important;
             background-color: transparent !important;
@@ -176,7 +190,9 @@ def aplicar_tema() -> None:
         }}
 
         .stButton > button:hover,
-        .stFormSubmitButton > button:hover {{
+        .stFormSubmitButton > button:hover,
+        .stDownloadButton > button:hover,
+        .stFileUploader section[data-testid="stFileUploaderDropzone"] button:hover {{
             border-color: var(--focus);
             filter: none;
             transform: none;
@@ -190,7 +206,13 @@ def aplicar_tema() -> None:
         .stButton > button:hover [data-testid="stMarkdownContainer"] p,
         .stFormSubmitButton > button:hover *,
         .stFormSubmitButton > button:hover [data-testid="stMarkdownContainer"],
-        .stFormSubmitButton > button:hover [data-testid="stMarkdownContainer"] p {{
+        .stFormSubmitButton > button:hover [data-testid="stMarkdownContainer"] p,
+        .stDownloadButton > button:hover *,
+        .stDownloadButton > button:hover [data-testid="stMarkdownContainer"],
+        .stDownloadButton > button:hover [data-testid="stMarkdownContainer"] p,
+        .stFileUploader section[data-testid="stFileUploaderDropzone"] button:hover *,
+        .stFileUploader section[data-testid="stFileUploaderDropzone"] button:hover [data-testid="stMarkdownContainer"],
+        .stFileUploader section[data-testid="stFileUploaderDropzone"] button:hover [data-testid="stMarkdownContainer"] p {{
             color: {button_text} !important;
             background: transparent !important;
             background-color: transparent !important;
@@ -198,7 +220,9 @@ def aplicar_tema() -> None:
         }}
 
         .stButton > button:active,
-        .stFormSubmitButton > button:active {{
+        .stFormSubmitButton > button:active,
+        .stDownloadButton > button:active,
+        .stFileUploader section[data-testid="stFileUploaderDropzone"] button:active {{
             transform: none;
             filter: none;
             background: {button_hover_bg};
@@ -209,14 +233,20 @@ def aplicar_tema() -> None:
         .stButton > button::before,
         .stButton > button::after,
         .stFormSubmitButton > button::before,
-        .stFormSubmitButton > button::after {{
+        .stFormSubmitButton > button::after,
+        .stDownloadButton > button::before,
+        .stDownloadButton > button::after,
+        .stFileUploader section[data-testid="stFileUploaderDropzone"] button::before,
+        .stFileUploader section[data-testid="stFileUploaderDropzone"] button::after {{
             display: none !important;
             box-shadow: none !important;
             background: transparent !important;
         }}
 
         .stButton > button:disabled,
-        .stFormSubmitButton > button:disabled {{
+        .stFormSubmitButton > button:disabled,
+        .stDownloadButton > button:disabled,
+        .stFileUploader section[data-testid="stFileUploaderDropzone"] button:disabled {{
             opacity: 0.62;
             color: {button_text} !important;
             background: linear-gradient(135deg, rgba(100, 116, 139, 0.95) 0%, rgba(71, 85, 105, 0.95) 100%);
@@ -526,6 +556,10 @@ def aplicar_tema() -> None:
             margin-bottom: 1rem;
         }}
 
+        .guide-shell-no-kicker h3 {{
+            margin-top: 0;
+        }}
+
         .guide-shell h3 {{
             margin: 0.7rem 0 1rem;
             color: var(--ink);
@@ -569,6 +603,27 @@ def aplicar_tema() -> None:
         .guide-step-copy p {{
             margin: 0;
             color: var(--muted);
+        }}
+
+        .stFileUploader section[data-testid="stFileUploaderDropzone"] {{
+            border: 1px solid var(--border);
+            background: var(--surface-soft);
+            border-radius: 18px;
+            padding: 0.8rem;
+        }}
+
+        .stFileUploader section[data-testid="stFileUploaderDropzone"]:hover {{
+            border-color: var(--focus);
+        }}
+
+        .stFileUploader section[data-testid="stFileUploaderDropzone"] button p {{
+            visibility: hidden;
+        }}
+
+        .stFileUploader section[data-testid="stFileUploaderDropzone"] button p::after {{
+            content: "Escolher arquivo";
+            visibility: visible;
+            display: block;
         }}
 
         .answer-zone-shell {{
