@@ -1,4 +1,3 @@
-import json
 import random
 
 import streamlit as st
@@ -6,6 +5,7 @@ import streamlit as st
 from core.engine.base import JogoBase
 from core.engine.ui import GameInfo, InputConfig
 from core.models.result import ResultadoJogo
+from services.loaders.json_loader import carregar_json
 
 GAME_NAME = "Sequencia"
 
@@ -15,8 +15,9 @@ class JogoSequencia(JogoBase):
 
     def __init__(self, jogador):
         self.jogador = jogador
-        with open("data/sequencias.json", encoding="utf-8") as arquivo:
-            self.lista = json.load(arquivo)
+        self.lista = carregar_json("data/sequencias.json") or []
+        if not self.lista:
+            raise ValueError("Nenhuma sequencia foi encontrada.")
 
         if "sequencia" not in st.session_state:
             self.resetar_jogo()

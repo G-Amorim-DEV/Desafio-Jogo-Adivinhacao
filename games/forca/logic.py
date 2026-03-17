@@ -39,6 +39,7 @@ class JogoForca(JogoBase):
             "palavra": palavra,
             "letras": letras_iniciais,
             "tentativas": configuracao["tentativas"],
+            "tentativas_iniciais": configuracao["tentativas"],
             "dificuldade": dificuldade,
         }
 
@@ -75,7 +76,7 @@ class JogoForca(JogoBase):
         col1, col2 = st.columns([1, 2])
 
         with col1:
-            erros = 6 - estado["tentativas"]
+            erros = max(0, estado.get("tentativas_iniciais", estado["tentativas"]) - estado["tentativas"])
             desenhar_forca(erros)
             st.write(f"**Tentativas restantes:** {estado['tentativas']}")
             st.write(f"**Modo:** {estado.get('dificuldade', 'medio').title()}")
@@ -104,7 +105,7 @@ class JogoForca(JogoBase):
 
     def verificar_resposta(self, letra):
         estado = st.session_state.forca
-        letra = letra.upper()
+        letra = letra.strip().upper()
 
         if estado["tentativas"] <= 0:
             return ResultadoJogo(
@@ -113,6 +114,12 @@ class JogoForca(JogoBase):
                 0,
                 True,
             )
+
+        if not letra.isalpha() or len(letra) != 1:
+            return ResultadoJogo(False, "Digite apenas uma letra valida.", 0, False)
+
+        if letra in estado["letras"]:
+            return ResultadoJogo(False, f"A letra {letra} ja foi usada. Tente outra.", 0, False)
 
         if letra not in estado["letras"]:
             estado["letras"].append(letra)

@@ -1,85 +1,160 @@
 # Arcade Cognitivo
 
-Plataforma web de jogos cognitivos, desafios educacionais e trilhas introdutórias de programação construída com `Streamlit`. O projeto combina jogos rápidos de raciocínio, memória e linguagem com um modo educacional chamado `Code Lab`, além de perfis locais, multiplayer por turnos, ranking, circuito aleatório e recursos de acessibilidade.
+Aplicacao web em `Streamlit` com jogos cognitivos, trilha educativa de programacao, perfis locais, ranking, multiplayer por turnos, acessibilidade e recurso de exportar/importar progresso para continuar depois.
 
-## Acesso Online
+## O que o projeto entrega
 
-Aplicação publicada no Streamlit Community Cloud:
+O `Arcade Cognitivo` combina:
 
-https://desafio-jogo-adivinhacao-bo25wk4blgetwgqvfw9q7v.streamlit.app/
-
-## Sumário
-
-- [Visão Geral](#visão-geral)
-- [Principais Recursos](#principais-recursos)
-- [Jogos Disponíveis](#jogos-disponíveis)
-- [Manual do Usuário](#manual-do-usuário)
-- [Arquitetura do Projeto](#arquitetura-do-projeto)
-- [Tecnologias e Bibliotecas](#tecnologias-e-bibliotecas)
-- [Estrutura de Dados](#estrutura-de-dados)
-- [Como Executar Localmente](#como-executar-localmente)
-- [Testes e Validação](#testes-e-validação)
-- [Acessibilidade](#acessibilidade)
-- [Deploy](#deploy)
-- [Roadmap](#roadmap)
-
-## Visão Geral
-
-O `Arcade Cognitivo` foi projetado para ser uma plataforma extensível de desafios interativos. A ideia central é unir:
-
-- jogos cognitivos curtos e reutilizáveis;
-- progressão de jogador com `XP`, `vidas` e `nível`;
-- conteúdo orientado a dados em arquivos `JSON`;
-- experiência local multiplayer;
-- trilhas educacionais para iniciantes em programação;
-- interface com foco em usabilidade e acessibilidade.
-
-O projeto atende tanto usuários que querem jogar casualmente quanto pessoas que desejam aprender lógica, interpretação e fundamentos de programação de forma lúdica.
-
-## Principais Recursos
-
-- catálogo com múltiplos jogos cognitivos;
-- perfis locais de usuários;
-- multiplayer por sessão com rotação entre perfis;
-- `Circuito Aleatório`, que mistura o catálogo inteiro em uma maratona;
+- jogos curtos de raciocinio, linguagem, memoria e logica;
+- perfis locais com `XP`, `vidas`, `nivel` e dificuldade;
+- multiplayer local com regras de troca de turno;
 - ranking global e ranking por jogo;
-- dificuldade automática ou manual;
-- sistema de vidas, XP e progressão;
-- sistema de dicas com custo controlado;
-- manual de uso integrado ao app;
-- recursos de acessibilidade na interface;
-- leitura de tela via síntese de voz do navegador;
-- trilha `Code Lab` com desafios de programação;
-- conteúdo expansível por arquivos `JSON`;
-- validação automatizada com testes.
+- `Circuito Aleatorio` com rotacao automatica entre participantes;
+- `Code Lab` para treino de leitura de codigo;
+- acessibilidade integrada;
+- arquivo de progresso para salvar e retomar a sessao.
 
-## Jogos Disponíveis
+## Recursos Principais
 
-### Jogos cognitivos
+- perfis persistidos em `JSON`;
+- dificuldade `automatica` e `manual`;
+- multiplayer com dois modos:
+  `Cada jogador responde um desafio`
+  `Errou, passou a vez`
+- exportacao de progresso via download;
+- importacao de progresso via upload;
+- ranking global e por jogo;
+- dicas com custo de XP;
+- leitura automatica da tela;
+- alto contraste, fonte ampliada e reducao de movimento;
+- conteudo extensivel por arquivos em `data/`.
 
-- `Adivinhação`
+## Jogos Disponiveis
+
+- `Adivinhacao`
 - `Analogias`
-- `Antônimos`
+- `Antonimos`
 - `Categorias`
+- `Code Lab`
 - `Forca`
-- `Matemática`
-- `Memória`
+- `Matematica`
+- `Memoria`
 - `Palavra Intrusa`
 - `Quiz`
 - `Scramble`
-- `Sequência`
-- `Sinônimos`
+- `Sequencia`
+- `Sinonimos`
 - `Verdadeiro ou Falso`
 
-### Trilha educacional
+## Como Executar
 
-- `Code Lab`
+### Requisitos
+
+- `Python 3`
+- dependencias do `requirements.txt`
+
+### Instalacao
+
+```bash
+pip install -r requirements.txt
+```
+
+### Execucao local
+
+```bash
+streamlit run app.py
+```
+
+O Streamlit normalmente abre em:
+
+```text
+http://localhost:8501
+```
+
+## Como Usar
+
+### Primeiro acesso
+
+1. Crie um perfil local.
+2. Abra o `Menu da Sessao`.
+3. Ajuste a dificuldade.
+4. Monte a sessao multiplayer, se quiser jogar com mais pessoas.
+5. Escolha um jogo na `Home`.
+
+### Dificuldade
+
+- `automatico`: acompanha o nivel do jogador.
+- `manual`: fixa em `facil`, `medio` ou `dificil`.
+
+### Multiplayer
+
+No `Menu da Sessao`, voce pode:
+
+1. definir quantos jogadores participam;
+2. escolher os perfis ativos;
+3. ativar o multiplayer nos jogos individuais;
+4. escolher a regra de troca de turno.
+
+Regras disponiveis:
+
+- `Cada jogador responde um desafio`
+  A vez troca quando o desafio do jogador termina.
+- `Errou, passou a vez`
+  Qualquer erro passa a vez para o proximo jogador.
+
+### Salvar de onde parou
+
+O app agora possui uma area de progresso no `Menu da Sessao`.
+
+#### Exportar progresso
+
+Use o botao `Baixar progresso atual` para gerar um arquivo `.json` com:
+
+- perfis locais;
+- ranking;
+- configuracoes da sessao;
+- configuracoes de acessibilidade;
+- configuracoes do multiplayer;
+- estado do circuito;
+- parte relevante do estado dos jogos para retomar depois.
+
+#### Importar progresso
+
+1. Abra o `Menu da Sessao`.
+2. Selecione um arquivo exportado anteriormente.
+3. Clique em `Restaurar progresso`.
+
+Isso permite continuar a experiencia em outro momento ou em outro ambiente com o mesmo progresso salvo.
+
+## Acessibilidade
+
+Recursos disponiveis:
+
+- alto contraste;
+- fonte ampliada;
+- reducao de efeitos visuais;
+- leitura automatica da tela;
+- controle de velocidade da narracao;
+- leitura manual da tela atual.
+
+Tambem foi reorganizada a interface para manter o enunciado proximo da area de resposta, melhorando usabilidade e leitura.
 
 ## Code Lab
 
-O `Code Lab` foi criado para ajudar programadores iniciantes a aprenderem por meio de microdesafios. A trilha usa questões curtas com foco em leitura de código, lógica, sintaxe, estruturas básicas e entendimento de conceitos fundamentais.
+`Code Lab` e a trilha educativa do projeto para iniciantes em programacao.
 
-Linguagens atualmente incluídas:
+Ela oferece desafios de:
+
+- leitura de codigo;
+- logica basica;
+- sintaxe;
+- estruturas condicionais;
+- repeticao;
+- funcoes;
+- conceitos por linguagem.
+
+Linguagens atuais:
 
 - `Python`
 - `JavaScript`
@@ -90,74 +165,15 @@ Linguagens atualmente incluídas:
 - `Go`
 - `Rust`
 
-Os desafios podem incluir:
-
-- leitura de código;
-- lógica básica;
-- variáveis e tipos;
-- estruturas condicionais;
-- estruturas de repetição;
-- coleções e arrays;
-- funções e métodos;
-- conceitos específicos por linguagem.
-
-## Manual do Usuário
-
-### Primeiro acesso
-
-1. Abra o app localmente ou pela versão publicada.
-2. Crie um perfil com o nome do jogador.
-3. Escolha a dificuldade:
-   `automatico` ajusta conforme o progresso;
-   `manual` trava entre `facil`, `medio` e `dificil`.
-4. Se quiser jogar com outras pessoas, configure a sessão multiplayer na sidebar.
-
-### Como jogar
-
-1. Entre na `Home`.
-2. Escolha um card de jogo ou inicie o `Circuito Aleatório`.
-3. Leia a introdução do desafio e as instruções.
-4. Envie sua resposta pelo campo apropriado.
-5. Use dicas quando necessário.
-6. Acompanhe vidas, XP e ranking.
-
-### Multiplayer local
-
-1. Crie múltiplos perfis.
-2. Defina quantos jogadores participarão da sessão.
-3. Selecione os perfis ativos.
-4. Use o `Circuito Aleatório` para alternar automaticamente entre eles.
-
-### Ranking
-
-- O ranking pode ser visualizado no modo global.
-- Também é possível filtrar por jogo específico.
-- A plataforma registra pontuações para comparação entre perfis locais.
-
-### Acessibilidade
-
-Na sidebar, o usuário pode ativar:
-
-- `alto contraste`;
-- `fonte ampliada`;
-- `reduzir efeitos visuais`;
-- `leitura automática da tela`;
-- velocidade de leitura;
-- botão para ler a tela atual.
-
-## Arquitetura do Projeto
+## Estrutura do Projeto
 
 ```text
 app.py
 core/
   engine/
   models/
-  game_ui.py
   player_manager.py
   ranking_manager.py
-services/
-  loaders/
-  persistence/
 games/
   adivinhacao/
   analogias/
@@ -173,6 +189,9 @@ games/
   sequencia/
   sinonimos/
   verdadeiro_falso/
+services/
+  loaders/
+  persistence/
 ui/
   components.py
   layout.py
@@ -182,230 +201,68 @@ tests/
 utils/
 ```
 
-### Responsabilidades por camada
+## Arquitetura
 
-- `app.py`
-  fluxo principal da aplicação, roteamento de páginas, renderização das telas e integração dos gerenciadores.
+### `app.py`
 
-- `core/engine`
-  contratos base, descoberta dinâmica dos jogos, fábrica e gerenciamento de ciclo de vida.
+Orquestra as paginas, o fluxo da sessao, acessibilidade, multiplayer, feedback de rodada e a exportacao/importacao do progresso.
 
-- `core/models`
-  modelos de domínio usados na aplicação.
+### `core/`
 
-- `core/player_manager.py`
-  gestão de perfis, experiência, vidas, dificuldade e perfis ativos.
+Contem os gerenciadores de dominio e o motor base dos jogos.
 
-- `core/ranking_manager.py`
-  armazenamento e leitura do ranking.
+### `games/`
 
-- `services/loaders`
-  carregamento de conteúdo estruturado dos jogos.
+Cada modulo define:
 
-- `services/persistence`
-  persistência local em arquivos `JSON`.
+- geracao do desafio;
+- renderizacao;
+- configuracao do input;
+- verificacao da resposta;
+- dica.
 
-- `games/`
-  implementação da lógica específica de cada jogo.
+### `services/persistence/`
 
-- `ui/`
-  componentes reutilizáveis, layout lateral e tema visual.
+Responsavel por salvar e carregar perfis e ranking em `JSON`.
 
-- `data/`
-  bases de dados em `JSON` com perguntas, palavras, sequências, analogias e trilhas do `Code Lab`.
+### `ui/`
 
-- `tests/`
-  testes automatizados de lógica e regressão.
+Componentes visuais e tema aplicado sobre a interface do Streamlit.
 
-## Tecnologias e Bibliotecas
+### `data/`
 
-### Linguagem
+Conteudo dos desafios em arquivos `JSON`.
 
-- `Python 3`
+## QA e Robustez
 
-### Framework principal
+Durante a varredura de QA, o projeto foi ajustado em varios pontos importantes:
 
-- `Streamlit`
+- carregamento de dados sem depender do diretorio atual;
+- tratamento mais seguro para arquivos JSON ausentes ou invalidos;
+- correcao da troca de turno no multiplayer;
+- ajuste do fluxo de pergunta e resposta para acessibilidade;
+- protecao contra letra repetida na `Forca`;
+- persistencia mais consistente do estado de alguns jogos para retomada;
+- normalizacao mais segura dos perfis locais;
+- testes de regressao ampliados.
 
-### UI e experiência
+## Testes
 
-- `HTML` e `CSS` customizados aplicados sobre componentes do Streamlit
-- `Streamlit Components`
+Existe cobertura em `tests/test_game_logic.py`.
 
-### Persistência
-
-- `JSON` para ranking, perfis locais e conteúdo dos jogos
-
-### Visualização
-
-- `Matplotlib` para apoio visual na forca
-
-### Testes
-
-- `unittest`
-
-### Controle de versão e publicação
-
-- `Git`
-- `GitHub`
-- `Streamlit Community Cloud`
-
-### Bibliotecas do projeto
-
-Dependências listadas em `requirements.txt`:
-
-- `streamlit`
-- `streamlit-extras`
-- `watchdog`
-- `pydantic`
-- `python-dotenv`
-- `requests`
-- `python-dateutil`
-- `typing_extensions`
-- `numpy`
-- `pandas`
-- `matplotlib`
-- `faker`
-
-### Bibliotecas da standard library utilizadas
-
-- `abc`
-- `dataclasses`
-- `datetime`
-- `importlib`
-- `json`
-- `logging`
-- `pathlib`
-- `pkgutil`
-- `random`
-- `tempfile`
-- `typing`
-- `unittest`
-- `uuid`
-
-## Estrutura de Dados
-
-O projeto foi pensado para crescer via conteúdo orientado a dados. A maior parte dos desafios é alimentada por arquivos `JSON`.
-
-### Exemplos de bases atuais
-
-- `data/quiz.json`
-- `data/vf.json`
-- `data/sequencias.json`
-- `data/palavras_forca.json`
-- `data/memoria_palavras.json`
-- `data/analogias.json`
-- `data/intrusos.json`
-- `data/categorias.json`
-- `data/sinonimos.json`
-- `data/antonimos.json`
-- `data/code_lab/python.json`
-- `data/code_lab/javascript.json`
-- `data/code_lab/typescript.json`
-- `data/code_lab/java.json`
-- `data/code_lab/csharp.json`
-- `data/code_lab/sql.json`
-- `data/code_lab/go.json`
-- `data/code_lab/rust.json`
-
-Esse formato facilita:
-
-- manutenção do conteúdo;
-- expansão para novos jogos;
-- criação de novas linguagens no `Code Lab`;
-- revisão de desafios sem alterar a lógica central.
-
-## Como Executar Localmente
-
-### Pré-requisitos
-
-- `Python 3.10+` recomendado
-- ambiente virtual opcional, mas recomendado
-
-### Instalação
+Para rodar:
 
 ```bash
-python -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
+python3 -m unittest -v tests.test_game_logic
 ```
 
-### Execução
-
-```bash
-streamlit run app.py
-```
-
-Depois, abra a URL local exibida no terminal, normalmente:
-
-```text
-http://localhost:8501
-```
-
-## Testes e Validação
-
-### Rodar os testes automatizados
-
-```bash
-python -m unittest discover -s tests -v
-```
-
-### Validar sintaxe dos arquivos principais
-
-```bash
-python -m py_compile app.py ui/theme.py ui/components.py
-```
-
-### Observações
-
-- os testes cobrem partes importantes da lógica e regressões conhecidas;
-- a validação visual final deve ser feita no navegador com `streamlit run app.py`;
-- componentes do Streamlit podem exibir avisos quando executados fora do modo padrão do framework durante testes unitários.
-
-## Acessibilidade
-
-O projeto inclui recursos para melhorar a experiência de pessoas com diferentes necessidades de uso:
-
-- contraste mais forte;
-- aumento de fonte;
-- redução de efeitos visuais;
-- foco visível;
-- leitura automatizada da tela atual;
-- apoio ao uso com leitores de tela do navegador;
-- feedback textual claro de erros, acertos e progresso.
-
-Observação importante:
-para uma validação completa de acessibilidade, o ideal é testar com ferramentas reais como `NVDA`, `VoiceOver` e navegação apenas por teclado.
+Observacao:
+os testes dependem da biblioteca `streamlit`. Se ela nao estiver instalada no ambiente, a importacao dos testes falhara antes da execucao.
 
 ## Deploy
 
-O projeto roda em:
+O projeto pode ser executado localmente e tambem publicado no `Streamlit Community Cloud`, desde que as dependencias estejam instaladas corretamente.
 
-- ambiente local com `Streamlit`;
-- `Streamlit Community Cloud`.
+## Licenca
 
-Aplicação publicada:
-
-https://desafio-jogo-adivinhacao-bo25wk4blgetwgqvfw9q7v.streamlit.app/
-
-## Roadmap
-
-Possíveis melhorias futuras:
-
-- ampliar o `Code Lab` com novos formatos de desafio;
-- adicionar estatísticas detalhadas por perfil;
-- criar conquistas e medalhas;
-- melhorar tutorial interativo dentro do app;
-- adicionar modo campeonato por rodadas;
-- incluir novas bases educacionais e novos jogos;
-- fortalecer validação com testes de interface.
-
-## Status do Projeto
-
-Projeto funcional, em evolução contínua, com foco em:
-
-- experiência do usuário;
-- acessibilidade;
-- arquitetura mais profissional;
-- expansão do conteúdo;
-- estabilidade da lógica principal.
+Adicione aqui a licenca oficial do projeto, se desejar.

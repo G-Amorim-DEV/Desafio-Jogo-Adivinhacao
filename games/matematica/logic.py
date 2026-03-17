@@ -14,13 +14,15 @@ class JogoMatematica(JogoBase):
 
     def __init__(self, jogador):
         self.jogador = jogador
-        self.resposta = None
-        self.desafio_texto = None
         if "matematica" not in st.session_state:
             self.resetar_jogo()
 
     def resetar_jogo(self):
-        st.session_state.matematica = {"acertos_seguidos": 0}
+        st.session_state.matematica = {
+            "acertos_seguidos": 0,
+            "resposta": None,
+            "desafio_texto": None,
+        }
 
     def obter_info(self) -> GameInfo:
         return GameInfo(
@@ -43,6 +45,10 @@ class JogoMatematica(JogoBase):
         )
 
     def gerar_desafio(self):
+        estado = st.session_state.matematica
+        if estado.get("desafio_texto") is not None and estado.get("resposta") is not None:
+            return estado["desafio_texto"]
+
         dificuldade = self.jogador.dificuldade()
         limites = {"facil": 20, "medio": 50, "dificil": 120}
         operacoes = {
@@ -58,19 +64,21 @@ class JogoMatematica(JogoBase):
 
         if op == "/":
             b = random.randint(2, 12)
-            self.resposta = random.randint(2, 12)
-            a = b * self.resposta
+            resposta_correta = random.randint(2, 12)
+            a = b * resposta_correta
         elif op == "+":
-            self.resposta = a + b
+            resposta_correta = a + b
         elif op == "-":
-            self.resposta = a - b
+            resposta_correta = a - b
         else:
-            self.resposta = a * b
+            resposta_correta = a * b
 
-        st.session_state.matematica["pontos"] = pontos
-        st.session_state.matematica["dificuldade"] = dificuldade
-        self.desafio_texto = f"{a} {op} {b}"
-        return self.desafio_texto
+        desafio_texto = f"{a} {op} {b}"
+        estado["pontos"] = pontos
+        estado["dificuldade"] = dificuldade
+        estado["resposta"] = resposta_correta
+        estado["desafio_texto"] = desafio_texto
+        return desafio_texto
 
     def verificar_resposta(self, resposta):
         try:
@@ -79,16 +87,23 @@ class JogoMatematica(JogoBase):
             return ResultadoJogo(False, "Digite um numero valido.", 0, False)
 
         estado = st.session_state.matematica
+        resposta_correta = estado.get("resposta")
+        desafio_texto = estado.get("desafio_texto")
 
-        if resposta == self.resposta:
+        if resposta_correta is None or not desafio_texto:
+            return ResultadoJogo(False, "Nenhum desafio matematico ativo.", 0, False)
+
+        if resposta == resposta_correta:
             pontos = st.session_state.matematica.get("pontos", 5)
             self.jogador.adicionar_xp(pontos)
             estado["acertos_seguidos"] += 1
             if estado["acertos_seguidos"] % 5 == 0:
                 self.jogador.ganhar_vida()
+            estado["resposta"] = None
+            estado["desafio_texto"] = None
             return ResultadoJogo(
                 True,
-                f"Correto. {self.desafio_texto} = {self.resposta}",
+                f"Correto. {desafio_texto} = {resposta_correta}",
                 pontos,
                 False,
             )
@@ -96,14 +111,16 @@ class JogoMatematica(JogoBase):
         vidas_restantes = self.jogador.perder_vida()
         estado["acertos_seguidos"] = 0
         if vidas_restantes <= 0:
+            estado["resposta"] = None
+            estado["desafio_texto"] = None
             return ResultadoJogo(
                 False,
-                f"Errado. {self.desafio_texto} = {self.resposta}. Voce perdeu todas as vidas.",
+                f"Errado. {desafio_texto} = {resposta_correta}. Voce perdeu todas as vidas.",
                 0,
                 True,
             )
 
-        diferenca = abs(resposta - self.resposta)
+        diferenca = abs(resposta - resposta_correta)
         if diferenca <= 2:
             dica = "Muito proximo. Ajuste por poucos numeros."
         elif diferenca <= 10:
@@ -113,7 +130,7 @@ class JogoMatematica(JogoBase):
 
         return ResultadoJogo(
             False,
-            f"Errado. {dica} ({self.desafio_texto} = {self.resposta}). Vidas restantes: {vidas_restantes}",
+            f"Errado. {dica} ({desafio_texto} = {resposta_correta}). Vidas restantes: {vidas_restantes}",
             0,
             False,
         )
@@ -133,7 +150,8 @@ class JogoMatematica(JogoBase):
         return desafio
 
     def obter_dica(self):
-        operador = self.desafio_texto.split()[1] if self.desafio_texto else "?"
+        desafio_texto = st.session_state.matematica.get("desafio_texto")
+        operador = desafio_texto.split()[1] if desafio_texto else "?"
         return f"O operador da operacao e '{operador}'."
 
 

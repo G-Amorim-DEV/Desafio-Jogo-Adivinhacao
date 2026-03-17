@@ -40,7 +40,8 @@ class PlayerRepository:
                 active_player_id = players[0]["id"]
             return {"active_player_id": active_player_id, "players": players}
 
-        player = self._player_base(data)
-        if not any(player.values()):
+        if not any(data.get(chave) for chave in ("nome", "xp", "vidas", "jogos_jogados")):
             return {"active_player_id": None, "players": []}
+
+        player = self._player_base(data)
         return {"active_player_id": player["id"], "players": [player]}

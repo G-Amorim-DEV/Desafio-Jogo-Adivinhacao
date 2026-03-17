@@ -1,4 +1,3 @@
-import json
 import random
 
 import streamlit as st
@@ -6,6 +5,7 @@ import streamlit as st
 from core.engine.base import JogoBase
 from core.engine.ui import GameInfo, InputConfig
 from core.models.result import ResultadoJogo
+from services.loaders.json_loader import carregar_json
 
 GAME_NAME = "Categorias"
 
@@ -15,8 +15,9 @@ class JogoCategorias(JogoBase):
 
     def __init__(self, jogador):
         self.jogador = jogador
-        with open("data/categorias.json", encoding="utf-8") as arquivo:
-            self.desafios = json.load(arquivo)
+        self.desafios = carregar_json("data/categorias.json") or []
+        if not self.desafios:
+            raise ValueError("Nenhum desafio de categorias foi encontrado.")
         if "categorias" not in st.session_state:
             self.resetar_jogo()
 

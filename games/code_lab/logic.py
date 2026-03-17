@@ -1,12 +1,12 @@
 import json
 import random
-from pathlib import Path
 
 import streamlit as st
 
 from core.engine.base import JogoBase
 from core.engine.ui import GameInfo, InputConfig
 from core.models.result import ResultadoJogo
+from utils.paths import data_dir
 
 GAME_NAME = "Code Lab"
 
@@ -43,11 +43,13 @@ class JogoCodeLab(JogoBase):
             self.resetar_jogo()
 
     def _carregar_desafios(self):
-        base = Path("data/code_lab")
+        base = data_dir("code_lab")
         desafios = []
         for arquivo in sorted(base.glob("*.json")):
             with open(arquivo, encoding="utf-8") as f:
                 desafios.extend(json.load(f))
+        if not desafios:
+            raise ValueError("Nenhum desafio do Code Lab foi encontrado.")
         return desafios
 
     def resetar_jogo(self):

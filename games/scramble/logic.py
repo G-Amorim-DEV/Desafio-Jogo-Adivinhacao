@@ -49,7 +49,9 @@ class JogoScramble(JogoBase):
         if st.session_state.scramble.get("original"):
             return st.session_state.scramble["embaralhada"]
 
-        dados = carregar_json("data/palavras_forca.json")
+        dados = carregar_json("data/palavras_forca.json") or []
+        if not dados:
+            raise ValueError("Nenhuma palavra para scramble foi encontrada.")
         dificuldade = self.jogador.dificuldade()
         candidatos = [item for item in dados if item.get("dificuldade") == dificuldade]
         palavra_obj = random.choice(candidatos or dados)

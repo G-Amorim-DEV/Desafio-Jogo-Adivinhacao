@@ -2,32 +2,44 @@ from typing import Dict, List
 
 from services.persistence.ranking_repository import RankingRepository
 
+
 class RankingManager:
     """Gerencia rankings de jogadores por jogo e global."""
 
     def __init__(self):
         self.repository = RankingRepository()
         self.ranking = self.repository.load()
+        self.ranking.setdefault("global", {})
+        self.ranking.setdefault("jogos", {})
 
     def salvar(self):
         self.repository.save(self.ranking)
 
+    def importar_ranking(self, ranking_data: dict):
+        self.ranking = ranking_data or {"global": {}, "jogos": {}}
+        self.ranking.setdefault("global", {})
+        self.ranking.setdefault("jogos", {})
+        self.salvar()
+
     def adicionar_score(self, nome_jogador: str, jogo: str, score: int):
         """Adiciona ou atualiza score de um jogador em um jogo."""
+        if score <= 0:
+            return
+
         if jogo not in self.ranking["jogos"]:
             self.ranking["jogos"][jogo] = {}
-        
+
         self.ranking["jogos"][jogo][nome_jogador] = max(
             self.ranking["jogos"][jogo].get(nome_jogador, 0), score
         )
-        
+
         # Atualiza ranking global (soma de todos os jogos)
         total = sum(
-            jogo_dict.get(nome_jogador, 0) 
+            jogo_dict.get(nome_jogador, 0)
             for jogo_dict in self.ranking["jogos"].values()
         )
         self.ranking["global"][nome_jogador] = total
-        
+
         self.salvar()
 
     def get_ranking_global(self) -> List[tuple]:
@@ -35,7 +47,7 @@ class RankingManager:
         ranking = sorted(
             self.ranking["global"].items(),
             key=lambda x: x[1],
-            reverse=True
+            reverse=True,
         )
         return ranking
 
@@ -46,7 +58,7 @@ class RankingManager:
         ranking = sorted(
             self.ranking["jogos"][jogo].items(),
             key=lambda x: x[1],
-            reverse=True
+            reverse=True,
         )
         return ranking
 

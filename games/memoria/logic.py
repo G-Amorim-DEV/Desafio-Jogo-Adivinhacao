@@ -1,4 +1,3 @@
-import json
 import random
 
 import streamlit as st
@@ -6,6 +5,7 @@ import streamlit as st
 from core.engine.base import JogoBase
 from core.engine.ui import GameInfo, InputConfig
 from core.models.result import ResultadoJogo
+from services.loaders.json_loader import carregar_json
 
 GAME_NAME = "Memória"
 
@@ -15,8 +15,9 @@ class JogoMemoria(JogoBase):
 
     def __init__(self, jogador):
         self.jogador = jogador
-        with open("data/memoria_palavras.json", encoding="utf-8") as arquivo:
-            self.data = json.load(arquivo)
+        self.data = carregar_json("data/memoria_palavras.json") or {}
+        if not self.data:
+            raise ValueError("Nenhuma base de memoria foi encontrada.")
 
         if "memoria" not in st.session_state:
             self.resetar_jogo()

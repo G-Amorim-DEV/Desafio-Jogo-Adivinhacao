@@ -1,4 +1,6 @@
+import json
 import streamlit as st
+from datetime import datetime, timezone
 from random import shuffle
 
 from core.engine.manager import GameManager
@@ -22,6 +24,35 @@ from ui.theme import aplicar_tema
 CIRCUIT_PAGE = "🎲 Circuito Aleatorio"
 GUIDE_PAGE = "📘 Como Usar"
 MENU_PAGE = "🧭 Menu da Sessao"
+SAVE_BUNDLE_VERSION = 1
+SESSION_SAVE_KEYS = {
+    "pagina",
+    "jogo_atual",
+    "session_player_ids",
+    "session_player_count",
+    "multiplayer_game_mode",
+    "multiplayer_turn_mode",
+    "accessibility_high_contrast",
+    "accessibility_large_text",
+    "accessibility_reduce_motion",
+    "accessibility_auto_read",
+    "accessibility_reader_speed",
+    "circuito",
+    "adivinhacao",
+    "analogias",
+    "antonimos",
+    "categorias",
+    "code_lab",
+    "forca",
+    "intruso",
+    "matematica",
+    "memoria",
+    "quiz",
+    "scramble",
+    "sequencia",
+    "sinonimos",
+    "verdadeiro_falso",
+}
 
 
 def carregar_infos_jogos(manager: GameManager, player: PlayerManager) -> dict:
@@ -37,6 +68,54 @@ def carregar_infos_jogos(manager: GameManager, player: PlayerManager) -> dict:
             del st.session_state[chave]
 
     return infos
+
+
+def build_progress_snapshot(player_manager: PlayerManager, ranking_manager: RankingManager) -> dict:
+    session_data = {}
+    for chave in SESSION_SAVE_KEYS:
+        if chave in st.session_state:
+            session_data[chave] = st.session_state[chave]
+
+    for chave in st.session_state.keys():
+        if chave.startswith("controle_") or chave.startswith("turnos_"):
+            session_data[chave] = st.session_state[chave]
+
+    return {
+        "version": SAVE_BUNDLE_VERSION,
+        "saved_at": datetime.now(timezone.utc).isoformat(),
+        "player_store": player_manager.store,
+        "ranking": ranking_manager.ranking,
+        "session": session_data,
+    }
+
+
+def restore_progress_snapshot(snapshot: dict, player_manager: PlayerManager, ranking_manager: RankingManager):
+    if not isinstance(snapshot, dict):
+        raise ValueError("Arquivo invalido: formato de progresso nao reconhecido.")
+
+    version = snapshot.get("version")
+    if version is None:
+        raise ValueError("Arquivo invalido: versao do progresso ausente.")
+    if version > SAVE_BUNDLE_VERSION:
+        raise ValueError("Arquivo de progresso criado por uma versao mais nova do app.")
+
+    player_store = snapshot.get("player_store")
+    ranking = snapshot.get("ranking")
+    session_data = snapshot.get("session", {})
+
+    if not isinstance(player_store, dict) or not isinstance(ranking, dict) or not isinstance(session_data, dict):
+        raise ValueError("Arquivo invalido: dados obrigatorios ausentes.")
+
+    player_manager.importar_store(player_store)
+    ranking_manager.importar_ranking(ranking)
+
+    for chave in list(st.session_state.keys()):
+        del st.session_state[chave]
+
+    for chave, valor in session_data.items():
+        st.session_state[chave] = valor
+
+    st.session_state.progress_feedback = "Progresso importado com sucesso."
 
 
 def get_session_player_ids(player_manager: PlayerManager):
@@ -75,16 +154,16 @@ def get_multiplayer_turn_mode() -> str:
 def multiplayer_turn_mode_label() -> str:
     return {
         "round": "Um desafio por jogador",
-        "lose": "Troca apenas quando perder",
+        "lose": "Errou, passou a vez",
     }.get(get_multiplayer_turn_mode(), "Um desafio por jogador")
 
 
 def deve_avancar_turno_apos_resultado(player_manager: PlayerManager, resultado) -> bool:
-    if not multiplayer_ativo(player_manager) or not resultado or not resultado.finalizado:
+    if not multiplayer_ativo(player_manager) or not resultado:
         return False
 
     if get_multiplayer_turn_mode() == "round":
-        return True
+        return resultado.correto or resultado.finalizado
 
     return not resultado.correto
 
@@ -379,9 +458,14 @@ def render_circuit_page(manager: GameManager, player_manager: PlayerManager, ran
         st.info("Conclua a etapa atual do jogo para enviar a resposta desta rodada.")
 
 
-def render_menu_page(jogos: list[str], player_manager: PlayerManager):
+def render_menu_page(jogos: list[str], player_manager: PlayerManager, ranking: RankingManager):
     dados = player_manager.dados()
     jogadores = player_manager.listar_jogadores()
+
+    if st.session_state.get("progress_feedback"):
+        st.success(st.session_state.pop("progress_feedback"))
+    if st.session_state.get("progress_error"):
+        st.error(st.session_state.pop("progress_error"))
 
     render_page_hero(
         "Menu da Sessao",
@@ -510,12 +594,12 @@ def render_menu_page(jogos: list[str], player_manager: PlayerManager):
                     index=0 if get_multiplayer_turn_mode() == "round" else 1,
                     format_func=lambda valor: {
                         "round": "Cada jogador responde um desafio",
-                        "lose": "O jogador continua ate perder",
+                        "lose": "Errou, passou a vez",
                     }[valor],
                     key="multiplayer_turn_mode",
                 )
                 st.caption(
-                    "No primeiro modo, a vez troca ao final de cada desafio. No segundo, o jogador atual continua jogando ate perder a rodada."
+                    "No primeiro modo, a vez troca quando o desafio termina. No segundo, qualquer erro passa a vez para o proximo jogador."
                 )
             else:
                 st.caption("Ative o multiplayer para alternar jogadores nos desafios individuais.")
@@ -535,6 +619,33 @@ def render_menu_page(jogos: list[str], player_manager: PlayerManager):
             if st.button("Ler tela atual", key="ler_tela_menu", use_container_width=True):
                 st.session_state.accessibility_read_now = True
                 st.rerun()
+
+        with st.container(border=True):
+            st.subheader("Salvar e retomar progresso")
+            snapshot = build_progress_snapshot(player_manager, ranking)
+            st.download_button(
+                "Baixar progresso atual",
+                data=json.dumps(snapshot, ensure_ascii=False, indent=2),
+                file_name="arcade-cognitivo-save.json",
+                mime="application/json",
+                use_container_width=True,
+            )
+            arquivo_importado = st.file_uploader(
+                "Importar arquivo de progresso",
+                type=["json"],
+                key="progress_import_file",
+                help="Use um arquivo exportado pelo proprio app para continuar de onde parou.",
+            )
+            if st.button("Restaurar progresso", key="restaurar_progresso_menu", use_container_width=True):
+                if not arquivo_importado:
+                    st.session_state.progress_error = "Selecione um arquivo de progresso antes de restaurar."
+                else:
+                    try:
+                        snapshot_importado = json.loads(arquivo_importado.getvalue().decode("utf-8"))
+                        restore_progress_snapshot(snapshot_importado, player_manager, ranking)
+                    except (UnicodeDecodeError, json.JSONDecodeError, ValueError) as exc:
+                        st.session_state.progress_error = f"Nao foi possivel importar o progresso: {exc}"
+                    st.rerun()
 
     with col_nav:
         render_side_panel(
@@ -866,58 +977,82 @@ elif pagina == "🏆 Ranking":
         )
 
 elif pagina == MENU_PAGE:
-    render_menu_page(jogos, player)
+    render_menu_page(jogos, player, ranking)
 
 elif pagina == GUIDE_PAGE:
     render_page_hero(
         "Como Usar o Arcade Cognitivo",
-        "Um manual rapido para aprender o fluxo do app, entender os modos disponiveis e aproveitar melhor os recursos de acessibilidade.",
-        "Onboarding",
+        "Guia completo da plataforma: perfis, multiplayer, circuito, acessibilidade, ranking e boas praticas para cada rodada.",
+        "Manual da Plataforma",
     )
 
     guia_principal, guia_lateral = st.columns([1.45, 1])
     with guia_principal:
         render_step_guide(
-            "Passo a passo do app",
+            "Comecando do jeito certo",
             [
-                ("Crie seu perfil local", "Ao abrir o app pela primeira vez, informe um nome para criar o perfil principal e liberar o catalogo."),
-                ("Ajuste a dificuldade", "Na sidebar, escolha entre modo automatico ou manual para controlar o nivel dos desafios."),
-                ("Monte a sessao multiplayer", "Defina quantos jogadores participam e selecione os perfis que entram na rodada local."),
-                ("Escolha uma experiencia", "Na Home, abra um jogo especifico, va para o ranking ou inicie o Circuito Aleatorio."),
-                ("Responda e acompanhe o feedback", "Cada jogo informa regras, mostra dicas disponiveis e permite tentar novamente quando o erro nao encerra a rodada."),
-                ("Use os recursos de acessibilidade", "Ative alto contraste, fonte ampliada, reducao de efeitos e leitura automatica quando necessario."),
+                ("Crie ou selecione um perfil", "Cada participante joga com um perfil local proprio, com XP, vidas, nivel e preferencia de dificuldade."),
+                ("Escolha a dificuldade", "Use o modo automatico para progressao por nivel ou o modo manual para travar em facil, medio ou dificil."),
+                ("Monte a sessao", "Defina quantos jogadores participam e selecione os perfis ativos antes de abrir qualquer jogo."),
+                ("Defina a regra do multiplayer", "Escolha entre alternar a cada desafio ou trocar a vez quando alguem errar."),
+                ("Salve seu progresso", "No Menu da Sessao, use o download do arquivo de progresso para continuar depois exatamente com seus perfis, ranking e configuracoes."),
+                ("Abra um jogo ou circuito", "Na Home, entre em um desafio individual, no Code Lab ou no Circuito Aleatorio."),
+                ("Leia o feedback da rodada", "A interface mostra vidas, dicas, custo de ajuda, mensagens de acerto ou erro e a proxima acao recomendada."),
             ],
         )
 
         render_step_guide(
-            "Como funciona cada area",
+            "Entendendo cada area do app",
             [
-                ("Home", "Hub principal com cards dos jogos, resumo da sessao e atalhos para ranking e circuito."),
-                ("Jogos individuais", "Tela com introducao, input apropriado para cada desafio, dicas, vidas e feedback da rodada."),
-                ("Circuito Aleatorio", "Modo maratona que alterna jogadores e sorteia jogos do catalogo em sequencia."),
-                ("Ranking", "Painel de campeonato com classificacao global e filtros por jogo."),
-                ("Code Lab", "Trilha para iniciantes em programacao com desafios por linguagem, conceito e dificuldade."),
+                ("Home", "Central do arcade com cards dos jogos, atalhos e resumo da sessao atual."),
+                ("Menu da Sessao", "Lugar para trocar perfil, configurar dificuldade, montar multiplayer e ativar recursos de acessibilidade."),
+                ("Jogos Individuais", "Tela principal da rodada com instrucoes, area de resposta, dica, feedback e controle de turnos."),
+                ("Circuito Aleatorio", "Maratona que usa o catalogo inteiro e alterna automaticamente entre os jogadores da sessao."),
+                ("Ranking", "Quadro global e por jogo, sempre considerando a melhor pontuacao de cada perfil."),
+                ("Code Lab", "Modo de aprendizado com filtros por linguagem e conceito para treinar leitura de codigo."),
+            ],
+        )
+
+        render_step_guide(
+            "Como funciona o multiplayer",
+            [
+                ("Cada jogador responde um desafio", "A vez troca quando o desafio do jogador atual termina, seja por acerto ou por fim da rodada."),
+                ("Errou, passou a vez", "Qualquer erro ja transfere a vez para o proximo participante da sessao."),
+                ("Jogador ativo", "O nome exibido no topo e no placar lateral sempre indica quem esta com a vez naquele momento."),
+                ("Quando alguem perde todas as vidas", "No multiplayer, a tela oferece avancar para o proximo jogador sem reiniciar a sessao inteira."),
+            ],
+        )
+
+        render_step_guide(
+            "Salvar de onde parou",
+            [
+                ("Exportar progresso", "Baixe o arquivo JSON de progresso pelo Menu da Sessao para guardar perfis, ranking, configuracoes e parte do estado atual da sessao."),
+                ("Importar depois", "Use o uploader do mesmo menu para restaurar esse arquivo no futuro."),
+                ("O que volta junto", "Perfis, ranking, jogadores da sessao, configuracoes de acessibilidade, multiplayer, circuito e varios estados dos jogos."),
+                ("Boa pratica", "Sempre exporte novamente depois de uma sequencia importante de partidas para manter o backup atualizado."),
             ],
         )
     with guia_lateral:
         render_side_panel(
-            "Checklist de Inicio",
+            "Resumo do Manual",
             [
                 ("Perfil ativo", player.dados()["nome"]),
                 ("Jogadores na sessao", str(len(get_session_players(player)))),
                 ("Dificuldade", resumo_dificuldade(player)),
-                ("Pagina atual", "Manual do usuario"),
+                ("Modo multiplayer", multiplayer_turn_mode_label() if multiplayer_ativo(player) else "Desligado"),
             ],
-            "Se o objetivo for aprender jogando, comece pelo Code Lab e depois avance para o Circuito Aleatorio.",
+            "Se a ideia for aprender a plataforma rapido, ajuste a sessao no menu e depois teste um jogo individual antes de abrir o circuito.",
         )
 
         render_step_guide(
-            "Boas praticas de uso",
+            "Acessibilidade e boas praticas",
             [
-                ("Jogue em blocos curtos", "Os desafios foram pensados para sessoes rapidas e repetiveis."),
-                ("Use dica com estrategia", "Dicas ajudam a progredir, mas consomem uma pequena quantidade de XP."),
-                ("Reveja o ranking", "Acompanhar pontuacao ajuda a medir evolucao e criar metas simples."),
-                ("Ative a leitura de tela", "Para usuarios com baixa visao, a leitura automatica ajuda a navegar pelo conteudo atual."),
+                ("Ative a leitura automatica", "O app pode narrar o resumo da tela atual usando a sintese de voz do navegador."),
+                ("Use alto contraste e fonte ampliada", "Essas opcoes ajudam principalmente em leitura longa, baixa visao e uso em telas menores."),
+                ("Responda perto do enunciado", "A area de resposta foi organizada para manter o desafio visivel durante a interacao."),
+                ("Exporte o progresso regularmente", "Isso facilita retomar a experiencia em outro momento ou em outro ambiente sem perder a sessao."),
+                ("Use dicas com estrategia", "As dicas ajudam a manter o fluxo da rodada, mas consomem XP."),
+                ("Revise o ranking com frequencia", "Ele ajuda a acompanhar evolucao individual e desempenho por jogo."),
             ],
         )
 

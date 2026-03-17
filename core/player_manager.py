@@ -17,6 +17,11 @@ class PlayerManager:
     def salvar(self):
         self.repository.save(self.store)
 
+    def importar_store(self, store: dict):
+        self.store = self.repository._normalizar_store(store or {})
+        self.player = self._get_active_player()
+        self.salvar()
+
     def tem_jogadores(self):
         return bool(self.store.get("players"))
 

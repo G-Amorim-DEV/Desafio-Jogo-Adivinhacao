@@ -8,6 +8,8 @@ import streamlit as st
 
 from core.engine.loader import GameLoader
 from core.player_manager import PlayerManager
+from core.ranking_manager import RankingManager
+from services.persistence.player_repository import PlayerRepository
 from games.adivinhacao import Game as AdivinhacaoGame
 from games.analogias import Game as AnalogiasGame
 from games.antonimos import Game as AntonimosGame
@@ -15,11 +17,13 @@ from games.categorias import Game as CategoriasGame
 from games.code_lab import Game as CodeLabGame
 from games.forca import Game as ForcaGame
 from games.intruso import Game as IntrusoGame
+from games.matematica import Game as MatematicaGame
 from games.memoria import Game as MemoriaGame
 from games.quiz import Game as QuizGame
 from games.scramble import Game as ScrambleGame
 from games.sequencia import Game as SequenciaGame
 from games.sinonimos import Game as SinonimosGame
+from games.verdadeiro_falso import Game as VerdadeiroFalsoGame
 
 
 class GameLogicTests(unittest.TestCase):
@@ -46,6 +50,17 @@ class GameLogicTests(unittest.TestCase):
         patcher.start()
         self.addCleanup(patcher.stop)
         return PlayerManager()
+
+    def criar_ranking_manager(self):
+        ranking_path = Path(self.temp_dir.name) / "ranking.json"
+        ranking_path.write_text(
+            json.dumps({"global": {}, "jogos": {}}, ensure_ascii=False),
+            encoding="utf-8",
+        )
+        patcher = patch("services.persistence.ranking_repository.data_path", return_value=ranking_path)
+        patcher.start()
+        self.addCleanup(patcher.stop)
+        return RankingManager()
 
     def test_game_loader_cria_todos_os_jogos_com_player_manager(self):
         player = self.criar_player_manager()
@@ -217,6 +232,86 @@ class GameLogicTests(unittest.TestCase):
         self.assertFalse(resultado.correto)
         self.assertIn("Z", st.session_state.forca["letras"])
         self.assertEqual(st.session_state.forca["tentativas"], 5)
+
+    def test_forca_nao_consume_tentativa_em_letra_repetida(self):
+        player = self.criar_player_manager()
+        jogo = ForcaGame(player)
+        st.session_state.forca = {
+            "palavra": "PYTHON",
+            "letras": ["Z"],
+            "tentativas": 5,
+            "tentativas_iniciais": 6,
+        }
+
+        resultado = jogo.verificar_resposta("Z")
+
+        self.assertFalse(resultado.correto)
+        self.assertIn("ja foi usada", resultado.mensagem)
+        self.assertEqual(st.session_state.forca["tentativas"], 5)
+
+    def test_player_repository_nao_cria_perfil_fantasma_com_dados_vazios(self):
+        repo = PlayerRepository()
+
+        store = repo._normalizar_store({})
+
+        self.assertEqual(store, {"active_player_id": None, "players": []})
+
+    def test_player_manager_importa_store_e_mantem_jogador_ativo(self):
+        player = self.criar_player_manager()
+        novo_store = {
+            "active_player_id": "2",
+            "players": [
+                {"id": "1", "nome": "Ana", "vidas": 4, "xp": 10, "jogos_jogados": 2},
+                {"id": "2", "nome": "Bia", "vidas": 5, "xp": 20, "jogos_jogados": 3},
+            ],
+        }
+
+        player.importar_store(novo_store)
+
+        self.assertEqual(player.dados()["nome"], "Bia")
+        self.assertEqual(len(player.listar_jogadores()), 2)
+
+    def test_ranking_manager_importa_ranking(self):
+        ranking = self.criar_ranking_manager()
+        novo_ranking = {"global": {"Ana": 10}, "jogos": {"Quiz": {"Ana": 10}}}
+
+        ranking.importar_ranking(novo_ranking)
+
+        self.assertEqual(ranking.get_ranking_global(), [("Ana", 10)])
+        self.assertEqual(ranking.get_ranking_jogo("Quiz"), [("Ana", 10)])
+
+    def test_matematica_reaproveita_desafio_salvo_na_sessao(self):
+        player = self.criar_player_manager()
+        jogo = MatematicaGame(player)
+        st.session_state.matematica.update(
+            {
+                "acertos_seguidos": 0,
+                "resposta": 12,
+                "desafio_texto": "7 + 5",
+                "pontos": 5,
+                "dificuldade": "facil",
+            }
+        )
+
+        desafio = jogo.gerar_desafio()
+        resultado = jogo.verificar_resposta("12")
+
+        self.assertEqual(desafio, "7 + 5")
+        self.assertTrue(resultado.correto)
+        self.assertIsNone(st.session_state.matematica["desafio_texto"])
+
+    def test_verdadeiro_falso_reusa_afirmacao_salva_na_sessao(self):
+        player = self.criar_player_manager()
+        jogo = VerdadeiroFalsoGame(player)
+        afirmacao = {"texto": "O ceu e azul.", "resposta": "verdadeiro", "dificuldade": "facil"}
+        st.session_state.verdadeiro_falso["afirmacao_atual"] = afirmacao
+
+        desafio = jogo.gerar_desafio()
+        resultado = jogo.verificar_resposta("verdadeiro")
+
+        self.assertEqual(desafio, "O ceu e azul.")
+        self.assertTrue(resultado.correto)
+        self.assertIsNone(st.session_state.verdadeiro_falso["afirmacao_atual"])
 
     def test_novos_jogos_carregam_desafios(self):
         player = self.criar_player_manager()
