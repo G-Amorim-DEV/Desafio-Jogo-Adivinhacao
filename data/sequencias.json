@@ -1,646 +1,1066 @@
 [
-    {
-        "tipo": "aritmetica",
-        "dificuldade": "facil",
-        "sequencia": [
-            2,
-            4,
-            6,
-            8
-        ],
-        "resposta": 10,
-        "dica": "+2",
-        "explicacao": "soma constante",
-        "pontos": 5
-    },
-    {
-        "tipo": "aritmetica",
-        "dificuldade": "facil",
-        "sequencia": [
-            5,
-            10,
-            15,
-            20
-        ],
-        "resposta": 25,
-        "dica": "+5",
-        "explicacao": "progressão aritmética",
-        "pontos": 5
-    },
-    {
-        "tipo": "aritmetica",
-        "dificuldade": "facil",
-        "sequencia": [
-            1,
-            3,
-            5,
-            7
-        ],
-        "resposta": 9,
-        "dica": "+2",
-        "explicacao": "soma constante",
-        "pontos": 5
-    },
-    {
-        "tipo": "aritmetica",
-        "dificuldade": "facil",
-        "sequencia": [
-            10,
-            20,
-            30,
-            40
-        ],
-        "resposta": 50,
-        "dica": "+10",
-        "explicacao": "progressão aritmética",
-        "pontos": 5
-    },
-    {
-        "tipo": "aritmetica",
-        "dificuldade": "facil",
-        "sequencia": [
-            0,
-            2,
-            4,
-            6
-        ],
-        "resposta": 8,
-        "dica": "+2",
-        "explicacao": "soma constante",
-        "pontos": 5
-    },
-    {
-        "tipo": "aritmetica",
-        "dificuldade": "facil",
-        "sequencia": [
-            3,
-            6,
-            9,
-            12
-        ],
-        "resposta": 15,
-        "dica": "+3",
-        "explicacao": "progressão aritmética",
-        "pontos": 5
-    },
-    {
-        "tipo": "aritmetica",
-        "dificuldade": "facil",
-        "sequencia": [
-            7,
-            14,
-            21,
-            28
-        ],
-        "resposta": 35,
-        "dica": "+7",
-        "explicacao": "progressão aritmética",
-        "pontos": 5
-    },
-    {
-        "tipo": "aritmetica",
-        "dificuldade": "facil",
-        "sequencia": [
-            1,
-            2,
-            3,
-            4
-        ],
-        "resposta": 5,
-        "dica": "+1",
-        "explicacao": "soma constante",
-        "pontos": 5
-    },
-    {
-        "tipo": "aritmetica",
-        "dificuldade": "facil",
-        "sequencia": [
-            6,
-            12,
-            18,
-            24
-        ],
-        "resposta": 30,
-        "dica": "+6",
-        "explicacao": "progressão aritmética",
-        "pontos": 5
-    },
-    {
-        "tipo": "aritmetica",
-        "dificuldade": "facil",
-        "sequencia": [
-            8,
-            16,
-            24,
-            32
-        ],
-        "resposta": 40,
-        "dica": "+8",
-        "explicacao": "progressão aritmética",
-        "pontos": 5
-    },
-    {
-        "tipo": "geometrica",
-        "dificuldade": "medio",
-        "sequencia": [
-            3,
-            6,
-            12,
-            24
-        ],
-        "resposta": 48,
-        "dica": "×2",
-        "explicacao": "multiplicação constante",
-        "pontos": 8
-    },
-    {
-        "tipo": "geometrica",
-        "dificuldade": "medio",
-        "sequencia": [
-            2,
-            4,
-            8,
-            16
-        ],
-        "resposta": 32,
-        "dica": "×2",
-        "explicacao": "potência de 2",
-        "pontos": 8
-    },
-    {
-        "tipo": "geometrica",
-        "dificuldade": "medio",
-        "sequencia": [
-            1,
-            3,
-            9,
-            27
-        ],
-        "resposta": 81,
-        "dica": "×3",
-        "explicacao": "potências de 3",
-        "pontos": 8
-    },
-    {
-        "tipo": "geometrica",
-        "dificuldade": "medio",
-        "sequencia": [
-            5,
-            10,
-            20,
-            40
-        ],
-        "resposta": 80,
-        "dica": "×2",
-        "explicacao": "multiplicação constante",
-        "pontos": 8
-    },
-    {
-        "tipo": "geometrica",
-        "dificuldade": "medio",
-        "sequencia": [
-            4,
-            8,
-            16,
-            32
-        ],
-        "resposta": 64,
-        "dica": "×2",
-        "explicacao": "multiplicação constante",
-        "pontos": 8
-    },
-    {
-        "tipo": "triangular",
-        "dificuldade": "medio",
-        "sequencia": [
-            1,
-            3,
-            6,
-            10
-        ],
-        "resposta": 15,
-        "dica": "soma crescente",
-        "explicacao": "números triangulares",
-        "pontos": 10
-    },
-    {
-        "tipo": "triangular",
-        "dificuldade": "medio",
-        "sequencia": [
-            3,
-            6,
-            10,
-            15
-        ],
-        "resposta": 21,
-        "dica": "soma crescente",
-        "explicacao": "números triangulares",
-        "pontos": 10
-    },
-    {
-        "tipo": "triangular",
-        "dificuldade": "medio",
-        "sequencia": [
-            6,
-            10,
-            15,
-            21
-        ],
-        "resposta": 28,
-        "dica": "soma crescente",
-        "explicacao": "números triangulares",
-        "pontos": 10
-    },
-    {
-        "tipo": "triangular",
-        "dificuldade": "medio",
-        "sequencia": [
-            10,
-            15,
-            21,
-            28
-        ],
-        "resposta": 36,
-        "dica": "soma crescente",
-        "explicacao": "números triangulares",
-        "pontos": 10
-    },
-    {
-        "tipo": "triangular",
-        "dificuldade": "medio",
-        "sequencia": [
-            15,
-            21,
-            28,
-            36
-        ],
-        "resposta": 45,
-        "dica": "soma crescente",
-        "explicacao": "números triangulares",
-        "pontos": 10
-    },
-    {
-        "tipo": "potencia",
-        "dificuldade": "dificil",
-        "sequencia": [
-            2,
-            4,
-            16,
-            256
-        ],
-        "resposta": 65536,
-        "dica": "quadrado",
-        "explicacao": "potências sucessivas",
-        "pontos": 15
-    },
-    {
-        "tipo": "potencia",
-        "dificuldade": "dificil",
-        "sequencia": [
-            3,
-            9,
-            81,
-            6561
-        ],
-        "resposta": 43046721,
-        "dica": "quadrado",
-        "explicacao": "potências sucessivas",
-        "pontos": 15
-    },
-    {
-        "tipo": "potencia",
-        "dificuldade": "dificil",
-        "sequencia": [
-            2,
-            8,
-            64,
-            512
-        ],
-        "resposta": 4096,
-        "dica": "potência de 2",
-        "explicacao": "exponenciais",
-        "pontos": 15
-    },
-    {
-        "tipo": "potencia",
-        "dificuldade": "dificil",
-        "sequencia": [
-            5,
-            25,
-            625,
-            390625
-        ],
-        "resposta": 152587890625,
-        "dica": "potência de 5",
-        "explicacao": "exponenciais",
-        "pontos": 15
-    },
-    {
-        "tipo": "potencia",
-        "dificuldade": "dificil",
-        "sequencia": [
-            10,
-            100,
-            10000,
-            1000000
-        ],
-        "resposta": 100000000,
-        "dica": "potência de 10",
-        "explicacao": "exponenciais",
-        "pontos": 15
-    },
-    {
-        "tipo": "aritmetica",
-        "dificuldade": "medio",
-        "sequencia": [
-            2,
-            5,
-            8,
-            11
-        ],
-        "resposta": 14,
-        "dica": "+3",
-        "explicacao": "progressão aritmética",
-        "pontos": 8
-    },
-    {
-        "tipo": "aritmetica",
-        "dificuldade": "medio",
-        "sequencia": [
-            7,
-            14,
-            21,
-            28
-        ],
-        "resposta": 35,
-        "dica": "+7",
-        "explicacao": "progressão aritmética",
-        "pontos": 8
-    },
-    {
-        "tipo": "aritmetica",
-        "dificuldade": "medio",
-        "sequencia": [
-            1,
-            4,
-            7,
-            10
-        ],
-        "resposta": 13,
-        "dica": "+3",
-        "explicacao": "progressão aritmética",
-        "pontos": 8
-    },
-    {
-        "tipo": "aritmetica",
-        "dificuldade": "medio",
-        "sequencia": [
-            6,
-            12,
-            18,
-            24
-        ],
-        "resposta": 30,
-        "dica": "+6",
-        "explicacao": "progressão aritmética",
-        "pontos": 8
-    },
-    {
-        "tipo": "aritmetica",
-        "dificuldade": "medio",
-        "sequencia": [
-            3,
-            9,
-            15,
-            21
-        ],
-        "resposta": 27,
-        "dica": "+6",
-        "explicacao": "progressão aritmética",
-        "pontos": 8
-    },
-    {
-        "tipo": "geometrica",
-        "dificuldade": "dificil",
-        "sequencia": [
-            2,
-            6,
-            18,
-            54
-        ],
-        "resposta": 162,
-        "dica": "×3",
-        "explicacao": "multiplicação constante",
-        "pontos": 12
-    },
-    {
-        "tipo": "geometrica",
-        "dificuldade": "dificil",
-        "sequencia": [
-            1,
-            2,
-            6,
-            24
-        ],
-        "resposta": 120,
-        "dica": "× crescente",
-        "explicacao": "fatorial",
-        "pontos": 12
-    },
-    {
-        "tipo": "geometrica",
-        "dificuldade": "dificil",
-        "sequencia": [
-            5,
-            25,
-            125,
-            625
-        ],
-        "resposta": 3125,
-        "dica": "×5",
-        "explicacao": "multiplicação constante",
-        "pontos": 12
-    },
-    {
-        "tipo": "geometrica",
-        "dificuldade": "dificil",
-        "sequencia": [
-            4,
-            16,
-            64,
-            256
-        ],
-        "resposta": 1024,
-        "dica": "×4",
-        "explicacao": "multiplicação constante",
-        "pontos": 12
-    },
-    {
-        "tipo": "geometrica",
-        "dificuldade": "dificil",
-        "sequencia": [
-            3,
-            12,
-            48,
-            192
-        ],
-        "resposta": 768,
-        "dica": "×4",
-        "explicacao": "multiplicação constante",
-        "pontos": 12
-    },
-    {
-        "tipo": "triangular",
-        "dificuldade": "dificil",
-        "sequencia": [
-            21,
-            28,
-            36,
-            45
-        ],
-        "resposta": 55,
-        "dica": "soma crescente",
-        "explicacao": "números triangulares",
-        "pontos": 15
-    },
-    {
-        "tipo": "triangular",
-        "dificuldade": "dificil",
-        "sequencia": [
-            28,
-            36,
-            45,
-            55
-        ],
-        "resposta": 66,
-        "dica": "soma crescente",
-        "explicacao": "números triangulares",
-        "pontos": 15
-    },
-    {
-        "tipo": "triangular",
-        "dificuldade": "dificil",
-        "sequencia": [
-            36,
-            45,
-            55,
-            66
-        ],
-        "resposta": 78,
-        "dica": "soma crescente",
-        "explicacao": "números triangulares",
-        "pontos": 15
-    },
-    {
-        "tipo": "triangular",
-        "dificuldade": "dificil",
-        "sequencia": [
-            45,
-            55,
-            66,
-            78
-        ],
-        "resposta": 91,
-        "dica": "soma crescente",
-        "explicacao": "números triangulares",
-        "pontos": 15
-    },
-    {
-        "tipo": "triangular",
-        "dificuldade": "dificil",
-        "sequencia": [
-            55,
-            66,
-            78,
-            91
-        ],
-        "resposta": 105,
-        "dica": "soma crescente",
-        "explicacao": "números triangulares",
-        "pontos": 15
-    },
-    {
-        "tipo": "aritmetica",
-        "dificuldade": "facil",
-        "sequencia": [
-            1,
-            2,
-            3,
-            4
-        ],
-        "resposta": 5,
-        "dica": "+1",
-        "explicacao": "soma constante",
-        "pontos": 5
-    },
-    {
-        "tipo": "aritmetica",
-        "dificuldade": "facil",
-        "sequencia": [
-            10,
-            15,
-            20,
-            25
-        ],
-        "resposta": 30,
-        "dica": "+5",
-        "explicacao": "progressão aritmética",
-        "pontos": 5
-    },
-    {
-        "tipo": "aritmetica",
-        "dificuldade": "medio",
-        "sequencia": [
-            2,
-            4,
-            8,
-            16
-        ],
-        "resposta": 32,
-        "dica": "×2",
-        "explicacao": "multiplicação constante",
-        "pontos": 8
-    },
-    {
-        "tipo": "aritmetica",
-        "dificuldade": "medio",
-        "sequencia": [
-            3,
-            6,
-            12,
-            24
-        ],
-        "resposta": 48,
-        "dica": "×2",
-        "explicacao": "multiplicação constante",
-        "pontos": 8
-    },
-    {
-        "tipo": "aritmetica",
-        "dificuldade": "dificil",
-        "sequencia": [
-            2,
-            4,
-            16,
-            256
-        ],
-        "resposta": 65536,
-        "dica": "quadrado",
-        "explicacao": "potências sucessivas",
-        "pontos": 15
-    },
-    {
-        "tipo": "aritmetica",
-        "dificuldade": "dificil",
-        "sequencia": [
-            3,
-            9,
-            81,
-            6561
-        ],
-        "resposta": 43046721,
-        "dica": "quadrado",
-        "explicacao": "potências sucessivas",
-        "pontos": 15
-    }
+  {
+    "tipo": "aritmetica",
+    "dificuldade": "facil",
+    "sequencia": [
+      2,
+      4,
+      6,
+      8
+    ],
+    "resposta": 10,
+    "dica": "+2",
+    "explicacao": "progressao aritmetica",
+    "pontos": 5
+  },
+  {
+    "tipo": "aritmetica",
+    "dificuldade": "facil",
+    "sequencia": [
+      3,
+      5,
+      7,
+      9
+    ],
+    "resposta": 11,
+    "dica": "+2",
+    "explicacao": "progressao aritmetica",
+    "pontos": 5
+  },
+  {
+    "tipo": "aritmetica",
+    "dificuldade": "facil",
+    "sequencia": [
+      4,
+      6,
+      8,
+      10
+    ],
+    "resposta": 12,
+    "dica": "+2",
+    "explicacao": "progressao aritmetica",
+    "pontos": 5
+  },
+  {
+    "tipo": "aritmetica",
+    "dificuldade": "facil",
+    "sequencia": [
+      5,
+      7,
+      9,
+      11
+    ],
+    "resposta": 13,
+    "dica": "+2",
+    "explicacao": "progressao aritmetica",
+    "pontos": 5
+  },
+  {
+    "tipo": "aritmetica",
+    "dificuldade": "facil",
+    "sequencia": [
+      6,
+      8,
+      10,
+      12
+    ],
+    "resposta": 14,
+    "dica": "+2",
+    "explicacao": "progressao aritmetica",
+    "pontos": 5
+  },
+  {
+    "tipo": "aritmetica",
+    "dificuldade": "facil",
+    "sequencia": [
+      3,
+      6,
+      9,
+      12
+    ],
+    "resposta": 15,
+    "dica": "+3",
+    "explicacao": "progressao aritmetica",
+    "pontos": 5
+  },
+  {
+    "tipo": "aritmetica",
+    "dificuldade": "facil",
+    "sequencia": [
+      4,
+      7,
+      10,
+      13
+    ],
+    "resposta": 16,
+    "dica": "+3",
+    "explicacao": "progressao aritmetica",
+    "pontos": 5
+  },
+  {
+    "tipo": "aritmetica",
+    "dificuldade": "facil",
+    "sequencia": [
+      5,
+      8,
+      11,
+      14
+    ],
+    "resposta": 17,
+    "dica": "+3",
+    "explicacao": "progressao aritmetica",
+    "pontos": 5
+  },
+  {
+    "tipo": "aritmetica",
+    "dificuldade": "facil",
+    "sequencia": [
+      6,
+      9,
+      12,
+      15
+    ],
+    "resposta": 18,
+    "dica": "+3",
+    "explicacao": "progressao aritmetica",
+    "pontos": 5
+  },
+  {
+    "tipo": "aritmetica",
+    "dificuldade": "facil",
+    "sequencia": [
+      7,
+      10,
+      13,
+      16
+    ],
+    "resposta": 19,
+    "dica": "+3",
+    "explicacao": "progressao aritmetica",
+    "pontos": 5
+  },
+  {
+    "tipo": "aritmetica",
+    "dificuldade": "medio",
+    "sequencia": [
+      5,
+      10,
+      15,
+      20
+    ],
+    "resposta": 25,
+    "dica": "+5",
+    "explicacao": "progressao aritmetica",
+    "pontos": 8
+  },
+  {
+    "tipo": "aritmetica",
+    "dificuldade": "medio",
+    "sequencia": [
+      6,
+      11,
+      16,
+      21
+    ],
+    "resposta": 26,
+    "dica": "+5",
+    "explicacao": "progressao aritmetica",
+    "pontos": 8
+  },
+  {
+    "tipo": "aritmetica",
+    "dificuldade": "medio",
+    "sequencia": [
+      7,
+      12,
+      17,
+      22
+    ],
+    "resposta": 27,
+    "dica": "+5",
+    "explicacao": "progressao aritmetica",
+    "pontos": 8
+  },
+  {
+    "tipo": "aritmetica",
+    "dificuldade": "medio",
+    "sequencia": [
+      8,
+      13,
+      18,
+      23
+    ],
+    "resposta": 28,
+    "dica": "+5",
+    "explicacao": "progressao aritmetica",
+    "pontos": 8
+  },
+  {
+    "tipo": "aritmetica",
+    "dificuldade": "medio",
+    "sequencia": [
+      9,
+      14,
+      19,
+      24
+    ],
+    "resposta": 29,
+    "dica": "+5",
+    "explicacao": "progressao aritmetica",
+    "pontos": 8
+  },
+  {
+    "tipo": "aritmetica",
+    "dificuldade": "facil",
+    "sequencia": [
+      1,
+      5,
+      9,
+      13
+    ],
+    "resposta": 17,
+    "dica": "+4",
+    "explicacao": "progressao aritmetica",
+    "pontos": 5
+  },
+  {
+    "tipo": "aritmetica",
+    "dificuldade": "facil",
+    "sequencia": [
+      2,
+      6,
+      10,
+      14
+    ],
+    "resposta": 18,
+    "dica": "+4",
+    "explicacao": "progressao aritmetica",
+    "pontos": 5
+  },
+  {
+    "tipo": "aritmetica",
+    "dificuldade": "facil",
+    "sequencia": [
+      3,
+      7,
+      11,
+      15
+    ],
+    "resposta": 19,
+    "dica": "+4",
+    "explicacao": "progressao aritmetica",
+    "pontos": 5
+  },
+  {
+    "tipo": "aritmetica",
+    "dificuldade": "facil",
+    "sequencia": [
+      4,
+      8,
+      12,
+      16
+    ],
+    "resposta": 20,
+    "dica": "+4",
+    "explicacao": "progressao aritmetica",
+    "pontos": 5
+  },
+  {
+    "tipo": "aritmetica",
+    "dificuldade": "facil",
+    "sequencia": [
+      5,
+      9,
+      13,
+      17
+    ],
+    "resposta": 21,
+    "dica": "+4",
+    "explicacao": "progressao aritmetica",
+    "pontos": 5
+  },
+  {
+    "tipo": "aritmetica",
+    "dificuldade": "medio",
+    "sequencia": [
+      10,
+      20,
+      30,
+      40
+    ],
+    "resposta": 50,
+    "dica": "+10",
+    "explicacao": "progressao aritmetica",
+    "pontos": 8
+  },
+  {
+    "tipo": "aritmetica",
+    "dificuldade": "medio",
+    "sequencia": [
+      11,
+      21,
+      31,
+      41
+    ],
+    "resposta": 51,
+    "dica": "+10",
+    "explicacao": "progressao aritmetica",
+    "pontos": 8
+  },
+  {
+    "tipo": "aritmetica",
+    "dificuldade": "medio",
+    "sequencia": [
+      12,
+      22,
+      32,
+      42
+    ],
+    "resposta": 52,
+    "dica": "+10",
+    "explicacao": "progressao aritmetica",
+    "pontos": 8
+  },
+  {
+    "tipo": "aritmetica",
+    "dificuldade": "medio",
+    "sequencia": [
+      13,
+      23,
+      33,
+      43
+    ],
+    "resposta": 53,
+    "dica": "+10",
+    "explicacao": "progressao aritmetica",
+    "pontos": 8
+  },
+  {
+    "tipo": "aritmetica",
+    "dificuldade": "medio",
+    "sequencia": [
+      14,
+      24,
+      34,
+      44
+    ],
+    "resposta": 54,
+    "dica": "+10",
+    "explicacao": "progressao aritmetica",
+    "pontos": 8
+  },
+  {
+    "tipo": "aritmetica",
+    "dificuldade": "medio",
+    "sequencia": [
+      7,
+      14,
+      21,
+      28
+    ],
+    "resposta": 35,
+    "dica": "+7",
+    "explicacao": "progressao aritmetica",
+    "pontos": 8
+  },
+  {
+    "tipo": "aritmetica",
+    "dificuldade": "medio",
+    "sequencia": [
+      8,
+      15,
+      22,
+      29
+    ],
+    "resposta": 36,
+    "dica": "+7",
+    "explicacao": "progressao aritmetica",
+    "pontos": 8
+  },
+  {
+    "tipo": "aritmetica",
+    "dificuldade": "medio",
+    "sequencia": [
+      9,
+      16,
+      23,
+      30
+    ],
+    "resposta": 37,
+    "dica": "+7",
+    "explicacao": "progressao aritmetica",
+    "pontos": 8
+  },
+  {
+    "tipo": "aritmetica",
+    "dificuldade": "medio",
+    "sequencia": [
+      10,
+      17,
+      24,
+      31
+    ],
+    "resposta": 38,
+    "dica": "+7",
+    "explicacao": "progressao aritmetica",
+    "pontos": 8
+  },
+  {
+    "tipo": "aritmetica",
+    "dificuldade": "medio",
+    "sequencia": [
+      11,
+      18,
+      25,
+      32
+    ],
+    "resposta": 39,
+    "dica": "+7",
+    "explicacao": "progressao aritmetica",
+    "pontos": 8
+  },
+  {
+    "tipo": "geometrica",
+    "dificuldade": "medio",
+    "sequencia": [
+      2,
+      4,
+      8,
+      16
+    ],
+    "resposta": 32,
+    "dica": "x2",
+    "explicacao": "progressao geometrica",
+    "pontos": 8
+  },
+  {
+    "tipo": "geometrica",
+    "dificuldade": "medio",
+    "sequencia": [
+      3,
+      6,
+      12,
+      24
+    ],
+    "resposta": 48,
+    "dica": "x2",
+    "explicacao": "progressao geometrica",
+    "pontos": 8
+  },
+  {
+    "tipo": "geometrica",
+    "dificuldade": "medio",
+    "sequencia": [
+      5,
+      10,
+      20,
+      40
+    ],
+    "resposta": 80,
+    "dica": "x2",
+    "explicacao": "progressao geometrica",
+    "pontos": 8
+  },
+  {
+    "tipo": "geometrica",
+    "dificuldade": "dificil",
+    "sequencia": [
+      2,
+      6,
+      18,
+      54
+    ],
+    "resposta": 162,
+    "dica": "x3",
+    "explicacao": "progressao geometrica",
+    "pontos": 12
+  },
+  {
+    "tipo": "logica",
+    "dificuldade": "dificil",
+    "sequencia": [
+      1,
+      4,
+      9,
+      16
+    ],
+    "resposta": 25,
+    "dica": "n²",
+    "explicacao": "quadrados perfeitos",
+    "pontos": 12
+  },
+  {
+    "tipo": "logica",
+    "dificuldade": "dificil",
+    "sequencia": [
+      1,
+      8,
+      27,
+      64
+    ],
+    "resposta": 125,
+    "dica": "n³",
+    "explicacao": "cubos perfeitos",
+    "pontos": 12
+  },
+  {
+    "tipo": "logica",
+    "dificuldade": "medio",
+    "sequencia": [
+      2,
+      3,
+      5,
+      8
+    ],
+    "resposta": 13,
+    "dica": "soma dos dois anteriores",
+    "explicacao": "sequencia de Fibonacci adaptada",
+    "pontos": 8
+  },
+  {
+    "tipo": "logica",
+    "dificuldade": "medio",
+    "sequencia": [
+      1,
+      1,
+      2,
+      3
+    ],
+    "resposta": 5,
+    "dica": "soma dos dois anteriores",
+    "explicacao": "sequencia de Fibonacci",
+    "pontos": 8
+  },
+  {
+    "tipo": "logica",
+    "dificuldade": "dificil",
+    "sequencia": [
+      2,
+      6,
+      12,
+      20
+    ],
+    "resposta": 30,
+    "dica": "+4, +6, +8...",
+    "explicacao": "aumentos crescentes",
+    "pontos": 12
+  },
+  {
+    "tipo": "aritmetica",
+    "dificuldade": "facil",
+    "sequencia": [
+      1,
+      4,
+      7,
+      10
+    ],
+    "resposta": 13,
+    "dica": "+3",
+    "explicacao": "progressao aritmetica",
+    "pontos": 5
+  },
+  {
+    "tipo": "aritmetica",
+    "dificuldade": "medio",
+    "sequencia": [
+      3,
+      8,
+      13,
+      18
+    ],
+    "resposta": 23,
+    "dica": "+5",
+    "explicacao": "progressao aritmetica",
+    "pontos": 8
+  },
+  {
+    "tipo": "aritmetica",
+    "dificuldade": "medio",
+    "sequencia": [
+      4,
+      10,
+      16,
+      22
+    ],
+    "resposta": 28,
+    "dica": "+6",
+    "explicacao": "progressao aritmetica",
+    "pontos": 8
+  },
+  {
+    "tipo": "aritmetica",
+    "dificuldade": "facil",
+    "sequencia": [
+      7,
+      11,
+      15,
+      19
+    ],
+    "resposta": 23,
+    "dica": "+4",
+    "explicacao": "progressao aritmetica",
+    "pontos": 5
+  },
+  {
+    "tipo": "aritmetica",
+    "dificuldade": "medio",
+    "sequencia": [
+      9,
+      15,
+      21,
+      27
+    ],
+    "resposta": 33,
+    "dica": "+6",
+    "explicacao": "progressao aritmetica",
+    "pontos": 8
+  },
+  {
+    "tipo": "aritmetica",
+    "dificuldade": "facil",
+    "sequencia": [
+      10,
+      12,
+      14,
+      16
+    ],
+    "resposta": 18,
+    "dica": "+2",
+    "explicacao": "progressao aritmetica",
+    "pontos": 5
+  },
+  {
+    "tipo": "aritmetica",
+    "dificuldade": "facil",
+    "sequencia": [
+      11,
+      14,
+      17,
+      20
+    ],
+    "resposta": 23,
+    "dica": "+3",
+    "explicacao": "progressao aritmetica",
+    "pontos": 5
+  },
+  {
+    "tipo": "aritmetica",
+    "dificuldade": "facil",
+    "sequencia": [
+      12,
+      16,
+      20,
+      24
+    ],
+    "resposta": 28,
+    "dica": "+4",
+    "explicacao": "progressao aritmetica",
+    "pontos": 5
+  },
+  {
+    "tipo": "aritmetica",
+    "dificuldade": "medio",
+    "sequencia": [
+      13,
+      18,
+      23,
+      28
+    ],
+    "resposta": 33,
+    "dica": "+5",
+    "explicacao": "progressao aritmetica",
+    "pontos": 8
+  },
+  {
+    "tipo": "aritmetica",
+    "dificuldade": "medio",
+    "sequencia": [
+      14,
+      20,
+      26,
+      32
+    ],
+    "resposta": 38,
+    "dica": "+6",
+    "explicacao": "progressao aritmetica",
+    "pontos": 8
+  },
+  {
+    "tipo": "aritmetica",
+    "dificuldade": "facil",
+    "sequencia": [
+      15,
+      17,
+      19,
+      21
+    ],
+    "resposta": 23,
+    "dica": "+2",
+    "explicacao": "progressao aritmetica",
+    "pontos": 5
+  },
+  {
+    "tipo": "aritmetica",
+    "dificuldade": "facil",
+    "sequencia": [
+      16,
+      19,
+      22,
+      25
+    ],
+    "resposta": 28,
+    "dica": "+3",
+    "explicacao": "progressao aritmetica",
+    "pontos": 5
+  },
+  {
+    "tipo": "aritmetica",
+    "dificuldade": "facil",
+    "sequencia": [
+      17,
+      21,
+      25,
+      29
+    ],
+    "resposta": 33,
+    "dica": "+4",
+    "explicacao": "progressao aritmetica",
+    "pontos": 5
+  },
+  {
+    "tipo": "aritmetica",
+    "dificuldade": "medio",
+    "sequencia": [
+      18,
+      23,
+      28,
+      33
+    ],
+    "resposta": 38,
+    "dica": "+5",
+    "explicacao": "progressao aritmetica",
+    "pontos": 8
+  },
+  {
+    "tipo": "aritmetica",
+    "dificuldade": "medio",
+    "sequencia": [
+      19,
+      25,
+      31,
+      37
+    ],
+    "resposta": 43,
+    "dica": "+6",
+    "explicacao": "progressao aritmetica",
+    "pontos": 8
+  },
+  {
+    "tipo": "aritmetica",
+    "dificuldade": "facil",
+    "sequencia": [
+      20,
+      22,
+      24,
+      26
+    ],
+    "resposta": 28,
+    "dica": "+2",
+    "explicacao": "progressao aritmetica",
+    "pontos": 5
+  },
+  {
+    "tipo": "potencias",
+    "dificuldade": "dificil",
+    "sequencia": [
+      3,
+      9,
+      27,
+      81
+    ],
+    "resposta": 243,
+    "dica": "potencias de 3",
+    "explicacao": "potencias sucessivas",
+    "pontos": 12
+  },
+  {
+    "tipo": "potencias",
+    "dificuldade": "dificil",
+    "sequencia": [
+      4,
+      16,
+      64,
+      256
+    ],
+    "resposta": 1024,
+    "dica": "potencias de 4",
+    "explicacao": "potencias sucessivas",
+    "pontos": 12
+  },
+  {
+    "tipo": "potencias",
+    "dificuldade": "dificil",
+    "sequencia": [
+      5,
+      25,
+      125,
+      625
+    ],
+    "resposta": 3125,
+    "dica": "potencias de 5",
+    "explicacao": "potencias sucessivas",
+    "pontos": 12
+  },
+  {
+    "tipo": "potencias",
+    "dificuldade": "dificil",
+    "sequencia": [
+      6,
+      36,
+      216,
+      1296
+    ],
+    "resposta": 7776,
+    "dica": "potencias de 6",
+    "explicacao": "potencias sucessivas",
+    "pontos": 12
+  },
+  {
+    "tipo": "potencias",
+    "dificuldade": "dificil",
+    "sequencia": [
+      7,
+      49,
+      343,
+      2401
+    ],
+    "resposta": 16807,
+    "dica": "potencias de 7",
+    "explicacao": "potencias sucessivas",
+    "pontos": 12
+  },
+  {
+    "tipo": "potencias",
+    "dificuldade": "dificil",
+    "sequencia": [
+      8,
+      64,
+      512,
+      4096
+    ],
+    "resposta": 32768,
+    "dica": "potencias de 8",
+    "explicacao": "potencias sucessivas",
+    "pontos": 12
+  },
+  {
+    "tipo": "potencias",
+    "dificuldade": "dificil",
+    "sequencia": [
+      9,
+      81,
+      729,
+      6561
+    ],
+    "resposta": 59049,
+    "dica": "potencias de 9",
+    "explicacao": "potencias sucessivas",
+    "pontos": 12
+  },
+  {
+    "tipo": "potencias",
+    "dificuldade": "dificil",
+    "sequencia": [
+      10,
+      100,
+      1000,
+      10000
+    ],
+    "resposta": 100000,
+    "dica": "potencias de 10",
+    "explicacao": "potencias sucessivas",
+    "pontos": 12
+  },
+  {
+    "tipo": "potencias",
+    "dificuldade": "dificil",
+    "sequencia": [
+      11,
+      121,
+      1331,
+      14641
+    ],
+    "resposta": 161051,
+    "dica": "potencias de 11",
+    "explicacao": "potencias sucessivas",
+    "pontos": 12
+  },
+  {
+    "tipo": "incrementos",
+    "dificuldade": "medio",
+    "sequencia": [
+      3,
+      4,
+      6,
+      9
+    ],
+    "resposta": 13,
+    "dica": "+1, +2, +3...",
+    "explicacao": "incrementos crescentes",
+    "pontos": 8
+  },
+  {
+    "tipo": "incrementos",
+    "dificuldade": "medio",
+    "sequencia": [
+      4,
+      5,
+      7,
+      10
+    ],
+    "resposta": 14,
+    "dica": "+1, +2, +3...",
+    "explicacao": "incrementos crescentes",
+    "pontos": 8
+  },
+  {
+    "tipo": "incrementos",
+    "dificuldade": "medio",
+    "sequencia": [
+      5,
+      6,
+      8,
+      11
+    ],
+    "resposta": 15,
+    "dica": "+1, +2, +3...",
+    "explicacao": "incrementos crescentes",
+    "pontos": 8
+  },
+  {
+    "tipo": "incrementos",
+    "dificuldade": "medio",
+    "sequencia": [
+      6,
+      7,
+      9,
+      12
+    ],
+    "resposta": 16,
+    "dica": "+1, +2, +3...",
+    "explicacao": "incrementos crescentes",
+    "pontos": 8
+  },
+  {
+    "tipo": "incrementos",
+    "dificuldade": "medio",
+    "sequencia": [
+      7,
+      8,
+      10,
+      13
+    ],
+    "resposta": 17,
+    "dica": "+1, +2, +3...",
+    "explicacao": "incrementos crescentes",
+    "pontos": 8
+  },
+  {
+    "tipo": "incrementos",
+    "dificuldade": "medio",
+    "sequencia": [
+      8,
+      9,
+      11,
+      14
+    ],
+    "resposta": 18,
+    "dica": "+1, +2, +3...",
+    "explicacao": "incrementos crescentes",
+    "pontos": 8
+  },
+  {
+    "tipo": "incrementos",
+    "dificuldade": "medio",
+    "sequencia": [
+      9,
+      10,
+      12,
+      15
+    ],
+    "resposta": 19,
+    "dica": "+1, +2, +3...",
+    "explicacao": "incrementos crescentes",
+    "pontos": 8
+  },
+  {
+    "tipo": "incrementos",
+    "dificuldade": "medio",
+    "sequencia": [
+      10,
+      11,
+      13,
+      16
+    ],
+    "resposta": 20,
+    "dica": "+1, +2, +3...",
+    "explicacao": "incrementos crescentes",
+    "pontos": 8
+  },
+  {
+    "tipo": "incrementos",
+    "dificuldade": "medio",
+    "sequencia": [
+      11,
+      12,
+      14,
+      17
+    ],
+    "resposta": 21,
+    "dica": "+1, +2, +3...",
+    "explicacao": "incrementos crescentes",
+    "pontos": 8
+  },
+  {
+    "tipo": "incrementos",
+    "dificuldade": "medio",
+    "sequencia": [
+      12,
+      13,
+      15,
+      18
+    ],
+    "resposta": 22,
+    "dica": "+1, +2, +3...",
+    "explicacao": "incrementos crescentes",
+    "pontos": 8
+  },
+  {
+    "tipo": "incrementos",
+    "dificuldade": "medio",
+    "sequencia": [
+      13,
+      14,
+      16,
+      19
+    ],
+    "resposta": 23,
+    "dica": "+1, +2, +3...",
+    "explicacao": "incrementos crescentes",
+    "pontos": 8
+  },
+  {
+    "tipo": "incrementos",
+    "dificuldade": "medio",
+    "sequencia": [
+      14,
+      15,
+      17,
+      20
+    ],
+    "resposta": 24,
+    "dica": "+1, +2, +3...",
+    "explicacao": "incrementos crescentes",
+    "pontos": 8
+  }
 ]

@@ -1,0 +1,192 @@
+[
+  {
+    "id": 65,
+    "linguagem": "rust",
+    "conceito": "variaveis",
+    "dificuldade": "facil",
+    "tipo": "multipla_escolha",
+    "pergunta": "Qual sera a saida?",
+    "codigo": "fn main() {\n    let mut x = 2;\n    x = x + 2;\n    println!(\"{}\", x);\n}",
+    "opcoes": [
+      "0",
+      "2",
+      "4",
+      "5"
+    ],
+    "resposta": "4",
+    "dica": "A variavel mutavel e atualizada antes do println!.",
+    "explicacao": "x e declarado como mut para poder mudar.",
+    "pontos": 5
+  },
+  {
+    "id": 66,
+    "linguagem": "rust",
+    "conceito": "variaveis",
+    "dificuldade": "facil",
+    "tipo": "multipla_escolha",
+    "pergunta": "Qual sera a saida?",
+    "codigo": "fn main() {\n    let mut x = 5;\n    x = x + 3;\n    println!(\"{}\", x);\n}",
+    "opcoes": [
+      "0",
+      "5",
+      "8",
+      "9"
+    ],
+    "resposta": "8",
+    "dica": "A variavel mutavel e atualizada antes do println!.",
+    "explicacao": "x e declarado como mut para poder mudar.",
+    "pontos": 5
+  },
+  {
+    "id": 67,
+    "linguagem": "rust",
+    "conceito": "variaveis",
+    "dificuldade": "facil",
+    "tipo": "multipla_escolha",
+    "pergunta": "Qual sera a saida?",
+    "codigo": "fn main() {\n    let mut x = 9;\n    x = x + 4;\n    println!(\"{}\", x);\n}",
+    "opcoes": [
+      "0",
+      "9",
+      "13",
+      "14"
+    ],
+    "resposta": "13",
+    "dica": "A variavel mutavel e atualizada antes do println!.",
+    "explicacao": "x e declarado como mut para poder mudar.",
+    "pontos": 5
+  },
+  {
+    "id": 68,
+    "linguagem": "rust",
+    "conceito": "condicionais",
+    "dificuldade": "facil",
+    "tipo": "multipla_escolha",
+    "pergunta": "Qual sera a saida?",
+    "codigo": "fn main() {\n    let idade = 20;\n    if idade >= 18 {\n        println!(\"adulto\");\n    } else {\n        println!(\"menor\");\n    }\n}",
+    "opcoes": [
+      "adulto",
+      "menor",
+      "20",
+      "erro"
+    ],
+    "resposta": "adulto",
+    "dica": "Compare idade com 18.",
+    "explicacao": "A condicao e satisfeita.",
+    "pontos": 5
+  },
+  {
+    "id": 69,
+    "linguagem": "rust",
+    "conceito": "loops",
+    "dificuldade": "medio",
+    "tipo": "multipla_escolha",
+    "pergunta": "Qual sera a saida?",
+    "codigo": "fn main() {\n    let mut total = 0;\n    for i in 1..4 {\n        total += i;\n    }\n    println!(\"{}\", total);\n}",
+    "opcoes": [
+      "3",
+      "5",
+      "6",
+      "7"
+    ],
+    "resposta": "6",
+    "dica": "1..4 em Rust inclui 1, 2 e 3.",
+    "explicacao": "A soma desses valores e 6.",
+    "pontos": 8
+  },
+  {
+    "id": 70,
+    "linguagem": "rust",
+    "conceito": "funcoes",
+    "dificuldade": "medio",
+    "tipo": "multipla_escolha",
+    "pergunta": "Qual sera a saida?",
+    "codigo": "fn dobro(x: i32) -> i32 {\n    x * 2\n}\nfn main() {\n    println!(\"{}\", dobro(7));\n}",
+    "opcoes": [
+      "7",
+      "10",
+      "14",
+      "21"
+    ],
+    "resposta": "14",
+    "dica": "A funcao devolve o dobro do argumento.",
+    "explicacao": "7 vezes 2 e 14.",
+    "pontos": 8
+  },
+  {
+    "id": 71,
+    "linguagem": "rust",
+    "conceito": "vetores",
+    "dificuldade": "medio",
+    "tipo": "multipla_escolha",
+    "pergunta": "Qual sera a saida?",
+    "codigo": "fn main() {\n    let itens = vec![1, 2, 3];\n    println!(\"{}\", itens.len());\n}",
+    "opcoes": [
+      "2",
+      "3",
+      "4",
+      "erro"
+    ],
+    "resposta": "3",
+    "dica": "len informa o tamanho do vetor.",
+    "explicacao": "O vetor possui tres elementos.",
+    "pontos": 8
+  },
+  {
+    "id": 72,
+    "linguagem": "rust",
+    "conceito": "strings",
+    "dificuldade": "facil",
+    "tipo": "multipla_escolha",
+    "pergunta": "Qual sera a saida?",
+    "codigo": "fn main() {\n    let nome = String::from(\"Rust\");\n    println!(\"{} Lab\", nome);\n}",
+    "opcoes": [
+      "RustLab",
+      "Rust Lab",
+      "Lab Rust",
+      "erro"
+    ],
+    "resposta": "Rust Lab",
+    "dica": "O formato insere o valor antes de Lab.",
+    "explicacao": "A macro println! monta a string formatada.",
+    "pontos": 5
+  },
+  {
+    "id": 73,
+    "linguagem": "rust",
+    "conceito": "booleanos",
+    "dificuldade": "dificil",
+    "tipo": "multipla_escolha",
+    "pergunta": "Qual sera a saida?",
+    "codigo": "fn main() {\n    let ativo = true;\n    let admin = false;\n    println!(\"{}\", ativo && !admin);\n}",
+    "opcoes": [
+      "true",
+      "false",
+      "None",
+      "erro"
+    ],
+    "resposta": "true",
+    "dica": "!admin muda false para true.",
+    "explicacao": "A expressao booleana final e verdadeira.",
+    "pontos": 12
+  },
+  {
+    "id": 74,
+    "linguagem": "rust",
+    "conceito": "match",
+    "dificuldade": "dificil",
+    "tipo": "multipla_escolha",
+    "pergunta": "Qual sera a saida?",
+    "codigo": "fn main() {\n    let nota = 2;\n    let texto = match nota {\n        1 => \"baixo\",\n        2 => \"medio\",\n        _ => \"alto\",\n    };\n    println!(\"{}\", texto);\n}",
+    "opcoes": [
+      "baixo",
+      "medio",
+      "alto",
+      "erro"
+    ],
+    "resposta": "medio",
+    "dica": "O match usa o caso 2.",
+    "explicacao": "Como nota vale 2, texto recebe medio.",
+    "pontos": 12
+  }
+]

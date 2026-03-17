@@ -1,0 +1,2 @@
+from services.persistence.player_repository import PlayerRepository
+from services.persistence.ranking_repository import RankingRepository

@@ -1,0 +1,184 @@
+[
+  {
+    "id": 1,
+    "dificuldade": "facil",
+    "opcoes": [
+      "banana",
+      "maca",
+      "laranja",
+      "cadeira"
+    ],
+    "resposta": "cadeira",
+    "dica": "Tres itens sao frutas",
+    "pontos": 5
+  },
+  {
+    "id": 2,
+    "dificuldade": "facil",
+    "opcoes": [
+      "cachorro",
+      "gato",
+      "tigre",
+      "garfo"
+    ],
+    "resposta": "garfo",
+    "dica": "Tres itens sao animais",
+    "pontos": 5
+  },
+  {
+    "id": 3,
+    "dificuldade": "medio",
+    "opcoes": [
+      "teclado",
+      "mouse",
+      "monitor",
+      "girassol"
+    ],
+    "resposta": "girassol",
+    "dica": "Tres itens sao de computador",
+    "pontos": 8
+  },
+  {
+    "id": 4,
+    "dificuldade": "medio",
+    "opcoes": [
+      "Amazonas",
+      "Nilo",
+      "Danubio",
+      "Everest"
+    ],
+    "resposta": "Everest",
+    "dica": "Tres itens sao rios",
+    "pontos": 8
+  },
+  {
+    "id": 5,
+    "dificuldade": "dificil",
+    "opcoes": [
+      "metafora",
+      "hiperbole",
+      "ironia",
+      "equacao"
+    ],
+    "resposta": "equacao",
+    "dica": "Tres itens sao figuras de linguagem",
+    "pontos": 12
+  },
+  {
+    "id": 6,
+    "dificuldade": "dificil",
+    "opcoes": [
+      "proton",
+      "eletron",
+      "neutron",
+      "meridiano"
+    ],
+    "resposta": "meridiano",
+    "dica": "Tres itens sao particulas subatomicas",
+    "pontos": 12
+  },
+  {
+    "id": 7,
+    "dificuldade": "facil",
+    "opcoes": [
+      "mesa",
+      "cadeira",
+      "sofa",
+      "girafa"
+    ],
+    "resposta": "girafa",
+    "dica": "Tres itens sao moveis",
+    "pontos": 5
+  },
+  {
+    "id": 8,
+    "dificuldade": "facil",
+    "opcoes": [
+      "azul",
+      "verde",
+      "vermelho",
+      "garfo"
+    ],
+    "resposta": "garfo",
+    "dica": "Tres itens sao cores",
+    "pontos": 5
+  },
+  {
+    "id": 9,
+    "dificuldade": "medio",
+    "opcoes": [
+      "python",
+      "java",
+      "html",
+      "cachoeira"
+    ],
+    "resposta": "cachoeira",
+    "dica": "Tres itens sao termos de tecnologia",
+    "pontos": 8
+  },
+  {
+    "id": 10,
+    "dificuldade": "medio",
+    "opcoes": [
+      "violino",
+      "piano",
+      "flauta",
+      "planeta"
+    ],
+    "resposta": "planeta",
+    "dica": "Tres itens sao instrumentos musicais",
+    "pontos": 8
+  },
+  {
+    "id": 11,
+    "dificuldade": "medio",
+    "opcoes": [
+      "triangulo",
+      "quadrado",
+      "circulo",
+      "oceano"
+    ],
+    "resposta": "oceano",
+    "dica": "Tres itens sao formas geometricas",
+    "pontos": 8
+  },
+  {
+    "id": 12,
+    "dificuldade": "dificil",
+    "opcoes": [
+      "mitocondria",
+      "ribossomo",
+      "lisossomo",
+      "hemisferio"
+    ],
+    "resposta": "hemisferio",
+    "dica": "Tres itens sao organelas celulares",
+    "pontos": 12
+  },
+  {
+    "id": 13,
+    "dificuldade": "dificil",
+    "opcoes": [
+      "sintaxe",
+      "semantica",
+      "morfologia",
+      "termodinamica"
+    ],
+    "resposta": "termodinamica",
+    "dica": "Tres itens sao areas da linguistica",
+    "pontos": 12
+  },
+  {
+    "id": 14,
+    "dificuldade": "dificil",
+    "opcoes": [
+      "algoritmo",
+      "fila",
+      "pilha",
+      "peninsula"
+    ],
+    "resposta": "peninsula",
+    "dica": "Tres itens sao conceitos de computacao",
+    "pontos": 12
+  }
+]

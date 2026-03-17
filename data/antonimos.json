@@ -1,0 +1,170 @@
+[
+  {
+    "id": 1,
+    "dificuldade": "facil",
+    "termo": "alto",
+    "opcoes": [
+      "baixo",
+      "grande",
+      "forte",
+      "claro"
+    ],
+    "resposta": "baixo",
+    "dica": "E o oposto em altura",
+    "pontos": 5
+  },
+  {
+    "id": 2,
+    "dificuldade": "facil",
+    "termo": "frio",
+    "opcoes": [
+      "quente",
+      "leve",
+      "raso",
+      "agil"
+    ],
+    "resposta": "quente",
+    "dica": "Pense em temperatura",
+    "pontos": 5
+  },
+  {
+    "id": 3,
+    "dificuldade": "medio",
+    "termo": "expandir",
+    "opcoes": [
+      "reduzir",
+      "crescer",
+      "abrir",
+      "alongar"
+    ],
+    "resposta": "reduzir",
+    "dica": "Ideia contraria de aumentar alcance",
+    "pontos": 8
+  },
+  {
+    "id": 4,
+    "dificuldade": "medio",
+    "termo": "transparente",
+    "opcoes": [
+      "opaco",
+      "luminoso",
+      "vasto",
+      "maleavel"
+    ],
+    "resposta": "opaco",
+    "dica": "Nao deixa ver atraves",
+    "pontos": 8
+  },
+  {
+    "id": 5,
+    "dificuldade": "dificil",
+    "termo": "benevolente",
+    "opcoes": [
+      "maldoso",
+      "suave",
+      "prudente",
+      "tenue"
+    ],
+    "resposta": "maldoso",
+    "dica": "Oposto de bondade",
+    "pontos": 12
+  },
+  {
+    "id": 6,
+    "dificuldade": "dificil",
+    "termo": "escasso",
+    "opcoes": [
+      "abundante",
+      "sutil",
+      "rigido",
+      "oculto"
+    ],
+    "resposta": "abundante",
+    "dica": "Contrario de falta",
+    "pontos": 12
+  },
+  {
+    "id": 7,
+    "dificuldade": "facil",
+    "termo": "claro",
+    "opcoes": [
+      "escuro",
+      "branco",
+      "limpo",
+      "vivo"
+    ],
+    "resposta": "escuro",
+    "dica": "Procure o contrario de claro",
+    "pontos": 5
+  },
+  {
+    "id": 8,
+    "dificuldade": "facil",
+    "termo": "forte",
+    "opcoes": [
+      "fraco",
+      "amplo",
+      "duro",
+      "breve"
+    ],
+    "resposta": "fraco",
+    "dica": "Procure o contrario de forte",
+    "pontos": 5
+  },
+  {
+    "id": 9,
+    "dificuldade": "medio",
+    "termo": "aproximar",
+    "opcoes": [
+      "afastar",
+      "chegar",
+      "correr",
+      "crescer"
+    ],
+    "resposta": "afastar",
+    "dica": "Procure o contrario de aproximar",
+    "pontos": 8
+  },
+  {
+    "id": 10,
+    "dificuldade": "medio",
+    "termo": "visivel",
+    "opcoes": [
+      "oculto",
+      "nítido",
+      "colorido",
+      "firme"
+    ],
+    "resposta": "oculto",
+    "dica": "Procure o contrario de visivel",
+    "pontos": 8
+  },
+  {
+    "id": 11,
+    "dificuldade": "dificil",
+    "termo": "prolixo",
+    "opcoes": [
+      "conciso",
+      "ornado",
+      "pleno",
+      "sereno"
+    ],
+    "resposta": "conciso",
+    "dica": "Procure o contrario de prolixo",
+    "pontos": 12
+  },
+  {
+    "id": 12,
+    "dificuldade": "dificil",
+    "termo": "hostil",
+    "opcoes": [
+      "amigavel",
+      "tenso",
+      "amplo",
+      "vasto"
+    ],
+    "resposta": "amigavel",
+    "dica": "Procure o contrario de hostil",
+    "pontos": 12
+  }
+]

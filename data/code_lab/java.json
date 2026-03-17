@@ -1,0 +1,192 @@
+[
+  {
+    "id": 35,
+    "linguagem": "java",
+    "conceito": "variaveis",
+    "dificuldade": "facil",
+    "tipo": "multipla_escolha",
+    "pergunta": "Qual sera a saida?",
+    "codigo": "int x = 2;\nx = x + 4;\nSystem.out.println(x);",
+    "opcoes": [
+      "0",
+      "2",
+      "6",
+      "8"
+    ],
+    "resposta": "6",
+    "dica": "x recebe o novo valor antes do println.",
+    "explicacao": "A soma acontece na segunda linha.",
+    "pontos": 5
+  },
+  {
+    "id": 36,
+    "linguagem": "java",
+    "conceito": "variaveis",
+    "dificuldade": "facil",
+    "tipo": "multipla_escolha",
+    "pergunta": "Qual sera a saida?",
+    "codigo": "int x = 7;\nx = x + 2;\nSystem.out.println(x);",
+    "opcoes": [
+      "0",
+      "7",
+      "9",
+      "11"
+    ],
+    "resposta": "9",
+    "dica": "x recebe o novo valor antes do println.",
+    "explicacao": "A soma acontece na segunda linha.",
+    "pontos": 5
+  },
+  {
+    "id": 37,
+    "linguagem": "java",
+    "conceito": "variaveis",
+    "dificuldade": "facil",
+    "tipo": "multipla_escolha",
+    "pergunta": "Qual sera a saida?",
+    "codigo": "int x = 10;\nx = x + 3;\nSystem.out.println(x);",
+    "opcoes": [
+      "0",
+      "10",
+      "13",
+      "15"
+    ],
+    "resposta": "13",
+    "dica": "x recebe o novo valor antes do println.",
+    "explicacao": "A soma acontece na segunda linha.",
+    "pontos": 5
+  },
+  {
+    "id": 38,
+    "linguagem": "java",
+    "conceito": "condicionais",
+    "dificuldade": "facil",
+    "tipo": "multipla_escolha",
+    "pergunta": "Qual sera a saida?",
+    "codigo": "int idade = 21;\nif (idade >= 18) {\n  System.out.println(\"adulto\");\n} else {\n  System.out.println(\"menor\");\n}",
+    "opcoes": [
+      "adulto",
+      "menor",
+      "21",
+      "erro"
+    ],
+    "resposta": "adulto",
+    "dica": "A condicao compara idade com 18.",
+    "explicacao": "Como 21 >= 18, imprime adulto.",
+    "pontos": 5
+  },
+  {
+    "id": 39,
+    "linguagem": "java",
+    "conceito": "loops",
+    "dificuldade": "medio",
+    "tipo": "multipla_escolha",
+    "pergunta": "Qual sera a saida?",
+    "codigo": "int total = 0;\nfor (int i = 1; i <= 4; i++) {\n  total += i;\n}\nSystem.out.println(total);",
+    "opcoes": [
+      "4",
+      "8",
+      "10",
+      "12"
+    ],
+    "resposta": "10",
+    "dica": "Some os valores de 1 ate 4.",
+    "explicacao": "1 + 2 + 3 + 4 = 10.",
+    "pontos": 8
+  },
+  {
+    "id": 40,
+    "linguagem": "java",
+    "conceito": "funcoes",
+    "dificuldade": "medio",
+    "tipo": "multipla_escolha",
+    "pergunta": "Qual sera a saida?",
+    "codigo": "static int dobro(int x) {\n  return x * 2;\n}\nSystem.out.println(dobro(5));",
+    "opcoes": [
+      "5",
+      "10",
+      "15",
+      "erro"
+    ],
+    "resposta": "10",
+    "dica": "Veja o retorno do metodo dobro.",
+    "explicacao": "O metodo retorna o argumento multiplicado por 2.",
+    "pontos": 8
+  },
+  {
+    "id": 41,
+    "linguagem": "java",
+    "conceito": "strings",
+    "dificuldade": "facil",
+    "tipo": "multipla_escolha",
+    "pergunta": "Qual sera a saida?",
+    "codigo": "String nome = \"Code\";\nSystem.out.println(nome + \" Lab\");",
+    "opcoes": [
+      "CodeLab",
+      "Code Lab",
+      "Lab Code",
+      "erro"
+    ],
+    "resposta": "Code Lab",
+    "dica": "A concatenacao usa +.",
+    "explicacao": "A segunda string comeca com espaco.",
+    "pontos": 5
+  },
+  {
+    "id": 42,
+    "linguagem": "java",
+    "conceito": "arrays",
+    "dificuldade": "medio",
+    "tipo": "multipla_escolha",
+    "pergunta": "Qual sera a saida?",
+    "codigo": "int[] nums = {1, 2, 3};\nSystem.out.println(nums.length);",
+    "opcoes": [
+      "2",
+      "3",
+      "4",
+      "erro"
+    ],
+    "resposta": "3",
+    "dica": "length informa o tamanho do array.",
+    "explicacao": "O array possui tres elementos.",
+    "pontos": 8
+  },
+  {
+    "id": 43,
+    "linguagem": "java",
+    "conceito": "booleanos",
+    "dificuldade": "dificil",
+    "tipo": "multipla_escolha",
+    "pergunta": "Qual sera a saida?",
+    "codigo": "boolean ativo = true;\nboolean admin = false;\nSystem.out.println(ativo && !admin);",
+    "opcoes": [
+      "true",
+      "false",
+      "null",
+      "erro"
+    ],
+    "resposta": "true",
+    "dica": "!admin inverte false para true.",
+    "explicacao": "A expressao inteira resulta em true.",
+    "pontos": 12
+  },
+  {
+    "id": 44,
+    "linguagem": "java",
+    "conceito": "objetos",
+    "dificuldade": "dificil",
+    "tipo": "multipla_escolha",
+    "pergunta": "Qual linha acessa o atributo nome?",
+    "codigo": "class User { String nome; }\nUser u = new User();\nu.nome = \"Leo\";",
+    "opcoes": [
+      "u[\"nome\"]",
+      "u.nome",
+      "u->nome",
+      "nome(u)"
+    ],
+    "resposta": "u.nome",
+    "dica": "Java usa ponto para acessar campos.",
+    "explicacao": "Campos de objeto sao acessados com ponto.",
+    "pontos": 12
+  }
+]

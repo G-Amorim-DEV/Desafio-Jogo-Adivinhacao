@@ -1,962 +1,1762 @@
 [
-    {
-        "id": 1,
-        "categoria": "geografia",
-        "dificuldade": "facil",
-        "pergunta": "Capital do Canadá?",
-        "opcoes": [
-            "Toronto",
-            "Ottawa",
-            "Vancouver",
-            "Montreal"
-        ],
-        "resposta": "Ottawa",
-        "dica": "Não é Toronto",
-        "tempo": 15,
-        "pontos": 5
-    },
-    {
-        "id": 2,
-        "categoria": "matematica",
-        "dificuldade": "facil",
-        "pergunta": "5+6=?",
-        "opcoes": [
-            "10",
-            "11",
-            "12",
-            "13"
-        ],
-        "resposta": "11",
-        "dica": "Maior que 10",
-        "tempo": 10,
-        "pontos": 5
-    },
-    {
-        "id": 3,
-        "categoria": "ciencia",
-        "dificuldade": "facil",
-        "pergunta": "Água é formada por?",
-        "opcoes": [
-            "CO2",
-            "H2O",
-            "O2",
-            "NaCl"
-        ],
-        "resposta": "H2O",
-        "dica": "Dois hidrogênios",
-        "tempo": 12,
-        "pontos": 5
-    },
-    {
-        "id": 4,
-        "categoria": "historia",
-        "dificuldade": "facil",
-        "pergunta": "Descobrimento do Brasil ocorreu em?",
-        "opcoes": [
-            "1492",
-            "1500",
-            "1600",
-            "1700"
-        ],
-        "resposta": "1500",
-        "dica": "Século XVI",
-        "tempo": 15,
-        "pontos": 5
-    },
-    {
-        "id": 5,
-        "categoria": "tecnologia",
-        "dificuldade": "facil",
-        "pergunta": "Python é?",
-        "opcoes": [
-            "Sistema",
-            "Linguagem",
-            "Hardware",
-            "Banco"
-        ],
-        "resposta": "Linguagem",
-        "dica": "Usada em IA",
-        "tempo": 10,
-        "pontos": 5
-    },
-    {
-        "id": 6,
-        "categoria": "matematica",
-        "dificuldade": "medio",
-        "pergunta": "12×4=?",
-        "opcoes": [
-            "36",
-            "40",
-            "48",
-            "52"
-        ],
-        "resposta": "48",
-        "dica": "12 dobrado duas vezes",
-        "tempo": 10,
-        "pontos": 8
-    },
-    {
-        "id": 7,
-        "categoria": "ciencia",
-        "dificuldade": "medio",
-        "pergunta": "Planeta vermelho?",
-        "opcoes": [
-            "Terra",
-            "Marte",
-            "Saturno",
-            "Vênus"
-        ],
-        "resposta": "Marte",
-        "dica": "Deus da guerra",
-        "tempo": 12,
-        "pontos": 8
-    },
-    {
-        "id": 8,
-        "categoria": "geografia",
-        "dificuldade": "medio",
-        "pergunta": "Maior oceano?",
-        "opcoes": [
-            "Atlântico",
-            "Índico",
-            "Pacífico",
-            "Ártico"
-        ],
-        "resposta": "Pacífico",
-        "dica": "Nome sugere calma",
-        "tempo": 15,
-        "pontos": 8
-    },
-    {
-        "id": 9,
-        "categoria": "tecnologia",
-        "dificuldade": "medio",
-        "pergunta": "HTML serve para?",
-        "opcoes": [
-            "Banco",
-            "Estrutura web",
-            "IA",
-            "Rede"
-        ],
-        "resposta": "Estrutura web",
-        "dica": "Base dos sites",
-        "tempo": 12,
-        "pontos": 8
-    },
-    {
-        "id": 10,
-        "categoria": "historia",
-        "dificuldade": "medio",
-        "pergunta": "Primeira Guerra começou em?",
-        "opcoes": [
-            "1914",
-            "1920",
-            "1939",
-            "1900"
-        ],
-        "resposta": "1914",
-        "dica": "Antes da segunda",
-        "tempo": 15,
-        "pontos": 8
-    },
-    {
-        "id": 11,
-        "categoria": "ciencia",
-        "dificuldade": "dificil",
-        "pergunta": "Velocidade da luz aproximada?",
-        "opcoes": [
-            "300 mil km/s",
-            "150 mil",
-            "1 milhão",
-            "30 mil"
-        ],
-        "resposta": "300 mil km/s",
-        "dica": "Constante física",
-        "tempo": 10,
-        "pontos": 15
-    },
-    {
-        "id": 12,
-        "categoria": "matematica",
-        "dificuldade": "dificil",
-        "pergunta": "√144=?",
-        "opcoes": [
-            "10",
-            "11",
-            "12",
-            "14"
-        ],
-        "resposta": "12",
-        "dica": "12×12",
-        "tempo": 10,
-        "pontos": 15
-    },
-    {
-        "id": 13,
-        "categoria": "tecnologia",
-        "dificuldade": "dificil",
-        "pergunta": "Criador do Linux?",
-        "opcoes": [
-            "Bill Gates",
-            "Torvalds",
-            "Jobs",
-            "Musk"
-        ],
-        "resposta": "Torvalds",
-        "dica": "Linus",
-        "tempo": 12,
-        "pontos": 15
-    },
-    {
-        "id": 14,
-        "categoria": "historia",
-        "dificuldade": "dificil",
-        "pergunta": "Queda de Constantinopla?",
-        "opcoes": [
-            "1453",
-            "1500",
-            "1601",
-            "1702"
-        ],
-        "resposta": "1453",
-        "dica": "Fim da idade média",
-        "tempo": 15,
-        "pontos": 15
-    },
-    {
-        "id": 15,
-        "categoria": "geografia",
-        "dificuldade": "dificil",
-        "pergunta": "Maior deserto quente?",
-        "opcoes": [
-            "Saara",
-            "Gobi",
-            "Kalahari",
-            "Atacama"
-        ],
-        "resposta": "Saara",
-        "dica": "África",
-        "tempo": 12,
-        "pontos": 15
-    },
-    {
-        "id": 16,
-        "categoria": "matematica",
-        "dificuldade": "facil",
-        "pergunta": "7+3=?",
-        "opcoes": [
-            "9",
-            "10",
-            "11",
-            "12"
-        ],
-        "resposta": "10",
-        "dica": "Número redondo",
-        "tempo": 10,
-        "pontos": 5
-    },
-    {
-        "id": 17,
-        "categoria": "ciencia",
-        "dificuldade": "facil",
-        "pergunta": "Qual planeta é conhecido como azul?",
-        "opcoes": [
-            "Terra",
-            "Marte",
-            "Júpiter",
-            "Vênus"
-        ],
-        "resposta": "Terra",
-        "dica": "Nosso planeta",
-        "tempo": 12,
-        "pontos": 5
-    },
-    {
-        "id": 18,
-        "categoria": "geografia",
-        "dificuldade": "facil",
-        "pergunta": "Rio mais longo do mundo?",
-        "opcoes": [
-            "Nilo",
-            "Amazonas",
-            "Yangtzé",
-            "Mississippi"
-        ],
-        "resposta": "Nilo",
-        "dica": "África",
-        "tempo": 15,
-        "pontos": 5
-    },
-    {
-        "id": 19,
-        "categoria": "historia",
-        "dificuldade": "medio",
-        "pergunta": "Ano da independência dos EUA?",
-        "opcoes": [
-            "1776",
-            "1789",
-            "1800",
-            "1812"
-        ],
-        "resposta": "1776",
-        "dica": "Século XVIII",
-        "tempo": 15,
-        "pontos": 8
-    },
-    {
-        "id": 20,
-        "categoria": "tecnologia",
-        "dificuldade": "medio",
-        "pergunta": "O que é Java?",
-        "opcoes": [
-            "Linguagem",
-            "Café",
-            "Plataforma",
-            "Banco"
-        ],
-        "resposta": "Linguagem",
-        "dica": "Usada para backend",
-        "tempo": 12,
-        "pontos": 8
-    },
-    {
-        "id": 21,
-        "categoria": "matematica",
-        "dificuldade": "medio",
-        "pergunta": "15×3=?",
-        "opcoes": [
-            "45",
-            "35",
-            "40",
-            "50"
-        ],
-        "resposta": "45",
-        "dica": "15 dobrado 3 vezes",
-        "tempo": 10,
-        "pontos": 8
-    },
-    {
-        "id": 22,
-        "categoria": "ciencia",
-        "dificuldade": "medio",
-        "pergunta": "Maior planeta do sistema solar?",
-        "opcoes": [
-            "Terra",
-            "Marte",
-            "Júpiter",
-            "Saturno"
-        ],
-        "resposta": "Júpiter",
-        "dica": "Gigante gasoso",
-        "tempo": 12,
-        "pontos": 8
-    },
-    {
-        "id": 23,
-        "categoria": "historia",
-        "dificuldade": "medio",
-        "pergunta": "Independência do Brasil?",
-        "opcoes": [
-            "1822",
-            "1808",
-            "1889",
-            "1810"
-        ],
-        "resposta": "1822",
-        "dica": "Dia 7 de setembro",
-        "tempo": 15,
-        "pontos": 8
-    },
-    {
-        "id": 24,
-        "categoria": "geografia",
-        "dificuldade": "medio",
-        "pergunta": "País com mais ilhas?",
-        "opcoes": [
-            "Noruega",
-            "Filipinas",
-            "Indonésia",
-            "Japão"
-        ],
-        "resposta": "Suécia",
-        "dica": "País europeu",
-        "tempo": 15,
-        "pontos": 8
-    },
-    {
-        "id": 25,
-        "categoria": "tecnologia",
-        "dificuldade": "medio",
-        "pergunta": "CSS é usado para?",
-        "opcoes": [
-            "Backend",
-            "Estilizar sites",
-            "Banco",
-            "IA"
-        ],
-        "resposta": "Estilizar sites",
-        "dica": "Front-end",
-        "tempo": 12,
-        "pontos": 8
-    },
-    {
-        "id": 26,
-        "categoria": "ciencia",
-        "dificuldade": "dificil",
-        "pergunta": "Número de planetas no sistema solar?",
-        "opcoes": [
-            "7",
-            "8",
-            "9",
-            "10"
-        ],
-        "resposta": "8",
-        "dica": "Depois de Plutão",
-        "tempo": 10,
-        "pontos": 15
-    },
-    {
-        "id": 27,
-        "categoria": "matematica",
-        "dificuldade": "dificil",
-        "pergunta": "Integral de x dx?",
-        "opcoes": [
-            "x²/2",
-            "x³/3",
-            "2x",
-            "1/x"
-        ],
-        "resposta": "x²/2",
-        "dica": "Função básica",
-        "tempo": 10,
-        "pontos": 15
-    },
-    {
-        "id": 28,
-        "categoria": "tecnologia",
-        "dificuldade": "dificil",
-        "pergunta": "O que é Git?",
-        "opcoes": [
-            "Banco",
-            "Controle de versão",
-            "Linguagem",
-            "Framework"
-        ],
-        "resposta": "Controle de versão",
-        "dica": "Ferramenta essencial para dev",
-        "tempo": 12,
-        "pontos": 15
-    },
-    {
-        "id": 29,
-        "categoria": "historia",
-        "dificuldade": "dificil",
-        "pergunta": "Fim da Segunda Guerra?",
-        "opcoes": [
-            "1945",
-            "1939",
-            "1950",
-            "1940"
-        ],
-        "resposta": "1945",
-        "dica": "Europa em ruínas",
-        "tempo": 15,
-        "pontos": 15
-    },
-    {
-        "id": 30,
-        "categoria": "geografia",
-        "dificuldade": "dificil",
-        "pergunta": "Maior ilha do mundo?",
-        "opcoes": [
-            "Groenlândia",
-            "Madagáscar",
-            "Sumatra",
-            "Borneo"
-        ],
-        "resposta": "Groenlândia",
-        "dica": "Entre Canadá e Atlântico",
-        "tempo": 12,
-        "pontos": 15
-    },
-    {
-        "id": 31,
-        "categoria": "matematica",
-        "dificuldade": "facil",
-        "pergunta": "10-4=?",
-        "opcoes": [
-            "4",
-            "5",
-            "6",
-            "7"
-        ],
-        "resposta": "6",
-        "dica": "Menos que 7",
-        "tempo": 10,
-        "pontos": 5
-    },
-    {
-        "id": 32,
-        "categoria": "ciencia",
-        "dificuldade": "facil",
-        "pergunta": "Gas essencial para respiração?",
-        "opcoes": [
-            "O2",
-            "CO2",
-            "H2O",
-            "N2"
-        ],
-        "resposta": "O2",
-        "dica": "Oxigênio",
-        "tempo": 12,
-        "pontos": 5
-    },
-    {
-        "id": 33,
-        "categoria": "geografia",
-        "dificuldade": "facil",
-        "pergunta": "Capital da França?",
-        "opcoes": [
-            "Paris",
-            "Londres",
-            "Berlim",
-            "Madri"
-        ],
-        "resposta": "Paris",
-        "dica": "Cidade luz",
-        "tempo": 15,
-        "pontos": 5
-    },
-    {
-        "id": 34,
-        "categoria": "historia",
-        "dificuldade": "facil",
-        "pergunta": "Ano da Revolução Francesa?",
-        "opcoes": [
-            "1789",
-            "1776",
-            "1800",
-            "1799"
-        ],
-        "resposta": "1789",
-        "dica": "Fim do Antigo Regime",
-        "tempo": 15,
-        "pontos": 5
-    },
-    {
-        "id": 35,
-        "categoria": "tecnologia",
-        "dificuldade": "facil",
-        "pergunta": "HTML é?",
-        "opcoes": [
-            "Linguagem",
-            "Banco",
-            "Sistema",
-            "Rede"
-        ],
-        "resposta": "Linguagem",
-        "dica": "Sites web",
-        "tempo": 10,
-        "pontos": 5
-    },
-    {
-        "id": 36,
-        "categoria": "matematica",
-        "dificuldade": "medio",
-        "pergunta": "√81=?",
-        "opcoes": [
-            "7",
-            "8",
-            "9",
-            "10"
-        ],
-        "resposta": "9",
-        "dica": "Quadrado perfeito",
-        "tempo": 10,
-        "pontos": 8
-    },
-    {
-        "id": 37,
-        "categoria": "ciencia",
-        "dificuldade": "medio",
-        "pergunta": "Gas nobre mais leve?",
-        "opcoes": [
-            "Hélio",
-            "Neon",
-            "Argônio",
-            "Xenônio"
-        ],
-        "resposta": "Hélio",
-        "dica": "Balões",
-        "tempo": 12,
-        "pontos": 8
-    },
-    {
-        "id": 38,
-        "categoria": "historia",
-        "dificuldade": "medio",
-        "pergunta": "Fim da Guerra Fria?",
-        "opcoes": [
-            "1989",
-            "1991",
-            "1995",
-            "1985"
-        ],
-        "resposta": "1991",
-        "dica": "Queda do muro de Berlim",
-        "tempo": 15,
-        "pontos": 8
-    },
-    {
-        "id": 39,
-        "categoria": "geografia",
-        "dificuldade": "medio",
-        "pergunta": "Montanha mais alta?",
-        "opcoes": [
-            "Everest",
-            "K2",
-            "Kangchenjunga",
-            "Lhotse"
-        ],
-        "resposta": "Everest",
-        "dica": "Himalaia",
-        "tempo": 15,
-        "pontos": 8
-    },
-    {
-        "id": 40,
-        "categoria": "tecnologia",
-        "dificuldade": "medio",
-        "pergunta": "JS é usado para?",
-        "opcoes": [
-            "Backend",
-            "Estilizar",
-            "Programar",
-            "IA"
-        ],
-        "resposta": "Programar",
-        "dica": "Front-end",
-        "tempo": 12,
-        "pontos": 8
-    },
-    {
-        "id": 41,
-        "categoria": "ciencia",
-        "dificuldade": "dificil",
-        "pergunta": "Elemento químico ouro?",
-        "opcoes": [
-            "Au",
-            "Ag",
-            "Fe",
-            "O"
-        ],
-        "resposta": "Au",
-        "dica": "Símbolo químico",
-        "tempo": 10,
-        "pontos": 15
-    },
-    {
-        "id": 42,
-        "categoria": "matematica",
-        "dificuldade": "dificil",
-        "pergunta": "2³=?",
-        "opcoes": [
-            "6",
-            "7",
-            "8",
-            "9"
-        ],
-        "resposta": "8",
-        "dica": "Potência",
-        "tempo": 10,
-        "pontos": 15
-    },
-    {
-        "id": 43,
-        "categoria": "tecnologia",
-        "dificuldade": "dificil",
-        "pergunta": "Criador do Python?",
-        "opcoes": [
-            "Guido",
-            "Linus",
-            "Jobs",
-            "Torvalds"
-        ],
-        "resposta": "Guido",
-        "dica": "Van Rossum",
-        "tempo": 12,
-        "pontos": 15
-    },
-    {
-        "id": 44,
-        "categoria": "historia",
-        "dificuldade": "dificil",
-        "pergunta": "Queda do muro de Berlim?",
-        "opcoes": [
-            "1989",
-            "1990",
-            "1991",
-            "1988"
-        ],
-        "resposta": "1989",
-        "dica": "Fim da divisão",
-        "tempo": 15,
-        "pontos": 15
-    },
-    {
-        "id": 45,
-        "categoria": "geografia",
-        "dificuldade": "dificil",
-        "pergunta": "País maior em extensão?",
-        "opcoes": [
-            "China",
-            "Rússia",
-            "Canadá",
-            "EUA"
-        ],
-        "resposta": "Rússia",
-        "dica": "Maior do mundo",
-        "tempo": 12,
-        "pontos": 15
-    },
-    {
-        "id": 46,
-        "categoria": "matematica",
-        "dificuldade": "facil",
-        "pergunta": "3+4=?",
-        "opcoes": [
-            "6",
-            "7",
-            "8",
-            "9"
-        ],
-        "resposta": "7",
-        "dica": "Menor que 8",
-        "tempo": 10,
-        "pontos": 5
-    },
-    {
-        "id": 47,
-        "categoria": "ciencia",
-        "dificuldade": "facil",
-        "pergunta": "Sol é um?",
-        "opcoes": [
-            "Planeta",
-            "Estrela",
-            "Cometa",
-            "Lua"
-        ],
-        "resposta": "Estrela",
-        "dica": "Brilha no céu",
-        "tempo": 12,
-        "pontos": 5
-    },
-    {
-        "id": 48,
-        "categoria": "geografia",
-        "dificuldade": "facil",
-        "pergunta": "Capital da Itália?",
-        "opcoes": [
-            "Roma",
-            "Paris",
-            "Londres",
-            "Berlim"
-        ],
-        "resposta": "Roma",
-        "dica": "Cidade eterna",
-        "tempo": 15,
-        "pontos": 5
-    },
-    {
-        "id": 49,
-        "categoria": "historia",
-        "dificuldade": "medio",
-        "pergunta": "Ano da Revolução Industrial?",
-        "opcoes": [
-            "1750",
-            "1800",
-            "1700",
-            "1850"
-        ],
-        "resposta": "1750",
-        "dica": "Início do século XVIII",
-        "tempo": 15,
-        "pontos": 8
-    },
-    {
-        "id": 50,
-        "categoria": "tecnologia",
-        "dificuldade": "medio",
-        "pergunta": "SQL serve para?",
-        "opcoes": [
-            "Programar",
-            "Gerenciar banco de dados",
-            "Frontend",
-            "IA"
-        ],
-        "resposta": "Gerenciar banco de dados",
-        "dica": "Base de dados",
-        "tempo": 12,
-        "pontos": 8
-    },
-    {
-        "id": 51,
-        "categoria": "matematica",
-        "dificuldade": "medio",
-        "pergunta": "15-7=?",
-        "opcoes": [
-            "7",
-            "8",
-            "9",
-            "10"
-        ],
-        "resposta": "8",
-        "dica": "Menos que 9",
-        "tempo": 10,
-        "pontos": 8
-    },
-    {
-        "id": 52,
-        "categoria": "ciencia",
-        "dificuldade": "medio",
-        "pergunta": "Maior satélite da Terra?",
-        "opcoes": [
-            "Lua",
-            "Io",
-            "Europa",
-            "Ganimedes"
-        ],
-        "resposta": "Lua",
-        "dica": "Visível à noite",
-        "tempo": 12,
-        "pontos": 8
-    },
-    {
-        "id": 53,
-        "categoria": "historia",
-        "dificuldade": "medio",
-        "pergunta": "Primeiro presidente dos EUA?",
-        "opcoes": [
-            "Lincoln",
-            "Washington",
-            "Jefferson",
-            "Adams"
-        ],
-        "resposta": "Washington",
-        "dica": "Pai da pátria",
-        "tempo": 15,
-        "pontos": 8
-    },
-    {
-        "id": 54,
-        "categoria": "geografia",
-        "dificuldade": "medio",
-        "pergunta": "Rio Amazonas está em qual continente?",
-        "opcoes": [
-            "África",
-            "América do Sul",
-            "Ásia",
-            "Europa"
-        ],
-        "resposta": "América do Sul",
-        "dica": "Maior rio",
-        "tempo": 15,
-        "pontos": 8
-    },
-    {
-        "id": 55,
-        "categoria": "tecnologia",
-        "dificuldade": "medio",
-        "pergunta": "API significa?",
-        "opcoes": [
-            "Interface de Programação",
-            "Banco",
-            "Hardware",
-            "Rede"
-        ],
-        "resposta": "Interface de Programação",
-        "dica": "Comunicação entre softwares",
-        "tempo": 12,
-        "pontos": 8
-    },
-    {
-        "id": 56,
-        "categoria": "ciencia",
-        "dificuldade": "dificil",
-        "pergunta": "Força da gravidade na Terra?",
-        "opcoes": [
-            "9,8 m/s²",
-            "10 m/s²",
-            "8 m/s²",
-            "12 m/s²"
-        ],
-        "resposta": "9,8 m/s²",
-        "dica": "Aceleração padrão",
-        "tempo": 10,
-        "pontos": 15
-    },
-    {
-        "id": 57,
-        "categoria": "matematica",
-        "dificuldade": "dificil",
-        "pergunta": "log10 1000=?",
-        "opcoes": [
-            "2",
-            "3",
-            "10",
-            "100"
-        ],
-        "resposta": "3",
-        "dica": "Potência de 10",
-        "tempo": 10,
-        "pontos": 15
-    },
-    {
-        "id": 58,
-        "categoria": "tecnologia",
-        "dificuldade": "dificil",
-        "pergunta": "Criador do C?",
-        "opcoes": [
-            "Dennis Ritchie",
-            "Bjarne Stroustrup",
-            "Linus",
-            "Jobs"
-        ],
-        "resposta": "Dennis Ritchie",
-        "dica": "Unix",
-        "tempo": 12,
-        "pontos": 15
-    },
-    {
-        "id": 59,
-        "categoria": "historia",
-        "dificuldade": "dificil",
-        "pergunta": "Independência da Índia?",
-        "opcoes": [
-            "1947",
-            "1945",
-            "1950",
-            "1939"
-        ],
-        "resposta": "1947",
-        "dica": "Gandhi",
-        "tempo": 15,
-        "pontos": 15
-    },
-    {
-        "id": 60,
-        "categoria": "geografia",
-        "dificuldade": "dificil",
-        "pergunta": "Monte Everest fica em qual país?",
-        "opcoes": [
-            "Nepal",
-            "China",
-            "Índia",
-            "Tibete"
-        ],
-        "resposta": "Nepal",
-        "dica": "Himalaia",
-        "tempo": 12,
-        "pontos": 15
-    }
+  {
+    "id": 1,
+    "categoria": "geografia",
+    "dificuldade": "facil",
+    "pergunta": "Capital da Argentina?",
+    "opcoes": [
+      "Santiago",
+      "Buenos Aires",
+      "Lima",
+      "Bogota"
+    ],
+    "resposta": "Buenos Aires",
+    "dica": "Fica no Rio da Prata",
+    "tempo": 15,
+    "pontos": 5
+  },
+  {
+    "id": 2,
+    "categoria": "geografia",
+    "dificuldade": "facil",
+    "pergunta": "Capital do Japao?",
+    "opcoes": [
+      "Osaka",
+      "Kyoto",
+      "Toquio",
+      "Nagoya"
+    ],
+    "resposta": "Toquio",
+    "dica": "E a maior cidade do pais",
+    "tempo": 15,
+    "pontos": 5
+  },
+  {
+    "id": 3,
+    "categoria": "ciencia",
+    "dificuldade": "facil",
+    "pergunta": "Planeta conhecido como planeta vermelho?",
+    "opcoes": [
+      "Venus",
+      "Marte",
+      "Jupiter",
+      "Mercurio"
+    ],
+    "resposta": "Marte",
+    "dica": "Tem cor avermelhada",
+    "tempo": 15,
+    "pontos": 5
+  },
+  {
+    "id": 4,
+    "categoria": "ciencia",
+    "dificuldade": "facil",
+    "pergunta": "Gas essencial para respiracao humana?",
+    "opcoes": [
+      "Helio",
+      "Oxigenio",
+      "Nitrogenio",
+      "Neon"
+    ],
+    "resposta": "Oxigenio",
+    "dica": "Compõe cerca de 21% do ar",
+    "tempo": 15,
+    "pontos": 5
+  },
+  {
+    "id": 5,
+    "categoria": "historia",
+    "dificuldade": "facil",
+    "pergunta": "Pais das piramides de Gizé?",
+    "opcoes": [
+      "Grecia",
+      "Peru",
+      "Egito",
+      "India"
+    ],
+    "resposta": "Egito",
+    "dica": "Fica no norte da Africa",
+    "tempo": 15,
+    "pontos": 5
+  },
+  {
+    "id": 6,
+    "categoria": "matematica",
+    "dificuldade": "facil",
+    "pergunta": "7 + 8 = ?",
+    "opcoes": [
+      "14",
+      "15",
+      "16",
+      "17"
+    ],
+    "resposta": "15",
+    "dica": "Maior que 14",
+    "tempo": 15,
+    "pontos": 5
+  },
+  {
+    "id": 7,
+    "categoria": "matematica",
+    "dificuldade": "facil",
+    "pergunta": "9 x 3 = ?",
+    "opcoes": [
+      "18",
+      "27",
+      "21",
+      "24"
+    ],
+    "resposta": "27",
+    "dica": "Multiplicacao por 3",
+    "tempo": 15,
+    "pontos": 5
+  },
+  {
+    "id": 8,
+    "categoria": "lingua",
+    "dificuldade": "facil",
+    "pergunta": "Sinonimo de rapido",
+    "opcoes": [
+      "lento",
+      "agil",
+      "pesado",
+      "fraco"
+    ],
+    "resposta": "agil",
+    "dica": "Comeca com a",
+    "tempo": 15,
+    "pontos": 5
+  },
+  {
+    "id": 9,
+    "categoria": "tecnologia",
+    "dificuldade": "facil",
+    "pergunta": "Extensao comum de arquivo de imagem",
+    "opcoes": [
+      ".mp3",
+      ".jpg",
+      ".txt",
+      ".csv"
+    ],
+    "resposta": ".jpg",
+    "dica": "Muito usada em fotos",
+    "tempo": 15,
+    "pontos": 5
+  },
+  {
+    "id": 10,
+    "categoria": "cultura",
+    "dificuldade": "facil",
+    "pergunta": "Instrumento com teclas pretas e brancas",
+    "opcoes": [
+      "Violino",
+      "Bateria",
+      "Piano",
+      "Flauta"
+    ],
+    "resposta": "Piano",
+    "dica": "Pode ser de cauda",
+    "tempo": 15,
+    "pontos": 5
+  },
+  {
+    "id": 11,
+    "categoria": "geografia",
+    "dificuldade": "medio",
+    "pergunta": "Maior oceano do planeta?",
+    "opcoes": [
+      "Atlantico",
+      "Indico",
+      "Pacifico",
+      "Artico"
+    ],
+    "resposta": "Pacifico",
+    "dica": "Banha a costa oeste das Americas",
+    "tempo": 12,
+    "pontos": 8
+  },
+  {
+    "id": 12,
+    "categoria": "ciencia",
+    "dificuldade": "medio",
+    "pergunta": "Formula quimica da agua",
+    "opcoes": [
+      "CO2",
+      "H2O",
+      "O2",
+      "NaCl"
+    ],
+    "resposta": "H2O",
+    "dica": "Dois atomos de hidrogenio",
+    "tempo": 12,
+    "pontos": 8
+  },
+  {
+    "id": 13,
+    "categoria": "historia",
+    "dificuldade": "medio",
+    "pergunta": "Ano da independencia do Brasil",
+    "opcoes": [
+      "1822",
+      "1889",
+      "1500",
+      "1808"
+    ],
+    "resposta": "1822",
+    "dica": "Seculo XIX",
+    "tempo": 12,
+    "pontos": 8
+  },
+  {
+    "id": 14,
+    "categoria": "matematica",
+    "dificuldade": "medio",
+    "pergunta": "Raiz quadrada de 144",
+    "opcoes": [
+      "10",
+      "11",
+      "12",
+      "14"
+    ],
+    "resposta": "12",
+    "dica": "E um numero par",
+    "tempo": 12,
+    "pontos": 8
+  },
+  {
+    "id": 15,
+    "categoria": "tecnologia",
+    "dificuldade": "medio",
+    "pergunta": "Linguagem muito usada para ciencia de dados",
+    "opcoes": [
+      "HTML",
+      "Python",
+      "CSS",
+      "SQL"
+    ],
+    "resposta": "Python",
+    "dica": "Tambem e popular em automacao",
+    "tempo": 12,
+    "pontos": 8
+  },
+  {
+    "id": 16,
+    "categoria": "lingua",
+    "dificuldade": "medio",
+    "pergunta": "Antonomasia e uma figura de",
+    "opcoes": [
+      "som",
+      "pensamento",
+      "palavras",
+      "sintaxe"
+    ],
+    "resposta": "palavras",
+    "dica": "Envolve substituicao de nomes",
+    "tempo": 12,
+    "pontos": 8
+  },
+  {
+    "id": 17,
+    "categoria": "cultura",
+    "dificuldade": "medio",
+    "pergunta": "Autor de Dom Casmurro",
+    "opcoes": [
+      "Machado de Assis",
+      "Jose de Alencar",
+      "Clarice Lispector",
+      "Eca de Queiros"
+    ],
+    "resposta": "Machado de Assis",
+    "dica": "Tambem escreveu Memorias Postumas",
+    "tempo": 12,
+    "pontos": 8
+  },
+  {
+    "id": 18,
+    "categoria": "geografia",
+    "dificuldade": "dificil",
+    "pergunta": "Pais com maior area territorial da Africa",
+    "opcoes": [
+      "Argelia",
+      "Sudao",
+      "Republica Democratica do Congo",
+      "Libia"
+    ],
+    "resposta": "Argelia",
+    "dica": "Fica no norte da Africa",
+    "tempo": 10,
+    "pontos": 12
+  },
+  {
+    "id": 19,
+    "categoria": "ciencia",
+    "dificuldade": "dificil",
+    "pergunta": "Particula com carga negativa",
+    "opcoes": [
+      "Proton",
+      "Eletron",
+      "Neutron",
+      "Foton"
+    ],
+    "resposta": "Eletron",
+    "dica": "Orbita o nucleo",
+    "tempo": 10,
+    "pontos": 12
+  },
+  {
+    "id": 20,
+    "categoria": "historia",
+    "dificuldade": "dificil",
+    "pergunta": "Tratado que encerrou oficialmente a Primeira Guerra em 1919",
+    "opcoes": [
+      "Tordesilhas",
+      "Versalhes",
+      "Munique",
+      "Utrecht"
+    ],
+    "resposta": "Versalhes",
+    "dica": "Assinado na Franca",
+    "tempo": 10,
+    "pontos": 12
+  },
+  {
+    "id": 21,
+    "categoria": "matematica",
+    "dificuldade": "dificil",
+    "pergunta": "Valor de 2 elevado a 10",
+    "opcoes": [
+      "512",
+      "1000",
+      "1024",
+      "2048"
+    ],
+    "resposta": "1024",
+    "dica": "Maior que 1000",
+    "tempo": 10,
+    "pontos": 12
+  },
+  {
+    "id": 22,
+    "categoria": "tecnologia",
+    "dificuldade": "dificil",
+    "pergunta": "Estrutura de dados FIFO",
+    "opcoes": [
+      "Pilha",
+      "Fila",
+      "Arvore",
+      "Grafo"
+    ],
+    "resposta": "Fila",
+    "dica": "First in, first out",
+    "tempo": 10,
+    "pontos": 12
+  },
+  {
+    "id": 23,
+    "categoria": "matematica",
+    "dificuldade": "facil",
+    "pergunta": "2 + 2 = ?",
+    "opcoes": [
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    "resposta": "4",
+    "dica": "Resultado entre 3 e 5",
+    "tempo": 12,
+    "pontos": 5
+  },
+  {
+    "id": 24,
+    "categoria": "matematica",
+    "dificuldade": "facil",
+    "pergunta": "2 + 3 = ?",
+    "opcoes": [
+      "4",
+      "5",
+      "6",
+      "7"
+    ],
+    "resposta": "5",
+    "dica": "Resultado entre 4 e 6",
+    "tempo": 12,
+    "pontos": 5
+  },
+  {
+    "id": 25,
+    "categoria": "matematica",
+    "dificuldade": "facil",
+    "pergunta": "2 + 4 = ?",
+    "opcoes": [
+      "5",
+      "6",
+      "7",
+      "8"
+    ],
+    "resposta": "6",
+    "dica": "Resultado entre 5 e 7",
+    "tempo": 12,
+    "pontos": 5
+  },
+  {
+    "id": 26,
+    "categoria": "matematica",
+    "dificuldade": "facil",
+    "pergunta": "2 + 5 = ?",
+    "opcoes": [
+      "6",
+      "7",
+      "8",
+      "9"
+    ],
+    "resposta": "7",
+    "dica": "Resultado entre 6 e 8",
+    "tempo": 12,
+    "pontos": 5
+  },
+  {
+    "id": 27,
+    "categoria": "matematica",
+    "dificuldade": "facil",
+    "pergunta": "2 + 6 = ?",
+    "opcoes": [
+      "7",
+      "8",
+      "9",
+      "10"
+    ],
+    "resposta": "8",
+    "dica": "Resultado entre 7 e 9",
+    "tempo": 12,
+    "pontos": 5
+  },
+  {
+    "id": 28,
+    "categoria": "matematica",
+    "dificuldade": "facil",
+    "pergunta": "2 + 7 = ?",
+    "opcoes": [
+      "8",
+      "9",
+      "10",
+      "11"
+    ],
+    "resposta": "9",
+    "dica": "Resultado entre 8 e 10",
+    "tempo": 12,
+    "pontos": 5
+  },
+  {
+    "id": 29,
+    "categoria": "matematica",
+    "dificuldade": "facil",
+    "pergunta": "3 + 2 = ?",
+    "opcoes": [
+      "4",
+      "5",
+      "6",
+      "7"
+    ],
+    "resposta": "5",
+    "dica": "Resultado entre 4 e 6",
+    "tempo": 12,
+    "pontos": 5
+  },
+  {
+    "id": 30,
+    "categoria": "matematica",
+    "dificuldade": "facil",
+    "pergunta": "3 + 3 = ?",
+    "opcoes": [
+      "5",
+      "6",
+      "7",
+      "8"
+    ],
+    "resposta": "6",
+    "dica": "Resultado entre 5 e 7",
+    "tempo": 12,
+    "pontos": 5
+  },
+  {
+    "id": 31,
+    "categoria": "matematica",
+    "dificuldade": "facil",
+    "pergunta": "3 + 4 = ?",
+    "opcoes": [
+      "6",
+      "7",
+      "8",
+      "9"
+    ],
+    "resposta": "7",
+    "dica": "Resultado entre 6 e 8",
+    "tempo": 12,
+    "pontos": 5
+  },
+  {
+    "id": 32,
+    "categoria": "matematica",
+    "dificuldade": "facil",
+    "pergunta": "3 + 5 = ?",
+    "opcoes": [
+      "7",
+      "8",
+      "9",
+      "10"
+    ],
+    "resposta": "8",
+    "dica": "Resultado entre 7 e 9",
+    "tempo": 12,
+    "pontos": 5
+  },
+  {
+    "id": 33,
+    "categoria": "matematica",
+    "dificuldade": "facil",
+    "pergunta": "3 + 6 = ?",
+    "opcoes": [
+      "8",
+      "9",
+      "10",
+      "11"
+    ],
+    "resposta": "9",
+    "dica": "Resultado entre 8 e 10",
+    "tempo": 12,
+    "pontos": 5
+  },
+  {
+    "id": 34,
+    "categoria": "matematica",
+    "dificuldade": "facil",
+    "pergunta": "3 + 7 = ?",
+    "opcoes": [
+      "9",
+      "10",
+      "11",
+      "12"
+    ],
+    "resposta": "10",
+    "dica": "Resultado entre 9 e 11",
+    "tempo": 12,
+    "pontos": 5
+  },
+  {
+    "id": 35,
+    "categoria": "matematica",
+    "dificuldade": "facil",
+    "pergunta": "4 + 2 = ?",
+    "opcoes": [
+      "5",
+      "6",
+      "7",
+      "8"
+    ],
+    "resposta": "6",
+    "dica": "Resultado entre 5 e 7",
+    "tempo": 12,
+    "pontos": 5
+  },
+  {
+    "id": 36,
+    "categoria": "matematica",
+    "dificuldade": "facil",
+    "pergunta": "4 + 3 = ?",
+    "opcoes": [
+      "6",
+      "7",
+      "8",
+      "9"
+    ],
+    "resposta": "7",
+    "dica": "Resultado entre 6 e 8",
+    "tempo": 12,
+    "pontos": 5
+  },
+  {
+    "id": 37,
+    "categoria": "matematica",
+    "dificuldade": "facil",
+    "pergunta": "4 + 4 = ?",
+    "opcoes": [
+      "7",
+      "8",
+      "9",
+      "10"
+    ],
+    "resposta": "8",
+    "dica": "Resultado entre 7 e 9",
+    "tempo": 12,
+    "pontos": 5
+  },
+  {
+    "id": 38,
+    "categoria": "matematica",
+    "dificuldade": "facil",
+    "pergunta": "4 + 5 = ?",
+    "opcoes": [
+      "8",
+      "9",
+      "10",
+      "11"
+    ],
+    "resposta": "9",
+    "dica": "Resultado entre 8 e 10",
+    "tempo": 12,
+    "pontos": 5
+  },
+  {
+    "id": 39,
+    "categoria": "matematica",
+    "dificuldade": "facil",
+    "pergunta": "4 + 6 = ?",
+    "opcoes": [
+      "9",
+      "10",
+      "11",
+      "12"
+    ],
+    "resposta": "10",
+    "dica": "Resultado entre 9 e 11",
+    "tempo": 12,
+    "pontos": 5
+  },
+  {
+    "id": 40,
+    "categoria": "matematica",
+    "dificuldade": "facil",
+    "pergunta": "4 + 7 = ?",
+    "opcoes": [
+      "10",
+      "11",
+      "12",
+      "13"
+    ],
+    "resposta": "11",
+    "dica": "Resultado entre 10 e 12",
+    "tempo": 12,
+    "pontos": 5
+  },
+  {
+    "id": 41,
+    "categoria": "matematica",
+    "dificuldade": "facil",
+    "pergunta": "5 + 2 = ?",
+    "opcoes": [
+      "6",
+      "7",
+      "8",
+      "9"
+    ],
+    "resposta": "7",
+    "dica": "Resultado entre 6 e 8",
+    "tempo": 12,
+    "pontos": 5
+  },
+  {
+    "id": 42,
+    "categoria": "matematica",
+    "dificuldade": "facil",
+    "pergunta": "5 + 3 = ?",
+    "opcoes": [
+      "7",
+      "8",
+      "9",
+      "10"
+    ],
+    "resposta": "8",
+    "dica": "Resultado entre 7 e 9",
+    "tempo": 12,
+    "pontos": 5
+  },
+  {
+    "id": 43,
+    "categoria": "matematica",
+    "dificuldade": "facil",
+    "pergunta": "5 + 4 = ?",
+    "opcoes": [
+      "8",
+      "9",
+      "10",
+      "11"
+    ],
+    "resposta": "9",
+    "dica": "Resultado entre 8 e 10",
+    "tempo": 12,
+    "pontos": 5
+  },
+  {
+    "id": 44,
+    "categoria": "matematica",
+    "dificuldade": "facil",
+    "pergunta": "5 + 5 = ?",
+    "opcoes": [
+      "9",
+      "10",
+      "11",
+      "12"
+    ],
+    "resposta": "10",
+    "dica": "Resultado entre 9 e 11",
+    "tempo": 12,
+    "pontos": 5
+  },
+  {
+    "id": 45,
+    "categoria": "matematica",
+    "dificuldade": "facil",
+    "pergunta": "5 + 6 = ?",
+    "opcoes": [
+      "10",
+      "11",
+      "12",
+      "13"
+    ],
+    "resposta": "11",
+    "dica": "Resultado entre 10 e 12",
+    "tempo": 12,
+    "pontos": 5
+  },
+  {
+    "id": 46,
+    "categoria": "matematica",
+    "dificuldade": "medio",
+    "pergunta": "5 + 7 = ?",
+    "opcoes": [
+      "11",
+      "12",
+      "13",
+      "14"
+    ],
+    "resposta": "12",
+    "dica": "Resultado entre 11 e 13",
+    "tempo": 12,
+    "pontos": 8
+  },
+  {
+    "id": 47,
+    "categoria": "matematica",
+    "dificuldade": "facil",
+    "pergunta": "6 + 2 = ?",
+    "opcoes": [
+      "7",
+      "8",
+      "9",
+      "10"
+    ],
+    "resposta": "8",
+    "dica": "Resultado entre 7 e 9",
+    "tempo": 12,
+    "pontos": 5
+  },
+  {
+    "id": 48,
+    "categoria": "matematica",
+    "dificuldade": "facil",
+    "pergunta": "6 + 3 = ?",
+    "opcoes": [
+      "8",
+      "9",
+      "10",
+      "11"
+    ],
+    "resposta": "9",
+    "dica": "Resultado entre 8 e 10",
+    "tempo": 12,
+    "pontos": 5
+  },
+  {
+    "id": 49,
+    "categoria": "matematica",
+    "dificuldade": "facil",
+    "pergunta": "6 + 4 = ?",
+    "opcoes": [
+      "9",
+      "10",
+      "11",
+      "12"
+    ],
+    "resposta": "10",
+    "dica": "Resultado entre 9 e 11",
+    "tempo": 12,
+    "pontos": 5
+  },
+  {
+    "id": 50,
+    "categoria": "matematica",
+    "dificuldade": "facil",
+    "pergunta": "6 + 5 = ?",
+    "opcoes": [
+      "10",
+      "11",
+      "12",
+      "13"
+    ],
+    "resposta": "11",
+    "dica": "Resultado entre 10 e 12",
+    "tempo": 12,
+    "pontos": 5
+  },
+  {
+    "id": 51,
+    "categoria": "matematica",
+    "dificuldade": "medio",
+    "pergunta": "6 + 6 = ?",
+    "opcoes": [
+      "11",
+      "12",
+      "13",
+      "14"
+    ],
+    "resposta": "12",
+    "dica": "Resultado entre 11 e 13",
+    "tempo": 12,
+    "pontos": 8
+  },
+  {
+    "id": 52,
+    "categoria": "matematica",
+    "dificuldade": "medio",
+    "pergunta": "6 + 7 = ?",
+    "opcoes": [
+      "12",
+      "13",
+      "14",
+      "15"
+    ],
+    "resposta": "13",
+    "dica": "Resultado entre 12 e 14",
+    "tempo": 12,
+    "pontos": 8
+  },
+  {
+    "id": 53,
+    "categoria": "matematica",
+    "dificuldade": "facil",
+    "pergunta": "7 + 2 = ?",
+    "opcoes": [
+      "8",
+      "9",
+      "10",
+      "11"
+    ],
+    "resposta": "9",
+    "dica": "Resultado entre 8 e 10",
+    "tempo": 12,
+    "pontos": 5
+  },
+  {
+    "id": 54,
+    "categoria": "matematica",
+    "dificuldade": "facil",
+    "pergunta": "7 + 3 = ?",
+    "opcoes": [
+      "9",
+      "10",
+      "11",
+      "12"
+    ],
+    "resposta": "10",
+    "dica": "Resultado entre 9 e 11",
+    "tempo": 12,
+    "pontos": 5
+  },
+  {
+    "id": 55,
+    "categoria": "matematica",
+    "dificuldade": "facil",
+    "pergunta": "7 + 4 = ?",
+    "opcoes": [
+      "10",
+      "11",
+      "12",
+      "13"
+    ],
+    "resposta": "11",
+    "dica": "Resultado entre 10 e 12",
+    "tempo": 12,
+    "pontos": 5
+  },
+  {
+    "id": 56,
+    "categoria": "matematica",
+    "dificuldade": "medio",
+    "pergunta": "7 + 5 = ?",
+    "opcoes": [
+      "11",
+      "12",
+      "13",
+      "14"
+    ],
+    "resposta": "12",
+    "dica": "Resultado entre 11 e 13",
+    "tempo": 12,
+    "pontos": 8
+  },
+  {
+    "id": 57,
+    "categoria": "matematica",
+    "dificuldade": "medio",
+    "pergunta": "7 + 6 = ?",
+    "opcoes": [
+      "12",
+      "13",
+      "14",
+      "15"
+    ],
+    "resposta": "13",
+    "dica": "Resultado entre 12 e 14",
+    "tempo": 12,
+    "pontos": 8
+  },
+  {
+    "id": 58,
+    "categoria": "matematica",
+    "dificuldade": "medio",
+    "pergunta": "7 + 7 = ?",
+    "opcoes": [
+      "13",
+      "14",
+      "15",
+      "16"
+    ],
+    "resposta": "14",
+    "dica": "Resultado entre 13 e 15",
+    "tempo": 12,
+    "pontos": 8
+  },
+  {
+    "id": 59,
+    "categoria": "matematica",
+    "dificuldade": "facil",
+    "pergunta": "8 + 2 = ?",
+    "opcoes": [
+      "9",
+      "10",
+      "11",
+      "12"
+    ],
+    "resposta": "10",
+    "dica": "Resultado entre 9 e 11",
+    "tempo": 12,
+    "pontos": 5
+  },
+  {
+    "id": 60,
+    "categoria": "matematica",
+    "dificuldade": "facil",
+    "pergunta": "8 + 3 = ?",
+    "opcoes": [
+      "10",
+      "11",
+      "12",
+      "13"
+    ],
+    "resposta": "11",
+    "dica": "Resultado entre 10 e 12",
+    "tempo": 12,
+    "pontos": 5
+  },
+  {
+    "id": 61,
+    "categoria": "matematica",
+    "dificuldade": "medio",
+    "pergunta": "8 + 4 = ?",
+    "opcoes": [
+      "11",
+      "12",
+      "13",
+      "14"
+    ],
+    "resposta": "12",
+    "dica": "Resultado entre 11 e 13",
+    "tempo": 12,
+    "pontos": 8
+  },
+  {
+    "id": 62,
+    "categoria": "matematica",
+    "dificuldade": "medio",
+    "pergunta": "8 + 5 = ?",
+    "opcoes": [
+      "12",
+      "13",
+      "14",
+      "15"
+    ],
+    "resposta": "13",
+    "dica": "Resultado entre 12 e 14",
+    "tempo": 12,
+    "pontos": 8
+  },
+  {
+    "id": 63,
+    "categoria": "matematica",
+    "dificuldade": "medio",
+    "pergunta": "8 + 6 = ?",
+    "opcoes": [
+      "13",
+      "14",
+      "15",
+      "16"
+    ],
+    "resposta": "14",
+    "dica": "Resultado entre 13 e 15",
+    "tempo": 12,
+    "pontos": 8
+  },
+  {
+    "id": 64,
+    "categoria": "matematica",
+    "dificuldade": "medio",
+    "pergunta": "8 + 7 = ?",
+    "opcoes": [
+      "14",
+      "15",
+      "16",
+      "17"
+    ],
+    "resposta": "15",
+    "dica": "Resultado entre 14 e 16",
+    "tempo": 12,
+    "pontos": 8
+  },
+  {
+    "id": 65,
+    "categoria": "matematica",
+    "dificuldade": "facil",
+    "pergunta": "9 + 2 = ?",
+    "opcoes": [
+      "10",
+      "11",
+      "12",
+      "13"
+    ],
+    "resposta": "11",
+    "dica": "Resultado entre 10 e 12",
+    "tempo": 12,
+    "pontos": 5
+  },
+  {
+    "id": 66,
+    "categoria": "matematica",
+    "dificuldade": "medio",
+    "pergunta": "9 + 3 = ?",
+    "opcoes": [
+      "11",
+      "12",
+      "13",
+      "14"
+    ],
+    "resposta": "12",
+    "dica": "Resultado entre 11 e 13",
+    "tempo": 12,
+    "pontos": 8
+  },
+  {
+    "id": 67,
+    "categoria": "matematica",
+    "dificuldade": "medio",
+    "pergunta": "9 + 4 = ?",
+    "opcoes": [
+      "12",
+      "13",
+      "14",
+      "15"
+    ],
+    "resposta": "13",
+    "dica": "Resultado entre 12 e 14",
+    "tempo": 12,
+    "pontos": 8
+  },
+  {
+    "id": 68,
+    "categoria": "matematica",
+    "dificuldade": "medio",
+    "pergunta": "9 + 5 = ?",
+    "opcoes": [
+      "13",
+      "14",
+      "15",
+      "16"
+    ],
+    "resposta": "14",
+    "dica": "Resultado entre 13 e 15",
+    "tempo": 12,
+    "pontos": 8
+  },
+  {
+    "id": 69,
+    "categoria": "matematica",
+    "dificuldade": "medio",
+    "pergunta": "9 + 6 = ?",
+    "opcoes": [
+      "14",
+      "15",
+      "16",
+      "17"
+    ],
+    "resposta": "15",
+    "dica": "Resultado entre 14 e 16",
+    "tempo": 12,
+    "pontos": 8
+  },
+  {
+    "id": 70,
+    "categoria": "matematica",
+    "dificuldade": "medio",
+    "pergunta": "9 + 7 = ?",
+    "opcoes": [
+      "15",
+      "16",
+      "17",
+      "18"
+    ],
+    "resposta": "16",
+    "dica": "Resultado entre 15 e 17",
+    "tempo": 12,
+    "pontos": 8
+  },
+  {
+    "id": 71,
+    "categoria": "matematica",
+    "dificuldade": "medio",
+    "pergunta": "10 + 2 = ?",
+    "opcoes": [
+      "11",
+      "12",
+      "13",
+      "14"
+    ],
+    "resposta": "12",
+    "dica": "Resultado entre 11 e 13",
+    "tempo": 12,
+    "pontos": 8
+  },
+  {
+    "id": 72,
+    "categoria": "matematica",
+    "dificuldade": "medio",
+    "pergunta": "10 + 3 = ?",
+    "opcoes": [
+      "12",
+      "13",
+      "14",
+      "15"
+    ],
+    "resposta": "13",
+    "dica": "Resultado entre 12 e 14",
+    "tempo": 12,
+    "pontos": 8
+  },
+  {
+    "id": 73,
+    "categoria": "matematica",
+    "dificuldade": "medio",
+    "pergunta": "10 + 4 = ?",
+    "opcoes": [
+      "13",
+      "14",
+      "15",
+      "16"
+    ],
+    "resposta": "14",
+    "dica": "Resultado entre 13 e 15",
+    "tempo": 12,
+    "pontos": 8
+  },
+  {
+    "id": 74,
+    "categoria": "matematica",
+    "dificuldade": "medio",
+    "pergunta": "10 + 5 = ?",
+    "opcoes": [
+      "14",
+      "15",
+      "16",
+      "17"
+    ],
+    "resposta": "15",
+    "dica": "Resultado entre 14 e 16",
+    "tempo": 12,
+    "pontos": 8
+  },
+  {
+    "id": 75,
+    "categoria": "matematica",
+    "dificuldade": "medio",
+    "pergunta": "10 + 6 = ?",
+    "opcoes": [
+      "15",
+      "16",
+      "17",
+      "18"
+    ],
+    "resposta": "16",
+    "dica": "Resultado entre 15 e 17",
+    "tempo": 12,
+    "pontos": 8
+  },
+  {
+    "id": 76,
+    "categoria": "matematica",
+    "dificuldade": "medio",
+    "pergunta": "10 + 7 = ?",
+    "opcoes": [
+      "16",
+      "17",
+      "18",
+      "19"
+    ],
+    "resposta": "17",
+    "dica": "Resultado entre 16 e 18",
+    "tempo": 12,
+    "pontos": 8
+  },
+  {
+    "id": 77,
+    "categoria": "matematica",
+    "dificuldade": "medio",
+    "pergunta": "11 + 2 = ?",
+    "opcoes": [
+      "12",
+      "13",
+      "14",
+      "15"
+    ],
+    "resposta": "13",
+    "dica": "Resultado entre 12 e 14",
+    "tempo": 12,
+    "pontos": 8
+  },
+  {
+    "id": 78,
+    "categoria": "matematica",
+    "dificuldade": "medio",
+    "pergunta": "11 + 3 = ?",
+    "opcoes": [
+      "13",
+      "14",
+      "15",
+      "16"
+    ],
+    "resposta": "14",
+    "dica": "Resultado entre 13 e 15",
+    "tempo": 12,
+    "pontos": 8
+  },
+  {
+    "id": 79,
+    "categoria": "matematica",
+    "dificuldade": "medio",
+    "pergunta": "11 + 4 = ?",
+    "opcoes": [
+      "14",
+      "15",
+      "16",
+      "17"
+    ],
+    "resposta": "15",
+    "dica": "Resultado entre 14 e 16",
+    "tempo": 12,
+    "pontos": 8
+  },
+  {
+    "id": 80,
+    "categoria": "matematica",
+    "dificuldade": "medio",
+    "pergunta": "11 + 5 = ?",
+    "opcoes": [
+      "15",
+      "16",
+      "17",
+      "18"
+    ],
+    "resposta": "16",
+    "dica": "Resultado entre 15 e 17",
+    "tempo": 12,
+    "pontos": 8
+  },
+  {
+    "id": 81,
+    "categoria": "matematica",
+    "dificuldade": "medio",
+    "pergunta": "11 + 6 = ?",
+    "opcoes": [
+      "16",
+      "17",
+      "18",
+      "19"
+    ],
+    "resposta": "17",
+    "dica": "Resultado entre 16 e 18",
+    "tempo": 12,
+    "pontos": 8
+  },
+  {
+    "id": 82,
+    "categoria": "matematica",
+    "dificuldade": "medio",
+    "pergunta": "11 + 7 = ?",
+    "opcoes": [
+      "17",
+      "18",
+      "19",
+      "20"
+    ],
+    "resposta": "18",
+    "dica": "Resultado entre 17 e 19",
+    "tempo": 12,
+    "pontos": 8
+  },
+  {
+    "id": 83,
+    "categoria": "matematica",
+    "dificuldade": "medio",
+    "pergunta": "3 x 2 = ?",
+    "opcoes": [
+      "4",
+      "6",
+      "8",
+      "10"
+    ],
+    "resposta": "6",
+    "dica": "Pense na tabuada do 3",
+    "tempo": 10,
+    "pontos": 8
+  },
+  {
+    "id": 84,
+    "categoria": "matematica",
+    "dificuldade": "medio",
+    "pergunta": "3 x 3 = ?",
+    "opcoes": [
+      "7",
+      "9",
+      "11",
+      "13"
+    ],
+    "resposta": "9",
+    "dica": "Pense na tabuada do 3",
+    "tempo": 10,
+    "pontos": 8
+  },
+  {
+    "id": 85,
+    "categoria": "matematica",
+    "dificuldade": "medio",
+    "pergunta": "3 x 4 = ?",
+    "opcoes": [
+      "10",
+      "12",
+      "14",
+      "16"
+    ],
+    "resposta": "12",
+    "dica": "Pense na tabuada do 3",
+    "tempo": 10,
+    "pontos": 8
+  },
+  {
+    "id": 86,
+    "categoria": "matematica",
+    "dificuldade": "medio",
+    "pergunta": "3 x 5 = ?",
+    "opcoes": [
+      "13",
+      "15",
+      "17",
+      "19"
+    ],
+    "resposta": "15",
+    "dica": "Pense na tabuada do 3",
+    "tempo": 10,
+    "pontos": 8
+  },
+  {
+    "id": 87,
+    "categoria": "matematica",
+    "dificuldade": "medio",
+    "pergunta": "4 x 2 = ?",
+    "opcoes": [
+      "6",
+      "8",
+      "10",
+      "12"
+    ],
+    "resposta": "8",
+    "dica": "Pense na tabuada do 4",
+    "tempo": 10,
+    "pontos": 8
+  },
+  {
+    "id": 88,
+    "categoria": "matematica",
+    "dificuldade": "medio",
+    "pergunta": "4 x 3 = ?",
+    "opcoes": [
+      "10",
+      "12",
+      "14",
+      "16"
+    ],
+    "resposta": "12",
+    "dica": "Pense na tabuada do 4",
+    "tempo": 10,
+    "pontos": 8
+  },
+  {
+    "id": 89,
+    "categoria": "matematica",
+    "dificuldade": "medio",
+    "pergunta": "4 x 4 = ?",
+    "opcoes": [
+      "14",
+      "16",
+      "18",
+      "20"
+    ],
+    "resposta": "16",
+    "dica": "Pense na tabuada do 4",
+    "tempo": 10,
+    "pontos": 8
+  },
+  {
+    "id": 90,
+    "categoria": "matematica",
+    "dificuldade": "medio",
+    "pergunta": "4 x 5 = ?",
+    "opcoes": [
+      "18",
+      "20",
+      "22",
+      "24"
+    ],
+    "resposta": "20",
+    "dica": "Pense na tabuada do 4",
+    "tempo": 10,
+    "pontos": 8
+  },
+  {
+    "id": 91,
+    "categoria": "matematica",
+    "dificuldade": "medio",
+    "pergunta": "5 x 2 = ?",
+    "opcoes": [
+      "8",
+      "10",
+      "12",
+      "14"
+    ],
+    "resposta": "10",
+    "dica": "Pense na tabuada do 5",
+    "tempo": 10,
+    "pontos": 8
+  },
+  {
+    "id": 92,
+    "categoria": "matematica",
+    "dificuldade": "medio",
+    "pergunta": "5 x 3 = ?",
+    "opcoes": [
+      "13",
+      "15",
+      "17",
+      "19"
+    ],
+    "resposta": "15",
+    "dica": "Pense na tabuada do 5",
+    "tempo": 10,
+    "pontos": 8
+  },
+  {
+    "id": 93,
+    "categoria": "matematica",
+    "dificuldade": "medio",
+    "pergunta": "5 x 4 = ?",
+    "opcoes": [
+      "18",
+      "20",
+      "22",
+      "24"
+    ],
+    "resposta": "20",
+    "dica": "Pense na tabuada do 5",
+    "tempo": 10,
+    "pontos": 8
+  },
+  {
+    "id": 94,
+    "categoria": "matematica",
+    "dificuldade": "medio",
+    "pergunta": "5 x 5 = ?",
+    "opcoes": [
+      "23",
+      "25",
+      "27",
+      "29"
+    ],
+    "resposta": "25",
+    "dica": "Pense na tabuada do 5",
+    "tempo": 10,
+    "pontos": 8
+  },
+  {
+    "id": 95,
+    "categoria": "matematica",
+    "dificuldade": "medio",
+    "pergunta": "6 x 2 = ?",
+    "opcoes": [
+      "10",
+      "12",
+      "14",
+      "16"
+    ],
+    "resposta": "12",
+    "dica": "Pense na tabuada do 6",
+    "tempo": 10,
+    "pontos": 8
+  },
+  {
+    "id": 96,
+    "categoria": "matematica",
+    "dificuldade": "medio",
+    "pergunta": "6 x 3 = ?",
+    "opcoes": [
+      "16",
+      "18",
+      "20",
+      "22"
+    ],
+    "resposta": "18",
+    "dica": "Pense na tabuada do 6",
+    "tempo": 10,
+    "pontos": 8
+  },
+  {
+    "id": 97,
+    "categoria": "matematica",
+    "dificuldade": "medio",
+    "pergunta": "6 x 4 = ?",
+    "opcoes": [
+      "22",
+      "24",
+      "26",
+      "28"
+    ],
+    "resposta": "24",
+    "dica": "Pense na tabuada do 6",
+    "tempo": 10,
+    "pontos": 8
+  },
+  {
+    "id": 98,
+    "categoria": "matematica",
+    "dificuldade": "dificil",
+    "pergunta": "6 x 5 = ?",
+    "opcoes": [
+      "28",
+      "30",
+      "32",
+      "34"
+    ],
+    "resposta": "30",
+    "dica": "Pense na tabuada do 6",
+    "tempo": 10,
+    "pontos": 12
+  },
+  {
+    "id": 99,
+    "categoria": "matematica",
+    "dificuldade": "medio",
+    "pergunta": "7 x 2 = ?",
+    "opcoes": [
+      "12",
+      "14",
+      "16",
+      "18"
+    ],
+    "resposta": "14",
+    "dica": "Pense na tabuada do 7",
+    "tempo": 10,
+    "pontos": 8
+  },
+  {
+    "id": 100,
+    "categoria": "matematica",
+    "dificuldade": "medio",
+    "pergunta": "7 x 3 = ?",
+    "opcoes": [
+      "19",
+      "21",
+      "23",
+      "25"
+    ],
+    "resposta": "21",
+    "dica": "Pense na tabuada do 7",
+    "tempo": 10,
+    "pontos": 8
+  },
+  {
+    "id": 101,
+    "categoria": "matematica",
+    "dificuldade": "medio",
+    "pergunta": "7 x 4 = ?",
+    "opcoes": [
+      "26",
+      "28",
+      "30",
+      "32"
+    ],
+    "resposta": "28",
+    "dica": "Pense na tabuada do 7",
+    "tempo": 10,
+    "pontos": 8
+  },
+  {
+    "id": 102,
+    "categoria": "matematica",
+    "dificuldade": "dificil",
+    "pergunta": "7 x 5 = ?",
+    "opcoes": [
+      "33",
+      "35",
+      "37",
+      "39"
+    ],
+    "resposta": "35",
+    "dica": "Pense na tabuada do 7",
+    "tempo": 10,
+    "pontos": 12
+  },
+  {
+    "id": 103,
+    "categoria": "matematica",
+    "dificuldade": "medio",
+    "pergunta": "8 x 2 = ?",
+    "opcoes": [
+      "14",
+      "16",
+      "18",
+      "20"
+    ],
+    "resposta": "16",
+    "dica": "Pense na tabuada do 8",
+    "tempo": 10,
+    "pontos": 8
+  },
+  {
+    "id": 104,
+    "categoria": "matematica",
+    "dificuldade": "medio",
+    "pergunta": "8 x 3 = ?",
+    "opcoes": [
+      "22",
+      "24",
+      "26",
+      "28"
+    ],
+    "resposta": "24",
+    "dica": "Pense na tabuada do 8",
+    "tempo": 10,
+    "pontos": 8
+  },
+  {
+    "id": 105,
+    "categoria": "matematica",
+    "dificuldade": "dificil",
+    "pergunta": "8 x 4 = ?",
+    "opcoes": [
+      "30",
+      "32",
+      "34",
+      "36"
+    ],
+    "resposta": "32",
+    "dica": "Pense na tabuada do 8",
+    "tempo": 10,
+    "pontos": 12
+  },
+  {
+    "id": 106,
+    "categoria": "matematica",
+    "dificuldade": "dificil",
+    "pergunta": "8 x 5 = ?",
+    "opcoes": [
+      "38",
+      "40",
+      "42",
+      "44"
+    ],
+    "resposta": "40",
+    "dica": "Pense na tabuada do 8",
+    "tempo": 10,
+    "pontos": 12
+  },
+  {
+    "id": 107,
+    "categoria": "matematica",
+    "dificuldade": "medio",
+    "pergunta": "9 x 2 = ?",
+    "opcoes": [
+      "16",
+      "18",
+      "20",
+      "22"
+    ],
+    "resposta": "18",
+    "dica": "Pense na tabuada do 9",
+    "tempo": 10,
+    "pontos": 8
+  },
+  {
+    "id": 108,
+    "categoria": "matematica",
+    "dificuldade": "medio",
+    "pergunta": "9 x 3 = ?",
+    "opcoes": [
+      "25",
+      "27",
+      "29",
+      "31"
+    ],
+    "resposta": "27",
+    "dica": "Pense na tabuada do 9",
+    "tempo": 10,
+    "pontos": 8
+  },
+  {
+    "id": 109,
+    "categoria": "matematica",
+    "dificuldade": "dificil",
+    "pergunta": "9 x 4 = ?",
+    "opcoes": [
+      "34",
+      "36",
+      "38",
+      "40"
+    ],
+    "resposta": "36",
+    "dica": "Pense na tabuada do 9",
+    "tempo": 10,
+    "pontos": 12
+  },
+  {
+    "id": 110,
+    "categoria": "matematica",
+    "dificuldade": "dificil",
+    "pergunta": "9 x 5 = ?",
+    "opcoes": [
+      "43",
+      "45",
+      "47",
+      "49"
+    ],
+    "resposta": "45",
+    "dica": "Pense na tabuada do 9",
+    "tempo": 10,
+    "pontos": 12
+  }
 ]

@@ -1,0 +1,212 @@
+[
+  {
+    "id": 1,
+    "dificuldade": "facil",
+    "categoria": "animais",
+    "opcoes": [
+      "gato",
+      "cadeira",
+      "livro",
+      "copo"
+    ],
+    "resposta": "gato",
+    "dica": "Tres itens nao sao animais",
+    "pontos": 5
+  },
+  {
+    "id": 2,
+    "dificuldade": "facil",
+    "categoria": "frutas",
+    "opcoes": [
+      "banana",
+      "janela",
+      "caneta",
+      "mesa"
+    ],
+    "resposta": "banana",
+    "dica": "Apenas uma opcao e fruta",
+    "pontos": 5
+  },
+  {
+    "id": 3,
+    "dificuldade": "medio",
+    "categoria": "tecnologia",
+    "opcoes": [
+      "algoritmo",
+      "montanha",
+      "oceano",
+      "jardim"
+    ],
+    "resposta": "algoritmo",
+    "dica": "So uma opcao pertence a tecnologia",
+    "pontos": 8
+  },
+  {
+    "id": 4,
+    "dificuldade": "medio",
+    "categoria": "geografia",
+    "opcoes": [
+      "deserto",
+      "rio",
+      "planicie",
+      "teclado"
+    ],
+    "resposta": "teclado",
+    "dica": "Tres itens sao da geografia fisica",
+    "pontos": 8
+  },
+  {
+    "id": 5,
+    "dificuldade": "dificil",
+    "categoria": "linguistica",
+    "opcoes": [
+      "morfologia",
+      "sintaxe",
+      "semantica",
+      "termodinamica"
+    ],
+    "resposta": "termodinamica",
+    "dica": "Tres itens sao areas da linguistica",
+    "pontos": 12
+  },
+  {
+    "id": 6,
+    "dificuldade": "dificil",
+    "categoria": "astronomia",
+    "opcoes": [
+      "nebulosa",
+      "galaxia",
+      "cometa",
+      "borboleta"
+    ],
+    "resposta": "borboleta",
+    "dica": "Tres itens sao da astronomia",
+    "pontos": 12
+  },
+  {
+    "id": 7,
+    "dificuldade": "facil",
+    "categoria": "cores",
+    "opcoes": [
+      "azul",
+      "verde",
+      "amarelo",
+      "garfo"
+    ],
+    "resposta": "garfo",
+    "dica": "Tres itens pertencem a categoria cores",
+    "pontos": 5
+  },
+  {
+    "id": 8,
+    "dificuldade": "facil",
+    "categoria": "formas",
+    "opcoes": [
+      "circulo",
+      "quadrado",
+      "triangulo",
+      "chuva"
+    ],
+    "resposta": "chuva",
+    "dica": "Tres itens pertencem a categoria formas",
+    "pontos": 5
+  },
+  {
+    "id": 9,
+    "dificuldade": "facil",
+    "categoria": "meios de transporte",
+    "opcoes": [
+      "carro",
+      "onibus",
+      "aviao",
+      "janela"
+    ],
+    "resposta": "janela",
+    "dica": "Tres itens pertencem a categoria meios de transporte",
+    "pontos": 5
+  },
+  {
+    "id": 10,
+    "dificuldade": "medio",
+    "categoria": "programacao",
+    "opcoes": [
+      "python",
+      "java",
+      "html",
+      "girassol"
+    ],
+    "resposta": "girassol",
+    "dica": "Tres itens pertencem a categoria programacao",
+    "pontos": 8
+  },
+  {
+    "id": 11,
+    "dificuldade": "medio",
+    "categoria": "musica",
+    "opcoes": [
+      "violino",
+      "piano",
+      "flauta",
+      "deserto"
+    ],
+    "resposta": "deserto",
+    "dica": "Tres itens pertencem a categoria musica",
+    "pontos": 8
+  },
+  {
+    "id": 12,
+    "dificuldade": "medio",
+    "categoria": "corpo humano",
+    "opcoes": [
+      "osso",
+      "musculo",
+      "pulmao",
+      "satelite"
+    ],
+    "resposta": "satelite",
+    "dica": "Tres itens pertencem a categoria corpo humano",
+    "pontos": 8
+  },
+  {
+    "id": 13,
+    "dificuldade": "dificil",
+    "categoria": "matematica",
+    "opcoes": [
+      "vetor",
+      "matriz",
+      "escalar",
+      "girafa"
+    ],
+    "resposta": "girafa",
+    "dica": "Tres itens pertencem a categoria matematica",
+    "pontos": 12
+  },
+  {
+    "id": 14,
+    "dificuldade": "dificil",
+    "categoria": "literatura",
+    "opcoes": [
+      "romance",
+      "conto",
+      "cronica",
+      "fotossintese"
+    ],
+    "resposta": "fotossintese",
+    "dica": "Tres itens pertencem a categoria literatura",
+    "pontos": 12
+  },
+  {
+    "id": 15,
+    "dificuldade": "dificil",
+    "categoria": "quimica",
+    "opcoes": [
+      "atomo",
+      "molecula",
+      "reacao",
+      "cordilheira"
+    ],
+    "resposta": "cordilheira",
+    "dica": "Tres itens pertencem a categoria quimica",
+    "pontos": 12
+  }
+]

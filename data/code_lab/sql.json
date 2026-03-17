@@ -1,0 +1,192 @@
+[
+  {
+    "id": 75,
+    "linguagem": "sql",
+    "conceito": "select",
+    "dificuldade": "facil",
+    "tipo": "multipla_escolha",
+    "pergunta": "Qual consulta retorna todas as colunas da tabela usuarios?",
+    "codigo": "Tabela: usuarios(id, nome, email)",
+    "opcoes": [
+      "SELECT * FROM usuarios;",
+      "GET ALL FROM usuarios;",
+      "SELECT usuarios FROM *;",
+      "SHOW usuarios;"
+    ],
+    "resposta": "SELECT * FROM usuarios;",
+    "dica": "O asterisco representa todas as colunas.",
+    "explicacao": "SELECT * retorna todas as colunas da tabela.",
+    "pontos": 5
+  },
+  {
+    "id": 76,
+    "linguagem": "sql",
+    "conceito": "where",
+    "dificuldade": "facil",
+    "tipo": "multipla_escolha",
+    "pergunta": "Qual consulta filtra usuarios com idade maior que 18?",
+    "codigo": "Tabela: usuarios(nome, idade)",
+    "opcoes": [
+      "SELECT * FROM usuarios WHERE idade > 18;",
+      "SELECT idade > 18 FROM usuarios;",
+      "FILTER usuarios idade > 18;",
+      "SELECT * idade > 18 usuarios;"
+    ],
+    "resposta": "SELECT * FROM usuarios WHERE idade > 18;",
+    "dica": "A clausula WHERE faz o filtro.",
+    "explicacao": "WHERE restringe os registros retornados.",
+    "pontos": 5
+  },
+  {
+    "id": 77,
+    "linguagem": "sql",
+    "conceito": "order_by",
+    "dificuldade": "medio",
+    "tipo": "multipla_escolha",
+    "pergunta": "Qual consulta ordena produtos por preco crescente?",
+    "codigo": "Tabela: produtos(nome, preco)",
+    "opcoes": [
+      "SELECT * FROM produtos ORDER BY preco ASC;",
+      "SELECT * FROM produtos SORT preco;",
+      "SELECT * FROM produtos ORDER preco;",
+      "SELECT preco ASC FROM produtos;"
+    ],
+    "resposta": "SELECT * FROM produtos ORDER BY preco ASC;",
+    "dica": "ORDER BY define a ordenacao.",
+    "explicacao": "ASC representa ordem crescente.",
+    "pontos": 8
+  },
+  {
+    "id": 78,
+    "linguagem": "sql",
+    "conceito": "count",
+    "dificuldade": "medio",
+    "tipo": "multipla_escolha",
+    "pergunta": "Qual consulta conta quantos pedidos existem?",
+    "codigo": "Tabela: pedidos(id, valor)",
+    "opcoes": [
+      "SELECT COUNT(*) FROM pedidos;",
+      "SELECT SUM(*) FROM pedidos;",
+      "COUNT FROM pedidos;",
+      "SELECT TOTAL FROM pedidos;"
+    ],
+    "resposta": "SELECT COUNT(*) FROM pedidos;",
+    "dica": "COUNT(*) conta linhas.",
+    "explicacao": "A funcao COUNT(*) retorna a quantidade de registros.",
+    "pontos": 8
+  },
+  {
+    "id": 79,
+    "linguagem": "sql",
+    "conceito": "group_by",
+    "dificuldade": "dificil",
+    "tipo": "multipla_escolha",
+    "pergunta": "Qual consulta agrupa vendas por categoria?",
+    "codigo": "Tabela: vendas(categoria, valor)",
+    "opcoes": [
+      "SELECT categoria, SUM(valor) FROM vendas GROUP BY categoria;",
+      "SELECT GROUP categoria FROM vendas;",
+      "SELECT categoria FROM vendas SUM(valor);",
+      "SELECT categoria, valor FROM vendas ORDER BY categoria;"
+    ],
+    "resposta": "SELECT categoria, SUM(valor) FROM vendas GROUP BY categoria;",
+    "dica": "GROUP BY agrupa pelos valores da coluna escolhida.",
+    "explicacao": "Cada categoria forma um grupo para agregacao.",
+    "pontos": 12
+  },
+  {
+    "id": 80,
+    "linguagem": "sql",
+    "conceito": "join",
+    "dificuldade": "dificil",
+    "tipo": "multipla_escolha",
+    "pergunta": "Qual consulta une pedidos e clientes pela coluna cliente_id?",
+    "codigo": "Tabelas: pedidos(cliente_id, valor) e clientes(id, nome)",
+    "opcoes": [
+      "SELECT * FROM pedidos JOIN clientes ON pedidos.cliente_id = clientes.id;",
+      "SELECT * FROM pedidos WITH clientes;",
+      "SELECT * FROM pedidos LINK clientes;",
+      "SELECT * FROM pedidos, clientes WHERE id = id;"
+    ],
+    "resposta": "SELECT * FROM pedidos JOIN clientes ON pedidos.cliente_id = clientes.id;",
+    "dica": "JOIN precisa da condicao ON.",
+    "explicacao": "A clausula ON informa como as tabelas se relacionam.",
+    "pontos": 12
+  },
+  {
+    "id": 81,
+    "linguagem": "sql",
+    "conceito": "insert",
+    "dificuldade": "facil",
+    "tipo": "multipla_escolha",
+    "pergunta": "Qual comando insere um novo usuario?",
+    "codigo": "Tabela: usuarios(nome, email)",
+    "opcoes": [
+      "INSERT INTO usuarios (nome, email) VALUES ('Ana', 'ana@email.com');",
+      "ADD usuarios ('Ana');",
+      "CREATE usuarios VALUES Ana;",
+      "PUT INTO usuarios Ana;"
+    ],
+    "resposta": "INSERT INTO usuarios (nome, email) VALUES ('Ana', 'ana@email.com');",
+    "dica": "INSERT INTO adiciona novas linhas.",
+    "explicacao": "A sintaxe correta usa colunas e VALUES.",
+    "pontos": 5
+  },
+  {
+    "id": 82,
+    "linguagem": "sql",
+    "conceito": "update",
+    "dificuldade": "medio",
+    "tipo": "multipla_escolha",
+    "pergunta": "Qual comando atualiza o email de um usuario?",
+    "codigo": "Tabela: usuarios(id, email)",
+    "opcoes": [
+      "UPDATE usuarios SET email = 'novo@email.com' WHERE id = 1;",
+      "CHANGE usuarios email WHERE id = 1;",
+      "UPDATE email FROM usuarios = 'novo@email.com';",
+      "SET usuarios email = novo;"
+    ],
+    "resposta": "UPDATE usuarios SET email = 'novo@email.com' WHERE id = 1;",
+    "dica": "UPDATE altera linhas existentes.",
+    "explicacao": "SET define o novo valor e WHERE escolhe o registro.",
+    "pontos": 8
+  },
+  {
+    "id": 83,
+    "linguagem": "sql",
+    "conceito": "delete",
+    "dificuldade": "medio",
+    "tipo": "multipla_escolha",
+    "pergunta": "Qual comando remove pedidos com valor 0?",
+    "codigo": "Tabela: pedidos(valor)",
+    "opcoes": [
+      "DELETE FROM pedidos WHERE valor = 0;",
+      "REMOVE pedidos valor 0;",
+      "DROP pedidos WHERE valor = 0;",
+      "DELETE valor 0 FROM pedidos;"
+    ],
+    "resposta": "DELETE FROM pedidos WHERE valor = 0;",
+    "dica": "DELETE FROM remove linhas da tabela.",
+    "explicacao": "WHERE restringe quais linhas serao removidas.",
+    "pontos": 8
+  },
+  {
+    "id": 84,
+    "linguagem": "sql",
+    "conceito": "having",
+    "dificuldade": "dificil",
+    "tipo": "multipla_escolha",
+    "pergunta": "Qual consulta filtra grupos cuja soma seja maior que 100?",
+    "codigo": "Tabela: vendas(categoria, valor)",
+    "opcoes": [
+      "SELECT categoria, SUM(valor) FROM vendas GROUP BY categoria HAVING SUM(valor) > 100;",
+      "SELECT categoria FROM vendas HAVING valor > 100;",
+      "SELECT * FROM vendas WHERE SUM(valor) > 100;",
+      "GROUP vendas BY categoria HAVING 100;"
+    ],
+    "resposta": "SELECT categoria, SUM(valor) FROM vendas GROUP BY categoria HAVING SUM(valor) > 100;",
+    "dica": "HAVING filtra apos a agregacao.",
+    "explicacao": "Use HAVING com funcoes agregadas sobre grupos.",
+    "pontos": 12
+  }
+]

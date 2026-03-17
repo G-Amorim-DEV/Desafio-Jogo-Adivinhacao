@@ -1,0 +1,170 @@
+[
+  {
+    "id": 1,
+    "dificuldade": "facil",
+    "termo": "feliz",
+    "opcoes": [
+      "contente",
+      "escuro",
+      "duro",
+      "frio"
+    ],
+    "resposta": "contente",
+    "dica": "Palavra ligada a alegria",
+    "pontos": 5
+  },
+  {
+    "id": 2,
+    "dificuldade": "facil",
+    "termo": "rapido",
+    "opcoes": [
+      "agil",
+      "pesado",
+      "lento",
+      "parado"
+    ],
+    "resposta": "agil",
+    "dica": "Ideia de velocidade",
+    "pontos": 5
+  },
+  {
+    "id": 3,
+    "dificuldade": "medio",
+    "termo": "iniciar",
+    "opcoes": [
+      "comecar",
+      "destruir",
+      "desligar",
+      "sumir"
+    ],
+    "resposta": "comecar",
+    "dica": "Marca o principio",
+    "pontos": 8
+  },
+  {
+    "id": 4,
+    "dificuldade": "medio",
+    "termo": "abundante",
+    "opcoes": [
+      "farto",
+      "vazio",
+      "curto",
+      "duro"
+    ],
+    "resposta": "farto",
+    "dica": "Ideia de grande quantidade",
+    "pontos": 8
+  },
+  {
+    "id": 5,
+    "dificuldade": "dificil",
+    "termo": "efemero",
+    "opcoes": [
+      "passageiro",
+      "eterno",
+      "barulhento",
+      "rigido"
+    ],
+    "resposta": "passageiro",
+    "dica": "Dura pouco tempo",
+    "pontos": 12
+  },
+  {
+    "id": 6,
+    "dificuldade": "dificil",
+    "termo": "contundente",
+    "opcoes": [
+      "incisivo",
+      "vago",
+      "morno",
+      "raro"
+    ],
+    "resposta": "incisivo",
+    "dica": "Tem forca e clareza",
+    "pontos": 12
+  },
+  {
+    "id": 7,
+    "dificuldade": "facil",
+    "termo": "bonito",
+    "opcoes": [
+      "belo",
+      "torto",
+      "raso",
+      "seco"
+    ],
+    "resposta": "belo",
+    "dica": "Pense no significado de bonito",
+    "pontos": 5
+  },
+  {
+    "id": 8,
+    "dificuldade": "facil",
+    "termo": "calmo",
+    "opcoes": [
+      "tranquilo",
+      "nervoso",
+      "bravo",
+      "intenso"
+    ],
+    "resposta": "tranquilo",
+    "dica": "Pense no significado de calmo",
+    "pontos": 5
+  },
+  {
+    "id": 9,
+    "dificuldade": "medio",
+    "termo": "preciso",
+    "opcoes": [
+      "exato",
+      "vasto",
+      "opaco",
+      "raro"
+    ],
+    "resposta": "exato",
+    "dica": "Pense no significado de preciso",
+    "pontos": 8
+  },
+  {
+    "id": 10,
+    "dificuldade": "medio",
+    "termo": "cauteloso",
+    "opcoes": [
+      "prudente",
+      "impulsivo",
+      "fraco",
+      "simples"
+    ],
+    "resposta": "prudente",
+    "dica": "Pense no significado de cauteloso",
+    "pontos": 8
+  },
+  {
+    "id": 11,
+    "dificuldade": "dificil",
+    "termo": "perspicaz",
+    "opcoes": [
+      "astuto",
+      "apatico",
+      "pesado",
+      "macio"
+    ],
+    "resposta": "astuto",
+    "dica": "Pense no significado de perspicaz",
+    "pontos": 12
+  },
+  {
+    "id": 12,
+    "dificuldade": "dificil",
+    "termo": "inerente",
+    "opcoes": [
+      "intrinseco",
+      "externo",
+      "vazio",
+      "duplo"
+    ],
+    "resposta": "intrinseco",
+    "dica": "Pense no significado de inerente",
+    "pontos": 12
+  }
+]

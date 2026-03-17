@@ -1,25 +1,16 @@
-import json
-from pathlib import Path
 from typing import Dict, List
-from utils.paths import data_path
+
+from services.persistence.ranking_repository import RankingRepository
 
 class RankingManager:
     """Gerencia rankings de jogadores por jogo e global."""
 
     def __init__(self):
-        self.path = data_path("ranking.json")
-        self.ranking = self._load()
-
-    def _load(self) -> Dict:
-        try:
-            with open(self.path, encoding="utf-8") as f:
-                return json.load(f)
-        except (FileNotFoundError, json.JSONDecodeError):
-            return {"global": {}, "jogos": {}}
+        self.repository = RankingRepository()
+        self.ranking = self.repository.load()
 
     def salvar(self):
-        with open(self.path, "w", encoding="utf-8") as f:
-            json.dump(self.ranking, f, indent=2, ensure_ascii=False)
+        self.repository.save(self.ranking)
 
     def adicionar_score(self, nome_jogador: str, jogo: str, score: int):
         """Adiciona ou atualiza score de um jogador em um jogo."""

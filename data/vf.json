@@ -1,266 +1,402 @@
 [
   {
-    "texto": "Python foi criado em 1991.",
-    "resposta": "verdadeiro"
+    "texto": "A Terra gira em torno do Sol.",
+    "resposta": "verdadeiro",
+    "dificuldade": "facil"
+  },
+  {
+    "texto": "A Amazonia abriga grande biodiversidade.",
+    "resposta": "verdadeiro",
+    "dificuldade": "facil"
+  },
+  {
+    "texto": "Um triangulo tem tres lados.",
+    "resposta": "verdadeiro",
+    "dificuldade": "facil"
+  },
+  {
+    "texto": "A luz e mais rapida que o som.",
+    "resposta": "verdadeiro",
+    "dificuldade": "facil"
+  },
+  {
+    "texto": "O Brasil esta na America do Sul.",
+    "resposta": "verdadeiro",
+    "dificuldade": "facil"
+  },
+  {
+    "texto": "O coracao bombeia sangue.",
+    "resposta": "verdadeiro",
+    "dificuldade": "facil"
+  },
+  {
+    "texto": "A agua pode existir em estado solido, liquido e gasoso.",
+    "resposta": "verdadeiro",
+    "dificuldade": "facil"
+  },
+  {
+    "texto": "Mamiferos amamentam seus filhotes.",
+    "resposta": "verdadeiro",
+    "dificuldade": "facil"
+  },
+  {
+    "texto": "O numero zero e um numero inteiro.",
+    "resposta": "verdadeiro",
+    "dificuldade": "facil"
+  },
+  {
+    "texto": "Plantas fazem fotossintese.",
+    "resposta": "verdadeiro",
+    "dificuldade": "facil"
+  },
+  {
+    "texto": "Saturno possui aneis.",
+    "resposta": "verdadeiro",
+    "dificuldade": "facil"
+  },
+  {
+    "texto": "Um byte tem 8 bits.",
+    "resposta": "verdadeiro",
+    "dificuldade": "facil"
+  },
+  {
+    "texto": "Python e usada em programacao.",
+    "resposta": "verdadeiro",
+    "dificuldade": "facil"
+  },
+  {
+    "texto": "O Monte Everest fica na Asia.",
+    "resposta": "verdadeiro",
+    "dificuldade": "facil"
+  },
+  {
+    "texto": "A Lua influencia as mares.",
+    "resposta": "verdadeiro",
+    "dificuldade": "facil"
+  },
+  {
+    "texto": "A capital da Franca e Paris.",
+    "resposta": "verdadeiro",
+    "dificuldade": "facil"
+  },
+  {
+    "texto": "O oceano Pacifico e o maior do mundo.",
+    "resposta": "verdadeiro",
+    "dificuldade": "facil"
   },
   {
     "texto": "O Sol gira em torno da Terra.",
-    "resposta": "falso"
+    "resposta": "falso",
+    "dificuldade": "facil"
   },
   {
-    "texto": "A água ferve a 100°C ao nível do mar.",
-    "resposta": "verdadeiro"
+    "texto": "Pinguins vivem naturalmente no deserto do Saara.",
+    "resposta": "falso",
+    "dificuldade": "facil"
   },
   {
-    "texto": "O Brasil fica na Europa.",
-    "resposta": "falso"
+    "texto": "Dois mais dois e igual a cinco.",
+    "resposta": "falso",
+    "dificuldade": "facil"
   },
   {
-    "texto": "A luz viaja mais rápido que o som.",
-    "resposta": "verdadeiro"
+    "texto": "HTML e um sistema operacional.",
+    "resposta": "falso",
+    "dificuldade": "facil"
   },
   {
-    "texto": "HTML é uma linguagem de programação.",
-    "resposta": "falso"
+    "texto": "A Terra tem formato de cubo.",
+    "resposta": "falso",
+    "dificuldade": "facil"
   },
   {
-    "texto": "Um byte possui 8 bits.",
-    "resposta": "verdadeiro"
+    "texto": "Todos os metais sao liquidos em temperatura ambiente.",
+    "resposta": "falso",
+    "dificuldade": "facil"
   },
   {
-    "texto": "A Terra tem duas luas.",
-    "resposta": "falso"
+    "texto": "O Brasil faz fronteira com o Mexico.",
+    "resposta": "falso",
+    "dificuldade": "facil"
   },
   {
-    "texto": "O oxigênio é essencial para a respiração humana.",
-    "resposta": "verdadeiro"
+    "texto": "O corpo humano possui apenas um osso.",
+    "resposta": "falso",
+    "dificuldade": "facil"
   },
   {
-    "texto": "O Monte Everest está na África.",
-    "resposta": "falso"
+    "texto": "Mercurio e o maior planeta do Sistema Solar.",
+    "resposta": "falso",
+    "dificuldade": "facil"
   },
   {
-    "texto": "A Lua é um satélite natural da Terra.",
-    "resposta": "verdadeiro"
+    "texto": "Aranhas sao insetos.",
+    "resposta": "falso",
+    "dificuldade": "facil"
   },
   {
-    "texto": "O Brasil é o maior país do mundo.",
-    "resposta": "falso"
+    "texto": "A agua ferve a 50 graus Celsius ao nivel do mar.",
+    "resposta": "falso",
+    "dificuldade": "facil"
   },
   {
-    "texto": "A gravidade mantém a Terra em órbita ao redor do Sol.",
-    "resposta": "verdadeiro"
+    "texto": "Um ano tem 500 dias.",
+    "resposta": "falso",
+    "dificuldade": "facil"
   },
   {
-    "texto": "Saturno é o planeta mais próximo do Sol.",
-    "resposta": "falso"
+    "texto": "Baleias sao peixes.",
+    "resposta": "falso",
+    "dificuldade": "facil"
   },
   {
-    "texto": "Água é composta por hidrogênio e oxigênio.",
-    "resposta": "verdadeiro"
+    "texto": "A Antartida fica no hemisferio norte.",
+    "resposta": "falso",
+    "dificuldade": "facil"
   },
   {
-    "texto": "A eletricidade não pode ser convertida em luz.",
-    "resposta": "falso"
+    "texto": "O alfabeto portugues tem apenas 10 letras.",
+    "resposta": "falso",
+    "dificuldade": "facil"
   },
   {
-    "texto": "O cérebro humano é responsável pelo pensamento e memória.",
-    "resposta": "verdadeiro"
+    "texto": "2 e um numero par.",
+    "resposta": "verdadeiro",
+    "dificuldade": "medio"
   },
   {
-    "texto": "O DNA é encontrado apenas em plantas.",
-    "resposta": "falso"
+    "texto": "3 e um numero par.",
+    "resposta": "falso",
+    "dificuldade": "medio"
   },
   {
-    "texto": "A velocidade da luz é maior que a do som.",
-    "resposta": "verdadeiro"
+    "texto": "4 e um numero par.",
+    "resposta": "verdadeiro",
+    "dificuldade": "medio"
   },
   {
-    "texto": "O fogo é frio.",
-    "resposta": "falso"
+    "texto": "5 e um numero par.",
+    "resposta": "falso",
+    "dificuldade": "medio"
   },
   {
-    "texto": "Marte é conhecido como planeta vermelho.",
-    "resposta": "verdadeiro"
+    "texto": "6 e um numero par.",
+    "resposta": "verdadeiro",
+    "dificuldade": "medio"
   },
   {
-    "texto": "O ouro é mais leve que a água.",
-    "resposta": "falso"
+    "texto": "7 e um numero par.",
+    "resposta": "falso",
+    "dificuldade": "medio"
   },
   {
-    "texto": "A Amazonia é a maior floresta tropical do mundo.",
-    "resposta": "verdadeiro"
+    "texto": "8 e um numero par.",
+    "resposta": "verdadeiro",
+    "dificuldade": "medio"
   },
   {
-    "texto": "O gelo é mais quente que a água.",
-    "resposta": "falso"
+    "texto": "9 e um numero par.",
+    "resposta": "falso",
+    "dificuldade": "medio"
   },
   {
-    "texto": "A Terra gira em torno do Sol.",
-    "resposta": "verdadeiro"
+    "texto": "10 e um numero par.",
+    "resposta": "verdadeiro",
+    "dificuldade": "medio"
   },
   {
-    "texto": "Plutão é atualmente considerado um planeta principal.",
-    "resposta": "falso"
+    "texto": "11 e um numero par.",
+    "resposta": "falso",
+    "dificuldade": "medio"
   },
   {
-    "texto": "O ferro é um metal.",
-    "resposta": "verdadeiro"
+    "texto": "12 e um numero par.",
+    "resposta": "verdadeiro",
+    "dificuldade": "medio"
   },
   {
-    "texto": "O som se propaga mais rápido que a luz.",
-    "resposta": "falso"
+    "texto": "13 e um numero par.",
+    "resposta": "falso",
+    "dificuldade": "medio"
   },
   {
-    "texto": "O café vem da planta Coffea.",
-    "resposta": "verdadeiro"
+    "texto": "14 e um numero par.",
+    "resposta": "verdadeiro",
+    "dificuldade": "medio"
   },
   {
-    "texto": "O Japão está na América do Sul.",
-    "resposta": "falso"
+    "texto": "15 e um numero par.",
+    "resposta": "falso",
+    "dificuldade": "medio"
   },
   {
-    "texto": "A Lua influencia as marés da Terra.",
-    "resposta": "verdadeiro"
+    "texto": "16 e um numero par.",
+    "resposta": "verdadeiro",
+    "dificuldade": "medio"
   },
   {
-    "texto": "O sol nasce no oeste.",
-    "resposta": "falso"
+    "texto": "17 e um numero par.",
+    "resposta": "falso",
+    "dificuldade": "medio"
   },
   {
-    "texto": "O corpo humano possui 206 ossos.",
-    "resposta": "verdadeiro"
+    "texto": "18 e um numero par.",
+    "resposta": "verdadeiro",
+    "dificuldade": "medio"
   },
   {
-    "texto": "A gravidade só existe na Terra.",
-    "resposta": "falso"
+    "texto": "19 e um numero par.",
+    "resposta": "falso",
+    "dificuldade": "medio"
   },
   {
-    "texto": "A velocidade média de um carro depende do tempo e distância.",
-    "resposta": "verdadeiro"
+    "texto": "20 e um numero par.",
+    "resposta": "verdadeiro",
+    "dificuldade": "medio"
   },
   {
-    "texto": "O sangue humano é azul.",
-    "resposta": "falso"
+    "texto": "21 e um numero par.",
+    "resposta": "falso",
+    "dificuldade": "medio"
   },
   {
-    "texto": "A água cobre mais de 70% da superfície da Terra.",
-    "resposta": "verdadeiro"
+    "texto": "22 e um numero par.",
+    "resposta": "verdadeiro",
+    "dificuldade": "medio"
   },
   {
-    "texto": "O Brasil tem 52 estados.",
-    "resposta": "falso"
+    "texto": "23 e um numero par.",
+    "resposta": "falso",
+    "dificuldade": "medio"
   },
   {
-    "texto": "A eletricidade é um fluxo de elétrons.",
-    "resposta": "verdadeiro"
+    "texto": "24 e um numero par.",
+    "resposta": "verdadeiro",
+    "dificuldade": "medio"
   },
   {
-    "texto": "A Lua é feita de queijo.",
-    "resposta": "falso"
+    "texto": "25 e um numero par.",
+    "resposta": "falso",
+    "dificuldade": "medio"
   },
   {
-    "texto": "A fotossíntese ocorre nas plantas.",
-    "resposta": "verdadeiro"
+    "texto": "26 e um numero par.",
+    "resposta": "verdadeiro",
+    "dificuldade": "medio"
   },
   {
-    "texto": "O número zero é negativo.",
-    "resposta": "falso"
+    "texto": "27 e um numero par.",
+    "resposta": "falso",
+    "dificuldade": "medio"
   },
   {
-    "texto": "O universo está em constante expansão.",
-    "resposta": "verdadeiro"
+    "texto": "28 e um numero par.",
+    "resposta": "verdadeiro",
+    "dificuldade": "medio"
   },
   {
-    "texto": "O sol é menor que a Terra.",
-    "resposta": "falso"
+    "texto": "29 e um numero par.",
+    "resposta": "falso",
+    "dificuldade": "medio"
   },
   {
-    "texto": "Os seres humanos possuem cinco sentidos principais.",
-    "resposta": "verdadeiro"
+    "texto": "30 e um numero par.",
+    "resposta": "verdadeiro",
+    "dificuldade": "dificil"
   },
   {
-    "texto": "O vento é feito de água.",
-    "resposta": "falso"
+    "texto": "2 e maior que 5.",
+    "resposta": "falso",
+    "dificuldade": "dificil"
   },
   {
-    "texto": "O coração bombeia sangue por todo o corpo.",
-    "resposta": "verdadeiro"
+    "texto": "3 e maior que 6.",
+    "resposta": "falso",
+    "dificuldade": "dificil"
   },
   {
-    "texto": "O carvão é um líquido.",
-    "resposta": "falso"
+    "texto": "4 e maior que 7.",
+    "resposta": "falso",
+    "dificuldade": "dificil"
   },
   {
-    "texto": "O diamante é uma forma cristalina de carbono.",
-    "resposta": "verdadeiro"
+    "texto": "5 e maior que 8.",
+    "resposta": "falso",
+    "dificuldade": "dificil"
   },
   {
-    "texto": "Os peixes respiram ar como os humanos.",
-    "resposta": "falso"
+    "texto": "6 e maior que 9.",
+    "resposta": "falso",
+    "dificuldade": "dificil"
   },
   {
-    "texto": "A luz solar é essencial para a vida na Terra.",
-    "resposta": "verdadeiro"
+    "texto": "7 e maior que 10.",
+    "resposta": "falso",
+    "dificuldade": "dificil"
   },
   {
-    "texto": "O leite vem das árvores.",
-    "resposta": "falso"
+    "texto": "8 e maior que 11.",
+    "resposta": "falso",
+    "dificuldade": "dificil"
   },
   {
-    "texto": "O planeta Terra tem formato aproximadamente esférico.",
-    "resposta": "verdadeiro"
+    "texto": "9 e maior que 12.",
+    "resposta": "falso",
+    "dificuldade": "dificil"
   },
   {
-    "texto": "O tempo passa mais rápido à noite.",
-    "resposta": "falso"
+    "texto": "10 e maior que 13.",
+    "resposta": "falso",
+    "dificuldade": "dificil"
   },
   {
-    "texto": "O cobre é um bom condutor de eletricidade.",
-    "resposta": "verdadeiro"
+    "texto": "11 e maior que 14.",
+    "resposta": "falso",
+    "dificuldade": "dificil"
   },
   {
-    "texto": "A gravidade pode ser desligada.",
-    "resposta": "falso"
+    "texto": "12 e maior que 15.",
+    "resposta": "falso",
+    "dificuldade": "dificil"
   },
   {
-    "texto": "O cérebro humano contém bilhões de neurônios.",
-    "resposta": "verdadeiro"
+    "texto": "13 e maior que 16.",
+    "resposta": "falso",
+    "dificuldade": "dificil"
   },
   {
-    "texto": "A água salgada é doce.",
-    "resposta": "falso"
+    "texto": "14 e maior que 17.",
+    "resposta": "falso",
+    "dificuldade": "dificil"
   },
   {
-    "texto": "O petróleo é um recurso natural não renovável.",
-    "resposta": "verdadeiro"
+    "texto": "15 e maior que 18.",
+    "resposta": "falso",
+    "dificuldade": "dificil"
   },
   {
-    "texto": "A Terra é plana.",
-    "resposta": "falso"
+    "texto": "16 e maior que 19.",
+    "resposta": "falso",
+    "dificuldade": "dificil"
   },
   {
-    "texto": "Os gatos são mamíferos.",
-    "resposta": "verdadeiro"
+    "texto": "17 e maior que 20.",
+    "resposta": "falso",
+    "dificuldade": "dificil"
   },
   {
-    "texto": "O fogo é um sólido.",
-    "resposta": "falso"
+    "texto": "18 e maior que 21.",
+    "resposta": "falso",
+    "dificuldade": "dificil"
   },
   {
-    "texto": "O vento pode ser medido com anemômetro.",
-    "resposta": "verdadeiro"
+    "texto": "19 e maior que 22.",
+    "resposta": "falso",
+    "dificuldade": "dificil"
   },
   {
-    "texto": "O açúcar é salgado.",
-    "resposta": "falso"
-  },
-  {
-    "texto": "As plantas produzem oxigênio através da fotossíntese.",
-    "resposta": "verdadeiro"
-  },
-  {
-    "texto": "A Lua reflete a luz do Sol.",
-    "resposta": "verdadeiro"
+    "texto": "20 e maior que 23.",
+    "resposta": "falso",
+    "dificuldade": "dificil"
   }
 ]

@@ -1,0 +1,230 @@
+[
+  {
+    "id": 1,
+    "linguagem": "python",
+    "conceito": "variaveis",
+    "dificuldade": "facil",
+    "tipo": "multipla_escolha",
+    "pergunta": "Qual sera a saida deste codigo?",
+    "codigo": "x = 2\nx = x + 3\nprint(x)",
+    "opcoes": [
+      "0",
+      "2",
+      "5",
+      "6"
+    ],
+    "resposta": "5",
+    "dica": "A segunda linha atualiza x.",
+    "explicacao": "x recebe o valor inicial e depois soma o segundo numero antes do print.",
+    "pontos": 5
+  },
+  {
+    "id": 2,
+    "linguagem": "python",
+    "conceito": "variaveis",
+    "dificuldade": "facil",
+    "tipo": "multipla_escolha",
+    "pergunta": "Qual sera a saida deste codigo?",
+    "codigo": "x = 4\nx = x + 5\nprint(x)",
+    "opcoes": [
+      "0",
+      "4",
+      "9",
+      "10"
+    ],
+    "resposta": "9",
+    "dica": "A segunda linha atualiza x.",
+    "explicacao": "x recebe o valor inicial e depois soma o segundo numero antes do print.",
+    "pontos": 5
+  },
+  {
+    "id": 3,
+    "linguagem": "python",
+    "conceito": "variaveis",
+    "dificuldade": "facil",
+    "tipo": "multipla_escolha",
+    "pergunta": "Qual sera a saida deste codigo?",
+    "codigo": "x = 7\nx = x + 1\nprint(x)",
+    "opcoes": [
+      "0",
+      "7",
+      "8",
+      "9"
+    ],
+    "resposta": "8",
+    "dica": "A segunda linha atualiza x.",
+    "explicacao": "x recebe o valor inicial e depois soma o segundo numero antes do print.",
+    "pontos": 5
+  },
+  {
+    "id": 4,
+    "linguagem": "python",
+    "conceito": "loops",
+    "dificuldade": "medio",
+    "tipo": "multipla_escolha",
+    "pergunta": "Qual sera a saida deste loop?",
+    "codigo": "total = 0\nfor i in range(3):\n    total += i\nprint(total)",
+    "opcoes": [
+      "0",
+      "3",
+      "3",
+      "4"
+    ],
+    "resposta": "3",
+    "dica": "range(n) vai de 0 ate n-1.",
+    "explicacao": "O laco soma todos os valores produzidos por range.",
+    "pontos": 8
+  },
+  {
+    "id": 5,
+    "linguagem": "python",
+    "conceito": "loops",
+    "dificuldade": "medio",
+    "tipo": "multipla_escolha",
+    "pergunta": "Qual sera a saida deste loop?",
+    "codigo": "total = 0\nfor i in range(4):\n    total += i\nprint(total)",
+    "opcoes": [
+      "0",
+      "4",
+      "6",
+      "7"
+    ],
+    "resposta": "6",
+    "dica": "range(n) vai de 0 ate n-1.",
+    "explicacao": "O laco soma todos os valores produzidos por range.",
+    "pontos": 8
+  },
+  {
+    "id": 6,
+    "linguagem": "python",
+    "conceito": "loops",
+    "dificuldade": "medio",
+    "tipo": "multipla_escolha",
+    "pergunta": "Qual sera a saida deste loop?",
+    "codigo": "total = 0\nfor i in range(5):\n    total += i\nprint(total)",
+    "opcoes": [
+      "0",
+      "5",
+      "10",
+      "11"
+    ],
+    "resposta": "10",
+    "dica": "range(n) vai de 0 ate n-1.",
+    "explicacao": "O laco soma todos os valores produzidos por range.",
+    "pontos": 8
+  },
+  {
+    "id": 7,
+    "linguagem": "python",
+    "conceito": "condicionais",
+    "dificuldade": "facil",
+    "tipo": "multipla_escolha",
+    "pergunta": "O que sera impresso?",
+    "codigo": "idade = 18\nif idade >= 18:\n    print('adulto')\nelse:\n    print('menor')",
+    "opcoes": [
+      "adulto",
+      "menor",
+      "18",
+      "erro"
+    ],
+    "resposta": "adulto",
+    "dica": "Observe a condicao do if.",
+    "explicacao": "Como 18 >= 18, o bloco verdadeiro e executado.",
+    "pontos": 5
+  },
+  {
+    "id": 8,
+    "linguagem": "python",
+    "conceito": "funcoes",
+    "dificuldade": "medio",
+    "tipo": "multipla_escolha",
+    "pergunta": "Qual e a saida?",
+    "codigo": "def dobro(x):\n    return x * 2\n\nprint(dobro(6))",
+    "opcoes": [
+      "6",
+      "8",
+      "12",
+      "16"
+    ],
+    "resposta": "12",
+    "dica": "Veja o valor retornado pela funcao.",
+    "explicacao": "A funcao multiplica o argumento por 2.",
+    "pontos": 8
+  },
+  {
+    "id": 9,
+    "linguagem": "python",
+    "conceito": "colecoes",
+    "dificuldade": "medio",
+    "tipo": "multipla_escolha",
+    "pergunta": "Qual e a saida?",
+    "codigo": "nomes = ['ana', 'bia', 'caio']\nprint(len(nomes))",
+    "opcoes": [
+      "2",
+      "3",
+      "4",
+      "erro"
+    ],
+    "resposta": "3",
+    "dica": "len conta quantos itens existem na lista.",
+    "explicacao": "A lista possui tres elementos.",
+    "pontos": 8
+  },
+  {
+    "id": 10,
+    "linguagem": "python",
+    "conceito": "strings",
+    "dificuldade": "facil",
+    "tipo": "multipla_escolha",
+    "pergunta": "Qual e a saida?",
+    "codigo": "ling = 'py'\nprint(ling + 'thon')",
+    "opcoes": [
+      "py thon",
+      "python",
+      "python",
+      "erro"
+    ],
+    "resposta": "python",
+    "dica": "A soma entre strings concatena texto.",
+    "explicacao": "Em Python, + une as strings.",
+    "pontos": 5
+  },
+  {
+    "id": 11,
+    "linguagem": "python",
+    "conceito": "logica",
+    "dificuldade": "dificil",
+    "tipo": "multipla_escolha",
+    "pergunta": "Qual valor sera impresso?",
+    "codigo": "ativo = True\nadmin = False\nprint(ativo and not admin)",
+    "opcoes": [
+      "True",
+      "False",
+      "None",
+      "erro"
+    ],
+    "resposta": "True",
+    "dica": "not inverte o valor booleano.",
+    "explicacao": "True and not False resulta em True.",
+    "pontos": 12
+  },
+  {
+    "id": 12,
+    "linguagem": "python",
+    "conceito": "dicionarios",
+    "dificuldade": "dificil",
+    "tipo": "multipla_escolha",
+    "pergunta": "Qual sera a saida?",
+    "codigo": "user = {'nome': 'Lia', 'xp': 10}\nprint(user['nome'])",
+    "opcoes": [
+      "Lia",
+      "10",
+      "nome",
+      "erro"
+    ],
+    "resposta": "Lia",
+    "dica": "A chave nome aponta para o valor textual.",
+    "explicacao": "O acesso por chave retorna o valor associado.",
+    "pontos": 12
+  }
+]

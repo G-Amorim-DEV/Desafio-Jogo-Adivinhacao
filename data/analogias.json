@@ -1,0 +1,296 @@
+[
+  {
+    "id": 1,
+    "dificuldade": "facil",
+    "pergunta": "Gato esta para miado assim como cachorro esta para...",
+    "opcoes": [
+      "latido",
+      "ninho",
+      "pena",
+      "casco"
+    ],
+    "resposta": "latido",
+    "dica": "Som caracteristico do cachorro",
+    "pontos": 5
+  },
+  {
+    "id": 2,
+    "dificuldade": "facil",
+    "pergunta": "Dia esta para sol assim como noite esta para...",
+    "opcoes": [
+      "chuva",
+      "lua",
+      "praia",
+      "vento"
+    ],
+    "resposta": "lua",
+    "dica": "Aparece no ceu noturno",
+    "pontos": 5
+  },
+  {
+    "id": 3,
+    "dificuldade": "medio",
+    "pergunta": "Livro esta para leitura assim como garfo esta para...",
+    "opcoes": [
+      "cozinhar",
+      "servir",
+      "comer",
+      "lavar"
+    ],
+    "resposta": "comer",
+    "dica": "Funcao principal do objeto",
+    "pontos": 8
+  },
+  {
+    "id": 4,
+    "dificuldade": "medio",
+    "pergunta": "Professor esta para ensinar assim como medico esta para...",
+    "opcoes": [
+      "voar",
+      "curar",
+      "pintar",
+      "correr"
+    ],
+    "resposta": "curar",
+    "dica": "Profissao ligada a saude",
+    "pontos": 8
+  },
+  {
+    "id": 5,
+    "dificuldade": "dificil",
+    "pergunta": "Semente esta para arvore assim como ideia esta para...",
+    "opcoes": [
+      "silencio",
+      "projeto",
+      "planta",
+      "chuva"
+    ],
+    "resposta": "projeto",
+    "dica": "Um desenvolvimento da ideia",
+    "pontos": 12
+  },
+  {
+    "id": 6,
+    "dificuldade": "dificil",
+    "pergunta": "Bussola esta para direcao assim como relogio esta para...",
+    "opcoes": [
+      "tempo",
+      "agua",
+      "barulho",
+      "tinta"
+    ],
+    "resposta": "tempo",
+    "dica": "Objeto que mede algo",
+    "pontos": 12
+  },
+  {
+    "id": 7,
+    "dificuldade": "facil",
+    "pergunta": "Numero 1 esta para 1 assim como 2 esta para...",
+    "opcoes": [
+      "3",
+      "4",
+      "5",
+      "4"
+    ],
+    "resposta": "4",
+    "dica": "Pense no quadrado do numero",
+    "pontos": 5
+  },
+  {
+    "id": 8,
+    "dificuldade": "facil",
+    "pergunta": "Numero 2 esta para 4 assim como 3 esta para...",
+    "opcoes": [
+      "8",
+      "9",
+      "10",
+      "6"
+    ],
+    "resposta": "9",
+    "dica": "Pense no quadrado do numero",
+    "pontos": 5
+  },
+  {
+    "id": 9,
+    "dificuldade": "facil",
+    "pergunta": "Numero 3 esta para 9 assim como 4 esta para...",
+    "opcoes": [
+      "15",
+      "16",
+      "17",
+      "8"
+    ],
+    "resposta": "16",
+    "dica": "Pense no quadrado do numero",
+    "pontos": 5
+  },
+  {
+    "id": 10,
+    "dificuldade": "facil",
+    "pergunta": "Numero 4 esta para 16 assim como 5 esta para...",
+    "opcoes": [
+      "24",
+      "25",
+      "26",
+      "10"
+    ],
+    "resposta": "25",
+    "dica": "Pense no quadrado do numero",
+    "pontos": 5
+  },
+  {
+    "id": 11,
+    "dificuldade": "facil",
+    "pergunta": "Numero 5 esta para 25 assim como 6 esta para...",
+    "opcoes": [
+      "35",
+      "36",
+      "37",
+      "12"
+    ],
+    "resposta": "36",
+    "dica": "Pense no quadrado do numero",
+    "pontos": 5
+  },
+  {
+    "id": 12,
+    "dificuldade": "medio",
+    "pergunta": "Numero 6 esta para 36 assim como 7 esta para...",
+    "opcoes": [
+      "48",
+      "49",
+      "50",
+      "14"
+    ],
+    "resposta": "49",
+    "dica": "Pense no quadrado do numero",
+    "pontos": 8
+  },
+  {
+    "id": 13,
+    "dificuldade": "medio",
+    "pergunta": "Numero 7 esta para 49 assim como 8 esta para...",
+    "opcoes": [
+      "63",
+      "64",
+      "65",
+      "16"
+    ],
+    "resposta": "64",
+    "dica": "Pense no quadrado do numero",
+    "pontos": 8
+  },
+  {
+    "id": 14,
+    "dificuldade": "medio",
+    "pergunta": "Numero 8 esta para 64 assim como 9 esta para...",
+    "opcoes": [
+      "80",
+      "81",
+      "82",
+      "18"
+    ],
+    "resposta": "81",
+    "dica": "Pense no quadrado do numero",
+    "pontos": 8
+  },
+  {
+    "id": 15,
+    "dificuldade": "medio",
+    "pergunta": "Numero 9 esta para 81 assim como 10 esta para...",
+    "opcoes": [
+      "99",
+      "100",
+      "101",
+      "20"
+    ],
+    "resposta": "100",
+    "dica": "Pense no quadrado do numero",
+    "pontos": 8
+  },
+  {
+    "id": 16,
+    "dificuldade": "medio",
+    "pergunta": "Numero 10 esta para 100 assim como 11 esta para...",
+    "opcoes": [
+      "120",
+      "121",
+      "122",
+      "22"
+    ],
+    "resposta": "121",
+    "dica": "Pense no quadrado do numero",
+    "pontos": 8
+  },
+  {
+    "id": 17,
+    "dificuldade": "dificil",
+    "pergunta": "Numero 11 esta para 121 assim como 12 esta para...",
+    "opcoes": [
+      "143",
+      "144",
+      "145",
+      "24"
+    ],
+    "resposta": "144",
+    "dica": "Pense no quadrado do numero",
+    "pontos": 12
+  },
+  {
+    "id": 18,
+    "dificuldade": "dificil",
+    "pergunta": "Numero 12 esta para 144 assim como 13 esta para...",
+    "opcoes": [
+      "168",
+      "169",
+      "170",
+      "26"
+    ],
+    "resposta": "169",
+    "dica": "Pense no quadrado do numero",
+    "pontos": 12
+  },
+  {
+    "id": 19,
+    "dificuldade": "dificil",
+    "pergunta": "Numero 13 esta para 169 assim como 14 esta para...",
+    "opcoes": [
+      "195",
+      "196",
+      "197",
+      "28"
+    ],
+    "resposta": "196",
+    "dica": "Pense no quadrado do numero",
+    "pontos": 12
+  },
+  {
+    "id": 20,
+    "dificuldade": "dificil",
+    "pergunta": "Numero 14 esta para 196 assim como 15 esta para...",
+    "opcoes": [
+      "224",
+      "225",
+      "226",
+      "30"
+    ],
+    "resposta": "225",
+    "dica": "Pense no quadrado do numero",
+    "pontos": 12
+  },
+  {
+    "id": 21,
+    "dificuldade": "dificil",
+    "pergunta": "Numero 15 esta para 225 assim como 16 esta para...",
+    "opcoes": [
+      "255",
+      "256",
+      "257",
+      "32"
+    ],
+    "resposta": "256",
+    "dica": "Pense no quadrado do numero",
+    "pontos": 12
+  }
+]

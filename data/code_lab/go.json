@@ -1,0 +1,192 @@
+[
+  {
+    "id": 55,
+    "linguagem": "go",
+    "conceito": "variaveis",
+    "dificuldade": "facil",
+    "tipo": "multipla_escolha",
+    "pergunta": "Qual sera a saida?",
+    "codigo": "package main\nimport \"fmt\"\nfunc main() {\n    x := 2\n    x = x + 5\n    fmt.Println(x)\n}",
+    "opcoes": [
+      "0",
+      "2",
+      "7",
+      "9"
+    ],
+    "resposta": "7",
+    "dica": "x recebe um novo valor antes do fmt.Println.",
+    "explicacao": "A soma ocorre normalmente e o valor final e impresso.",
+    "pontos": 5
+  },
+  {
+    "id": 56,
+    "linguagem": "go",
+    "conceito": "variaveis",
+    "dificuldade": "facil",
+    "tipo": "multipla_escolha",
+    "pergunta": "Qual sera a saida?",
+    "codigo": "package main\nimport \"fmt\"\nfunc main() {\n    x := 4\n    x = x + 4\n    fmt.Println(x)\n}",
+    "opcoes": [
+      "0",
+      "4",
+      "8",
+      "10"
+    ],
+    "resposta": "8",
+    "dica": "x recebe um novo valor antes do fmt.Println.",
+    "explicacao": "A soma ocorre normalmente e o valor final e impresso.",
+    "pontos": 5
+  },
+  {
+    "id": 57,
+    "linguagem": "go",
+    "conceito": "variaveis",
+    "dificuldade": "facil",
+    "tipo": "multipla_escolha",
+    "pergunta": "Qual sera a saida?",
+    "codigo": "package main\nimport \"fmt\"\nfunc main() {\n    x := 9\n    x = x + 1\n    fmt.Println(x)\n}",
+    "opcoes": [
+      "0",
+      "9",
+      "10",
+      "12"
+    ],
+    "resposta": "10",
+    "dica": "x recebe um novo valor antes do fmt.Println.",
+    "explicacao": "A soma ocorre normalmente e o valor final e impresso.",
+    "pontos": 5
+  },
+  {
+    "id": 58,
+    "linguagem": "go",
+    "conceito": "condicionais",
+    "dificuldade": "facil",
+    "tipo": "multipla_escolha",
+    "pergunta": "Qual sera a saida?",
+    "codigo": "package main\nimport \"fmt\"\nfunc main() {\n    idade := 19\n    if idade >= 18 {\n        fmt.Println(\"adulto\")\n    } else {\n        fmt.Println(\"menor\")\n    }\n}",
+    "opcoes": [
+      "adulto",
+      "menor",
+      "19",
+      "erro"
+    ],
+    "resposta": "adulto",
+    "dica": "Compare idade com 18.",
+    "explicacao": "A condicao e verdadeira.",
+    "pontos": 5
+  },
+  {
+    "id": 59,
+    "linguagem": "go",
+    "conceito": "loops",
+    "dificuldade": "medio",
+    "tipo": "multipla_escolha",
+    "pergunta": "Qual sera a saida?",
+    "codigo": "package main\nimport \"fmt\"\nfunc main() {\n    total := 0\n    for i := 1; i <= 3; i++ {\n        total += i\n    }\n    fmt.Println(total)\n}",
+    "opcoes": [
+      "3",
+      "5",
+      "6",
+      "7"
+    ],
+    "resposta": "6",
+    "dica": "Some 1 + 2 + 3.",
+    "explicacao": "O laco acumula esses valores em total.",
+    "pontos": 8
+  },
+  {
+    "id": 60,
+    "linguagem": "go",
+    "conceito": "funcoes",
+    "dificuldade": "medio",
+    "tipo": "multipla_escolha",
+    "pergunta": "Qual sera a saida?",
+    "codigo": "package main\nimport \"fmt\"\nfunc dobro(x int) int {\n    return x * 2\n}\nfunc main() {\n    fmt.Println(dobro(6))\n}",
+    "opcoes": [
+      "6",
+      "8",
+      "12",
+      "16"
+    ],
+    "resposta": "12",
+    "dica": "A funcao devolve x multiplicado por 2.",
+    "explicacao": "dobro(6) resulta em 12.",
+    "pontos": 8
+  },
+  {
+    "id": 61,
+    "linguagem": "go",
+    "conceito": "slices",
+    "dificuldade": "medio",
+    "tipo": "multipla_escolha",
+    "pergunta": "Qual sera a saida?",
+    "codigo": "package main\nimport \"fmt\"\nfunc main() {\n    nums := []int{1, 2, 3}\n    fmt.Println(len(nums))\n}",
+    "opcoes": [
+      "2",
+      "3",
+      "4",
+      "erro"
+    ],
+    "resposta": "3",
+    "dica": "len retorna o tamanho do slice.",
+    "explicacao": "O slice possui tres elementos.",
+    "pontos": 8
+  },
+  {
+    "id": 62,
+    "linguagem": "go",
+    "conceito": "strings",
+    "dificuldade": "facil",
+    "tipo": "multipla_escolha",
+    "pergunta": "Qual sera a saida?",
+    "codigo": "package main\nimport \"fmt\"\nfunc main() {\n    nome := \"Go\"\n    fmt.Println(nome + \" Lab\")\n}",
+    "opcoes": [
+      "GoLab",
+      "Go Lab",
+      "Lab Go",
+      "erro"
+    ],
+    "resposta": "Go Lab",
+    "dica": "O operador + concatena strings.",
+    "explicacao": "A segunda string ja inclui um espaco.",
+    "pontos": 5
+  },
+  {
+    "id": 63,
+    "linguagem": "go",
+    "conceito": "booleanos",
+    "dificuldade": "dificil",
+    "tipo": "multipla_escolha",
+    "pergunta": "Qual sera a saida?",
+    "codigo": "package main\nimport \"fmt\"\nfunc main() {\n    ativo := true\n    admin := false\n    fmt.Println(ativo && !admin)\n}",
+    "opcoes": [
+      "true",
+      "false",
+      "nil",
+      "erro"
+    ],
+    "resposta": "true",
+    "dica": "!admin transforma false em true.",
+    "explicacao": "true && true resulta em true.",
+    "pontos": 12
+  },
+  {
+    "id": 64,
+    "linguagem": "go",
+    "conceito": "maps",
+    "dificuldade": "dificil",
+    "tipo": "multipla_escolha",
+    "pergunta": "Qual sera a saida?",
+    "codigo": "package main\nimport \"fmt\"\nfunc main() {\n    user := map[string]int{\"xp\": 10}\n    fmt.Println(user[\"xp\"])\n}",
+    "opcoes": [
+      "xp",
+      "10",
+      "0",
+      "erro"
+    ],
+    "resposta": "10",
+    "dica": "O mapa retorna o valor associado a chave.",
+    "explicacao": "A chave xp guarda o valor 10.",
+    "pontos": 12
+  }
+]

@@ -1,0 +1,192 @@
+[
+  {
+    "id": 45,
+    "linguagem": "csharp",
+    "conceito": "variaveis",
+    "dificuldade": "facil",
+    "tipo": "multipla_escolha",
+    "pergunta": "Qual sera a saida?",
+    "codigo": "int x = 1;\nx = x + 4;\nConsole.WriteLine(x);",
+    "opcoes": [
+      "0",
+      "1",
+      "5",
+      "6"
+    ],
+    "resposta": "5",
+    "dica": "x e atualizado antes da exibicao.",
+    "explicacao": "A soma acontece antes do WriteLine.",
+    "pontos": 5
+  },
+  {
+    "id": 46,
+    "linguagem": "csharp",
+    "conceito": "variaveis",
+    "dificuldade": "facil",
+    "tipo": "multipla_escolha",
+    "pergunta": "Qual sera a saida?",
+    "codigo": "int x = 6;\nx = x + 2;\nConsole.WriteLine(x);",
+    "opcoes": [
+      "0",
+      "6",
+      "8",
+      "9"
+    ],
+    "resposta": "8",
+    "dica": "x e atualizado antes da exibicao.",
+    "explicacao": "A soma acontece antes do WriteLine.",
+    "pontos": 5
+  },
+  {
+    "id": 47,
+    "linguagem": "csharp",
+    "conceito": "variaveis",
+    "dificuldade": "facil",
+    "tipo": "multipla_escolha",
+    "pergunta": "Qual sera a saida?",
+    "codigo": "int x = 9;\nx = x + 3;\nConsole.WriteLine(x);",
+    "opcoes": [
+      "0",
+      "9",
+      "12",
+      "13"
+    ],
+    "resposta": "12",
+    "dica": "x e atualizado antes da exibicao.",
+    "explicacao": "A soma acontece antes do WriteLine.",
+    "pontos": 5
+  },
+  {
+    "id": 48,
+    "linguagem": "csharp",
+    "conceito": "condicionais",
+    "dificuldade": "facil",
+    "tipo": "multipla_escolha",
+    "pergunta": "Qual sera a saida?",
+    "codigo": "int idade = 15;\nif (idade >= 18)\n{\n    Console.WriteLine(\"adulto\");\n}\nelse\n{\n    Console.WriteLine(\"menor\");\n}",
+    "opcoes": [
+      "adulto",
+      "menor",
+      "15",
+      "erro"
+    ],
+    "resposta": "menor",
+    "dica": "Observe a comparacao com 18.",
+    "explicacao": "15 nao atende a condicao.",
+    "pontos": 5
+  },
+  {
+    "id": 49,
+    "linguagem": "csharp",
+    "conceito": "loops",
+    "dificuldade": "medio",
+    "tipo": "multipla_escolha",
+    "pergunta": "Qual sera a saida?",
+    "codigo": "int total = 0;\nfor (int i = 0; i < 4; i++)\n{\n    total += i;\n}\nConsole.WriteLine(total);",
+    "opcoes": [
+      "4",
+      "5",
+      "6",
+      "7"
+    ],
+    "resposta": "6",
+    "dica": "Some 0 + 1 + 2 + 3.",
+    "explicacao": "O resultado final e 6.",
+    "pontos": 8
+  },
+  {
+    "id": 50,
+    "linguagem": "csharp",
+    "conceito": "funcoes",
+    "dificuldade": "medio",
+    "tipo": "multipla_escolha",
+    "pergunta": "Qual sera a saida?",
+    "codigo": "int Dobro(int x)\n{\n    return x * 2;\n}\nConsole.WriteLine(Dobro(8));",
+    "opcoes": [
+      "8",
+      "12",
+      "16",
+      "18"
+    ],
+    "resposta": "16",
+    "dica": "Veja o retorno do metodo.",
+    "explicacao": "8 multiplicado por 2 e 16.",
+    "pontos": 8
+  },
+  {
+    "id": 51,
+    "linguagem": "csharp",
+    "conceito": "listas",
+    "dificuldade": "medio",
+    "tipo": "multipla_escolha",
+    "pergunta": "Qual sera a saida?",
+    "codigo": "var nomes = new List<string> { \"Ana\", \"Bia\", \"Caio\" };\nConsole.WriteLine(nomes.Count);",
+    "opcoes": [
+      "2",
+      "3",
+      "4",
+      "erro"
+    ],
+    "resposta": "3",
+    "dica": "Count informa a quantidade de elementos.",
+    "explicacao": "A lista tem tres itens.",
+    "pontos": 8
+  },
+  {
+    "id": 52,
+    "linguagem": "csharp",
+    "conceito": "strings",
+    "dificuldade": "facil",
+    "tipo": "multipla_escolha",
+    "pergunta": "Qual sera a saida?",
+    "codigo": "string nome = \"Code\";\nConsole.WriteLine(nome + \" Lab\");",
+    "opcoes": [
+      "CodeLab",
+      "Code Lab",
+      "Lab Code",
+      "erro"
+    ],
+    "resposta": "Code Lab",
+    "dica": "A operacao une as strings.",
+    "explicacao": "O espaco faz parte da segunda string.",
+    "pontos": 5
+  },
+  {
+    "id": 53,
+    "linguagem": "csharp",
+    "conceito": "logica",
+    "dificuldade": "dificil",
+    "tipo": "multipla_escolha",
+    "pergunta": "Qual sera a saida?",
+    "codigo": "bool ativo = true;\nbool bloqueado = false;\nConsole.WriteLine(ativo && !bloqueado);",
+    "opcoes": [
+      "True",
+      "False",
+      "null",
+      "erro"
+    ],
+    "resposta": "True",
+    "dica": "!bloqueado muda false para true.",
+    "explicacao": "true && true resulta em True.",
+    "pontos": 12
+  },
+  {
+    "id": 54,
+    "linguagem": "csharp",
+    "conceito": "objetos",
+    "dificuldade": "dificil",
+    "tipo": "multipla_escolha",
+    "pergunta": "Qual acesso esta correto?",
+    "codigo": "var user = new { Nome = \"Lia\", Nivel = 3 };",
+    "opcoes": [
+      "user[\"Nome\"]",
+      "user.Nome",
+      "user->Nome",
+      "Nome(user)"
+    ],
+    "resposta": "user.Nome",
+    "dica": "Propriedades sao acessadas com ponto.",
+    "explicacao": "A sintaxe correta usa ponto.",
+    "pontos": 12
+  }
+]

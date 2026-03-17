@@ -1,0 +1,192 @@
+[
+  {
+    "id": 25,
+    "linguagem": "typescript",
+    "conceito": "variaveis",
+    "dificuldade": "facil",
+    "tipo": "multipla_escolha",
+    "pergunta": "Qual sera a saida?",
+    "codigo": "let score: number = 3;\nscore = score + 2;\nconsole.log(score);",
+    "opcoes": [
+      "0",
+      "3",
+      "5",
+      "8"
+    ],
+    "resposta": "5",
+    "dica": "O tipo number nao muda a soma.",
+    "explicacao": "A variavel e atualizada antes do log.",
+    "pontos": 5
+  },
+  {
+    "id": 26,
+    "linguagem": "typescript",
+    "conceito": "variaveis",
+    "dificuldade": "facil",
+    "tipo": "multipla_escolha",
+    "pergunta": "Qual sera a saida?",
+    "codigo": "let score: number = 6;\nscore = score + 1;\nconsole.log(score);",
+    "opcoes": [
+      "0",
+      "6",
+      "7",
+      "10"
+    ],
+    "resposta": "7",
+    "dica": "O tipo number nao muda a soma.",
+    "explicacao": "A variavel e atualizada antes do log.",
+    "pontos": 5
+  },
+  {
+    "id": 27,
+    "linguagem": "typescript",
+    "conceito": "variaveis",
+    "dificuldade": "facil",
+    "tipo": "multipla_escolha",
+    "pergunta": "Qual sera a saida?",
+    "codigo": "let score: number = 10;\nscore = score + 5;\nconsole.log(score);",
+    "opcoes": [
+      "0",
+      "10",
+      "15",
+      "18"
+    ],
+    "resposta": "15",
+    "dica": "O tipo number nao muda a soma.",
+    "explicacao": "A variavel e atualizada antes do log.",
+    "pontos": 5
+  },
+  {
+    "id": 28,
+    "linguagem": "typescript",
+    "conceito": "tipos",
+    "dificuldade": "facil",
+    "tipo": "multipla_escolha",
+    "pergunta": "Qual linha declara corretamente uma string?",
+    "codigo": "// Escolha a declaracao correta",
+    "opcoes": [
+      "let nome: string = 10;",
+      "let nome: string = \"Ana\";",
+      "let nome = true as string;",
+      "string nome = \"Ana\";"
+    ],
+    "resposta": "let nome: string = \"Ana\";",
+    "dica": "TypeScript usa anotacao : string.",
+    "explicacao": "A segunda opcao declara uma string valida.",
+    "pontos": 5
+  },
+  {
+    "id": 29,
+    "linguagem": "typescript",
+    "conceito": "funcoes",
+    "dificuldade": "medio",
+    "tipo": "multipla_escolha",
+    "pergunta": "Qual sera a saida?",
+    "codigo": "function soma(a: number, b: number): number {\n  return a + b;\n}\nconsole.log(soma(4, 5));",
+    "opcoes": [
+      "45",
+      "8",
+      "9",
+      "erro"
+    ],
+    "resposta": "9",
+    "dica": "Veja o retorno da funcao soma.",
+    "explicacao": "4 + 5 e igual a 9.",
+    "pontos": 8
+  },
+  {
+    "id": 30,
+    "linguagem": "typescript",
+    "conceito": "arrays",
+    "dificuldade": "medio",
+    "tipo": "multipla_escolha",
+    "pergunta": "Qual sera a saida?",
+    "codigo": "const langs: string[] = ['ts', 'js', 'py'];\nconsole.log(langs[1]);",
+    "opcoes": [
+      "ts",
+      "js",
+      "py",
+      "erro"
+    ],
+    "resposta": "js",
+    "dica": "Arrays comecam no indice 0.",
+    "explicacao": "O item de indice 1 e o segundo elemento.",
+    "pontos": 8
+  },
+  {
+    "id": 31,
+    "linguagem": "typescript",
+    "conceito": "condicionais",
+    "dificuldade": "medio",
+    "tipo": "multipla_escolha",
+    "pergunta": "Qual e a saida?",
+    "codigo": "const online: boolean = true;\nif (online) {\n  console.log('ok');\n} else {\n  console.log('off');\n}",
+    "opcoes": [
+      "ok",
+      "off",
+      "true",
+      "erro"
+    ],
+    "resposta": "ok",
+    "dica": "online vale true.",
+    "explicacao": "O bloco do if e executado.",
+    "pontos": 8
+  },
+  {
+    "id": 32,
+    "linguagem": "typescript",
+    "conceito": "interfaces",
+    "dificuldade": "dificil",
+    "tipo": "multipla_escolha",
+    "pergunta": "Qual acesso esta correto?",
+    "codigo": "interface User {\n  nome: string;\n  xp: number;\n}\nconst user: User = { nome: 'Ivo', xp: 20 };\nconsole.log(user.xp);",
+    "opcoes": [
+      "Ivo",
+      "20",
+      "xp",
+      "erro"
+    ],
+    "resposta": "20",
+    "dica": "Observe a propriedade usada no log.",
+    "explicacao": "A propriedade xp vale 20.",
+    "pontos": 12
+  },
+  {
+    "id": 33,
+    "linguagem": "typescript",
+    "conceito": "logica",
+    "dificuldade": "dificil",
+    "tipo": "multipla_escolha",
+    "pergunta": "Qual valor sera exibido?",
+    "codigo": "const ativo = true;\nconst bloqueado = false;\nconsole.log(ativo && !bloqueado);",
+    "opcoes": [
+      "true",
+      "false",
+      "null",
+      "erro"
+    ],
+    "resposta": "true",
+    "dica": "O segundo valor tambem se torna verdadeiro com !.",
+    "explicacao": "A expressao resulta em true.",
+    "pontos": 12
+  },
+  {
+    "id": 34,
+    "linguagem": "typescript",
+    "conceito": "loops",
+    "dificuldade": "medio",
+    "tipo": "multipla_escolha",
+    "pergunta": "Qual sera a saida?",
+    "codigo": "let total = 0;\nfor (let i = 1; i <= 3; i++) {\n  total += i;\n}\nconsole.log(total);",
+    "opcoes": [
+      "3",
+      "5",
+      "6",
+      "7"
+    ],
+    "resposta": "6",
+    "dica": "O laco soma 1 + 2 + 3.",
+    "explicacao": "O total final e 6.",
+    "pontos": 8
+  }
+]

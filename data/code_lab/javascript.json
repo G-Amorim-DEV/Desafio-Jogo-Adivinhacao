@@ -1,0 +1,230 @@
+[
+  {
+    "id": 13,
+    "linguagem": "javascript",
+    "conceito": "variaveis",
+    "dificuldade": "facil",
+    "tipo": "multipla_escolha",
+    "pergunta": "Qual sera a saida?",
+    "codigo": "let x = 2;\nx = x + 3;\nconsole.log(x);",
+    "opcoes": [
+      "undefined",
+      "2",
+      "5",
+      "6"
+    ],
+    "resposta": "5",
+    "dica": "x e atualizado antes do console.log.",
+    "explicacao": "A variavel recebe um novo valor na segunda linha.",
+    "pontos": 5
+  },
+  {
+    "id": 14,
+    "linguagem": "javascript",
+    "conceito": "variaveis",
+    "dificuldade": "facil",
+    "tipo": "multipla_escolha",
+    "pergunta": "Qual sera a saida?",
+    "codigo": "let x = 5;\nx = x + 4;\nconsole.log(x);",
+    "opcoes": [
+      "undefined",
+      "5",
+      "9",
+      "10"
+    ],
+    "resposta": "9",
+    "dica": "x e atualizado antes do console.log.",
+    "explicacao": "A variavel recebe um novo valor na segunda linha.",
+    "pontos": 5
+  },
+  {
+    "id": 15,
+    "linguagem": "javascript",
+    "conceito": "variaveis",
+    "dificuldade": "facil",
+    "tipo": "multipla_escolha",
+    "pergunta": "Qual sera a saida?",
+    "codigo": "let x = 8;\nx = x + 1;\nconsole.log(x);",
+    "opcoes": [
+      "undefined",
+      "8",
+      "9",
+      "10"
+    ],
+    "resposta": "9",
+    "dica": "x e atualizado antes do console.log.",
+    "explicacao": "A variavel recebe um novo valor na segunda linha.",
+    "pontos": 5
+  },
+  {
+    "id": 16,
+    "linguagem": "javascript",
+    "conceito": "loops",
+    "dificuldade": "medio",
+    "tipo": "multipla_escolha",
+    "pergunta": "Qual sera a saida?",
+    "codigo": "let total = 0;\nfor (let i = 0; i < 3; i++) {\n  total += i;\n}\nconsole.log(total);",
+    "opcoes": [
+      "0",
+      "3",
+      "3",
+      "5"
+    ],
+    "resposta": "3",
+    "dica": "O laco para antes de i == n.",
+    "explicacao": "A soma inclui 0 ate n-1.",
+    "pontos": 8
+  },
+  {
+    "id": 17,
+    "linguagem": "javascript",
+    "conceito": "loops",
+    "dificuldade": "medio",
+    "tipo": "multipla_escolha",
+    "pergunta": "Qual sera a saida?",
+    "codigo": "let total = 0;\nfor (let i = 0; i < 4; i++) {\n  total += i;\n}\nconsole.log(total);",
+    "opcoes": [
+      "0",
+      "4",
+      "6",
+      "8"
+    ],
+    "resposta": "6",
+    "dica": "O laco para antes de i == n.",
+    "explicacao": "A soma inclui 0 ate n-1.",
+    "pontos": 8
+  },
+  {
+    "id": 18,
+    "linguagem": "javascript",
+    "conceito": "loops",
+    "dificuldade": "medio",
+    "tipo": "multipla_escolha",
+    "pergunta": "Qual sera a saida?",
+    "codigo": "let total = 0;\nfor (let i = 0; i < 5; i++) {\n  total += i;\n}\nconsole.log(total);",
+    "opcoes": [
+      "0",
+      "5",
+      "10",
+      "12"
+    ],
+    "resposta": "10",
+    "dica": "O laco para antes de i == n.",
+    "explicacao": "A soma inclui 0 ate n-1.",
+    "pontos": 8
+  },
+  {
+    "id": 19,
+    "linguagem": "javascript",
+    "conceito": "condicionais",
+    "dificuldade": "facil",
+    "tipo": "multipla_escolha",
+    "pergunta": "O que sera exibido?",
+    "codigo": "const idade = 16;\nif (idade >= 18) {\n  console.log('adulto');\n} else {\n  console.log('menor');\n}",
+    "opcoes": [
+      "adulto",
+      "menor",
+      "16",
+      "erro"
+    ],
+    "resposta": "menor",
+    "dica": "Compare o valor de idade com 18.",
+    "explicacao": "A condicao e falsa, entao o else executa.",
+    "pontos": 5
+  },
+  {
+    "id": 20,
+    "linguagem": "javascript",
+    "conceito": "funcoes",
+    "dificuldade": "medio",
+    "tipo": "multipla_escolha",
+    "pergunta": "Qual sera a saida?",
+    "codigo": "function dobro(x) {\n  return x * 2;\n}\nconsole.log(dobro(7));",
+    "opcoes": [
+      "7",
+      "9",
+      "14",
+      "21"
+    ],
+    "resposta": "14",
+    "dica": "A funcao retorna x multiplicado por 2.",
+    "explicacao": "7 vezes 2 resulta em 14.",
+    "pontos": 8
+  },
+  {
+    "id": 21,
+    "linguagem": "javascript",
+    "conceito": "arrays",
+    "dificuldade": "medio",
+    "tipo": "multipla_escolha",
+    "pergunta": "Qual sera a saida?",
+    "codigo": "const itens = ['a', 'b', 'c'];\nconsole.log(itens.length);",
+    "opcoes": [
+      "2",
+      "3",
+      "4",
+      "erro"
+    ],
+    "resposta": "3",
+    "dica": "length informa o tamanho do array.",
+    "explicacao": "O array tem tres itens.",
+    "pontos": 8
+  },
+  {
+    "id": 22,
+    "linguagem": "javascript",
+    "conceito": "strings",
+    "dificuldade": "facil",
+    "tipo": "multipla_escolha",
+    "pergunta": "Qual sera a saida?",
+    "codigo": "const nome = 'Code';\nconsole.log(nome + ' Lab');",
+    "opcoes": [
+      "CodeLab",
+      "Code Lab",
+      "Lab Code",
+      "erro"
+    ],
+    "resposta": "Code Lab",
+    "dica": "O operador + concatena strings.",
+    "explicacao": "A segunda string inclui um espaco inicial.",
+    "pontos": 5
+  },
+  {
+    "id": 23,
+    "linguagem": "javascript",
+    "conceito": "logica",
+    "dificuldade": "dificil",
+    "tipo": "multipla_escolha",
+    "pergunta": "Qual valor sera exibido?",
+    "codigo": "const ativo = true;\nconst premium = false;\nconsole.log(ativo && !premium);",
+    "opcoes": [
+      "true",
+      "false",
+      "undefined",
+      "erro"
+    ],
+    "resposta": "true",
+    "dica": "!premium inverte false para true.",
+    "explicacao": "true && true resulta em true.",
+    "pontos": 12
+  },
+  {
+    "id": 24,
+    "linguagem": "javascript",
+    "conceito": "objetos",
+    "dificuldade": "dificil",
+    "tipo": "multipla_escolha",
+    "pergunta": "Qual sera a saida?",
+    "codigo": "const user = { nome: 'Mia', nivel: 2 };\nconsole.log(user.nome);",
+    "opcoes": [
+      "Mia",
+      "2",
+      "nome",
+      "erro"
+    ],
+    "resposta": "Mia",
+    "dica": "O ponto acessa a propriedade do objeto.",
+    "explicacao": "user.nome retorna o valor da propriedade nome.",
+    "pontos": 12
+  }
+]
