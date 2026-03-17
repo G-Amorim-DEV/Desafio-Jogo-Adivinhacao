@@ -57,7 +57,9 @@ class JogoAntonimos(JogoBase):
 
     def renderizar(self, desafio):
         st.write(f"**Vidas restantes:** {self.jogador.vidas()} ❤️")
-        st.write(f"Selecione o antonimo de **{desafio['termo']}**")
+
+    def obter_contexto_resposta(self, desafio):
+        return f"Selecione o antonimo de {desafio['termo']}"
 
     def verificar_resposta(self, resposta):
         item = st.session_state.antonimos.get("item_atual")

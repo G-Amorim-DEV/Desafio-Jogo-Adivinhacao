@@ -17,6 +17,9 @@ class JogoBase(ABC):
     def configurar_input(self) -> InputConfig:
         return InputConfig()
 
+    def obter_contexto_resposta(self, desafio: Any):
+        return None
+
     @abstractmethod
     def gerar_desafio(self) -> Any:
         pass

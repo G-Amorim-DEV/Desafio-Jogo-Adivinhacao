@@ -120,7 +120,6 @@ class JogoMatematica(JogoBase):
 
     def renderizar(self, desafio):
         st.write(f"**Vidas restantes:** {self.jogador.vidas()} ❤️")
-        st.write(desafio)
         col1, col2, col3 = st.columns(3)
         with col1:
             st.markdown("🧮 **Calculo mental:** Resolva a operacao.")
@@ -129,6 +128,9 @@ class JogoMatematica(JogoBase):
             st.markdown(f"🔢 **Modo:** {modo}")
         with col3:
             st.markdown("🎯 **Precisao:** Digite apenas o resultado.")
+
+    def obter_contexto_resposta(self, desafio):
+        return desafio
 
     def obter_dica(self):
         operador = self.desafio_texto.split()[1] if self.desafio_texto else "?"

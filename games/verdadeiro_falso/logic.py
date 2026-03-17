@@ -50,8 +50,6 @@ class JogoVF(JogoBase):
 
     def renderizar(self, desafio):
         st.write(f"**Vidas restantes:** {self.jogador.vidas()} ❤️")
-        st.write(desafio)
-        st.write("Verdadeiro ou falso?")
         col1, col2, col3 = st.columns(3)
         with col1:
             st.markdown("✅ **Verdadeiro:** Se a afirmacao estiver correta.")
@@ -59,6 +57,9 @@ class JogoVF(JogoBase):
             st.markdown("❌ **Falso:** Se a afirmacao estiver incorreta.")
         with col3:
             st.markdown("🧠 **Julgamento:** Use seu conhecimento.")
+
+    def obter_contexto_resposta(self, desafio):
+        return f"{desafio}\nVerdadeiro ou falso?"
 
     def verificar_resposta(self, resposta):
         estado = st.session_state.verdadeiro_falso

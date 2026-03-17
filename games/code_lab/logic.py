@@ -145,11 +145,13 @@ class JogoCodeLab(JogoBase):
             f"Conceito: {desafio['conceito'].replace('_', ' ').title()} | "
             f"Dificuldade: {desafio['dificuldade'].title()}"
         )
-        st.write(desafio["pergunta"])
         st.code(
             desafio["codigo"],
             language=CODE_LANGUAGE_MAP.get(desafio["linguagem"], "text"),
         )
+
+    def obter_contexto_resposta(self, desafio):
+        return desafio.get("pergunta", "")
 
     def verificar_resposta(self, resposta):
         item = st.session_state.code_lab.get("item_atual")

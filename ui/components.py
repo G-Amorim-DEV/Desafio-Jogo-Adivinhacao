@@ -1,3 +1,4 @@
+import html
 import json
 
 import streamlit as st
@@ -158,14 +159,20 @@ def render_step_guide(titulo: str, passos: list[tuple[str, str]]) -> None:
     )
 
 
-def render_answer_panel(titulo: str, descricao: str, destaque: str = "") -> None:
+def render_answer_panel(titulo: str, descricao: str, destaque: str = "", contexto: str = "") -> None:
     destaque_html = f"<div class='answer-zone-chip'>{destaque}</div>" if destaque else ""
+    contexto_html = (
+        f"<div class='answer-zone-context'><strong>Desafio atual</strong><div>{html.escape(contexto)}</div></div>"
+        if contexto
+        else ""
+    )
     st.markdown(
         f"""
         <section class="answer-zone-shell">
             <div class="answer-zone-kicker">Area de resposta</div>
             <h3>{titulo}</h3>
             <p>{descricao}</p>
+            {contexto_html}
             {destaque_html}
         </section>
         """,

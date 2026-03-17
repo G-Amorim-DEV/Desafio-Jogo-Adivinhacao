@@ -59,8 +59,12 @@ class JogoIntruso(JogoBase):
 
     def renderizar(self, desafio):
         st.write(f"**Vidas restantes:** {self.jogador.vidas()} ❤️")
-        st.write("Tres palavras pertencem ao mesmo grupo. Uma delas nao pertence.")
-        st.markdown("### " + " | ".join(desafio["opcoes"]))
+
+    def obter_contexto_resposta(self, desafio):
+        return (
+            "Tres palavras pertencem ao mesmo grupo. Uma delas nao pertence.\n"
+            + " | ".join(desafio["opcoes"])
+        )
 
     def verificar_resposta(self, resposta):
         item = st.session_state.intruso.get("item_atual")

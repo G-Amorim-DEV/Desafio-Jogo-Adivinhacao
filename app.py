@@ -341,6 +341,12 @@ def render_circuit_page(manager: GameManager, player_manager: PlayerManager, ran
 
     config = jogo.configurar_input()
     if config.tipo != "none":
+        render_answer_panel(
+            "Envie sua resposta nesta area",
+            "Use o campo logo abaixo para responder ao desafio atual. Se errar e a rodada continuar ativa, ajuste a resposta e envie novamente.",
+            config.label,
+            jogo.obter_contexto_resposta(desafio) or "",
+        )
         with st.form(key=f"form_circuito_{jogo_nome}"):
             resposta = renderizar_input(config, f"circuito_{jogo_nome}")
             submitted = st.form_submit_button("Enviar resposta", use_container_width=True)
@@ -971,6 +977,7 @@ else:
                     "Envie sua resposta nesta area",
                     "Use o campo logo abaixo para responder ao desafio atual. Se errar e a rodada continuar ativa, ajuste a resposta e envie novamente.",
                     config.label,
+                    jogo.obter_contexto_resposta(desafio) or "",
                 )
                 with st.form(key=f"form_{pagina}"):
                     resposta = renderizar_input(config, pagina)

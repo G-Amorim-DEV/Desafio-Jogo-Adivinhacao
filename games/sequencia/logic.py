@@ -56,8 +56,6 @@ class JogoSequencia(JogoBase):
 
     def renderizar(self, desafio):
         st.write(f"**Vidas restantes:** {self.jogador.vidas()} ❤️")
-        st.write(desafio["sequencia"])
-        st.write("Qual e o proximo numero?")
         col1, col2, col3 = st.columns(3)
         with col1:
             st.markdown("📊 **Padrao:** Observe a logica da sequencia.")
@@ -65,6 +63,9 @@ class JogoSequencia(JogoBase):
             st.markdown("🔢 **Regra:** Descubra a transformacao.")
         with col3:
             st.markdown("🎯 **Resposta:** Informe o proximo termo.")
+
+    def obter_contexto_resposta(self, desafio):
+        return f"{desafio['sequencia']}\nQual e o proximo numero?"
 
     def verificar_resposta(self, resposta):
         item = st.session_state.sequencia.get("item_atual")

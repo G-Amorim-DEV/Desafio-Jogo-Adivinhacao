@@ -612,6 +612,31 @@ def aplicar_tema() -> None:
             color: var(--muted);
         }}
 
+        .answer-zone-context {{
+            position: relative;
+            margin-top: 0.85rem;
+            padding: 0.85rem 0.95rem;
+            border-radius: 16px;
+            border: 1px solid rgba(148, 163, 184, 0.18);
+            background: rgba(15, 23, 42, 0.58);
+            color: var(--ink);
+        }}
+
+        .answer-zone-context strong {{
+            display: block;
+            margin-bottom: 0.25rem;
+            color: #dbeafe;
+            font-size: 0.82rem;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+        }}
+
+        .answer-zone-context div {{
+            color: var(--ink);
+            line-height: 1.55;
+            white-space: pre-line;
+        }}
+
         .answer-zone-chip {{
             display: inline-flex;
             margin-top: 0.8rem;

@@ -72,7 +72,6 @@ class JogoAdivinhacao(JogoBase):
         """,
             unsafe_allow_html=True,
         )
-        st.write(desafio)
         st.info(f"Tentativas restantes: {estado['tentativas']}")
 
         col1, col2, col3 = st.columns(3)
@@ -82,6 +81,9 @@ class JogoAdivinhacao(JogoBase):
             st.markdown(f"🔢 **Faixa:** {estado['intervalo'][0]} a {estado['intervalo'][1]}")
         with col3:
             st.markdown(f"⚙️ **Modo:** {estado.get('dificuldade', 'medio').title()}")
+
+    def obter_contexto_resposta(self, desafio):
+        return desafio
 
     def verificar_resposta(self, resposta):
         estado = st.session_state.adivinhacao

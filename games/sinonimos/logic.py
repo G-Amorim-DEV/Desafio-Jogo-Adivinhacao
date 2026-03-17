@@ -57,7 +57,9 @@ class JogoSinonimos(JogoBase):
 
     def renderizar(self, desafio):
         st.write(f"**Vidas restantes:** {self.jogador.vidas()} ❤️")
-        st.write(f"Selecione o sinonimo de **{desafio['termo']}**")
+
+    def obter_contexto_resposta(self, desafio):
+        return f"Selecione o sinonimo de {desafio['termo']}"
 
     def verificar_resposta(self, resposta):
         item = st.session_state.sinonimos.get("item_atual")

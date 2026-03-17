@@ -63,7 +63,6 @@ class JogoScramble(JogoBase):
 
     def renderizar(self, desafio):
         st.write(f"**Vidas restantes:** {self.jogador.vidas()} ❤️")
-        st.write(f"Reordene as letras para formar uma palavra: **{desafio}**")
         col1, col2, col3 = st.columns(3)
         with col1:
             st.markdown("🔀 **Embaralhado:** As letras estao misturadas.")
@@ -71,6 +70,9 @@ class JogoScramble(JogoBase):
             st.markdown("📝 **Reordene:** Forme uma palavra valida.")
         with col3:
             st.markdown("🎯 **Observacao:** Teste possibilidades.")
+
+    def obter_contexto_resposta(self, desafio):
+        return f"Reordene as letras para formar uma palavra: {desafio}"
 
     def verificar_resposta(self, resposta):
         estado = st.session_state.scramble

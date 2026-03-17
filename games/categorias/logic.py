@@ -57,8 +57,10 @@ class JogoCategorias(JogoBase):
 
     def renderizar(self, desafio):
         st.write(f"**Vidas restantes:** {self.jogador.vidas()} ❤️")
-        st.write(f"Categoria alvo: **{desafio['categoria'].title()}**")
         st.caption("Somente uma opcao pertence de fato a categoria pedida.")
+
+    def obter_contexto_resposta(self, desafio):
+        return f"Categoria alvo: {desafio['categoria'].title()}"
 
     def verificar_resposta(self, resposta):
         item = st.session_state.categorias.get("item_atual")

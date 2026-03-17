@@ -104,7 +104,6 @@ class JogoMemoria(JogoBase):
                 estado["fase"] = "esconder"
                 st.rerun()
         else:
-            st.write("Digite as palavras na ordem correta, separadas por espaco:")
             col1, col2, col3 = st.columns(3)
             with col1:
                 st.markdown("🔄 **Recupere:** Lembre da sequencia.")
@@ -112,6 +111,15 @@ class JogoMemoria(JogoBase):
                 st.markdown("📋 **Formato:** palavra1 palavra2 palavra3")
             with col3:
                 st.markdown("🎯 **Precisao:** Ordem exata.")
+
+    def obter_contexto_resposta(self, desafio):
+        estado = st.session_state.memoria
+        if estado.get("fase") == "esconder":
+            return (
+                f"Categoria: {desafio['categoria']}\n"
+                "Digite as palavras na ordem correta, separadas por espaco."
+            )
+        return None
 
     def verificar_resposta(self, resposta):
         estado = st.session_state.memoria

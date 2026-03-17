@@ -64,7 +64,6 @@ class JogoQuiz(JogoBase):
 
     def renderizar(self, desafio):
         st.write(f"**Vidas restantes:** {self.jogador.vidas()} ❤️")
-        st.write(desafio["pergunta"])
         col1, col2, col3 = st.columns(3)
         with col1:
             st.markdown("🧠 **Conhecimento:** Teste seu repertorio.")
@@ -72,6 +71,9 @@ class JogoQuiz(JogoBase):
             st.markdown("🎯 **Precisao:** Escolha a melhor resposta.")
         with col3:
             st.markdown("⏱️ **Ritmo:** Pense e responda.")
+
+    def obter_contexto_resposta(self, desafio):
+        return desafio.get("pergunta", "")
 
     def verificar_resposta(self, resposta):
         pergunta = st.session_state.quiz.get("pergunta_atual")

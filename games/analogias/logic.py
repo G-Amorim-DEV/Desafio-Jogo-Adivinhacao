@@ -59,7 +59,6 @@ class JogoAnalogias(JogoBase):
 
     def renderizar(self, desafio):
         st.write(f"**Vidas restantes:** {self.jogador.vidas()} ❤️")
-        st.write(desafio["pergunta"])
         col1, col2, col3 = st.columns(3)
         with col1:
             st.markdown("🧠 **Relacao:** Procure o padrao.")
@@ -67,6 +66,9 @@ class JogoAnalogias(JogoBase):
             st.markdown("🔎 **Contexto:** Compare funcao, forma ou significado.")
         with col3:
             st.markdown("✅ **Resposta:** Escolha a melhor analogia.")
+
+    def obter_contexto_resposta(self, desafio):
+        return desafio.get("pergunta", "")
 
     def verificar_resposta(self, resposta):
         item = st.session_state.analogias.get("item_atual")
