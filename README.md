@@ -2,6 +2,46 @@
 
 Aplicacao web desenvolvida com `Streamlit` para treino cognitivo, aprendizado introdutorio de programacao e experiencias locais multiplayer. O projeto combina jogos curtos, progressao por perfil, ranking, acessibilidade e exportacao/importacao de progresso para continuar a sessao depois.
 
+## Demonstracao
+
+### Home — tema escuro
+
+![Home tema escuro](img/tela-01-home.png)
+
+### Home — tema claro.
+
+![Home tema claro](img/tela-02-home-claro.png)
+
+### Menu lateral
+
+![Menu lateral](img/tela-03-menu-lateral.png)
+
+### Jogo em andamento
+
+![Jogo em andamento](img/tela-04-jogo.png)
+
+### Detalhe de jogo
+
+![Detalhe de jogo](img/tela-05-jogo-detalhe.png)
+
+![Detalhe de jogo 2](img/tela-06-jogo-detalhe2.png)
+
+### Ranking
+
+![Ranking](img/tela-07-ranking.png)
+
+### Perfil do jogador
+
+![Perfil do jogador](img/tela-08-perfil.png)
+
+### Multiplayer
+
+![Multiplayer](img/tela-09-multiplayer.png)
+
+### Acessibilidade
+
+![Acessibilidade](img/tela-10-acessibilidade.png)
+
 ## Visao Geral
 
 O `Arcade Cognitivo` foi estruturado para reunir, em uma unica plataforma:
