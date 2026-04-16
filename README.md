@@ -8,7 +8,7 @@ Aplicacao web desenvolvida com `Streamlit` para treino cognitivo, aprendizado in
 
 ![Home tema escuro](img/tela-01-home.png)
 
-### Home — tema claro
+### Home — tema claro.
 
 ![Home tema claro](img/tela-02-home-claro.png)
 
