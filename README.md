@@ -316,7 +316,7 @@ O projeto pode ser executado localmente e tambem publicado no `Streamlit Communi
 Desenvolvido por **Guilherme**.
 
 
-### Home — tema claro
+### Home — tema escuro
 
 ![Home tema claro](img/tela-02-home-claro.png)
 
